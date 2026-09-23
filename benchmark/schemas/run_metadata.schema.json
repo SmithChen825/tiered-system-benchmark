@@ -1,0 +1,265 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tsb.local/schemas/run_metadata.schema.json",
+  "title": "Tiered System Benchmark run metadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "phase",
+    "lifecycle_state",
+    "validity_status",
+    "task",
+    "system",
+    "schedule",
+    "timing",
+    "limits",
+    "stopping",
+    "results",
+    "clarification",
+    "usage",
+    "artifacts"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "run_id": {
+      "type": "string",
+      "pattern": "^(validation|pilot|main)-L[1-4]-[0-9]{2}-[a-z0-9]+(?:-[a-z0-9]+)*-r[0-9]{2}-a[0-9]{2}$"
+    },
+    "phase": {"enum": ["validation", "pilot", "main"]},
+    "lifecycle_state": {
+      "enum": [
+        "prepared",
+        "running",
+        "submitted",
+        "suspended",
+        "evaluating",
+        "successful",
+        "unsuccessful",
+        "invalidated"
+      ]
+    },
+    "validity_status": {"enum": ["pending", "valid", "invalid"]},
+    "task": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "task_id",
+        "tier",
+        "repetition",
+        "attempt",
+        "fixture_sha256",
+        "prompt_sha256",
+        "start_commit",
+        "clarification_opportunity"
+      ],
+      "properties": {
+        "task_id": {"type": "string", "pattern": "^L[1-4]-[0-9]{2}$"},
+        "tier": {"type": "integer", "minimum": 1, "maximum": 4},
+        "repetition": {"type": "integer", "minimum": 1, "maximum": 99},
+        "attempt": {"type": "integer", "minimum": 1, "maximum": 99},
+        "fixture_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "prompt_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "start_commit": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+        "clarification_opportunity": {"type": "boolean"}
+      }
+    },
+    "system": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "system_id",
+        "system_slug",
+        "evaluation_interface",
+        "product_version",
+        "model_identifier",
+        "provider_endpoint",
+        "configuration_sha256"
+      ],
+      "properties": {
+        "system_id": {
+          "enum": [
+            "cursor",
+            "devin",
+            "gpt-5.4",
+            "qwen2.5-coder-7b-instruct",
+            "baseline",
+            "oracle"
+          ]
+        },
+        "system_slug": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+        "evaluation_interface": {
+          "enum": ["native_ide", "api_wrapper", "researcher_validation"]
+        },
+        "product_version": {"type": ["string", "null"]},
+        "model_identifier": {"type": ["string", "null"]},
+        "provider_endpoint": {"type": ["string", "null"]},
+        "configuration_sha256": {
+          "oneOf": [
+            {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+            {"type": "null"}
+          ]
+        }
+      }
+    },
+    "schedule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["order_position", "random_seed"],
+      "properties": {
+        "order_position": {
+          "oneOf": [
+            {"type": "integer", "minimum": 1, "maximum": 4},
+            {"type": "null"}
+          ]
+        },
+        "random_seed": {"type": ["string", "null"]}
+      }
+    },
+    "timing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["started_at", "ended_at", "elapsed_seconds"],
+      "properties": {
+        "started_at": {"type": ["string", "null"], "format": "date-time"},
+        "ended_at": {"type": ["string", "null"], "format": "date-time"},
+        "elapsed_seconds": {"type": ["number", "null"], "minimum": 0}
+      }
+    },
+    "limits": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "task_wall_clock_seconds",
+        "api_action_limit",
+        "command_timeout_seconds",
+        "consecutive_no_action_response_limit"
+      ],
+      "properties": {
+        "task_wall_clock_seconds": {"type": ["integer", "null"], "minimum": 1},
+        "api_action_limit": {"type": ["integer", "null"], "minimum": 1},
+        "command_timeout_seconds": {"type": ["integer", "null"], "minimum": 1},
+        "consecutive_no_action_response_limit": {"type": ["integer", "null"], "minimum": 1}
+      }
+    },
+    "stopping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reason", "detail", "submission_signal", "submit_marker_seen"],
+      "properties": {
+        "reason": {
+          "type": ["string", "null"],
+          "enum": [
+            null,
+            "submitted",
+            "task_wall_clock_limit",
+            "api_action_limit",
+            "command_timeout",
+            "protocol_no_progress_limit",
+            "evaluator_error",
+            "infrastructure_failure",
+            "runner_error"
+          ]
+        },
+        "detail": {"type": ["string", "null"]},
+        "submission_signal": {
+          "type": ["string", "null"],
+          "enum": [null, "api_submit_marker", "native_visible_completion"]
+        },
+        "submit_marker_seen": {"type": "boolean"}
+      }
+    },
+    "results": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "success",
+        "functional_tests",
+        "architecture_checks",
+        "robustness_eligible",
+        "autonomous_success"
+      ],
+      "properties": {
+        "success": {"type": ["boolean", "null"]},
+        "functional_tests": {"$ref": "#/$defs/diagnosticResult"},
+        "architecture_checks": {"$ref": "#/$defs/diagnosticResult"},
+        "robustness_eligible": {"type": "boolean"},
+        "autonomous_success": {"type": ["boolean", "null"]}
+      }
+    },
+    "clarification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["opportunity", "requests", "authorized_requests", "responses"],
+      "properties": {
+        "opportunity": {"type": "boolean"},
+        "requests": {"type": "integer", "minimum": 0},
+        "authorized_requests": {"type": "integer", "minimum": 0},
+        "responses": {"type": "integer", "minimum": 0}
+      }
+    },
+    "usage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "input_tokens",
+        "output_tokens",
+        "total_tokens",
+        "monetary_cost",
+        "currency"
+      ],
+      "properties": {
+        "status": {"enum": ["available", "unavailable", "not_applicable"]},
+        "input_tokens": {"type": ["integer", "null"], "minimum": 0},
+        "output_tokens": {"type": ["integer", "null"], "minimum": 0},
+        "total_tokens": {"type": ["integer", "null"], "minimum": 0},
+        "monetary_cost": {"type": ["number", "null"], "minimum": 0},
+        "currency": {"type": ["string", "null"], "pattern": "^[A-Z]{3}$"}
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "task_prompt",
+        "transcript",
+        "raw_model_response",
+        "adapter_decisions",
+        "clarification_log",
+        "hidden_test_results",
+        "architecture_checks",
+        "docker_status",
+        "docker_logs",
+        "database_checks",
+        "final_diff"
+      ],
+      "properties": {
+        "task_prompt": {"const": "task_prompt.txt"},
+        "transcript": {"const": "transcript.txt"},
+        "raw_model_response": {"const": "raw_model_response.jsonl"},
+        "adapter_decisions": {"const": "adapter_decisions.jsonl"},
+        "clarification_log": {"const": "clarification_log.json"},
+        "hidden_test_results": {"const": "hidden_test_results.json"},
+        "architecture_checks": {"const": "architecture_checks.json"},
+        "docker_status": {"const": "docker_status.txt"},
+        "docker_logs": {"const": "docker_logs.txt"},
+        "database_checks": {"const": "database_checks.json"},
+        "final_diff": {"const": "final.diff"}
+      }
+    }
+  },
+  "$defs": {
+    "diagnosticResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["passed", "applicable", "proportion"],
+      "properties": {
+        "passed": {"type": ["integer", "null"], "minimum": 0},
+        "applicable": {"type": ["integer", "null"], "minimum": 0},
+        "proportion": {"type": ["number", "null"], "minimum": 0, "maximum": 1}
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+services:
+  app:
+    image: ${L2_02_IMAGE:-tsb-l2-02-baseline:local}
+    build:
+      context: .
+    environment:
+      TASK_DB_PATH: /data/tasks.db
+    ports:
+      - "${L2_02_PORT:-8000}:8000"
+    volumes:
+      - task_data:/data
+    restart: "no"
+
+volumes:
+  task_data:
+

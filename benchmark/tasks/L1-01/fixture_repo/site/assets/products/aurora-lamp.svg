@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title description">
+  <title id="title">Aurora camp lamp</title>
+  <desc id="description">A dark green camp lamp glowing against a warm landscape.</desc>
+  <rect width="800" height="600" fill="#d9aa5d"/>
+  <path d="M0 430 190 280l145 120 128-156L800 430v170H0Z" fill="#2d5947"/>
+  <circle cx="636" cy="122" r="64" fill="#fff0b8" opacity=".85"/>
+  <path d="M330 186h140l32 252H298Z" fill="#173a31"/>
+  <rect x="346" y="227" width="108" height="148" rx="20" fill="#ffd879"/>
+  <path d="M356 188c0-64 88-64 88 0" fill="none" stroke="#173a31" stroke-width="22"/>
+</svg>

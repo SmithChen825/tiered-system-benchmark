@@ -1,0 +1,19 @@
+:root { font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #17221c; background: #f2efe8; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.site-header { width: min(1080px, calc(100% - 40px)); margin: 0 auto; padding: 28px 0; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.brand { color: #17221c; font-weight: 800; text-decoration: none; white-space: nowrap; }
+.site-nav { display: flex; align-items: center; justify-content: flex-end; gap: 28px; white-space: nowrap; }
+.site-nav a { color: #365342; font-weight: 700; text-decoration: none; }
+main { width: min(1080px, calc(100% - 40px)); margin: 0 auto; padding: 68px 0; }
+.eyebrow { color: #82612f; font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+h1 { max-width: 760px; margin: 12px 0 20px; font: 700 clamp(2.4rem, 7vw, 5.2rem)/.98 Georgia, serif; }
+.intro { max-width: 660px; color: #546159; font-size: 1.15rem; line-height: 1.6; }
+.content-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 52px; }
+.content-grid article { padding: 22px; border: 1px solid #d4cbbb; border-radius: 16px; background: #fffdf8; }
+@media (max-width: 640px) {
+  .site-header { align-items: flex-start; flex-direction: column; gap: 18px; }
+  .site-header .nav-links { width: 100%; flex-direction: column; align-items: stretch; gap: 0; white-space: normal; }
+  .site-nav a { display: block; padding: 12px 0; border-top: 1px solid #d4cbbb; }
+  .content-grid { grid-template-columns: 1fr; }
+}

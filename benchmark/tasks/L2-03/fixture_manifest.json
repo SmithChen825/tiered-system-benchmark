@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "task_id": "L2-03",
+  "generated_on": "2026-08-29",
+  "hash_algorithm": "sha256",
+  "aggregate_fixture_hash": "5e98cd59212a3dae996df3112b9c0d4ad9aad38d3d0aaae86e31f7d5020faf78",
+  "start_commit": "1b55bc3e263c60dd97c72c1756a7d37f562695c2",
+  "hash_scope": "All regular fixture_repo files sorted by relative POSIX path and null-delimited; caches, bytecode, and atomic-write temporary files excluded.",
+  "excluded_from_hash": [
+    "__pycache__ directories",
+    ".pytest_cache directories",
+    ".pyc files"
+  ],
+  "evaluator_manifest": {
+    "path": "evaluator_manifest.json",
+    "review_status": "approved",
+    "classified_on": "2026-08-29",
+    "post_change_full_cycle_revalidation_required": false,
+    "post_change_full_cycle_revalidated_on": "2026-08-29"
+  },
+  "validation_result": {
+    "baseline_failed_as_intended": true,
+    "oracle_passed_all_hidden_tests": true,
+    "second_reset_reproduced_same_failures": true,
+    "baseline_container_import_visible_before_recreate": true,
+    "baseline_container_import_lost_after_recreate": true,
+    "oracle_container_seed_loaded": true,
+    "oracle_container_import_export_passed": true,
+    "oracle_container_invalid_import_preserved_notes": true,
+    "oracle_container_import_survived_recreate": true
+  }
+}

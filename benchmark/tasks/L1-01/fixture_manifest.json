@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "task_id": "L1-01",
+  "generated_on": "2026-08-06",
+  "hash_algorithm": "sha256",
+  "aggregate_fixture_hash": "4311c7ab44139ad55dbbf94e3680ee3b30c7dbc165df2f442e7edc7c76f21b47",
+  "start_commit": "4bcf1b9a560c807e090899cad2fae24446f2f632",
+  "hash_scope": "All regular files beneath fixture_repo, sorted by relative POSIX path; each path and file body is null-delimited.",
+  "excluded_from_hash": [
+    "__pycache__ directories",
+    ".pytest_cache directories",
+    ".pyc files"
+  ],
+  "evaluator_manifest": {
+    "path": "evaluator_manifest.json",
+    "review_status": "approved",
+    "classified_on": "2026-08-08",
+    "post_change_full_cycle_revalidation_required": false
+  },
+  "validation_result": {
+    "baseline_failed_as_intended": true,
+    "oracle_passed_all_python_hidden_tests": true,
+    "oracle_passed_chromium_check": true,
+    "second_reset_reproduced_same_failures": true,
+    "nginx_container_check": "passed for both baseline and oracle images",
+    "nginx_base_digest": "sha256:814a8e88df978ade80e584cc5b333144b9372a8e3c98872d07137dbf3b44d0e4"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "L3-02",
+  "review_status": "approved",
+  "pytest_environment_variable": "L3_02_REPO",
+  "functional_tests": [
+    {"id":"backend_order_contract","description":"The order API returns the frozen order_status contract.","runner":"pytest","source":"evaluator/hidden_tests/test_l3_02.py::test_backend_order_contract_uses_renamed_field","implementation_status":"implemented"},
+    {"id":"browser_order_status","description":"Chromium renders Ready for dispatch from the API.","runner":"node","source":"evaluator/hidden_tests/browser_check.cjs","implementation_status":"implemented"}
+  ],
+  "architecture_checks": [
+    {"id":"backend_contract_preserved","requirement":"The backend order contract retains order_status.","evidence":[{"source_id":"backend_order_contract","source":"evaluator/hidden_tests/test_l3_02.py::test_backend_order_contract_uses_renamed_field"}],"implementation_status":"implemented"},
+    {"id":"api_derived_status","requirement":"The frontend obtains status from the API rather than hard-coding it.","evidence":[{"source_id":"no_hard_coding","source":"evaluator/hidden_tests/test_l3_02.py::test_order_status_is_not_hard_coded_in_frontend"},{"source_id":"browser_order_status","source":"evaluator/hidden_tests/browser_check.cjs"}],"implementation_status":"implemented"},
+    {"id":"endpoint_identity_preserved","requirement":"The frozen order endpoint and ID remain unchanged.","evidence":[{"source_id":"endpoint_preserved","source":"evaluator/hidden_tests/test_l3_02.py::test_frontend_targets_the_frozen_order_endpoint"}],"implementation_status":"implemented"},
+    {"id":"separate_services_preserved","requirement":"Frontend and backend remain separate services.","evidence":[{"source_id":"service_boundary","source":"evaluator/hidden_tests/test_l3_02.py::test_services_and_cors_boundary_remain_preserved"}],"implementation_status":"implemented"},
+    {"id":"cors_origin_preserved","requirement":"The frozen frontend CORS origin remains authorised.","evidence":[{"source_id":"service_boundary","source":"evaluator/hidden_tests/test_l3_02.py::test_services_and_cors_boundary_remain_preserved"}],"implementation_status":"implemented"}
+  ],
+  "operational_evidence": [
+    {"id":"workspace_isolation","description":"The evaluated workspace contains no researcher-only material or symbolic links.","runner":"global_validator","source":"benchmark/runner/task_probes/common.py::record_workspace_isolation","implementation_status":"implemented"}
+  ]
+}

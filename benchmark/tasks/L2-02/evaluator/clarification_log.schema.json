@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/tsb/l2-02/clarification-log.schema.json",
+  "title": "L2-02 clarification event log",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "task_id",
+    "clarification_opportunity",
+    "requests",
+    "summary"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_id": {
+      "const": "L2-02"
+    },
+    "clarification_opportunity": {
+      "const": true
+    },
+    "requests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "sequence",
+          "request_text",
+          "request_timestamp",
+          "qualifying",
+          "response_issued",
+          "response_card_id",
+          "reason_code"
+        ],
+        "properties": {
+          "sequence": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "request_text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "request_timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "qualifying": {
+            "type": "boolean"
+          },
+          "response_issued": {
+            "type": "boolean"
+          },
+          "response_card_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "reason_code": {
+            "enum": [
+              "QUALIFYING_DUE_DATE_RULE",
+              "TOO_VAGUE",
+              "DEBUGGING_ASSISTANCE",
+              "TECHNICAL_FAULT",
+              "UNRELATED_REQUIREMENT",
+              "DUPLICATE_REQUEST"
+            ]
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "N_req",
+        "N_acc",
+        "N_resp",
+        "opportunity_captured"
+      ],
+      "properties": {
+        "N_req": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "N_acc": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "N_resp": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "opportunity_captured": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

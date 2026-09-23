@@ -1,0 +1,7 @@
+--- a/app/main.py
++++ b/app/main.py
+@@
+-    def item_detail(product_id: int) -> str:
+-        item = ITEMS.get(product_id)
++    def item_detail(item_id: int) -> str:
++        item = ITEMS.get(item_id)

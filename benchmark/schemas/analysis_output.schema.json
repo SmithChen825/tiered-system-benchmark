@@ -1,0 +1,207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/tsb/analysis-output.schema.json",
+  "title": "TSB frozen analysis output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "provenance",
+    "run_flow",
+    "overall_system_success",
+    "tier_system_success",
+    "task_system_success",
+    "pairwise_risk_differences",
+    "elapsed_time",
+    "clarification_funnel",
+    "diagnostic_correctness",
+    "robustness",
+    "failure_categories"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "analysis_plan_sha256",
+        "main_schedule_sha256",
+        "input_dataset_sha256",
+        "analysis_script_sha256",
+        "generated_at",
+        "bootstrap_random_seed",
+        "package_versions"
+      ],
+      "properties": {
+        "analysis_plan_sha256": {"$ref": "#/$defs/sha256"},
+        "main_schedule_sha256": {"$ref": "#/$defs/sha256"},
+        "input_dataset_sha256": {"$ref": "#/$defs/sha256"},
+        "analysis_script_sha256": {"$ref": "#/$defs/sha256"},
+        "generated_at": {"type": "string", "format": "date-time"},
+        "bootstrap_random_seed": {"type": "string", "minLength": 1},
+        "package_versions": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "run_flow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scheduled_slots", "attempt_records", "valid_slots", "invalidated_attempts", "rerun_slots"],
+      "properties": {
+        "scheduled_slots": {"const": 144},
+        "attempt_records": {"type": "integer", "minimum": 144},
+        "valid_slots": {"type": "integer", "minimum": 0, "maximum": 144},
+        "invalidated_attempts": {"type": "integer", "minimum": 0},
+        "rerun_slots": {"type": "integer", "minimum": 0, "maximum": 144}
+      }
+    },
+    "overall_system_success": {"type": "array", "items": {"$ref": "#/$defs/successSummary"}, "minItems": 4, "maxItems": 4},
+    "tier_system_success": {"type": "array", "items": {"$ref": "#/$defs/tierSuccessSummary"}},
+    "task_system_success": {"type": "array", "items": {"$ref": "#/$defs/taskSuccessSummary"}},
+    "pairwise_risk_differences": {"type": "array", "items": {"$ref": "#/$defs/pairwiseContrast"}, "minItems": 6, "maxItems": 6},
+    "elapsed_time": {"type": "array", "items": {"$ref": "#/$defs/timingSummary"}},
+    "clarification_funnel": {"type": "array", "items": {"$ref": "#/$defs/clarificationSummary"}},
+    "diagnostic_correctness": {"type": "array", "items": {"$ref": "#/$defs/diagnosticSummary"}},
+    "robustness": {"type": "array", "items": {"$ref": "#/$defs/robustnessSummary"}, "minItems": 4, "maxItems": 4},
+    "failure_categories": {"type": "array", "items": {"$ref": "#/$defs/failureCategory"}}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "system": {"enum": ["cursor", "devin", "gpt-5.4", "qwen2.5-coder-7b-instruct"]},
+    "proportion": {"type": "number", "minimum": 0, "maximum": 1},
+    "nullableNumber": {"type": ["number", "null"]},
+    "wilson": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method", "confidence_level", "lower", "upper"],
+      "properties": {
+        "method": {"const": "wilson"},
+        "confidence_level": {"const": 0.95},
+        "lower": {"$ref": "#/$defs/proportion"},
+        "upper": {"$ref": "#/$defs/proportion"}
+      }
+    },
+    "successSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["system_id", "valid_n", "success_n", "success_rate", "wilson_95_ci"],
+      "properties": {
+        "system_id": {"$ref": "#/$defs/system"},
+        "valid_n": {"type": "integer", "minimum": 0, "maximum": 36},
+        "success_n": {"type": "integer", "minimum": 0, "maximum": 36},
+        "success_rate": {"$ref": "#/$defs/proportion"},
+        "wilson_95_ci": {"$ref": "#/$defs/wilson"}
+      }
+    },
+    "tierSuccessSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tier", "system_id", "valid_n", "success_n", "success_rate", "wilson_95_ci"],
+      "properties": {
+        "tier": {"type": "integer", "minimum": 1, "maximum": 4},
+        "system_id": {"$ref": "#/$defs/system"},
+        "valid_n": {"type": "integer", "minimum": 0},
+        "success_n": {"type": "integer", "minimum": 0},
+        "success_rate": {"$ref": "#/$defs/proportion"},
+        "wilson_95_ci": {"$ref": "#/$defs/wilson"}
+      }
+    },
+    "taskSuccessSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["task_id", "tier", "system_id", "valid_n", "success_n", "success_rate", "wilson_95_ci"],
+      "properties": {
+        "task_id": {"type": "string", "pattern": "^L[1-4]-[0-9]{2}$"},
+        "tier": {"type": "integer", "minimum": 1, "maximum": 4},
+        "system_id": {"$ref": "#/$defs/system"},
+        "valid_n": {"type": "integer", "minimum": 0},
+        "success_n": {"type": "integer", "minimum": 0},
+        "success_rate": {"$ref": "#/$defs/proportion"},
+        "wilson_95_ci": {"$ref": "#/$defs/wilson"}
+      }
+    },
+    "pairwiseContrast": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["system_a", "system_b", "risk_difference", "bootstrap_interval_method", "ci_95_lower", "ci_95_upper", "p_value_method", "p_value", "holm_adjusted_p_value", "bootstrap_resamples"],
+      "properties": {
+        "system_a": {"$ref": "#/$defs/system"},
+        "system_b": {"$ref": "#/$defs/system"},
+        "risk_difference": {"type": "number", "minimum": -1, "maximum": 1},
+        "bootstrap_interval_method": {"type": "string", "minLength": 1},
+        "ci_95_lower": {"type": "number", "minimum": -1, "maximum": 1},
+        "ci_95_upper": {"type": "number", "minimum": -1, "maximum": 1},
+        "p_value_method": {"type": "string", "minLength": 1},
+        "p_value": {"$ref": "#/$defs/proportion"},
+        "holm_adjusted_p_value": {"$ref": "#/$defs/proportion"},
+        "bootstrap_resamples": {"const": 10000}
+      }
+    },
+    "timingSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["system_id", "population", "n", "median_seconds", "q1_seconds", "q3_seconds"],
+      "properties": {
+        "system_id": {"$ref": "#/$defs/system"},
+        "population": {"enum": ["successful_valid_runs", "all_valid_runs"]},
+        "n": {"type": "integer", "minimum": 0},
+        "median_seconds": {"$ref": "#/$defs/nullableNumber"},
+        "q1_seconds": {"$ref": "#/$defs/nullableNumber"},
+        "q3_seconds": {"$ref": "#/$defs/nullableNumber"}
+      }
+    },
+    "clarificationSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["system_id", "opportunity_capture", "request_precision", "unnecessary_request_rate", "N_req", "N_acc", "N_resp"],
+      "properties": {
+        "system_id": {"$ref": "#/$defs/system"},
+        "opportunity_capture": {"$ref": "#/$defs/proportion"},
+        "request_precision": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "unnecessary_request_rate": {"$ref": "#/$defs/proportion"},
+        "N_req": {"type": "integer", "minimum": 0},
+        "N_acc": {"type": "integer", "minimum": 0},
+        "N_resp": {"type": "integer", "minimum": 0}
+      }
+    },
+    "diagnosticSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["system_id", "measure", "n", "median", "q1", "q3"],
+      "properties": {
+        "system_id": {"$ref": "#/$defs/system"},
+        "measure": {"enum": ["C_func", "C_arch"]},
+        "n": {"type": "integer", "minimum": 0},
+        "median": {"$ref": "#/$defs/nullableNumber"},
+        "q1": {"$ref": "#/$defs/nullableNumber"},
+        "q3": {"$ref": "#/$defs/nullableNumber"}
+      }
+    },
+    "robustnessSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["system_id", "eligible_n", "autonomous_success_n", "robustness_rate"],
+      "properties": {
+        "system_id": {"$ref": "#/$defs/system"},
+        "eligible_n": {"type": "integer", "minimum": 0, "maximum": 18},
+        "autonomous_success_n": {"type": "integer", "minimum": 0, "maximum": 18},
+        "robustness_rate": {"$ref": "#/$defs/proportion"}
+      }
+    },
+    "failureCategory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["system_id", "category", "run_count", "run_ids", "evidence_references"],
+      "properties": {
+        "system_id": {"$ref": "#/$defs/system"},
+        "category": {"type": "string", "minLength": 1},
+        "run_count": {"type": "integer", "minimum": 0},
+        "run_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "evidence_references": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

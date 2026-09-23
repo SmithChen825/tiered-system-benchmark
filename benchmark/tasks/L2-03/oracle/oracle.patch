@@ -1,0 +1,12 @@
+--- a/app/main.py
++++ b/app/main.py
+@@ -12,7 +12,7 @@ from pydantic import BaseModel, ConfigDict, ValidationError
+ 
+ 
+ PROJECT_ROOT = Path(__file__).resolve().parents[1]
+-STORAGE_PATH = Path(os.getenv("NOTE_STORAGE_PATH", "storage/notes.json")).expanduser().resolve()
++STORAGE_PATH = Path(os.getenv("NOTE_STORAGE_PATH", str(PROJECT_ROOT / "storage" / "notes.json"))).expanduser().resolve()
+ 
+ 
+ class Note(BaseModel):
+

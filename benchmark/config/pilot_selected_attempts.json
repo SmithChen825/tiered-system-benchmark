@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "status": "REVIEW_INPUT",
+  "phase": "pilot",
+  "selection_rule": "first valid terminal attempt under the final accepted configuration or formally authorized same-configuration replacement",
+  "scheduled_slots": 16,
+  "selected_run_ids": [
+    "pilot-L1-01-cursor-r01-a05",
+    "pilot-L1-01-devin-r01-a02",
+    "pilot-L1-01-gpt-5-4-r01-a01",
+    "pilot-L1-01-qwen2-5-coder-7b-instruct-r01-a03",
+    "pilot-L2-02-cursor-r01-a01",
+    "pilot-L2-02-gpt-5-4-r01-a01",
+    "pilot-L2-02-qwen2-5-coder-7b-instruct-r01-a01",
+    "pilot-L2-02-devin-r01-a01",
+    "pilot-L3-01-cursor-r01-a01",
+    "pilot-L3-01-devin-r01-a01",
+    "pilot-L3-01-qwen2-5-coder-7b-instruct-r01-a02",
+    "pilot-L3-01-gpt-5-4-r01-a01",
+    "pilot-L4-01-qwen2-5-coder-7b-instruct-r01-a01",
+    "pilot-L4-01-devin-r01-a02",
+    "pilot-L4-01-cursor-r01-a03",
+    "pilot-L4-01-gpt-5-4-r01-a01"
+  ],
+  "replacement_notes": {
+    "L1-01/cursor": "a05 is the valid run after retained pre-start, update, and wrong-workspace infrastructure attempts.",
+    "L1-01/devin": "a02 is the authorized valid replacement; a01 lacks a valid frozen native launch record.",
+    "L1-01/qwen2.5-coder-7b-instruct": "a03 is the final valid result under the accepted v3 response adapter; a01-a03 remain a configuration-evolution audit, not repetitions.",
+    "L3-01/qwen2.5-coder-7b-instruct": "a02 is the authorized same-configuration replacement after evaluator infrastructure invalidated a01.",
+    "L4-01/devin": "a02 is the authorized same-configuration replacement after a01 lacked complete permission evidence.",
+    "L4-01/cursor": "a03 is the authorized same-configuration replacement; a01 was abandoned before start and a02 was evaluator-infrastructure invalid."
+  }
+}

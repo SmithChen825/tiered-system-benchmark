@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "notes": [
+    {
+      "id": 1,
+      "title": "Tide table",
+      "body": "Check the harbour window before departure."
+    },
+    {
+      "id": 2,
+      "title": "Repair kit",
+      "body": "Pack tape, cord, and the small multitool."
+    }
+  ]
+}
+

@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "L3-01",
+  "review_status": "approved",
+  "pytest_environment_variable": "L3_01_REPO",
+  "functional_tests": [
+    {
+      "id": "direct_account_endpoint_healthy",
+      "description": "The direct account endpoint preserves the frozen HTTP and JSON contract.",
+      "runner": "pytest",
+      "source": "evaluator/hidden_tests/test_l3_01.py::test_direct_account_endpoint_remains_healthy",
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "expected_origin_get_allowed",
+      "description": "GET from the frozen frontend origin receives the exact CORS header.",
+      "runner": "pytest",
+      "source": "evaluator/hidden_tests/test_l3_01.py::test_expected_origin_receives_cors_header_on_get",
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "expected_origin_preflight_allowed",
+      "description": "Preflight from the frozen frontend origin is accepted.",
+      "runner": "pytest",
+      "source": "evaluator/hidden_tests/test_l3_01.py::test_expected_origin_preflight_is_accepted",
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "browser_account_loads",
+      "description": "The supplied frontend loads and renders the frozen account through real Chromium.",
+      "runner": "node",
+      "source": "evaluator/hidden_tests/browser_check.cjs::browser_account_cors",
+      "implementation_status": "implemented"
+    }
+  ],
+  "architecture_checks": [
+    {
+      "id": "exact_frontend_origin_allowed",
+      "requirement": "The exact frontend origin http://127.0.0.1:8080 is allowed by the backend.",
+      "evidence": [
+        {
+          "source_id": "expected_origin_get_allowed",
+          "source": "evaluator/hidden_tests/test_l3_01.py::test_expected_origin_receives_cors_header_on_get"
+        },
+        {
+          "source_id": "expected_origin_preflight_allowed",
+          "source": "evaluator/hidden_tests/test_l3_01.py::test_expected_origin_preflight_is_accepted"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "wildcard_policy_rejected",
+      "requirement": "A wildcard Access-Control-Allow-Origin policy is rejected.",
+      "evidence": [
+        {
+          "source_id": "frozen_named_origin_policy",
+          "source": "evaluator/hidden_tests/test_l3_01.py::test_backend_policy_names_the_frozen_frontend_origin"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "stale_and_unrelated_origins_rejected",
+      "requirement": "The stale origin http://127.0.0.1:5173 and unrelated origins are not allowed.",
+      "evidence": [
+        {
+          "source_id": "stale_origin_rejected",
+          "source": "evaluator/hidden_tests/test_l3_01.py::test_stale_development_origin_is_not_allowed"
+        },
+        {
+          "source_id": "unrelated_origin_rejected",
+          "source": "evaluator/hidden_tests/test_l3_01.py::test_unrelated_origin_is_not_allowed"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "backend_account_contract_preserved",
+      "requirement": "The backend account endpoint continues to return the frozen JSON contract.",
+      "evidence": [
+        {
+          "source_id": "direct_account_endpoint_healthy",
+          "source": "evaluator/hidden_tests/test_l3_01.py::test_direct_account_endpoint_remains_healthy"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "frontend_backend_address_preserved",
+      "requirement": "The Vue frontend continues to fetch the backend at http://127.0.0.1:8000 and does not introduce a proxy or hard-coded account fallback.",
+      "evidence": [
+        {
+          "source_id": "frontend_address_no_proxy_or_fallback",
+          "source": "evaluator/hidden_tests/test_l3_01.py::test_frontend_keeps_frozen_backend_address_without_proxy_or_fallback"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "frontend_backend_remain_separate",
+      "requirement": "Frontend and backend remain separate services.",
+      "evidence": [
+        {
+          "source_id": "separate_services_check",
+          "source": "evaluator/hidden_tests/test_l3_01.py::test_frontend_and_backend_remain_separate_services"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "researcher_materials_unchanged",
+      "requirement": "The agent does not modify evaluator-only tests or evaluator metadata.",
+      "evidence": [
+        {
+          "source_id": "workspace_isolation",
+          "source": "benchmark/runner/evidence_validator.py::workspace_isolation"
+        }
+      ],
+      "implementation_status": "implemented"
+    }
+  ],
+  "operational_evidence": [
+    {
+      "id": "compose_service_health",
+      "description": "Frontend and backend containers become healthy; retained as environment evidence and not counted in C_func.",
+      "runner": "compose_probe",
+      "source": "scripts/validate_compose.py::loaded_health",
+      "implementation_status": "implemented"
+    }
+  ]
+}

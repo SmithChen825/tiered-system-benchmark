@@ -1,0 +1,73 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  color: #e9f4ff;
+  background: #071523;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 80% 10%, rgb(43 117 156 / 32%), transparent 40%),
+    #071523;
+}
+
+.account-shell {
+  width: min(720px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 88px 0;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #65d8c4;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 32px;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  line-height: 1;
+}
+
+.account-panel {
+  min-height: 210px;
+  padding: 28px;
+  border: 1px solid #27465c;
+  border-radius: 24px;
+  background: rgb(11 37 56 / 84%);
+  box-shadow: 0 24px 80px rgb(0 0 0 / 30%);
+}
+
+dl {
+  display: grid;
+  gap: 24px;
+  margin: 0;
+}
+
+dl div {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 18px;
+}
+
+dt {
+  color: #89a9bd;
+}
+
+dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+.error {
+  color: #ff9c9c;
+}

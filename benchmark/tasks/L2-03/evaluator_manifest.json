@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "L2-03",
+  "review_status": "approved",
+  "pytest_environment_variable": "L2_03_REPO",
+  "functional_tests": [
+    {"id":"seed_notes","description":"GET /api/notes loads the two frozen notes from the project store.","runner":"pytest","source":"evaluator/hidden_tests/test_l2_03.py::test_seed_notes_load_from_authoritative_project_store","implementation_status":"implemented"},
+    {"id":"import_export","description":"A valid backup replaces the authoritative store and is returned unchanged by export.","runner":"pytest","source":"evaluator/hidden_tests/test_l2_03.py::test_import_and_export_update_the_authoritative_project_store","implementation_status":"implemented"},
+    {"id":"restart_persistence","description":"Imported notes reload after the application restarts from another working directory.","runner":"pytest","source":"evaluator/hidden_tests/test_l2_03.py::test_import_survives_restart_from_a_different_working_directory","implementation_status":"implemented"},
+    {"id":"invalid_import","description":"Malformed or schema-invalid backups return HTTP 400 without replacing saved notes.","runner":"pytest","source":"evaluator/hidden_tests/test_l2_03.py::test_invalid_backup_is_rejected_without_changing_saved_notes","implementation_status":"implemented"}
+  ],
+  "architecture_checks": [
+    {"id":"authoritative_project_store","requirement":"The authoritative default store remains storage/notes.json under the project root.","evidence":[{"source_id":"project_anchored_path","source":"evaluator/hidden_tests/test_l2_03.py::test_default_storage_path_is_anchored_to_the_project_root"}],"implementation_status":"implemented"},
+    {"id":"backup_schema_preserved","requirement":"The frozen schema_version and id/title/body note fields remain unchanged.","evidence":[{"source_id":"contract_preserved","source":"evaluator/hidden_tests/test_l2_03.py::test_backup_schema_and_route_contract_are_preserved"}],"implementation_status":"implemented"},
+    {"id":"routes_preserved","requirement":"GET /api/notes, GET /api/notes/export, and POST /api/notes/import remain available.","evidence":[{"source_id":"contract_preserved","source":"evaluator/hidden_tests/test_l2_03.py::test_backup_schema_and_route_contract_are_preserved"}],"implementation_status":"implemented"},
+    {"id":"invalid_import_is_atomic","requirement":"Invalid backup content returns HTTP 400 without changing the authoritative store.","evidence":[{"source_id":"invalid_import","source":"evaluator/hidden_tests/test_l2_03.py::test_invalid_backup_is_rejected_without_changing_saved_notes"}],"implementation_status":"implemented"},
+    {"id":"valid_import_persists","requirement":"A valid import is written atomically and survives service recreation using the existing named volume.","evidence":[{"source_id":"restart_persistence","source":"evaluator/hidden_tests/test_l2_03.py::test_import_survives_restart_from_a_different_working_directory"}],"implementation_status":"implemented"},
+    {"id":"single_service_preserved","requirement":"The application remains a single FastAPI service without a database or additional storage service.","evidence":[{"source_id":"single_service_volume","source":"evaluator/hidden_tests/test_l2_03.py::test_health_and_single_service_volume_architecture_are_preserved"}],"implementation_status":"implemented"}
+  ],
+  "operational_evidence": [
+    {"id":"workspace_isolation","description":"The evaluated workspace contains no researcher-only material or symbolic links.","runner":"global_validator","source":"benchmark/runner/task_probes/common.py::record_workspace_isolation","implementation_status":"implemented"}
+  ]
+}

@@ -1,0 +1,11 @@
+--- a/site/index.html
++++ b/site/index.html
+@@ -4,7 +4,7 @@
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Contact | Cedar & Tide Studio</title>
+   <link rel="stylesheet" href="/assets/styles.css">
+-  <script src="/assets/contact-validation.js" defer></script>
++  <script src="/assets/contact-form.js" defer></script>
+ </head>
+ <body>

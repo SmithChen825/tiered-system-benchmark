@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "task_id": "L3-01",
+  "generated_on": "2026-08-06",
+  "hash_algorithm": "sha256",
+  "aggregate_fixture_hash": "f85a274f8e1ff9ffd05df79a441a65ff0076fb559d3850e0e12f6749284d7b52",
+  "start_commit": "e13ac46d44e6c971b23820afc33e1a37642aa6d9",
+  "frontend_lockfile_sha256": "acfdf7dcafe25f3fbe73c7acc96f53a124b099fcfea8fb4dc58487bf27c5fcdd",
+  "hash_scope": "All regular files beneath fixture_repo, sorted by relative POSIX path; each path and file body is null-delimited.",
+  "excluded_from_hash": [
+    "__pycache__ directories",
+    ".pytest_cache directories",
+    "node_modules directories",
+    "dist directories",
+    ".pyc files"
+  ],
+  "evaluator_manifest": {
+    "path": "evaluator_manifest.json",
+    "review_status": "approved",
+    "classified_on": "2026-08-08",
+    "post_change_full_cycle_revalidation_required": false,
+    "post_change_full_cycle_revalidated_on": "2026-08-08"
+  },
+  "container_bases": {
+    "python": "sha256:2199a62885a12290dc9c5be3ca0681d367576ab7bf037da120e564723292a2f0",
+    "node": "sha256:51eff88af6dff26f59316b6e356188ffa2c422bd3c3b76f2556a2e7e89d080bd",
+    "nginx": "sha256:814a8e88df978ade80e584cc5b333144b9372a8e3c98872d07137dbf3b44d0e4"
+  },
+  "validation_result": {
+    "baseline_failed_exactly_four_cors_hidden_tests": true,
+    "oracle_passed_all_seven_hidden_tests": true,
+    "second_reset_reproduced_same_failures": true,
+    "baseline_compose_browser_was_blocked": true,
+    "oracle_compose_browser_loaded_account": true,
+    "npm_audit_vulnerabilities": 0
+  }
+}

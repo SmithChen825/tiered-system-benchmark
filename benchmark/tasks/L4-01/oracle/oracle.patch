@@ -1,0 +1,35 @@
+diff --git a/backend/app/models.py b/backend/app/models.py
+--- a/backend/app/models.py
++++ b/backend/app/models.py
+@@ -13,4 +13,3 @@ class User(Base):
+     name: Mapped[str] = mapped_column(String, nullable=False)
+     email: Mapped[str] = mapped_column(String, nullable=False, unique=True)
+     role: Mapped[str] = mapped_column(String, nullable=False)
+-    age: Mapped[int] = mapped_column(Integer, nullable=False)
+diff --git a/backend/app/schemas.py b/backend/app/schemas.py
+--- a/backend/app/schemas.py
++++ b/backend/app/schemas.py
+@@ -8,4 +8,3 @@ class UserRead(BaseModel):
+     name: str
+     email: str
+     role: str
+-    age: int
+diff --git a/frontend/src/App.vue b/frontend/src/App.vue
+--- a/frontend/src/App.vue
++++ b/frontend/src/App.vue
+@@ -36,7 +36,6 @@ onMounted(async () => {
+             <th>Name</th>
+             <th>Email</th>
+             <th>Role</th>
+-            <th>Age</th>
+           </tr>
+         </thead>
+         <tbody>
+@@ -44,7 +43,6 @@ onMounted(async () => {
+             <td>{{ user.name }}</td>
+             <td>{{ user.email }}</td>
+             <td>{{ user.role }}</td>
+-            <td>{{ user.age }}</td>
+           </tr>
+         </tbody>
+       </table>

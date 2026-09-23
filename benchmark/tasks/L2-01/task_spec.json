@@ -1,0 +1,9 @@
+{
+  "schema_version":"1.0","task_id":"L2-01","tier":2,"architecture":"Single-service FastAPI application","clarification_opportunity":false,
+  "public_intent":"Restore the item-detail page.",
+  "injected_fault":{"category":"route_parameter_mismatch","description":"The /items/{item_id} route handler declares product_id.","deterministic_failure":"GET /items/2 returns HTTP 422 because item_id is not bound to the handler."},
+  "success_rule":"All HTTP, template-integration, source-contract, 404, health, and architecture checks pass.",
+  "architectural_invariants":["All three item identities and values remain unchanged.","The public /items/{item_id} route remains.","Unknown items return 404.","The JSON item endpoint remains available.","No query fallback or hard-coded selected item is introduced."],
+  "expected_baseline_failures":["test_item_detail_route_returns_expected_item","test_each_index_link_resolves_to_its_detail_page","test_unknown_item_returns_404_not_a_fallback_item","test_route_uses_the_declared_path_parameter_without_query_fallback"],
+  "oracle":{"type":"researcher-authored main.py replacement","path":"oracle/app/main.py","patch_path":"oracle/oracle.patch"}
+}

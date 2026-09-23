@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "task_id": "L1-03",
+  "tier": 1,
+  "architecture": "Nginx-served static HTML/CSS/JavaScript website",
+  "clarification_opportunity": false,
+  "public_intent": "Restore the existing contact-form client-side validation and valid-submission confirmation.",
+  "injected_fault": {
+    "category": "static_script_filename_mismatch",
+    "description": "The page loads retired contact-validation.js while the supplied listener remains in contact-form.js.",
+    "deterministic_failure": "The validation bundle returns HTTP 404, its submit listener never attaches, and neither invalid nor valid submissions produce the expected status."
+  },
+  "success_rule": "All source, Chromium interaction, asset-response, and architecture checks pass.",
+  "architectural_invariants": [
+    "The existing name, email, and message fields and their labels remain unchanged.",
+    "The supplied external validation bundle is loaded with defer and owns submit handling.",
+    "Invalid input remains on the page and produces the existing error status.",
+    "A complete valid submission produces the existing success confirmation and resets the form.",
+    "No inline-script, native-validation, external dependency, or server-side workaround is introduced.",
+    "Nginx exact-path 404 behaviour remains enabled."
+  ],
+  "expected_baseline_failures": [
+    "test_contact_form_loads_existing_validation_script",
+    "browser_contact_form_validation"
+  ],
+  "oracle": {
+    "type": "researcher-authored HTML replacement",
+    "path": "oracle/site/index.html",
+    "patch_path": "oracle/oracle.patch"
+  }
+}
+

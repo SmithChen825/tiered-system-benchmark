@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "L4-03",
+  "review_status": "approved",
+  "pytest_environment_variable": "L4_03_REPO",
+  "functional_tests": [
+    {"id":"compose_health","description":"PostgreSQL, FastAPI, and Vue/Nginx all reach their frozen healthy/running state.","runner":"compose_probe","source":"benchmark/runner/task_probes/l4_03.py::run","implementation_status":"implemented"},
+    {"id":"dashboard_api","description":"The API returns the PostgreSQL-backed operational status and three seeded metrics.","runner":"compose_probe","source":"benchmark/runner/task_probes/l4_03.py::HTTP_CHECK","implementation_status":"implemented"},
+    {"id":"browser_dashboard","description":"Chromium renders the operational database status and all three API metrics.","runner":"node","source":"evaluator/hidden_tests/browser_check.cjs","implementation_status":"implemented"}
+  ],
+  "architecture_checks": [
+    {"id":"compose_service_hostname","requirement":"The Compose services remain db, backend, and frontend on their frozen ports.","evidence":[{"source_id":"database_hostname","source":"evaluator/hidden_tests/test_l4_03.py::test_database_url_targets_the_frozen_compose_service"},{"source_id":"three_service_boundary","source":"evaluator/hidden_tests/test_l4_03.py::test_three_service_health_architecture_is_preserved"}],"implementation_status":"implemented"},
+    {"id":"database_network_target","requirement":"The backend connects to the db service through the Compose network.","evidence":[{"source_id":"database_hostname","source":"evaluator/hidden_tests/test_l4_03.py::test_database_url_targets_the_frozen_compose_service"}],"implementation_status":"implemented"},
+    {"id":"startup_and_health_database_checks","requirement":"FastAPI retains its startup database connectivity check and database-backed health endpoint.","evidence":[{"source_id":"startup_connectivity","source":"evaluator/hidden_tests/test_l4_03.py::test_backend_lifespan_requires_database_connectivity"},{"source_id":"database_backed_health","source":"evaluator/hidden_tests/test_l4_03.py::test_health_and_dashboard_routes_remain_database_backed"},{"source_id":"compose_health","source":"benchmark/runner/task_probes/l4_03.py::run"}],"implementation_status":"implemented"},
+    {"id":"postgres_backed_dashboard","requirement":"The dashboard status and three frozen metrics remain PostgreSQL-backed.","evidence":[{"source_id":"schema_and_seeds","source":"evaluator/hidden_tests/test_l4_03.py::test_dashboard_schema_and_seed_metrics_are_preserved"},{"source_id":"dashboard_api","source":"benchmark/runner/task_probes/l4_03.py::HTTP_CHECK"}],"implementation_status":"implemented"},
+    {"id":"frontend_not_hard_coded","requirement":"The frontend fetches the dashboard API and does not hard-code operational data.","evidence":[{"source_id":"frontend_contract","source":"evaluator/hidden_tests/test_l4_03.py::test_frontend_consumes_dashboard_without_hard_coding"},{"source_id":"browser_dashboard","source":"evaluator/hidden_tests/browser_check.cjs"}],"implementation_status":"implemented"},
+    {"id":"frozen_stack_contract","requirement":"The PostgreSQL image pin, schema, seeds, CORS origin, and service health checks remain unchanged.","evidence":[{"source_id":"schema_and_seeds","source":"evaluator/hidden_tests/test_l4_03.py::test_dashboard_schema_and_seed_metrics_are_preserved"},{"source_id":"three_service_boundary","source":"evaluator/hidden_tests/test_l4_03.py::test_three_service_health_architecture_is_preserved"}],"implementation_status":"implemented"}
+  ],
+  "operational_evidence": [
+    {"id":"workspace_isolation","description":"The evaluated workspace contains no researcher-only material or symbolic links.","runner":"global_validator","source":"benchmark/runner/task_probes/common.py::record_workspace_isolation","implementation_status":"implemented"}
+  ]
+}

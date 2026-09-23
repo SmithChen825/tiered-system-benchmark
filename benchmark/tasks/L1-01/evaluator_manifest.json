@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "L1-01",
+  "review_status": "approved",
+  "pytest_environment_variable": "L1_01_REPO",
+  "functional_tests": [
+    {
+      "id": "product_image_files_resolve",
+      "description": "All three product image references resolve to non-empty repository files.",
+      "runner": "pytest",
+      "source": "evaluator/hidden_tests/test_l1_01.py::test_all_product_image_paths_resolve_to_repository_files",
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "product_images_render_in_nginx",
+      "description": "A real Chromium load through the Nginx service renders all three images without failed image responses.",
+      "runner": "node",
+      "source": "evaluator/hidden_tests/browser_url_check.cjs::browser_product_images_nginx",
+      "implementation_status": "implemented"
+    }
+  ],
+  "architecture_checks": [
+    {
+      "id": "catalogue_identity_preserved",
+      "requirement": "Exactly three catalogue product cards and their original titles remain present.",
+      "evidence": [
+        {
+          "source_id": "catalogue_identity_and_accessible_text",
+          "source": "evaluator/hidden_tests/test_l1_01.py::test_catalogue_identity_and_accessible_text_are_preserved"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "all_product_images_resolve",
+      "requirement": "Every product image resolves to a non-empty repository asset and returns HTTP 200.",
+      "evidence": [
+        {
+          "source_id": "product_image_files_resolve",
+          "source": "evaluator/hidden_tests/test_l1_01.py::test_all_product_image_paths_resolve_to_repository_files"
+        },
+        {
+          "source_id": "product_images_render_in_nginx",
+          "source": "evaluator/hidden_tests/browser_url_check.cjs::browser_product_images_nginx"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "product_images_remain_local",
+      "requirement": "Product images remain local paths; external URLs and embedded data URIs are rejected.",
+      "evidence": [
+        {
+          "source_id": "local_not_embedded",
+          "source": "evaluator/hidden_tests/test_l1_01.py::test_product_images_remain_local_and_not_embedded"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "supplied_assets_preserved",
+      "requirement": "The supplied image files are not renamed, duplicated, or replaced to preserve stale references.",
+      "evidence": [
+        {
+          "source_id": "assets_not_duplicated_or_renamed",
+          "source": "evaluator/hidden_tests/test_l1_01.py::test_supplied_product_assets_are_not_duplicated_or_renamed"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "nginx_missing_resources_return_404",
+      "requirement": "Nginx retains exact-path static serving with missing resources returning HTTP 404.",
+      "evidence": [
+        {
+          "source_id": "nginx_configuration_404",
+          "source": "evaluator/hidden_tests/test_l1_01.py::test_nginx_keeps_missing_resource_failures_visible"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "researcher_materials_unchanged",
+      "requirement": "The agent does not modify evaluator-only tests or evaluator metadata.",
+      "evidence": [
+        {
+          "source_id": "workspace_isolation",
+          "source": "benchmark/runner/evidence_validator.py::workspace_isolation"
+        }
+      ],
+      "implementation_status": "implemented"
+    }
+  ],
+  "operational_evidence": [
+    {
+      "id": "local_static_browser_smoke",
+      "description": "Local static-server Chromium diagnostic used during task validation; not counted in C_func.",
+      "runner": "node",
+      "source": "evaluator/hidden_tests/browser_check.cjs::browser_product_images",
+      "implementation_status": "implemented"
+    }
+  ]
+}

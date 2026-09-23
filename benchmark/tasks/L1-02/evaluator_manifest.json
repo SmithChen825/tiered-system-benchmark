@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "L1-02",
+  "review_status": "approved",
+  "pytest_environment_variable": "L1_02_REPO",
+  "functional_tests": [
+    {
+      "id": "mobile_navigation_chromium",
+      "description": "Chromium confirms all links are visible in a non-overflowing column at 390px and the desktop navigation remains present.",
+      "runner": "node",
+      "source": "evaluator/hidden_tests/browser_check.cjs",
+      "implementation_status": "implemented"
+    }
+  ],
+  "architecture_checks": [
+    {
+      "id": "navigation_identity_preserved",
+      "requirement": "Four navigation labels and targets remain unchanged.",
+      "evidence": [{"source_id":"navigation_identity","source":"evaluator/hidden_tests/test_l1_02.py::test_primary_navigation_identity_and_targets_are_preserved"}],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "desktop_navigation_preserved",
+      "requirement": "Desktop navigation remains horizontal.",
+      "evidence": [{"source_id":"desktop_preserved","source":"evaluator/hidden_tests/test_l1_02.py::test_desktop_navigation_layout_remains_horizontal"}],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "mobile_navigation_visible",
+      "requirement": "Mobile navigation has no horizontal overflow and every link remains visible.",
+      "evidence": [
+        {"source_id":"selector_matches_dom","source":"evaluator/hidden_tests/test_l1_02.py::test_mobile_media_query_targets_the_current_navigation_dom"},
+        {"source_id":"mobile_navigation_chromium","source":"evaluator/hidden_tests/browser_check.cjs"}
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "no_navigation_workaround",
+      "requirement": "No script or hidden-navigation workaround is introduced.",
+      "evidence": [{"source_id":"no_hidden_or_script_workaround","source":"evaluator/hidden_tests/test_l1_02.py::test_mobile_fix_does_not_hide_navigation_or_replace_it_with_script"}],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "nginx_404_preserved",
+      "requirement": "Nginx exact-path 404 behaviour remains enabled.",
+      "evidence": [{"source_id":"nginx_404_contract","source":"evaluator/hidden_tests/test_l1_02.py::test_nginx_exact_path_404_policy_is_preserved"}],
+      "implementation_status": "implemented"
+    }
+  ],
+  "operational_evidence": [
+    {
+      "id": "workspace_isolation",
+      "description": "The evaluated workspace contains no researcher-only material or symbolic links.",
+      "runner": "global_validator",
+      "source": "benchmark/runner/task_probes/common.py::record_workspace_isolation",
+      "implementation_status": "implemented"
+    }
+  ]
+}

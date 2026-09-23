@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "status": "FROZEN",
+  "freeze_scope": "main_experiment",
+  "applies_to": {
+    "evaluation_interface": "api_wrapper",
+    "systems": [
+      "gpt-5.4",
+      "qwen2.5-coder-7b-instruct"
+    ],
+    "identical_policy_required": true
+  },
+  "limit": {
+    "max_context_characters": 100000,
+    "selection_status": "selected_and_frozen",
+    "must_be_positive_when_selected": true,
+    "must_be_frozen_before_pilot": true
+  },
+  "measurement": {
+    "unit": "python_unicode_code_points",
+    "included": "ContextMessage.content for retained messages",
+    "excluded": "structured tool-call names, IDs, and argument objects",
+    "threshold_kind": "retention_threshold_not_hard_provider_payload_cap"
+  },
+  "immutable_prefix": {
+    "messages": [
+      "system_prompt",
+      "task_prompt"
+    ],
+    "never_dropped": true
+  },
+  "turn_group": {
+    "definition": "one assistant message plus all linked tool-result messages from that model turn",
+    "partial_group_allowed": false
+  },
+  "pruning": {
+    "enabled_when": "max_context_characters_is_not_null",
+    "drop_order": "oldest_complete_turn_first",
+    "minimum_retained_turn_groups": 1,
+    "check_timing": "after_assistant_or_tool_result_append",
+    "context_notice_position": "after_system_prompt_before_task_prompt",
+    "context_notice_template": "[CONTEXT_NOTICE] {dropped_turns} older complete model turn(s) were removed by the frozen context limit.",
+    "may_exceed_threshold_to_preserve_prefix_and_latest_turn": true
+  },
+  "internal_safety_guard": {
+    "max_model_turns": 1000,
+    "classification_if_reached": "runner_error",
+    "experiment_performance_limit": false
+  },
+  "pending_decisions": [],
+  "notes": [
+    "The user approved retention of the 100000-character threshold for the main experiment on 2026-08-27.",
+    "No selected pilot API run triggered pruning; the maximum observed retained context was 23025 characters, so the boundary was not stress-tested.",
+    "The identical threshold applies to both API systems and is not a provider token limit or hard payload cap."
+  ]
+}

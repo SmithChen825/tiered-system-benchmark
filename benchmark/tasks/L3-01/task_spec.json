@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "task_id": "L3-01",
+  "tier": 3,
+  "architecture": "Vue 3 frontend and FastAPI backend in separate containers",
+  "clarification_opportunity": false,
+  "public_intent": "Restore the frontend's ability to load account data from the backend.",
+  "frozen_network_contract": {
+    "frontend_origin": "http://127.0.0.1:8080",
+    "backend_origin": "http://127.0.0.1:8000",
+    "account_endpoint": "/api/account"
+  },
+  "injected_fault": {
+    "category": "cors_named_origin_mismatch",
+    "description": "The backend CORS middleware allows the retired Vite development origin http://127.0.0.1:5173 instead of the frozen frontend origin http://127.0.0.1:8080.",
+    "deterministic_failure": "The backend returns account JSON, but browser fetch from the supplied frontend is blocked because the expected Access-Control-Allow-Origin response header is absent."
+  },
+  "containers": {
+    "python_base": "python:3.12.8-slim-bookworm@sha256:2199a62885a12290dc9c5be3ca0681d367576ab7bf037da120e564723292a2f0",
+    "node_builder": "node:22.12.0-alpine@sha256:51eff88af6dff26f59316b6e356188ffa2c422bd3c3b76f2556a2e7e89d080bd",
+    "nginx_base": "nginx:1.27.3-alpine@sha256:814a8e88df978ade80e584cc5b333144b9372a8e3c98872d07137dbf3b44d0e4"
+  },
+  "success_rule": "All evaluator-only CORS contract, architecture, direct API, Compose health, and Chromium checks pass against the frozen final state.",
+  "architectural_invariants": [
+    "The exact frontend origin http://127.0.0.1:8080 is allowed by the backend.",
+    "A wildcard Access-Control-Allow-Origin policy is rejected.",
+    "The stale origin http://127.0.0.1:5173 and unrelated origins are not allowed.",
+    "The backend account endpoint continues to return the frozen JSON contract.",
+    "The Vue frontend continues to fetch the backend at http://127.0.0.1:8000 and does not introduce a proxy or hard-coded account fallback.",
+    "Frontend and backend remain separate services.",
+    "The agent does not modify evaluator-only tests or evaluator metadata."
+  ],
+  "expected_baseline_failures": [
+    "test_expected_origin_receives_cors_header_on_get",
+    "test_expected_origin_preflight_is_accepted",
+    "test_backend_policy_names_the_frozen_frontend_origin",
+    "test_stale_development_origin_is_not_allowed"
+  ],
+  "oracle": {
+    "type": "researcher-authored backend policy replacement plus auditable unified diff",
+    "path": "oracle/backend/app/main.py",
+    "patch_path": "oracle/oracle.patch"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tsb.local/schemas/workspace_artifact_policy.schema.json",
+  "title": "TSB prospective incidental workspace artifact policy",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "status",
+    "policy_id",
+    "effective_scope",
+    "historical_run_rule",
+    "classifications",
+    "controls"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "status": {"enum": ["CANDIDATE", "FROZEN"]},
+    "policy_id": {"const": "tsb-incidental-workspace-artifacts-v1"},
+    "effective_scope": {"const": "future_runs_prepared_with_policy_snapshot"},
+    "historical_run_rule": {"type": "string", "minLength": 1},
+    "classifications": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "untracked_only",
+          "directory_names",
+          "suffixes",
+          "treatment"
+        ],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "untracked_only": {"const": true},
+          "directory_names": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "suffixes": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {"type": "string", "pattern": "^\\.[^/\\\\]+$"}
+          },
+          "treatment": {"const": "inventory_and_exclude_from_final_diff"}
+        }
+      }
+    },
+    "controls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "preserve_files_after_freeze",
+        "tracked_changes_always_in_final_diff",
+        "nonmatching_untracked_files_always_in_final_diff",
+        "require_inventory",
+        "require_hash_exclusion_alignment"
+      ],
+      "properties": {
+        "preserve_files_after_freeze": {"const": true},
+        "tracked_changes_always_in_final_diff": {"const": true},
+        "nonmatching_untracked_files_always_in_final_diff": {"const": true},
+        "require_inventory": {"const": true},
+        "require_hash_exclusion_alignment": {"const": true}
+      }
+    }
+  }
+}

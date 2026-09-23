@@ -1,0 +1,10 @@
+{
+ "schema_version":"1.0","task_id":"L4-02","tier":4,"architecture":"Vue frontend, FastAPI/SQLAlchemy backend, PostgreSQL database","clarification_opportunity":false,
+ "public_intent":"Restore creation of a customer record after a schema change.",
+ "injected_fault":{"category":"required_field_mapping_gap","description":"customers.status is NOT NULL, but ORM, Pydantic, and create mapping omit it.","deterministic_failure":"POST /api/customers without status reaches PostgreSQL without the required value and returns a server error."},
+ "frozen_business_rule":"New customers default to active; accepted values are active and inactive.",
+ "success_rule":"Clean PostgreSQL startup plus create/read, schema, API, Compose, and Chromium checks pass.",
+ "architectural_invariants":["customers.status remains required.","Existing seeded customers remain active.","Missing status defaults to active at the validated API boundary.","Only active and inactive are accepted.","Email uniqueness and the three-service architecture remain.","The frontend reads status from API responses."],
+ "expected_baseline_failures":["test_orm_customer_model_maps_required_status","test_create_schema_supplies_the_frozen_active_default","test_read_schema_exposes_status","test_create_endpoint_persists_the_mapped_status","compose_customer_creation"],
+ "oracle":{"type":"researcher-authored backend mapping/contract repair","paths":["oracle/backend/app/models.py","oracle/backend/app/schemas.py","oracle/backend/app/main.py"],"patch_path":"oracle/oracle.patch"}
+}

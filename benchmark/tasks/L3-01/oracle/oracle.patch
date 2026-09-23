@@ -1,0 +1,11 @@
+--- a/backend/app/main.py
++++ b/backend/app/main.py
+@@ -2,7 +2,7 @@
+ from fastapi.middleware.cors import CORSMiddleware
+ 
+ 
+-ALLOWED_ORIGINS = ["http://127.0.0.1:5173"]
++ALLOWED_ORIGINS = ["http://127.0.0.1:8080"]
+ 
+ 
+ def create_app() -> FastAPI:

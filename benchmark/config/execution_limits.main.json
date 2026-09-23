@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "status": "FROZEN",
+  "freeze_scope": "main_experiment",
+  "common_task_wall_clock": {
+    "applies_to_systems": [
+      "cursor",
+      "devin",
+      "gpt-5.4",
+      "qwen2.5-coder-7b-instruct"
+    ],
+    "seconds": 5400,
+    "selection_status": "selected_and_frozen",
+    "same_value_for_all_systems": true,
+    "required_before_main_experiment": true,
+    "stop_transition": "suspended",
+    "stop_reason": "task_wall_clock_limit"
+  },
+  "api_wrapper_limits": {
+    "applies_to_systems": [
+      "gpt-5.4",
+      "qwen2.5-coder-7b-instruct"
+    ],
+    "api_action_limit": {
+      "pilot_start_value": 15,
+      "frozen_value": 30,
+      "selection_status": "selected_and_frozen",
+      "counted_event": "accepted known logical tool call reaching the executor",
+      "multiple_calls_count_separately": true,
+      "malformed_arguments_for_known_tool_count": true,
+      "unknown_tool_calls_count": false,
+      "provider_retries_count": false,
+      "submission_counts": false,
+      "stop_transition": "suspended",
+      "stop_reason": "api_action_limit"
+    },
+    "command_timeout_seconds": {
+      "pilot_start_value": 180,
+      "frozen_value": 180,
+      "selection_status": "selected_and_frozen",
+      "scope": "each accepted execute_bash call",
+      "stop_transition": "suspended",
+      "stop_reason": "command_timeout"
+    },
+    "consecutive_no_action_response_limit": {
+      "frozen_value": 3,
+      "selection_status": "selected_from_l1_canary_review",
+      "counted_event": "model response with neither an accepted known logical tool call reaching the executor nor the exact submit marker",
+      "reset_event": "accepted known logical tool call reaching the executor",
+      "provider_retries_count": false,
+      "stop_transition": "suspended",
+      "stop_reason": "protocol_no_progress_limit"
+    },
+    "same_values_for_both_api_systems": true
+  },
+  "pre_freeze_adjustment": {
+    "maximum_total_adjustments": 1,
+    "eligible_limits": [
+      "api_action_limit",
+      "command_timeout_seconds"
+    ],
+    "requires_pilot_evidence": true,
+    "must_be_documented_before_main_freeze": true,
+    "post_freeze_change_requires_amendment": true
+  },
+  "limit_event_outcome": {
+    "validity": "valid_unsuccessful_outcome",
+    "further_agent_actions": "stopped",
+    "final_state_evaluation": "still_runs"
+  },
+  "pending_decisions": [],
+  "notes": [
+    "The user approved the main values on 2026-08-27 after the complete 16-slot pilot review.",
+    "The single permitted pre-main adjustment changes the common API action limit from 15 to 30; command timeout remains 180 seconds.",
+    "All four selected GPT-5.4 pilot runs consumed 15 actions, three stopped at the cap, and L4 passed 2/2 functional plus 8/8 architecture checks without submission.",
+    "The common task wall clock remains 5400 seconds, the provider-neutral no-progress limit remains three responses, and all values apply identically within their declared system scope."
+  ]
+}

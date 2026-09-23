@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "L2-01",
+  "review_status": "approved",
+  "pytest_environment_variable": "L2_01_REPO",
+  "functional_tests": [
+    {"id":"detail_page","description":"GET /items/2 renders the expected item.","runner":"pytest","source":"evaluator/hidden_tests/test_l2_01.py::test_item_detail_route_returns_expected_item","implementation_status":"implemented"},
+    {"id":"all_index_links","description":"Every index link resolves to its corresponding item.","runner":"pytest","source":"evaluator/hidden_tests/test_l2_01.py::test_each_index_link_resolves_to_its_detail_page","implementation_status":"implemented"},
+    {"id":"json_contract","description":"The item JSON endpoint is preserved.","runner":"pytest","source":"evaluator/hidden_tests/test_l2_01.py::test_json_item_contract_remains_available","implementation_status":"implemented"}
+  ],
+  "architecture_checks": [
+    {
+      "id": "item_identity_preserved",
+      "requirement": "All three item identities and values remain unchanged.",
+      "evidence": [{"source_id":"all_index_links","source":"evaluator/hidden_tests/test_l2_01.py::test_each_index_link_resolves_to_its_detail_page"}],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "public_detail_route_preserved",
+      "requirement": "The public /items/{item_id} route remains.",
+      "evidence": [
+        {"source_id":"detail_page","source":"evaluator/hidden_tests/test_l2_01.py::test_item_detail_route_returns_expected_item"},
+        {"source_id":"single_service_health","source":"evaluator/hidden_tests/test_l2_01.py::test_service_health_and_single_service_architecture_are_preserved"}
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "unknown_item_404",
+      "requirement": "Unknown items return 404.",
+      "evidence": [{"source_id":"unknown_404","source":"evaluator/hidden_tests/test_l2_01.py::test_unknown_item_returns_404_not_a_fallback_item"}],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "json_endpoint_preserved",
+      "requirement": "The JSON item endpoint remains available.",
+      "evidence": [{"source_id":"json_contract","source":"evaluator/hidden_tests/test_l2_01.py::test_json_item_contract_remains_available"}],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "no_route_fallback",
+      "requirement": "No query fallback or hard-coded selected item is introduced.",
+      "evidence": [{"source_id":"path_binding","source":"evaluator/hidden_tests/test_l2_01.py::test_route_uses_the_declared_path_parameter_without_query_fallback"}],
+      "implementation_status": "implemented"
+    }
+  ],
+  "operational_evidence": [
+    {"id":"workspace_isolation","description":"The evaluated workspace contains no researcher-only material or symbolic links.","runner":"global_validator","source":"benchmark/runner/task_probes/common.py::record_workspace_isolation","implementation_status":"implemented"}
+  ]
+}

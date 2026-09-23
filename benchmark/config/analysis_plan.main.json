@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0.0",
+  "status": "FROZEN",
+  "freeze_scope": "main_experiment",
+  "analysis_plan_id": "tsb-main-analysis-v1",
+  "applies_to": {
+    "phase": "main",
+    "scheduled_runs": 144,
+    "tasks": 12,
+    "systems": 4,
+    "repetitions_per_task": 3,
+    "pilot_runs_excluded": true
+  },
+  "source_contracts": {
+    "run_metadata_schema": {
+      "path": "benchmark/schemas/run_metadata.schema.json",
+      "sha256": "449bc335af4df8c4b67dd599ee5fff5cf3fc0a4627ecc2346fce85c4b49de2fa"
+    },
+    "analysis_output_schema": {
+      "path": "benchmark/schemas/analysis_output.schema.json",
+      "sha256": "2a7771faf87d4e5fe445c64085b54628fd488728d19849316a2f929096f39f53"
+    },
+    "result_tables": {
+      "path": "benchmark/config/result_tables.main.json",
+      "sha256": "f96be74e61251bef70515152af3290564d3c879e4632d48b0942a72dca525ca5"
+    }
+  },
+  "population": {
+    "analysis_unit": "scheduled_task_system_repetition_slot",
+    "systems": [
+      "cursor",
+      "devin",
+      "gpt-5.4",
+      "qwen2.5-coder-7b-instruct"
+    ],
+    "tasks_per_tier": 3,
+    "tiers": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "valid_terminal_states": [
+      "successful",
+      "unsuccessful"
+    ],
+    "invalidated_attempts_retained_but_not_scored": true
+  },
+  "primary_outcome": {
+    "name": "binary_run_success",
+    "symbol": "Y_s_i_r",
+    "success_value": 1,
+    "failure_value": 0,
+    "success_rule": "all_applicable_functional_tests_and_architecture_invariants_pass",
+    "primary_estimand": "system_success_rate",
+    "main_denominator_per_system": 36
+  },
+  "diagnostic_outcomes": {
+    "measures": [
+      "C_func",
+      "C_arch"
+    ],
+    "reported_separately": true,
+    "may_override_primary_outcome": false,
+    "weighted_aggregate": null
+  },
+  "success_summaries": {
+    "levels": [
+      "overall_by_system",
+      "tier_by_system",
+      "task_by_system"
+    ],
+    "interval": "wilson_95_percent",
+    "heatmap": "task_by_system_success_rate"
+  },
+  "pairwise_comparisons": {
+    "systems": [
+      "cursor",
+      "devin",
+      "gpt-5.4",
+      "qwen2.5-coder-7b-instruct"
+    ],
+    "contrasts": [
+      [
+        "cursor",
+        "devin"
+      ],
+      [
+        "cursor",
+        "gpt-5.4"
+      ],
+      [
+        "cursor",
+        "qwen2.5-coder-7b-instruct"
+      ],
+      [
+        "devin",
+        "gpt-5.4"
+      ],
+      [
+        "devin",
+        "qwen2.5-coder-7b-instruct"
+      ],
+      [
+        "gpt-5.4",
+        "qwen2.5-coder-7b-instruct"
+      ]
+    ],
+    "effect_measure": "risk_difference_system_a_minus_system_b",
+    "resampling_unit": "task",
+    "bootstrap_resamples": 10000,
+    "retain_within_resample": "all_four_systems_and_all_three_repetitions",
+    "bootstrap_interval_method": "percentile_two_sided_95",
+    "p_value_method": "exact_paired_task_label_swap_two_sided_4096",
+    "multiplicity_adjustment": "holm_for_six_pairwise_contrasts",
+    "familywise_alpha": 0.05
+  },
+  "timing_analysis": {
+    "summaries": [
+      "median",
+      "interquartile_range"
+    ],
+    "populations": [
+      "successful_valid_runs",
+      "all_valid_runs"
+    ],
+    "measure": "elapsed_seconds"
+  },
+  "clarification_analysis": {
+    "metrics": [
+      "opportunity_capture",
+      "request_precision",
+      "unnecessary_request_rate"
+    ],
+    "opportunity_runs_total": 12,
+    "opportunity_runs_per_system": 3,
+    "complete_brief_runs_total": 132,
+    "complete_brief_runs_per_system": 33,
+    "permission_approvals_excluded": true
+  },
+  "robustness_analysis": {
+    "eligible_tiers": [
+      3,
+      4
+    ],
+    "eligible_tasks": 6,
+    "denominator_per_system": 18,
+    "numerator": "successful_runs_without_evaluator_response"
+  },
+  "qualitative_failure_analysis": {
+    "unit": "valid_unsuccessful_run",
+    "categories": [
+      "premature_submission",
+      "repeated_ineffective_commands",
+      "incorrect_api_or_database_assumption",
+      "missed_cascading_dependency",
+      "unnecessary_clarification",
+      "failed_final_state_validation",
+      "other_evidence_supported"
+    ],
+    "multiple_categories_per_run": true,
+    "evidence_reference_required": true,
+    "private_reasoning_inference_prohibited": true
+  },
+  "missingness_and_invalid_runs": {
+    "retain_invalidated_attempts": true,
+    "exclude_invalidated_attempts_from_performance_denominators": true,
+    "rerun_only_formally_invalid_attempts": true,
+    "analysis_attempt_per_scheduled_slot": "first_valid_terminal_attempt",
+    "agent_failures_and_limits_are_valid_unsuccessful": true,
+    "unavailable_native_usage_or_cost": "report_unavailable_without_imputation"
+  },
+  "prohibited_methods": [
+    "weighted_aggregate_score",
+    "mixed_effects_primary_model",
+    "private_reasoning_inference",
+    "imputation_of_unavailable_native_usage_or_cost"
+  ],
+  "reproducibility": {
+    "notebook_format": "python_jupyter",
+    "bootstrap_random_seed": "tsb-main-bootstrap-2026-v1",
+    "package_versions": {
+      "python": "3.12.13",
+      "numpy": "2.3.5",
+      "pandas": "3.0.1",
+      "python-dateutil": "2.9.0.post0",
+      "six": "1.17.0",
+      "tzdata": "2026.3"
+    },
+    "final_main_schedule_sha256": "9514957ba6a7ac9525bc6c94f5f9df42b931000c232077224f82ba245f0703a6",
+    "input_dataset_sha256_required": true,
+    "analysis_script_sha256_required": true
+  },
+  "pending_decisions": [],
+  "notes": [
+    "This candidate encodes the approved analysis choices with Devin Desktop replacing the unavailable, formally renamed Windsurf Desktop before pilot execution.",
+    "The user approved a two-sided 95 percent percentile bootstrap interval, the public seed tsb-main-bootstrap-2026-v1, and an exact two-sided paired task-label-swap test over all 4096 task-level assignments on 2026-08-09.",
+    "The minimal analysis stack is frozen to the locally verified Python, NumPy, pandas, and required Windows date/time dependencies; uninstalled analytical packages are not claimed.",
+    "The verified raw SHA-256 of the seeded 144-run main schedule candidate is bound in reproducibility. The overall analysis plan remains a candidate until the main manifest is sealed.",
+    "This final main analysis plan binds the main-specific frozen schedule and result-table definitions."
+  ]
+}

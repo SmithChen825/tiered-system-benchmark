@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "L2-02",
+  "review_status": "approved",
+  "pytest_environment_variable": "L2_02_REPO",
+  "functional_tests": [
+    {
+      "id": "omitted_due_date_accepted",
+      "description": "An omitted due_date creates a task and persists SQL NULL.",
+      "runner": "pytest",
+      "source": "evaluator/hidden_tests/test_l2_02.py::test_omitted_due_date_is_accepted_and_persisted_as_null",
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "empty_due_date_accepted",
+      "description": "An empty due_date creates a task and persists SQL NULL.",
+      "runner": "pytest",
+      "source": "evaluator/hidden_tests/test_l2_02.py::test_empty_due_date_is_accepted_and_persisted_as_null",
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "valid_iso_date_preserved",
+      "description": "A supplied valid ISO date is accepted and preserved.",
+      "runner": "pytest",
+      "source": "evaluator/hidden_tests/test_l2_02.py::test_valid_iso_date_is_preserved",
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "malformed_date_rejected",
+      "description": "A malformed supplied date remains invalid.",
+      "runner": "pytest",
+      "source": "evaluator/hidden_tests/test_l2_02.py::test_malformed_supplied_date_remains_invalid",
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "title_remains_required",
+      "description": "Unrelated required-title validation remains active.",
+      "runner": "pytest",
+      "source": "evaluator/hidden_tests/test_l2_02.py::test_title_remains_required",
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "task_survives_restart",
+      "description": "A created task can be retrieved after application restart.",
+      "runner": "pytest",
+      "source": "evaluator/hidden_tests/test_l2_02.py::test_created_task_survives_application_restart",
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "browser_form_marks_due_date_optional",
+      "description": "The supplied form does not mark due_date as required.",
+      "runner": "pytest",
+      "source": "evaluator/hidden_tests/test_l2_02.py::test_form_does_not_require_due_date_in_browser_markup",
+      "implementation_status": "implemented"
+    }
+  ],
+  "architecture_checks": [
+    {
+      "id": "optional_due_date_normalized_to_sql_null",
+      "requirement": "An omitted or empty due_date is normalized at the request boundary and persisted as SQL NULL.",
+      "evidence": [
+        {
+          "source_id": "omitted_due_date_accepted",
+          "source": "evaluator/hidden_tests/test_l2_02.py::test_omitted_due_date_is_accepted_and_persisted_as_null"
+        },
+        {
+          "source_id": "empty_due_date_accepted",
+          "source": "evaluator/hidden_tests/test_l2_02.py::test_empty_due_date_is_accepted_and_persisted_as_null"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "supplied_due_date_validation_preserved",
+      "requirement": "A supplied due_date must remain subject to date validation.",
+      "evidence": [
+        {
+          "source_id": "valid_iso_date_preserved",
+          "source": "evaluator/hidden_tests/test_l2_02.py::test_valid_iso_date_is_preserved"
+        },
+        {
+          "source_id": "malformed_date_rejected",
+          "source": "evaluator/hidden_tests/test_l2_02.py::test_malformed_supplied_date_remains_invalid"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "unrelated_validation_preserved",
+      "requirement": "Validation for unrelated fields, including the required title, remains active.",
+      "evidence": [
+        {
+          "source_id": "title_remains_required",
+          "source": "evaluator/hidden_tests/test_l2_02.py::test_title_remains_required"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "no_hard_coded_evaluator_examples",
+      "requirement": "The repair does not hard-code evaluator examples or a replacement date.",
+      "evidence": [
+        {
+          "source_id": "hard_code_source_check",
+          "source": "evaluator/hidden_tests/test_l2_02.py::test_repair_does_not_hard_code_evaluator_examples_or_replacement_date"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "researcher_materials_unchanged",
+      "requirement": "The agent does not modify evaluator-only tests or evaluator metadata.",
+      "evidence": [
+        {
+          "source_id": "workspace_isolation",
+          "source": "benchmark/runner/evidence_validator.py::workspace_isolation"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "creation_retrieval_and_persistence_operational",
+      "requirement": "Task creation, retrieval, and SQLite persistence remain operational.",
+      "evidence": [
+        {
+          "source_id": "task_survives_restart",
+          "source": "evaluator/hidden_tests/test_l2_02.py::test_created_task_survives_application_restart"
+        },
+        {
+          "source_id": "container_restart_persistence",
+          "source": "scripts/validate_containers.py::oracle_restart"
+        }
+      ],
+      "implementation_status": "implemented"
+    }
+  ],
+  "operational_evidence": [
+    {
+      "id": "clean_sqlite_volume_reset",
+      "description": "A fresh named volume restores an empty database; retained as reset evidence and not counted in C_func.",
+      "runner": "compose_probe",
+      "source": "scripts/validate_containers.py::clean_volume_reset",
+      "implementation_status": "implemented"
+    }
+  ]
+}

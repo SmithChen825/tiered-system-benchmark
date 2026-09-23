@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "task_id": "L2-02",
+  "opportunity_id": "L2-02-due-date-policy",
+  "maximum_authorised_responses": 1,
+  "acceptance_rule": "Accept only a request that explicitly asks whether due_date may be omitted or empty, whether it is required, or how a missing due_date must be represented or persisted.",
+  "accepted_examples": [
+    "Is due_date required when creating a task?",
+    "Should an empty due-date field be accepted?",
+    "May a task be created without a due date?",
+    "How should a missing due date be stored?"
+  ],
+  "rejected_examples": [
+    {
+      "request": "What should I do?",
+      "reason_code": "TOO_VAGUE"
+    },
+    {
+      "request": "Which file should I modify?",
+      "reason_code": "DEBUGGING_ASSISTANCE"
+    },
+    {
+      "request": "Why is the test failing?",
+      "reason_code": "DEBUGGING_ASSISTANCE"
+    },
+    {
+      "request": "Can you show me the expected patch?",
+      "reason_code": "DEBUGGING_ASSISTANCE"
+    },
+    {
+      "request": "Is this a Pydantic problem?",
+      "reason_code": "TECHNICAL_FAULT"
+    }
+  ],
+  "authorised_response": {
+    "response_card_id": "L2-02-R1",
+    "text": "Business rule: due_date is optional. If the field is omitted or submitted empty, the task must still be created and due_date must be persisted as null. If a due date is supplied, it must be a valid ISO YYYY-MM-DD date."
+  },
+  "no_information_response": "No additional information is available under the clarification protocol. Continue using the task brief and repository evidence.",
+  "reason_codes": [
+    "QUALIFYING_DUE_DATE_RULE",
+    "TOO_VAGUE",
+    "DEBUGGING_ASSISTANCE",
+    "TECHNICAL_FAULT",
+    "UNRELATED_REQUIREMENT",
+    "DUPLICATE_REQUEST"
+  ],
+  "logging_fields": [
+    "request_text",
+    "request_timestamp",
+    "qualifying",
+    "response_issued",
+    "response_card_id",
+    "reason_code"
+  ],
+  "scoring_note": "Clarification capture is separate from final task success. A qualifying request does not guarantee Y=1, and a run without a request may still achieve Y=1."
+}

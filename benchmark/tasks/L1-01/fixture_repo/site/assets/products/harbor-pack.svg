@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title description">
+  <title id="title">Harbor day pack</title>
+  <desc id="description">A blue day pack beside a quiet shoreline.</desc>
+  <rect width="800" height="600" fill="#a9d0d2"/>
+  <path d="M0 380c160-65 300 35 470-20 125-40 215-33 330 20v220H0Z" fill="#3f7780"/>
+  <path d="M278 185h244l52 334H226Z" fill="#183f54"/>
+  <path d="M333 185c0-76 134-76 134 0" fill="none" stroke="#183f54" stroke-width="25"/>
+  <rect x="284" y="278" width="232" height="151" rx="26" fill="#e8a64f"/>
+  <path d="M312 316h176" stroke="#183f54" stroke-width="18" stroke-linecap="round"/>
+</svg>

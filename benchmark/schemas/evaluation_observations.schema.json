@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tsb.local/schemas/evaluation_observations.schema.json",
+  "title": "TSB task-probe observations",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "evaluator_version",
+    "evaluated_at",
+    "observations",
+    "docker_status",
+    "docker_logs",
+    "database_checks",
+    "evaluation_error"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "evaluator_version": {"type": "string", "minLength": 1},
+    "evaluated_at": {"type": "string", "format": "date-time"},
+    "observations": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/sourceResult"}
+    },
+    "docker_status": {"type": "string"},
+    "docker_logs": {"type": "string"},
+    "database_checks": {"type": "object"},
+    "evaluation_error": {
+      "oneOf": [
+        {"type": "null"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["classification", "detail"],
+          "properties": {
+            "classification": {
+              "enum": ["evaluator_error", "infrastructure_failure"]
+            },
+            "detail": {"type": "string", "minLength": 1}
+          }
+        }
+      ]
+    }
+  },
+  "$defs": {
+    "sourceResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "status", "duration_seconds", "detail", "evidence"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+        "status": {
+          "enum": ["passed", "failed", "not_applicable", "unavailable"]
+        },
+        "duration_seconds": {"type": ["number", "null"], "minimum": 0},
+        "detail": {"type": ["string", "null"]},
+        "evidence": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

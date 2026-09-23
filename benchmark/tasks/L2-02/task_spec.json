@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "task_id": "L2-02",
+  "tier": 2,
+  "architecture": "single-service FastAPI application with SQLite persistence",
+  "clarification_opportunity": true,
+  "public_intent": "Restore creation of a new task from the web form.",
+  "injected_fault": {
+    "category": "request_validation",
+    "description": "The TaskCreate schema incorrectly requires due_date and rejects omitted or empty form values.",
+    "deterministic_failure": "POST /tasks with a valid title and an omitted or empty due_date returns HTTP 422 instead of creating a task."
+  },
+  "omitted_requirement": {
+    "id": "due_date_optional_policy",
+    "field": "due_date",
+    "type": "non-technical product policy",
+    "frozen_rule": "due_date is optional; omitted or empty values are persisted as null; supplied values must be valid ISO YYYY-MM-DD dates"
+  },
+  "success_rule": "All evaluator-only hidden tests and architectural invariants pass against the frozen final repository state.",
+  "architectural_invariants": [
+    "An omitted or empty due_date is normalized at the request boundary and persisted as SQL NULL.",
+    "A supplied due_date must remain subject to date validation.",
+    "Validation for unrelated fields, including the required title, remains active.",
+    "The repair does not hard-code evaluator examples or a replacement date.",
+    "The agent does not modify evaluator-only tests or evaluator metadata.",
+    "Task creation, retrieval, and SQLite persistence remain operational."
+  ],
+  "expected_baseline_failures": [
+    "test_omitted_due_date_is_accepted_and_persisted_as_null",
+    "test_empty_due_date_is_accepted_and_persisted_as_null",
+    "test_created_task_survives_application_restart"
+  ],
+  "oracle": {
+    "type": "researcher-authored file replacement plus auditable unified diff",
+    "path": "oracle/app/schemas.py",
+    "patch_path": "oracle/oracle.patch"
+  }
+}

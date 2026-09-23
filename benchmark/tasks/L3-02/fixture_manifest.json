@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "task_id": "L3-02",
+  "generated_on": "2026-08-28",
+  "hash_algorithm": "sha256",
+  "aggregate_fixture_hash": "64107183c8b05dd69bb57b62c0773cbcca8c73a1eb91153c4f7f526be3b4ad86",
+  "start_commit": "40665af38a62f2e2f2d138a2e68ec543e570cfbf",
+  "hash_scope": "All regular fixture_repo files sorted by relative POSIX path and null-delimited; caches, node_modules, dist, and bytecode excluded.",
+  "evaluator_manifest": {
+    "path": "evaluator_manifest.json",
+    "review_status": "approved",
+    "classified_on": "2026-08-29",
+    "post_change_full_cycle_revalidation_required": false,
+    "post_change_full_cycle_revalidated_on": "2026-08-29"
+  },
+  "validation_result": {
+    "baseline_failed_as_intended": true,
+    "oracle_passed_all_hidden_tests": true,
+    "second_reset_reproduced_same_failures": true,
+    "baseline_compose_browser": "blank_status",
+    "oracle_compose_browser": "loaded_status"
+  },
+  "excluded_from_hash": [
+    "__pycache__ directories",
+    ".pytest_cache directories",
+    ".pyc files"
+  ]
+}

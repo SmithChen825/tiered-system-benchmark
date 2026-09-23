@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "descriptive operational pilot review; not system ranking or inference",
+  "selected_slots": 16,
+  "valid_successful": 7,
+  "valid_unsuccessful": 9,
+  "all_attempt_directories": 27,
+  "nonselected_attempt_directories": 11,
+  "all_selected_required_files_complete": true,
+  "stop_reason_counts": {
+    "api_action_limit": 3,
+    "protocol_no_progress_limit": 4,
+    "submitted": 9
+  },
+  "task_wall_clock_limit_events": 0,
+  "command_timeout_events": 0,
+  "api_action_limit_events": 3,
+  "protocol_no_progress_limit_events": 4,
+  "maximum_selected_elapsed_seconds": 1603.297,
+  "system_summaries": [
+    {
+      "system_id": "cursor",
+      "selected_runs": 4,
+      "valid_successful": 3,
+      "valid_unsuccessful": 1,
+      "median_elapsed_seconds": 253.5235,
+      "minimum_elapsed_seconds": 209.25,
+      "maximum_elapsed_seconds": 325.171,
+      "limit_events": 0
+    },
+    {
+      "system_id": "devin",
+      "selected_runs": 4,
+      "valid_successful": 3,
+      "valid_unsuccessful": 1,
+      "median_elapsed_seconds": 924.852,
+      "minimum_elapsed_seconds": 313.015,
+      "maximum_elapsed_seconds": 1603.297,
+      "limit_events": 0
+    },
+    {
+      "system_id": "gpt-5.4",
+      "selected_runs": 4,
+      "valid_successful": 1,
+      "valid_unsuccessful": 3,
+      "median_elapsed_seconds": 24.0235,
+      "minimum_elapsed_seconds": 11.345272,
+      "maximum_elapsed_seconds": 41.547,
+      "limit_events": 3
+    },
+    {
+      "system_id": "qwen2.5-coder-7b-instruct",
+      "selected_runs": 4,
+      "valid_successful": 0,
+      "valid_unsuccessful": 4,
+      "median_elapsed_seconds": 29.546128,
+      "minimum_elapsed_seconds": 24.049854,
+      "maximum_elapsed_seconds": 51.35507,
+      "limit_events": 4
+    }
+  ],
+  "limitations": [
+    "One pilot repetition per task-system cell; outcomes are diagnostic only.",
+    "API accepted-action counts and native IDE permission counts are not cross-interface comparable.",
+    "No ranking, inferential comparison, weighted aggregate score, or private-reasoning claim is produced."
+  ]
+}

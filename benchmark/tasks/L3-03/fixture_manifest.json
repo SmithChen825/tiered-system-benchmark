@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "task_id": "L3-03",
+  "generated_on": "2026-08-29",
+  "hash_algorithm": "sha256",
+  "aggregate_fixture_hash": "63308a764506427670ed11e857b54fd5f45149a80c29cf666f0843366b10ffbd",
+  "start_commit": "5283043f9c9f1c6df919ae737e6088e820a633a3",
+  "hash_scope": "All regular fixture_repo files sorted by relative POSIX path and null-delimited; caches, node_modules, dist, and bytecode excluded.",
+  "evaluator_manifest": {
+    "path": "evaluator_manifest.json",
+    "review_status": "approved",
+    "classified_on": "2026-08-29",
+    "post_change_full_cycle_revalidation_required": false,
+    "post_change_full_cycle_revalidated_on": "2026-08-29"
+  },
+  "validation_result": {
+    "baseline_failed_as_intended": true,
+    "oracle_passed_all_hidden_tests": true,
+    "second_reset_reproduced_same_failures": true,
+    "baseline_compose_current_api_status": 202,
+    "baseline_compose_retired_api_status": 404,
+    "baseline_browser_request": "/api/v1/auth/password-reset",
+    "baseline_browser_response_status": 404,
+    "oracle_browser_request": "/api/v2/auth/password-reset",
+    "oracle_browser_response_status": 202,
+    "oracle_browser_confirmation_rendered": true
+  },
+  "excluded_from_hash": [
+    "__pycache__ directories",
+    ".pytest_cache directories",
+    ".pyc files"
+  ]
+}

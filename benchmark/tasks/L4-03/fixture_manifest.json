@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "task_id": "L4-03",
+  "generated_on": "2026-08-29",
+  "hash_algorithm": "sha256",
+  "aggregate_fixture_hash": "b39d8d8e9e37edb9c6fece35aa352f598dd98d0942d9eda97523d1d7314fd6b9",
+  "start_commit": "385ccf77fe94826043b49cfb11dbdf5741c317e9",
+  "hash_scope": "All regular fixture_repo files sorted by relative POSIX path and null-delimited; caches, node_modules, dist, and bytecode excluded.",
+  "evaluator_manifest": {
+    "path": "evaluator_manifest.json",
+    "review_status": "approved",
+    "classified_on": "2026-08-29",
+    "post_change_full_cycle_revalidation_required": false,
+    "post_change_full_cycle_revalidated_on": "2026-08-29"
+  },
+  "validation_result": {
+    "baseline_failed_as_intended": true,
+    "oracle_passed_all_hidden_tests": true,
+    "second_reset_reproduced_same_failures": true,
+    "baseline_database_seed_rows": 3,
+    "baseline_backend_state": "exited",
+    "baseline_browser_dashboard": "unavailable",
+    "oracle_compose_all_services_healthy": true,
+    "oracle_health_api_passed": true,
+    "oracle_dashboard_api_passed": true,
+    "oracle_browser_dashboard_rendered": true
+  }
+}

@@ -1,0 +1,15 @@
+--- a/backend/app/models.py
++++ b/backend/app/models.py
+@@
++    status: Mapped[str] = mapped_column(String, nullable=False)
+--- a/backend/app/schemas.py
++++ b/backend/app/schemas.py
+@@
++    status: Literal["active", "inactive"] = "active"
+@@
++    status: Literal["active", "inactive"]
+--- a/backend/app/main.py
++++ b/backend/app/main.py
+@@
+-        customer = Customer(name=payload.name, email=payload.email)
++        customer = Customer(name=payload.name, email=payload.email, status=payload.status)

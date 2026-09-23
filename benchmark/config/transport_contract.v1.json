@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "contract_version": "1.0.0",
+  "frozen_on": "2026-08-08",
+  "shared_policy": {
+    "request_timeout_seconds": 120.0,
+    "max_output_tokens": 4096,
+    "temperature": 0.0,
+    "tool_choice": "auto",
+    "parallel_tool_calls": true,
+    "stream": false,
+    "retry": {
+      "max_attempts": 3,
+      "backoff_seconds": [
+        1.0,
+        2.0
+      ],
+      "maximum_retry_after_seconds": 30.0
+    }
+  },
+  "provider_profiles": {
+    "openai_gpt_5_4": {
+      "endpoint_family": "responses",
+      "model": "gpt-5.4-2026-03-05",
+      "store": false,
+      "previous_response_id": null,
+      "reasoning_effort": "none",
+      "strict_function_schemas": true,
+      "sdk_implicit_retries": 0
+    },
+    "qwen2_5_coder_7b_instruct": {
+      "endpoint_family": "openai_compatible_chat_completions",
+      "deployment": "managed_hugging_face_vllm_endpoint",
+      "model": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "repository_commit": null,
+      "vllm_version": null,
+      "endpoint_region": null,
+      "endpoint_hardware": null,
+      "tool_call_parser": null,
+      "sdk_implicit_retries": 0
+    }
+  },
+  "retryable_conditions": [
+    "connection_error",
+    "timeout",
+    "http_408",
+    "http_409",
+    "http_425",
+    "http_429_rate_limit",
+    "http_500",
+    "http_502",
+    "http_503",
+    "http_504"
+  ],
+  "non_retryable_infrastructure_conditions": [
+    "authentication",
+    "permission",
+    "quota_or_billing",
+    "invalid_request",
+    "model_unavailable",
+    "retry_after_above_30_seconds"
+  ],
+  "pending_experiment_configuration": [
+    "common_system_prompt",
+    "context_pruning_limit",
+    "qwen_repository_commit",
+    "qwen_vllm_version",
+    "qwen_endpoint_region",
+    "qwen_endpoint_hardware",
+    "qwen_tool_call_parser",
+    "endpoint_urls",
+    "sdk_versions",
+    "pricing_basis",
+    "configuration_hashes"
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0.0",
+  "status": "FROZEN",
+  "table_set_id": "tsb-main-result-tables-v1",
+  "tables": [
+    {
+      "table_id": "run_flow",
+      "title": "Scheduled slots, attempts, invalidations, and reruns",
+      "grain": "experiment",
+      "columns": [
+        "scheduled_slots",
+        "attempt_records",
+        "valid_slots",
+        "invalidated_attempts",
+        "rerun_slots"
+      ]
+    },
+    {
+      "table_id": "overall_system_success",
+      "title": "Overall binary success by system",
+      "grain": "system",
+      "columns": [
+        "system_id",
+        "valid_n",
+        "success_n",
+        "success_rate",
+        "wilson_95_ci_lower",
+        "wilson_95_ci_upper"
+      ]
+    },
+    {
+      "table_id": "tier_system_success",
+      "title": "Binary success by tier and system",
+      "grain": "tier_x_system",
+      "columns": [
+        "tier",
+        "system_id",
+        "valid_n",
+        "success_n",
+        "success_rate",
+        "wilson_95_ci_lower",
+        "wilson_95_ci_upper"
+      ]
+    },
+    {
+      "table_id": "task_system_success",
+      "title": "Task-system success heat-map source",
+      "grain": "task_x_system",
+      "columns": [
+        "task_id",
+        "tier",
+        "system_id",
+        "valid_n",
+        "success_n",
+        "success_rate"
+      ]
+    },
+    {
+      "table_id": "pairwise_risk_differences",
+      "title": "Pairwise system risk differences",
+      "grain": "unordered_system_pair",
+      "columns": [
+        "system_a",
+        "system_b",
+        "risk_difference",
+        "ci_95_lower",
+        "ci_95_upper",
+        "p_value",
+        "holm_adjusted_p_value",
+        "bootstrap_resamples"
+      ]
+    },
+    {
+      "table_id": "elapsed_time",
+      "title": "Elapsed-time summaries",
+      "grain": "system_x_population",
+      "columns": [
+        "system_id",
+        "population",
+        "n",
+        "median_seconds",
+        "q1_seconds",
+        "q3_seconds"
+      ]
+    },
+    {
+      "table_id": "clarification_funnel",
+      "title": "Clarification opportunity, precision, and unnecessary requests",
+      "grain": "system",
+      "columns": [
+        "system_id",
+        "N_req",
+        "N_acc",
+        "N_resp",
+        "opportunity_capture",
+        "request_precision",
+        "unnecessary_request_rate"
+      ]
+    },
+    {
+      "table_id": "diagnostic_correctness",
+      "title": "Separate functional and architectural diagnostics",
+      "grain": "system_x_measure",
+      "columns": [
+        "system_id",
+        "measure",
+        "n",
+        "median",
+        "q1",
+        "q3"
+      ]
+    },
+    {
+      "table_id": "robustness",
+      "title": "Autonomous success on Level 3 and Level 4 tasks",
+      "grain": "system",
+      "columns": [
+        "system_id",
+        "eligible_n",
+        "autonomous_success_n",
+        "robustness_rate"
+      ]
+    },
+    {
+      "table_id": "failure_categories",
+      "title": "Trace-supported qualitative failure categories",
+      "grain": "system_x_failure_category",
+      "columns": [
+        "system_id",
+        "category",
+        "run_count",
+        "run_ids",
+        "evidence_references"
+      ]
+    }
+  ],
+  "notes": [
+    "These tables are outputs of the frozen analysis notebook, not additional outcome definitions.",
+    "C_func and C_arch remain separate and no weighted aggregate score is permitted."
+  ]
+}

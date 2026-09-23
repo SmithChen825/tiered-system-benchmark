@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "L4-01",
+  "review_status": "approved",
+  "pytest_environment_variable": "L4_01_REPO",
+  "functional_tests": [
+    {
+      "id": "users_api_returns_remaining_contract",
+      "description": "GET /api/users returns HTTP 200 with three users containing only id, name, email, and role.",
+      "runner": "compose_probe",
+      "source": "scripts/validate_compose.py::loaded_users_contract",
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "browser_user_table_loads",
+      "description": "Real Chromium renders three user rows with Name, Email, and Role headers and no error state.",
+      "runner": "node",
+      "source": "evaluator/hidden_tests/browser_check.cjs::browser_schema_cascade",
+      "implementation_status": "implemented"
+    }
+  ],
+  "architecture_checks": [
+    {
+      "id": "database_age_column_absent",
+      "requirement": "The PostgreSQL users table does not contain an age column.",
+      "evidence": [
+        {
+          "source_id": "runtime_age_column_count",
+          "source": "scripts/validate_compose.py::loaded_age_column_count"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "no_age_reintroduction",
+      "requirement": "No migration, startup command, or repair re-adds users.age.",
+      "evidence": [
+        {
+          "source_id": "database_initial_state_has_no_age",
+          "source": "evaluator/hidden_tests/test_l4_01.py::test_database_initial_state_keeps_age_absent"
+        },
+        {
+          "source_id": "runtime_age_column_count",
+          "source": "scripts/validate_compose.py::loaded_age_column_count"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "orm_age_mapping_absent",
+      "requirement": "The SQLAlchemy User model does not map age.",
+      "evidence": [
+        {
+          "source_id": "orm_user_model_no_age",
+          "source": "evaluator/hidden_tests/test_l4_01.py::test_orm_user_model_has_no_age_mapping"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "api_age_field_absent",
+      "requirement": "The API user response schema and returned JSON contain no age field.",
+      "evidence": [
+        {
+          "source_id": "api_schema_no_age",
+          "source": "evaluator/hidden_tests/test_l4_01.py::test_api_user_schema_has_no_age_field"
+        },
+        {
+          "source_id": "users_api_returns_remaining_contract",
+          "source": "scripts/validate_compose.py::loaded_users_contract"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "frontend_age_reference_absent",
+      "requirement": "The Vue user table contains no age header, cell, fallback, or hard-coded replacement.",
+      "evidence": [
+        {
+          "source_id": "vue_table_no_age_reference",
+          "source": "evaluator/hidden_tests/test_l4_01.py::test_vue_table_has_no_age_reference"
+        },
+        {
+          "source_id": "browser_user_table_loads",
+          "source": "evaluator/hidden_tests/browser_check.cjs::browser_schema_cascade"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "remaining_fields_and_rows_preserved",
+      "requirement": "The remaining id, name, email, and role fields and all seeded rows are preserved.",
+      "evidence": [
+        {
+          "source_id": "runtime_columns_and_row_count",
+          "source": "scripts/validate_compose.py::loaded_database_columns_and_rows"
+        },
+        {
+          "source_id": "users_api_returns_remaining_contract",
+          "source": "scripts/validate_compose.py::loaded_users_contract"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "three_services_preserved",
+      "requirement": "Frontend, backend, and PostgreSQL remain separate services.",
+      "evidence": [
+        {
+          "source_id": "separate_services",
+          "source": "evaluator/hidden_tests/test_l4_01.py::test_frontend_backend_and_database_remain_separate_services"
+        }
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "researcher_materials_unchanged",
+      "requirement": "The agent does not modify evaluator-only tests or evaluator metadata.",
+      "evidence": [
+        {
+          "source_id": "workspace_isolation",
+          "source": "benchmark/runner/evidence_validator.py::workspace_isolation"
+        }
+      ],
+      "implementation_status": "implemented"
+    }
+  ],
+  "operational_evidence": [
+    {
+      "id": "compose_service_health",
+      "description": "Database, backend, and frontend services start and the backend health endpoint passes; not counted in C_func.",
+      "runner": "compose_probe",
+      "source": "scripts/validate_compose.py::loaded_health",
+      "implementation_status": "implemented"
+    }
+  ]
+}

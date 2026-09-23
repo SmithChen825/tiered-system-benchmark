@@ -1,0 +1,14 @@
+services:
+  app:
+    image: ${L2_03_IMAGE:-tsb-l2-03-baseline:local}
+    build:
+      context: .
+    ports:
+      - "${L2_03_PORT:-8000}:8000"
+    volumes:
+      - note_data:/workspace/storage
+    restart: "no"
+
+volumes:
+  note_data:
+

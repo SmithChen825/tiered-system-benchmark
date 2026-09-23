@@ -1,0 +1,9 @@
+{
+ "schema_version":"1.0","task_id":"L3-02","tier":3,"architecture":"Vue frontend plus FastAPI backend","clarification_opportunity":false,
+ "public_intent":"Restore the order-status panel.",
+ "injected_fault":{"category":"frontend_backend_contract_mismatch","description":"The API renamed status to order_status while Vue still reads order.status.","deterministic_failure":"The API returns a valid order but Chromium renders a blank status value."},
+ "success_rule":"The API contract, frontend binding, CORS/service architecture, Compose health, and real Chromium rendering checks pass.",
+ "architectural_invariants":["The backend order contract retains order_status.","The frontend obtains status from the API rather than hard-coding it.","The frozen order endpoint and ID remain unchanged.","Frontend and backend remain separate services.","The frozen frontend CORS origin remains authorised."],
+ "expected_baseline_failures":["test_frontend_consumes_the_current_order_status_field","browser_order_status_contract"],
+ "oracle":{"type":"researcher-authored Vue component replacement","path":"oracle/frontend/src/App.vue","patch_path":"oracle/oracle.patch"}
+}

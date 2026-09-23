@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "task_id": "L4-01",
+  "generated_on": "2026-08-06",
+  "hash_algorithm": "sha256",
+  "aggregate_fixture_hash": "75b862c9908d5acff9a669dd7c38135bddbee140344123130bb24cf7741d1915",
+  "start_commit": "7470fd6eed6b46e6ea066131717b3d0b28363643",
+  "frontend_lockfile_sha256": "5a5c529266cd8fd63207e49a659d7ba8fa1fea92dbc7a20fc95487e0f487dbf1",
+  "hash_scope": "All regular files beneath fixture_repo, sorted by relative POSIX path; each path and file body is null-delimited.",
+  "excluded_from_hash": [
+    "__pycache__ directories",
+    ".pytest_cache directories",
+    "node_modules directories",
+    "dist directories",
+    ".pyc files"
+  ],
+  "evaluator_manifest": {
+    "path": "evaluator_manifest.json",
+    "review_status": "approved",
+    "classified_on": "2026-08-08",
+    "post_change_full_cycle_revalidation_required": false
+  },
+  "container_bases": {
+    "postgres": "sha256:1d04b9ba1d4996401f2552b51beda8187f175c0645c091e4781134fc9c9a3eef",
+    "python": "sha256:2199a62885a12290dc9c5be3ca0681d367576ab7bf037da120e564723292a2f0",
+    "node": "sha256:51eff88af6dff26f59316b6e356188ffa2c422bd3c3b76f2556a2e7e89d080bd",
+    "nginx": "sha256:814a8e88df978ade80e584cc5b333144b9372a8e3c98872d07137dbf3b44d0e4"
+  },
+  "validation_result": {
+    "baseline_failed_exactly_three_downstream_hidden_tests": true,
+    "oracle_passed_all_six_hidden_tests": true,
+    "second_reset_reproduced_same_failures": true,
+    "database_age_column_count": 0,
+    "database_seeded_row_count": 3,
+    "baseline_users_api_status": 500,
+    "oracle_users_api_status": 200,
+    "oracle_browser_rendered_three_rows_without_age": true,
+    "npm_audit_vulnerabilities": 0
+  }
+}

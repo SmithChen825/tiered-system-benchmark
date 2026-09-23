@@ -1,0 +1,8 @@
+{
+  "name": "l3-01-evaluator",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "playwright": "1.62.0"
+  }
+}

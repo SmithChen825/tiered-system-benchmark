@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "task_id": "L2-03",
+  "tier": 2,
+  "architecture": "Single-service FastAPI application with JSON file persistence",
+  "clarification_opportunity": false,
+  "public_intent": "Repair import and export of saved notes, including persistence after service restart.",
+  "injected_fault": {
+    "category": "working_directory_relative_storage_path",
+    "description": "The default storage file is resolved from the process working directory rather than the application project root.",
+    "deterministic_failure": "The container starts in /workspace/app and writes /workspace/app/storage/notes.json instead of the persistent /workspace/storage/notes.json volume, so seed loading and restart persistence fail."
+  },
+  "success_rule": "All HTTP, JSON-contract, authoritative-file, invalid-import, cross-working-directory restart, Docker restart, and architecture checks pass.",
+  "architectural_invariants": [
+    "The authoritative default store remains storage/notes.json under the project root.",
+    "The frozen schema_version and id/title/body note fields remain unchanged.",
+    "GET /api/notes, GET /api/notes/export, and POST /api/notes/import remain available.",
+    "Invalid backup content returns HTTP 400 without changing the authoritative store.",
+    "A valid import is written atomically and survives service recreation using the existing named volume.",
+    "The application remains a single FastAPI service without a database or additional storage service."
+  ],
+  "expected_baseline_failures": [
+    "test_seed_notes_load_from_authoritative_project_store",
+    "test_import_and_export_update_the_authoritative_project_store",
+    "test_import_survives_restart_from_a_different_working_directory",
+    "test_default_storage_path_is_anchored_to_the_project_root"
+  ],
+  "oracle": {
+    "type": "researcher-authored main.py replacement",
+    "path": "oracle/app/main.py",
+    "patch_path": "oracle/oracle.patch"
+  }
+}
+

@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "task_id": "L2-02",
+  "generated_on": "2026-08-06",
+  "hash_algorithm": "sha256",
+  "aggregate_fixture_hash": "1e2d1900edb5e5fa95b4b3a3053522e46599995a5d7b5237e7489f7639b01748",
+  "start_commit": "57a97ae50467f6c9c24f8a67c26ba573d656b3e8",
+  "hash_scope": "All regular files beneath fixture_repo, sorted by relative POSIX path; each path and file body is null-delimited.",
+  "excluded_from_hash": [
+    "__pycache__ directories",
+    ".pytest_cache directories",
+    ".pyc files",
+    ".db files"
+  ],
+  "evaluator_manifest": {
+    "path": "evaluator_manifest.json",
+    "review_status": "approved",
+    "classified_on": "2026-08-08",
+    "post_change_full_cycle_revalidation_required": false,
+    "post_change_full_cycle_revalidated_on": "2026-08-08"
+  },
+  "validation_result": {
+    "baseline_failed_as_intended": true,
+    "oracle_passed_all_hidden_tests": true,
+    "second_reset_reproduced_same_failures": true,
+    "baseline_container_failed_as_intended": true,
+    "oracle_container_passed_http_and_persistence_checks": true,
+    "container_restart_preserved_sqlite_state": true,
+    "fresh_volume_reset_restored_empty_state": true
+  },
+  "container_images": {
+    "baseline": "tsb-l2-02-baseline:local",
+    "baseline_image_id": "sha256:1075bbf62c01fb8cb7e15f1ad9628f1e6e0d0c3455ab4795cc7d43df8f425560",
+    "oracle": "tsb-l2-02-oracle:local",
+    "oracle_image_id": "sha256:e02e0cdf855e4686742262dd6845754f1d8ffaf3f8d370b702d49d4db7cb44e6",
+    "python_base": "python:3.12.8-slim-bookworm@sha256:2199a62885a12290dc9c5be3ca0681d367576ab7bf037da120e564723292a2f0"
+  }
+}

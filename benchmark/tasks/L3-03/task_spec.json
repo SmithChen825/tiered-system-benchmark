@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "task_id": "L3-03",
+  "tier": 3,
+  "architecture": "Vue frontend plus FastAPI backend",
+  "clarification_opportunity": false,
+  "public_intent": "Restore password-reset submission from the Vue frontend to the current FastAPI endpoint.",
+  "injected_fault": {
+    "category": "obsolete_frontend_api_base_path",
+    "description": "The Vue form posts to retired /api/v1/auth/password-reset while FastAPI exposes /api/v2/auth/password-reset.",
+    "deterministic_failure": "Chromium sends the form request directly to the backend but receives HTTP 404 and renders the existing error state."
+  },
+  "success_rule": "All direct API, route-contract, frontend-source, CORS/preflight, service-boundary, Compose-health, Chromium-network, and UI checks pass.",
+  "architectural_invariants": [
+    "The backend current endpoint remains POST /api/v2/auth/password-reset.",
+    "The retired /api/v1/auth/password-reset route remains absent and returns 404.",
+    "The frontend posts the entered email as JSON and derives confirmation from the API response.",
+    "The browser request goes directly to the configured backend base URL without a frontend proxy.",
+    "The frontend and backend remain separate services on the frozen 8080 and 8000 ports.",
+    "Only the frozen frontend origin is authorised for POST and preflight."
+  ],
+  "expected_baseline_failures": [
+    "test_frontend_targets_the_current_password_reset_endpoint",
+    "browser_password_reset_network"
+  ],
+  "oracle": {
+    "type": "researcher-authored Vue component replacement",
+    "path": "oracle/frontend/src/App.vue",
+    "patch_path": "oracle/oracle.patch"
+  }
+}
+

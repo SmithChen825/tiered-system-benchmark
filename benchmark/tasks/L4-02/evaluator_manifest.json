@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "L4-02",
+  "review_status": "approved",
+  "pytest_environment_variable": "L4_02_REPO",
+  "functional_tests": [
+    {"id":"customer_create_read","description":"Compose POST creates a customer with active status and the record is readable.","runner":"compose_probe","source":"benchmark/runner/task_probes/l4_02.py::run","implementation_status":"implemented"},
+    {"id":"browser_customer_creation","description":"Chromium creates a customer and renders active status.","runner":"node","source":"evaluator/hidden_tests/browser_check.cjs","implementation_status":"implemented"}
+  ],
+  "architecture_checks": [
+    {"id":"required_status_preserved","requirement":"customers.status remains required.","evidence":[{"source_id":"database_status_required","source":"evaluator/hidden_tests/test_l4_02.py::test_database_schema_contains_required_status_and_seed_values"},{"source_id":"orm_status_mapping","source":"evaluator/hidden_tests/test_l4_02.py::test_orm_customer_model_maps_required_status"}],"implementation_status":"implemented"},
+    {"id":"seed_status_preserved","requirement":"Existing seeded customers remain active.","evidence":[{"source_id":"database_status_required","source":"evaluator/hidden_tests/test_l4_02.py::test_database_schema_contains_required_status_and_seed_values"}],"implementation_status":"implemented"},
+    {"id":"validated_active_default","requirement":"Missing status defaults to active at the validated API boundary.","evidence":[{"source_id":"request_default","source":"evaluator/hidden_tests/test_l4_02.py::test_create_schema_supplies_the_frozen_active_default"},{"source_id":"persistence_mapping","source":"evaluator/hidden_tests/test_l4_02.py::test_create_endpoint_persists_the_mapped_status"}],"implementation_status":"implemented"},
+    {"id":"status_domain_preserved","requirement":"Only active and inactive are accepted.","evidence":[{"source_id":"request_default","source":"evaluator/hidden_tests/test_l4_02.py::test_create_schema_supplies_the_frozen_active_default"}],"implementation_status":"implemented"},
+    {"id":"uniqueness_and_boundary_preserved","requirement":"Email uniqueness and the three-service architecture remain.","evidence":[{"source_id":"three_service_boundary","source":"evaluator/hidden_tests/test_l4_02.py::test_three_service_architecture_and_pinned_database_are_preserved"}],"implementation_status":"implemented"},
+    {"id":"api_derived_frontend_status","requirement":"The frontend reads status from API responses.","evidence":[{"source_id":"frontend_contract","source":"evaluator/hidden_tests/test_l4_02.py::test_frontend_reads_status_from_api_without_hard_coding"},{"source_id":"browser_customer_creation","source":"evaluator/hidden_tests/browser_check.cjs"}],"implementation_status":"implemented"}
+  ],
+  "operational_evidence": [
+    {"id":"workspace_isolation","description":"The evaluated workspace contains no researcher-only material or symbolic links.","runner":"global_validator","source":"benchmark/runner/task_probes/common.py::record_workspace_isolation","implementation_status":"implemented"}
+  ]
+}

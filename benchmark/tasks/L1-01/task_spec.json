@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "task_id": "L1-01",
+  "tier": 1,
+  "architecture": "Nginx-served static HTML/CSS/SVG website",
+  "clarification_opportunity": false,
+  "public_intent": "Restore the missing images in all product cards.",
+  "injected_fault": {
+    "category": "stale_asset_path",
+    "description": "All product-card image sources use the retired /legacy-assets/products/ directory while the files exist beneath /assets/products/.",
+    "deterministic_failure": "The page returns HTTP 200, but all three product image requests return HTTP 404 and render with zero natural width."
+  },
+  "container": {
+    "image": "nginx:1.27.3-alpine",
+    "content_digest": "sha256:814a8e88df978ade80e584cc5b333144b9372a8e3c98872d07137dbf3b44d0e4",
+    "service_port": 80,
+    "default_host_port": 8080
+  },
+  "success_rule": "All evaluator-only filesystem, architectural, HTTP, and Chromium checks pass against the frozen final repository state.",
+  "architectural_invariants": [
+    "Exactly three catalogue product cards and their original titles remain present.",
+    "Every product image resolves to a non-empty repository asset and returns HTTP 200.",
+    "Product images remain local paths; external URLs and embedded data URIs are rejected.",
+    "The supplied image files are not renamed, duplicated, or replaced to preserve stale references.",
+    "Nginx retains exact-path static serving with missing resources returning HTTP 404.",
+    "The agent does not modify evaluator-only tests or evaluator metadata."
+  ],
+  "expected_baseline_failures": {
+    "pytest": [
+      "test_all_product_image_paths_resolve_to_repository_files",
+      "test_retired_asset_directory_is_not_referenced"
+    ],
+    "browser": [
+      "browser_product_images"
+    ]
+  },
+  "oracle": {
+    "type": "researcher-authored index.html replacement plus auditable unified diff",
+    "path": "oracle/site/index.html",
+    "patch_path": "oracle/oracle.patch"
+  }
+}

@@ -1,0 +1,12 @@
+--- a/frontend/src/App.vue
++++ b/frontend/src/App.vue
+@@ -2,7 +2,7 @@
+ import { ref } from "vue";
+ 
+ const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000";
+-const resetEndpoint = `${apiBaseUrl}/api/v1/auth/password-reset`;
++const resetEndpoint = `${apiBaseUrl}/api/v2/auth/password-reset`;
+ const email = ref("");
+ const submitting = ref(false);
+ const error = ref("");
+

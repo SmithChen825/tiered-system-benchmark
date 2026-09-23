@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "status": "FROZEN",
+  "transport_contract_version": "1.0.0",
+  "source": {
+    "path": "benchmark/runner/api_wrapper/contracts.py",
+    "symbol": "TOOL_DEFINITIONS"
+  },
+  "logical_tool_names": [
+    "execute_bash",
+    "patch_file",
+    "read_file",
+    "request_human_clarification"
+  ],
+  "tool_definitions": [
+    {
+      "name": "read_file",
+      "description": "Read a UTF-8 text file from the isolated task workspace.",
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          }
+        }
+      }
+    },
+    {
+      "name": "patch_file",
+      "description": "Apply a standard unified git diff to files in the isolated task workspace. The patch must include diff --git, ---, +++, and @@ headers.",
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "patch"
+        ],
+        "properties": {
+          "patch": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1048576
+          }
+        }
+      }
+    },
+    {
+      "name": "execute_bash",
+      "description": "Execute one Bash command in the isolated task workspace sandbox. The default sandbox has no network or host-Docker access.",
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "command"
+        ],
+        "properties": {
+          "command": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 16384
+          }
+        }
+      }
+    },
+    {
+      "name": "request_human_clarification",
+      "description": "Submit one observable clarification request under the frozen protocol.",
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "request"
+        ],
+        "properties": {
+          "request": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          }
+        }
+      }
+    }
+  ],
+  "tool_definitions_sha256": "46db2dbf840975cace10a73082a9895dc27527493e7c0e2d2ca9d7614a97da1b",
+  "submission": {
+    "marker": "<SUBMIT_FIX>",
+    "detection": "substring_in_observable_assistant_text",
+    "counts_as_action": false,
+    "terminal_state": "submitted",
+    "tool_calls_in_same_turn": "recorded_but_not_executed"
+  },
+  "action_accounting": {
+    "known_tool_call_reaching_executor": 1,
+    "malformed_arguments_for_known_tool": 1,
+    "unknown_tool_call": 0,
+    "provider_retry": 0,
+    "submission": 0,
+    "multiple_calls_count_separately": true
+  },
+  "execution_semantics": {
+    "multiple_tool_calls": "provider_order_sequential",
+    "tool_result_visibility": "returned_before_next_model_turn",
+    "ordinary_tool_error": "observable_nonterminal",
+    "command_timeout": "suspend_run",
+    "tool_infrastructure_error": "invalidate_run",
+    "default_network_access": false,
+    "host_docker_access": false
+  }
+}

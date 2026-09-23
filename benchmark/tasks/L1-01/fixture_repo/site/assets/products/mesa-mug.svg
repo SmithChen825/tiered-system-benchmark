@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title description">
+  <title id="title">Mesa trail mug</title>
+  <desc id="description">A steel mug set on red desert rock.</desc>
+  <rect width="800" height="600" fill="#e0b99b"/>
+  <circle cx="650" cy="116" r="66" fill="#f6e3aa"/>
+  <path d="M0 390 190 280l170 100 170-150 270 177v193H0Z" fill="#9d4d38"/>
+  <path d="M277 205h259l-25 267c-7 66-48 96-105 96s-99-30-106-96Z" fill="#d8ded8"/>
+  <path d="M515 280h74c92 0 90 151 0 151h-63" fill="none" stroke="#d8ded8" stroke-width="38"/>
+  <path d="M315 254h184" stroke="#526460" stroke-width="18" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "L1-03",
+  "review_status": "approved",
+  "pytest_environment_variable": "L1_03_REPO",
+  "functional_tests": [
+    {
+      "id": "contact_form_validation_chromium",
+      "description": "Chromium confirms the validation asset returns HTTP 200, invalid input produces the frozen error, and complete input produces the frozen success confirmation.",
+      "runner": "node",
+      "source": "evaluator/hidden_tests/browser_check.cjs",
+      "implementation_status": "implemented"
+    }
+  ],
+  "architecture_checks": [
+    {
+      "id": "form_identity_preserved",
+      "requirement": "The existing name, email, and message fields and their labels remain unchanged.",
+      "evidence": [{"source_id":"form_identity","source":"evaluator/hidden_tests/test_l1_03.py::test_contact_form_contract_is_preserved"}],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "external_bundle_owns_submission",
+      "requirement": "The supplied external validation bundle is loaded with defer and owns submit handling.",
+      "evidence": [
+        {"source_id":"existing_bundle_loaded","source":"evaluator/hidden_tests/test_l1_03.py::test_contact_form_loads_existing_validation_script"},
+        {"source_id":"listener_contract","source":"evaluator/hidden_tests/test_l1_03.py::test_supplied_bundle_preserves_validation_and_success_contract"}
+      ],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "invalid_input_contract",
+      "requirement": "Invalid input remains on the page and produces the existing error status.",
+      "evidence": [{"source_id":"contact_form_validation_chromium","source":"evaluator/hidden_tests/browser_check.cjs"}],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "valid_submission_contract",
+      "requirement": "A complete valid submission produces the existing success confirmation and resets the form.",
+      "evidence": [{"source_id":"contact_form_validation_chromium","source":"evaluator/hidden_tests/browser_check.cjs"}],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "no_validation_workaround",
+      "requirement": "No inline-script, native-validation, external dependency, or server-side workaround is introduced.",
+      "evidence": [{"source_id":"no_workaround","source":"evaluator/hidden_tests/test_l1_03.py::test_repair_does_not_replace_the_existing_validation_architecture"}],
+      "implementation_status": "implemented"
+    },
+    {
+      "id": "nginx_404_preserved",
+      "requirement": "Nginx exact-path 404 behaviour remains enabled.",
+      "evidence": [{"source_id":"nginx_404_contract","source":"evaluator/hidden_tests/test_l1_03.py::test_nginx_exact_path_404_policy_is_preserved"}],
+      "implementation_status": "implemented"
+    }
+  ],
+  "operational_evidence": [
+    {
+      "id": "workspace_isolation",
+      "description": "The evaluated workspace contains no researcher-only material or symbolic links.",
+      "runner": "global_validator",
+      "source": "benchmark/runner/task_probes/common.py::record_workspace_isolation",
+      "implementation_status": "implemented"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "task_id": "L1-02",
+  "tier": 1,
+  "architecture": "Nginx-served static HTML/CSS website",
+  "clarification_opportunity": false,
+  "public_intent": "Make the existing navigation usable at mobile width.",
+  "injected_fault": {"category": "responsive_selector_mismatch", "description": "The mobile media query targets .nav-links while the DOM uses .site-nav.", "deterministic_failure": "At 390px the four navigation links remain in an overflowing horizontal row."},
+  "success_rule": "All source, desktop/mobile Chromium, and architecture checks pass.",
+  "architectural_invariants": ["Four navigation labels and targets remain unchanged.", "Desktop navigation remains horizontal.", "Mobile navigation has no horizontal overflow and every link remains visible.", "No script or hidden-navigation workaround is introduced.", "Nginx exact-path 404 behaviour remains enabled."],
+  "expected_baseline_failures": ["test_mobile_media_query_targets_the_current_navigation_dom", "browser_mobile_navigation"],
+  "oracle": {"type": "researcher-authored CSS replacement", "path": "oracle/site/assets/styles.css", "patch_path": "oracle/oracle.patch"}
+}

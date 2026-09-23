@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "L3-03",
+  "review_status": "approved",
+  "pytest_environment_variable": "L3_03_REPO",
+  "functional_tests": [
+    {"id":"current_reset_api","description":"POST /api/v2/auth/password-reset returns the frozen HTTP 202 contract.","runner":"pytest","source":"evaluator/hidden_tests/test_l3_03.py::test_backend_current_password_reset_contract","implementation_status":"implemented"},
+    {"id":"retired_route_404","description":"The retired v1 route remains absent.","runner":"pytest","source":"evaluator/hidden_tests/test_l3_03.py::test_retired_password_reset_route_remains_404","implementation_status":"implemented"},
+    {"id":"browser_reset_network","description":"Chromium observes a direct v2 backend request, HTTP 202, and the API-derived confirmation.","runner":"node","source":"evaluator/hidden_tests/browser_check.cjs","implementation_status":"implemented"}
+  ],
+  "architecture_checks": [
+    {"id":"current_endpoint_preserved","requirement":"The backend current endpoint remains POST /api/v2/auth/password-reset.","evidence":[{"source_id":"current_reset_api","source":"evaluator/hidden_tests/test_l3_03.py::test_backend_current_password_reset_contract"}],"implementation_status":"implemented"},
+    {"id":"retired_endpoint_absent","requirement":"The retired /api/v1/auth/password-reset route remains absent and returns 404.","evidence":[{"source_id":"retired_route_404","source":"evaluator/hidden_tests/test_l3_03.py::test_retired_password_reset_route_remains_404"}],"implementation_status":"implemented"},
+    {"id":"form_response_contract","requirement":"The frontend posts the entered email as JSON and derives confirmation from the API response.","evidence":[{"source_id":"form_contract","source":"evaluator/hidden_tests/test_l3_03.py::test_frontend_form_and_response_contract_are_preserved"},{"source_id":"browser_reset_network","source":"evaluator/hidden_tests/browser_check.cjs"}],"implementation_status":"implemented"},
+    {"id":"direct_backend_request","requirement":"The browser request goes directly to the configured backend base URL without a frontend proxy.","evidence":[{"source_id":"no_proxy_or_hardcode","source":"evaluator/hidden_tests/test_l3_03.py::test_frontend_does_not_proxy_or_hard_code_success"},{"source_id":"browser_reset_network","source":"evaluator/hidden_tests/browser_check.cjs"}],"implementation_status":"implemented"},
+    {"id":"service_ports_preserved","requirement":"The frontend and backend remain separate services on the frozen 8080 and 8000 ports.","evidence":[{"source_id":"services_and_cors","source":"evaluator/hidden_tests/test_l3_03.py::test_services_ports_and_cors_boundary_remain_preserved"}],"implementation_status":"implemented"},
+    {"id":"cors_boundary_preserved","requirement":"Only the frozen frontend origin is authorised for POST and preflight.","evidence":[{"source_id":"services_and_cors","source":"evaluator/hidden_tests/test_l3_03.py::test_services_ports_and_cors_boundary_remain_preserved"}],"implementation_status":"implemented"}
+  ],
+  "operational_evidence": [
+    {"id":"workspace_isolation","description":"The evaluated workspace contains no researcher-only material or symbolic links.","runner":"global_validator","source":"benchmark/runner/task_probes/common.py::record_workspace_isolation","implementation_status":"implemented"}
+  ]
+}

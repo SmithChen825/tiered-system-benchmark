@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "status": "FROZEN",
+  "policy_id": "tsb-incidental-workspace-artifacts-v1",
+  "effective_scope": "future_runs_prepared_with_policy_snapshot",
+  "historical_run_rule": "Frozen runs without a workspace artifact policy snapshot remain governed by their original evidence contract and must not be rewritten.",
+  "classifications": [
+    {
+      "id": "python_runtime_cache",
+      "untracked_only": true,
+      "directory_names": [
+        "__pycache__",
+        ".pytest_cache"
+      ],
+      "suffixes": [
+        ".pyc"
+      ],
+      "treatment": "inventory_and_exclude_from_final_diff"
+    }
+  ],
+  "controls": {
+    "preserve_files_after_freeze": true,
+    "tracked_changes_always_in_final_diff": true,
+    "nonmatching_untracked_files_always_in_final_diff": true,
+    "require_inventory": true,
+    "require_hash_exclusion_alignment": true
+  }
+}

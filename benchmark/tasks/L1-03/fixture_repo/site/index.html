@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Cedar & Tide Studio</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script src="/assets/contact-validation.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home">Cedar & Tide Studio</a>
+    <nav aria-label="Primary navigation"><a href="#work">Work</a><a href="#contact">Contact</a></nav>
+  </header>
+  <main id="home">
+    <section class="intro" id="work">
+      <p class="eyebrow">Independent design practice</p>
+      <h1>Thoughtful identities for useful things.</h1>
+      <p>We build clear visual systems for small teams working on durable products.</p>
+    </section>
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div><p class="eyebrow">Start a project</p><h2 id="contact-title">Tell us what you are making.</h2><p>All three fields are needed before the message is ready to send.</p></div>
+      <form id="contact-form" novalidate>
+        <label for="contact-name">Name</label>
+        <input id="contact-name" name="name" type="text" autocomplete="name">
+        <label for="contact-email">Email</label>
+        <input id="contact-email" name="email" type="email" autocomplete="email">
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" rows="5"></textarea>
+        <button type="submit">Send message</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
+

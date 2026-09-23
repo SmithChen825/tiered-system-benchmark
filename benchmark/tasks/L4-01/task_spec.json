@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "task_id": "L4-01",
+  "tier": 4,
+  "architecture": "Vue 3 frontend, FastAPI/SQLAlchemy backend, and PostgreSQL database",
+  "clarification_opportunity": false,
+  "public_intent": "Complete the breaking removal of users.age across all downstream layers.",
+  "frozen_network_contract": {
+    "frontend_origin": "http://127.0.0.1:8080",
+    "backend_origin": "http://127.0.0.1:8000",
+    "users_endpoint": "/api/users"
+  },
+  "injected_fault": {
+    "category": "schema_cascade",
+    "description": "PostgreSQL no longer has users.age, while the SQLAlchemy model, Pydantic response schema, and Vue user table still reference age.",
+    "deterministic_failure": "The database and backend health endpoint start successfully, but GET /api/users fails because generated SQL selects users.age; the frontend displays an error."
+  },
+  "containers": {
+    "postgres": "postgres:16.6-alpine@sha256:1d04b9ba1d4996401f2552b51beda8187f175c0645c091e4781134fc9c9a3eef",
+    "python": "python:3.12.8-slim-bookworm@sha256:2199a62885a12290dc9c5be3ca0681d367576ab7bf037da120e564723292a2f0",
+    "node": "node:22.12.0-alpine@sha256:51eff88af6dff26f59316b6e356188ffa2c422bd3c3b76f2556a2e7e89d080bd",
+    "nginx": "nginx:1.27.3-alpine@sha256:814a8e88df978ade80e584cc5b333144b9372a8e3c98872d07137dbf3b44d0e4"
+  },
+  "success_rule": "All evaluator-only source, database-schema, API-contract, Compose health, and Chromium checks pass while users.age remains absent.",
+  "architectural_invariants": [
+    "The PostgreSQL users table does not contain an age column.",
+    "No migration, startup command, or repair re-adds users.age.",
+    "The SQLAlchemy User model does not map age.",
+    "The API user response schema and returned JSON contain no age field.",
+    "The Vue user table contains no age header, cell, fallback, or hard-coded replacement.",
+    "The remaining id, name, email, and role fields and all seeded rows are preserved.",
+    "Frontend, backend, and PostgreSQL remain separate services.",
+    "The agent does not modify evaluator-only tests or evaluator metadata."
+  ],
+  "expected_baseline_failures": [
+    "test_orm_user_model_has_no_age_mapping",
+    "test_api_user_schema_has_no_age_field",
+    "test_vue_table_has_no_age_reference"
+  ],
+  "oracle": {
+    "type": "researcher-authored three-file replacement plus auditable unified diff",
+    "paths": [
+      "oracle/backend/app/models.py",
+      "oracle/backend/app/schemas.py",
+      "oracle/frontend/src/App.vue"
+    ],
+    "patch_path": "oracle/oracle.patch"
+  }
+}

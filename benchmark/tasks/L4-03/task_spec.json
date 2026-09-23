@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "task_id": "L4-03",
+  "tier": 4,
+  "architecture": "Vue frontend, FastAPI/SQLAlchemy backend, PostgreSQL database",
+  "clarification_opportunity": false,
+  "public_intent": "Restore API startup and the PostgreSQL-backed system dashboard health check.",
+  "injected_fault": {
+    "category": "incorrect_compose_database_hostname",
+    "description": "The backend DATABASE_URL names postgres while the frozen Compose database service is db.",
+    "deterministic_failure": "FastAPI fails its lifespan database connection and exits; the frontend remains available but renders Dashboard unavailable."
+  },
+  "success_rule": "The static contract, repeated reset, PostgreSQL schema/seed, three-service Compose health, direct API, and real Chromium dashboard checks pass.",
+  "architectural_invariants": [
+    "The Compose services remain db, backend, and frontend on their frozen ports.",
+    "The backend connects to the db service through the Compose network.",
+    "FastAPI retains its startup database connectivity check and database-backed health endpoint.",
+    "The dashboard status and three frozen metrics remain PostgreSQL-backed.",
+    "The frontend fetches the dashboard API and does not hard-code operational data.",
+    "The PostgreSQL image pin, schema, seeds, CORS origin, and service health checks remain unchanged."
+  ],
+  "expected_baseline_failures": [
+    "test_database_url_targets_the_frozen_compose_service",
+    "compose_backend_startup_and_dashboard"
+  ],
+  "oracle": {
+    "type": "researcher-authored Compose replacement",
+    "path": "oracle/compose.yaml",
+    "patch_path": "oracle/oracle.patch"
+  }
+}
+

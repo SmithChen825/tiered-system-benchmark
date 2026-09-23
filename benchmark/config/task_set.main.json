@@ -1,0 +1,387 @@
+{
+  "schema_version": "1.0.0",
+  "status": "FROZEN",
+  "freeze_scope": "main_experiment",
+  "benchmark_id": "TSB",
+  "expected_main_task_count": 12,
+  "tasks_per_tier": {
+    "1": 3,
+    "2": 3,
+    "3": 3,
+    "4": 3
+  },
+  "representative_pilot_task_ids": [
+    "L1-01",
+    "L2-02",
+    "L3-01",
+    "L4-01"
+  ],
+  "included_task_count": 12,
+  "included_tiers": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "clarification_design": {
+    "opportunity_task_id": "L2-02",
+    "opportunity_count_in_main_task_set": 1,
+    "maximum_information_bearing_responses_per_run": 1
+  },
+  "tasks": [
+    {
+      "task_id": "L1-01",
+      "tier": 1,
+      "architecture": "Nginx-served static HTML/CSS/SVG website",
+      "implementation_status": "implementation_validated",
+      "clarification_opportunity": false,
+      "public_task_brief": {
+        "path": "benchmark/tasks/L1-01/public_task_brief.md",
+        "sha256": "6fe713d609ab36948105d1ae2619de36a082f6426dcfdf7e543aafeafde14325"
+      },
+      "task_spec": {
+        "path": "benchmark/tasks/L1-01/task_spec.json",
+        "sha256": "65674f74b4570d93e0a3e434de28208e6d3d32554de6cdcff6c688128a718f73"
+      },
+      "fixture_manifest": {
+        "path": "benchmark/tasks/L1-01/fixture_manifest.json",
+        "sha256": "f20846c88c2f76d3f64fb32b1c6903a51cb83c5842a5e17144cf04f4967d6607"
+      },
+      "fixture_sha256": "4311c7ab44139ad55dbbf94e3680ee3b30c7dbc165df2f442e7edc7c76f21b47",
+      "start_commit": "4bcf1b9a560c807e090899cad2fae24446f2f632",
+      "evaluator_manifest": {
+        "path": "benchmark/tasks/L1-01/evaluator_manifest.json",
+        "sha256": "7db80efab13e898cbf248625880029afdf96b78a64e606e9f6fb533407afbc81"
+      },
+      "clarification_policy": {
+        "path": null,
+        "sha256": null
+      }
+    },
+    {
+      "task_id": "L1-02",
+      "tier": 1,
+      "architecture": "Nginx-served static HTML/CSS website",
+      "implementation_status": "implementation_validated",
+      "clarification_opportunity": false,
+      "public_task_brief": {
+        "path": "benchmark/tasks/L1-02/public_task_brief.md",
+        "sha256": "39129fabe8b6ad020a4fdc641db3adb606eacd0e8c0a8523e3cc42eae234f19a"
+      },
+      "task_spec": {
+        "path": "benchmark/tasks/L1-02/task_spec.json",
+        "sha256": "312ec2392f921909008887895e985ec5d92313590836da31d6132ce1b83d6fad"
+      },
+      "fixture_manifest": {
+        "path": "benchmark/tasks/L1-02/fixture_manifest.json",
+        "sha256": "5eb1ad977eaa56332eb9d6c0db53ab2405f957386e88144d2a8bba54c69dc288"
+      },
+      "fixture_sha256": "23bb3aff2b6c78fe864c804b874c0ce12f45a36c3fa01a51d05487acf63b0bea",
+      "start_commit": "e06fe6ca66a2f3a351e9b59e2550aad9e5cf2e71",
+      "evaluator_manifest": {
+        "path": "benchmark/tasks/L1-02/evaluator_manifest.json",
+        "sha256": "eb488361337421f290e192b1bd7cb89611af8185647d22c2af636df0f4720140"
+      },
+      "clarification_policy": {
+        "path": null,
+        "sha256": null
+      }
+    },
+    {
+      "task_id": "L1-03",
+      "tier": 1,
+      "architecture": "Nginx-served static HTML/CSS/JavaScript website",
+      "implementation_status": "implementation_validated",
+      "clarification_opportunity": false,
+      "public_task_brief": {
+        "path": "benchmark/tasks/L1-03/public_task_brief.md",
+        "sha256": "d6ef68e9cd2e6aa043f97b1b98fac995e2e8b419f8cdac5ac05a40c289bf4602"
+      },
+      "task_spec": {
+        "path": "benchmark/tasks/L1-03/task_spec.json",
+        "sha256": "a9e3d9861a00599dc0a3bd952580567750b1ed9328eac110de1a569f450acf4b"
+      },
+      "fixture_manifest": {
+        "path": "benchmark/tasks/L1-03/fixture_manifest.json",
+        "sha256": "7ea538ddc9209dc668e21b5bda6d5cea0db3e92f755f7c701ea0207bbb93a7f7"
+      },
+      "fixture_sha256": "e896ca6d951c68ea455fa57bb68b72635e7bcc72777171cecc063c24edc5788c",
+      "start_commit": "8cce2a97f6c8834370d6f0aa7fe3acb4cb4d136a",
+      "evaluator_manifest": {
+        "path": "benchmark/tasks/L1-03/evaluator_manifest.json",
+        "sha256": "8ebd461878a262db15e21216e04885b9854be30d5a8e6bb5a0a73028adbd94fb"
+      },
+      "clarification_policy": {
+        "path": null,
+        "sha256": null
+      }
+    },
+    {
+      "task_id": "L2-01",
+      "tier": 2,
+      "architecture": "Single-service FastAPI application",
+      "implementation_status": "implementation_validated",
+      "clarification_opportunity": false,
+      "public_task_brief": {
+        "path": "benchmark/tasks/L2-01/public_task_brief.md",
+        "sha256": "42e91aa57be8643ec5ca97dd549468d16ac16526a36e75281640dd71b2d94b37"
+      },
+      "task_spec": {
+        "path": "benchmark/tasks/L2-01/task_spec.json",
+        "sha256": "c1e77e16f21146fa99544d57625b4fb78858bf27d62399537c816f0cae369bfd"
+      },
+      "fixture_manifest": {
+        "path": "benchmark/tasks/L2-01/fixture_manifest.json",
+        "sha256": "624026d688fadfc5e038599cfee2b912c188b74aa3a8ecc7638c05ff6ba3cef9"
+      },
+      "fixture_sha256": "bec7e413e7a74675fccc060bf3947dbf234dac74c70966a232f2f6fc5a28654f",
+      "start_commit": "f70634aaa8a07b7d88fb5dccfa9573a3f5362196",
+      "evaluator_manifest": {
+        "path": "benchmark/tasks/L2-01/evaluator_manifest.json",
+        "sha256": "5a7cca4578cfe48344e5593ceefd0a0730f8bde22862b97bab08d9292a74c959"
+      },
+      "clarification_policy": {
+        "path": null,
+        "sha256": null
+      }
+    },
+    {
+      "task_id": "L2-02",
+      "tier": 2,
+      "architecture": "single-service FastAPI application with SQLite persistence",
+      "implementation_status": "implementation_validated",
+      "clarification_opportunity": true,
+      "public_task_brief": {
+        "path": "benchmark/tasks/L2-02/public_task_brief.md",
+        "sha256": "311edb2a53612dc58f0b23ef8102e472e0c6bed945c9536cbd2b24b2bf8281c8"
+      },
+      "task_spec": {
+        "path": "benchmark/tasks/L2-02/task_spec.json",
+        "sha256": "07d71f2d7bd02a536a0cf39249c04d9a4ba5fa5945f5d9f11af05f6052d97874"
+      },
+      "fixture_manifest": {
+        "path": "benchmark/tasks/L2-02/fixture_manifest.json",
+        "sha256": "e950267b34fd4c823f02e8f3500455050cd76533404475b818e45d55ea31f1ea"
+      },
+      "fixture_sha256": "1e2d1900edb5e5fa95b4b3a3053522e46599995a5d7b5237e7489f7639b01748",
+      "start_commit": "57a97ae50467f6c9c24f8a67c26ba573d656b3e8",
+      "evaluator_manifest": {
+        "path": "benchmark/tasks/L2-02/evaluator_manifest.json",
+        "sha256": "5c07bcc1535006768538b4a87ebd4ebaf053297fc651b7dabfb6c77269e277cc"
+      },
+      "clarification_policy": {
+        "path": "benchmark/tasks/L2-02/clarification_policy.json",
+        "sha256": "875f8a60eac4413fdd31eaf07d58b58d1d189649411751e728ec28e2ecbad344"
+      }
+    },
+    {
+      "task_id": "L2-03",
+      "tier": 2,
+      "architecture": "Single-service FastAPI application with JSON file persistence",
+      "implementation_status": "implementation_validated",
+      "clarification_opportunity": false,
+      "public_task_brief": {
+        "path": "benchmark/tasks/L2-03/public_task_brief.md",
+        "sha256": "bed38abaec7d0529268346963097e02df97e2ff8ad8a2f132f9c666866f88a65"
+      },
+      "task_spec": {
+        "path": "benchmark/tasks/L2-03/task_spec.json",
+        "sha256": "6c4bad71a0badde0dbd4a239ac501f484bc91f885d63828beeedca44c9eb37e6"
+      },
+      "fixture_manifest": {
+        "path": "benchmark/tasks/L2-03/fixture_manifest.json",
+        "sha256": "057a2bfcf8bfc380961c2811765a91cac8689c49afe32bff41fb356e4f9186cc"
+      },
+      "fixture_sha256": "5e98cd59212a3dae996df3112b9c0d4ad9aad38d3d0aaae86e31f7d5020faf78",
+      "start_commit": "1b55bc3e263c60dd97c72c1756a7d37f562695c2",
+      "evaluator_manifest": {
+        "path": "benchmark/tasks/L2-03/evaluator_manifest.json",
+        "sha256": "8bf04426cae3d2594230a89ce672ff1aeb4de97cfee10f2f3be42390a019ab59"
+      },
+      "clarification_policy": {
+        "path": null,
+        "sha256": null
+      }
+    },
+    {
+      "task_id": "L3-01",
+      "tier": 3,
+      "architecture": "Vue 3 frontend and FastAPI backend in separate containers",
+      "implementation_status": "implementation_validated",
+      "clarification_opportunity": false,
+      "public_task_brief": {
+        "path": "benchmark/tasks/L3-01/public_task_brief.md",
+        "sha256": "f0656d5a147063c50ba44a0537c9e68430c15e3ab240df42070c710eb2fc9d05"
+      },
+      "task_spec": {
+        "path": "benchmark/tasks/L3-01/task_spec.json",
+        "sha256": "73d236137b37c1221a5f8abdfcb9782190afcac5ec83920fe3c79058a18ca615"
+      },
+      "fixture_manifest": {
+        "path": "benchmark/tasks/L3-01/fixture_manifest.json",
+        "sha256": "dce7818011b43c603cb858897febdd4151575a7d966af4b7b52b2dbd6693d767"
+      },
+      "fixture_sha256": "f85a274f8e1ff9ffd05df79a441a65ff0076fb559d3850e0e12f6749284d7b52",
+      "start_commit": "e13ac46d44e6c971b23820afc33e1a37642aa6d9",
+      "evaluator_manifest": {
+        "path": "benchmark/tasks/L3-01/evaluator_manifest.json",
+        "sha256": "41dace8a08739a26cba08bb35251a89870b40ed7f7e6d0cd64084bf2088fbaea"
+      },
+      "clarification_policy": {
+        "path": null,
+        "sha256": null
+      }
+    },
+    {
+      "task_id": "L3-02",
+      "tier": 3,
+      "architecture": "Vue frontend plus FastAPI backend",
+      "implementation_status": "implementation_validated",
+      "clarification_opportunity": false,
+      "public_task_brief": {
+        "path": "benchmark/tasks/L3-02/public_task_brief.md",
+        "sha256": "6fd981ad0f8d232ad50f73decbdae859a9132f16b646db970ed5110510e7534c"
+      },
+      "task_spec": {
+        "path": "benchmark/tasks/L3-02/task_spec.json",
+        "sha256": "620265a0cc61daa376fb75674485e49b2cd420423c79ad4eb48d222ba313d1d2"
+      },
+      "fixture_manifest": {
+        "path": "benchmark/tasks/L3-02/fixture_manifest.json",
+        "sha256": "a9aa3b07656f6c26f66d958ef676581953cbe9ba00a63863bf9d723d96b255e1"
+      },
+      "fixture_sha256": "64107183c8b05dd69bb57b62c0773cbcca8c73a1eb91153c4f7f526be3b4ad86",
+      "start_commit": "40665af38a62f2e2f2d138a2e68ec543e570cfbf",
+      "evaluator_manifest": {
+        "path": "benchmark/tasks/L3-02/evaluator_manifest.json",
+        "sha256": "9fa3727e2df04abc8f12cc6845d9f7fb191bc730765b8f00e3dca3bb6f86d005"
+      },
+      "clarification_policy": {
+        "path": null,
+        "sha256": null
+      }
+    },
+    {
+      "task_id": "L3-03",
+      "tier": 3,
+      "architecture": "Vue frontend plus FastAPI backend",
+      "implementation_status": "implementation_validated",
+      "clarification_opportunity": false,
+      "public_task_brief": {
+        "path": "benchmark/tasks/L3-03/public_task_brief.md",
+        "sha256": "c8942707c9b6480ae2fe28a26832acb91361c34fc8ca333ac975b9e6ff4cb71c"
+      },
+      "task_spec": {
+        "path": "benchmark/tasks/L3-03/task_spec.json",
+        "sha256": "72b25cfcb6fb5abfd22af96d461d1e09e91fdbd737debae60e6a4c6f09095ed2"
+      },
+      "fixture_manifest": {
+        "path": "benchmark/tasks/L3-03/fixture_manifest.json",
+        "sha256": "9e4cf07db0944fd64625d0d97b361cc417e61d1c2d49332391dbbacf19a51fd1"
+      },
+      "fixture_sha256": "63308a764506427670ed11e857b54fd5f45149a80c29cf666f0843366b10ffbd",
+      "start_commit": "5283043f9c9f1c6df919ae737e6088e820a633a3",
+      "evaluator_manifest": {
+        "path": "benchmark/tasks/L3-03/evaluator_manifest.json",
+        "sha256": "072054bf15412360a9386e6c67a3b1dd1697030c2fad5c8086dd1fd3df26a6ec"
+      },
+      "clarification_policy": {
+        "path": null,
+        "sha256": null
+      }
+    },
+    {
+      "task_id": "L4-01",
+      "tier": 4,
+      "architecture": "Vue 3 frontend, FastAPI/SQLAlchemy backend, and PostgreSQL database",
+      "implementation_status": "implementation_validated",
+      "clarification_opportunity": false,
+      "public_task_brief": {
+        "path": "benchmark/tasks/L4-01/public_task_brief.md",
+        "sha256": "496c60dd992fca595212d16bb94a6f1a6f619e17b4a00bf93d4b95f4eb4e2886"
+      },
+      "task_spec": {
+        "path": "benchmark/tasks/L4-01/task_spec.json",
+        "sha256": "0a6628c1098945cbe6d61742f45b16ea9f90098b5f9cb86d08228871f5b01308"
+      },
+      "fixture_manifest": {
+        "path": "benchmark/tasks/L4-01/fixture_manifest.json",
+        "sha256": "56325311b3884a072e66c6c692c31776dc13b58ed88074c83031ae5cf7f9ccd1"
+      },
+      "fixture_sha256": "75b862c9908d5acff9a669dd7c38135bddbee140344123130bb24cf7741d1915",
+      "start_commit": "7470fd6eed6b46e6ea066131717b3d0b28363643",
+      "evaluator_manifest": {
+        "path": "benchmark/tasks/L4-01/evaluator_manifest.json",
+        "sha256": "df34defa2dd30a35ca91477e5de147ce5b935e0cd0e47d56926415a7eeafeb1b"
+      },
+      "clarification_policy": {
+        "path": null,
+        "sha256": null
+      }
+    },
+    {
+      "task_id": "L4-02",
+      "tier": 4,
+      "architecture": "Vue frontend, FastAPI/SQLAlchemy backend, PostgreSQL database",
+      "implementation_status": "implementation_validated",
+      "clarification_opportunity": false,
+      "public_task_brief": {
+        "path": "benchmark/tasks/L4-02/public_task_brief.md",
+        "sha256": "839b2f00f8d7209f783ffabcc7c3b5a23225951ed2a544b8b14dd5a5be6f7594"
+      },
+      "task_spec": {
+        "path": "benchmark/tasks/L4-02/task_spec.json",
+        "sha256": "4faafa5a3e3ceb17d4875717c2419475d1246c87254411282f8ffcd19e4b2814"
+      },
+      "fixture_manifest": {
+        "path": "benchmark/tasks/L4-02/fixture_manifest.json",
+        "sha256": "82a1715cf65cf81bfdfbb1d4b4eaa0eafd6c0659f73a40bedf7671c3b819d27a"
+      },
+      "fixture_sha256": "30a2c232434af3c56b7f5494be7186194d323f6514b7d611be059ae9e4b7ea0b",
+      "start_commit": "e4afa5197b521a1ac76de5f2de20839ef1ee8635",
+      "evaluator_manifest": {
+        "path": "benchmark/tasks/L4-02/evaluator_manifest.json",
+        "sha256": "b20fe7783bc61f89b704b396e8182616df31a63245549d79f12f7353340238d6"
+      },
+      "clarification_policy": {
+        "path": null,
+        "sha256": null
+      }
+    },
+    {
+      "task_id": "L4-03",
+      "tier": 4,
+      "architecture": "Vue frontend, FastAPI/SQLAlchemy backend, PostgreSQL database",
+      "implementation_status": "implementation_validated",
+      "clarification_opportunity": false,
+      "public_task_brief": {
+        "path": "benchmark/tasks/L4-03/public_task_brief.md",
+        "sha256": "63cff01a89542daa373c1430fe380be1bc257978582d10de17a5f686a93816c8"
+      },
+      "task_spec": {
+        "path": "benchmark/tasks/L4-03/task_spec.json",
+        "sha256": "e2d5a8ed73690a2dc04a3fb50ffc930a92f8f3e080151d9a4974b55953acc82d"
+      },
+      "fixture_manifest": {
+        "path": "benchmark/tasks/L4-03/fixture_manifest.json",
+        "sha256": "a8157ae843a27f16ed06f01d22d7bd9f0e5006e20cda6f0c34ad620c79a7ead5"
+      },
+      "fixture_sha256": "b39d8d8e9e37edb9c6fece35aa352f598dd98d0942d9eda97523d1d7314fd6b9",
+      "start_commit": "385ccf77fe94826043b49cfb11dbdf5741c317e9",
+      "evaluator_manifest": {
+        "path": "benchmark/tasks/L4-03/evaluator_manifest.json",
+        "sha256": "7e23b2585eabcf27bac0308e620ab5ba99b7b09d85ea690039ddb2865ea3de1a"
+      },
+      "clarification_policy": {
+        "path": null,
+        "sha256": null
+      }
+    }
+  ],
+  "task_records_sha256": "b1625dfd9af057fb880a6bf22401f9be42d8c0251ae317e3e74e3d8665332abe",
+  "pending_main_task_count": 0,
+  "notes": [
+    "This unfrozen main candidate contains all twelve implementation-validated tasks, exactly three per tier.",
+    "It cannot authorize main-experiment execution until promoted through the separate main freeze and strict gate."
+  ]
+}

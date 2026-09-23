@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "task_id": "L2-01",
+  "generated_on": "2026-08-28",
+  "hash_algorithm": "sha256",
+  "aggregate_fixture_hash": "bec7e413e7a74675fccc060bf3947dbf234dac74c70966a232f2f6fc5a28654f",
+  "start_commit": "f70634aaa8a07b7d88fb5dccfa9573a3f5362196",
+  "hash_scope": "All regular fixture_repo files sorted by relative POSIX path and null-delimited; caches, bytecode, and databases excluded.",
+  "excluded_from_hash": [
+    "__pycache__ directories",
+    ".pytest_cache directories",
+    ".pyc files"
+  ],
+  "evaluator_manifest": {
+    "path": "evaluator_manifest.json",
+    "review_status": "approved",
+    "classified_on": "2026-08-29",
+    "post_change_full_cycle_revalidation_required": false,
+    "post_change_full_cycle_revalidated_on": "2026-08-29"
+  },
+  "validation_result": {
+    "baseline_failed_as_intended": true,
+    "oracle_passed_all_hidden_tests": true,
+    "second_reset_reproduced_same_failures": true,
+    "baseline_container_status": 422,
+    "oracle_container_status": 200
+  }
+}

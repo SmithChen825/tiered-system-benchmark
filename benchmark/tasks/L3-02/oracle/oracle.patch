@@ -1,0 +1,5 @@
+--- a/frontend/src/App.vue
++++ b/frontend/src/App.vue
+@@
+-<dd data-testid="order-status">{{ order.status }}</dd>
++<dd data-testid="order-status">{{ order.order_status }}</dd>

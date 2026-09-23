@@ -1,0 +1,19 @@
+--- a/app/schemas.py
++++ b/app/schemas.py
+@@ -6,12 +6,12 @@ from pydantic import BaseModel, Field, field_validator
+ class TaskCreate(BaseModel):
+     title: str = Field(min_length=1, max_length=200)
+     description: str = Field(default="", max_length=2000)
+-    due_date: date
++    due_date: date | None = None
+ 
+     @field_validator("due_date", mode="before")
+     @classmethod
+-    def require_due_date(cls, value: object) -> object:
+-        """Reject missing form values before Pydantic performs date parsing."""
++    def normalize_empty_due_date(cls, value: object) -> object:
++        """Treat an omitted or empty form value as no due date."""
+         if value is None or value == "":
+-            raise ValueError("due_date is required")
++            return None
+         return value
