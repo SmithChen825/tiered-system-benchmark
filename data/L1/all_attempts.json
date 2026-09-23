@@ -1,0 +1,412 @@
+[
+  {
+    "global_position": 1,
+    "run_id": "main-L1-01-gpt-5-4-r01-a01",
+    "selected": false,
+    "validity_status": "invalid",
+    "lifecycle_state": "invalidated",
+    "stop_reason": "infrastructure_failure",
+    "exclusion_reason": "OpenAI transport failure (non-retryable)",
+    "selected_run_id": "main-L1-01-gpt-5-4-r01-a03"
+  },
+  {
+    "global_position": 1,
+    "run_id": "main-L1-01-gpt-5-4-r01-a02",
+    "selected": false,
+    "validity_status": "invalid",
+    "lifecycle_state": "invalidated",
+    "stop_reason": "infrastructure_failure",
+    "exclusion_reason": "Docker evaluator unavailable: host access denied",
+    "selected_run_id": "main-L1-01-gpt-5-4-r01-a03"
+  },
+  {
+    "global_position": 1,
+    "run_id": "main-L1-01-gpt-5-4-r01-a03",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-01-gpt-5-4-r01-a03"
+  },
+  {
+    "global_position": 2,
+    "run_id": "main-L1-01-cursor-r01-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-01-cursor-r01-a01"
+  },
+  {
+    "global_position": 3,
+    "run_id": "main-L1-01-qwen2-5-coder-7b-instruct-r01-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-01-qwen2-5-coder-7b-instruct-r01-a01"
+  },
+  {
+    "global_position": 4,
+    "run_id": "main-L1-01-devin-r01-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-01-devin-r01-a01"
+  },
+  {
+    "global_position": 5,
+    "run_id": "main-L1-01-devin-r02-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-01-devin-r02-a01"
+  },
+  {
+    "global_position": 6,
+    "run_id": "main-L1-01-qwen2-5-coder-7b-instruct-r02-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-01-qwen2-5-coder-7b-instruct-r02-a01"
+  },
+  {
+    "global_position": 7,
+    "run_id": "main-L1-01-gpt-5-4-r02-a01",
+    "selected": false,
+    "validity_status": "invalid",
+    "lifecycle_state": "invalidated",
+    "stop_reason": "infrastructure_failure",
+    "exclusion_reason": "OpenAI transport failure (non-retryable)",
+    "selected_run_id": "main-L1-01-gpt-5-4-r02-a03"
+  },
+  {
+    "global_position": 7,
+    "run_id": "main-L1-01-gpt-5-4-r02-a02",
+    "selected": false,
+    "validity_status": "invalid",
+    "lifecycle_state": "invalidated",
+    "stop_reason": "infrastructure_failure",
+    "exclusion_reason": "Docker evaluator unavailable: host access denied",
+    "selected_run_id": "main-L1-01-gpt-5-4-r02-a03"
+  },
+  {
+    "global_position": 7,
+    "run_id": "main-L1-01-gpt-5-4-r02-a03",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-01-gpt-5-4-r02-a03"
+  },
+  {
+    "global_position": 8,
+    "run_id": "main-L1-01-cursor-r02-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-01-cursor-r02-a01"
+  },
+  {
+    "global_position": 9,
+    "run_id": "main-L1-01-gpt-5-4-r03-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-01-gpt-5-4-r03-a01"
+  },
+  {
+    "global_position": 10,
+    "run_id": "main-L1-01-devin-r03-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-01-devin-r03-a01"
+  },
+  {
+    "global_position": 11,
+    "run_id": "main-L1-01-cursor-r03-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-01-cursor-r03-a01"
+  },
+  {
+    "global_position": 12,
+    "run_id": "main-L1-01-qwen2-5-coder-7b-instruct-r03-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-01-qwen2-5-coder-7b-instruct-r03-a01"
+  },
+  {
+    "global_position": 13,
+    "run_id": "main-L1-02-devin-r01-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-02-devin-r01-a01"
+  },
+  {
+    "global_position": 14,
+    "run_id": "main-L1-02-qwen2-5-coder-7b-instruct-r01-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-02-qwen2-5-coder-7b-instruct-r01-a01"
+  },
+  {
+    "global_position": 15,
+    "run_id": "main-L1-02-cursor-r01-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-02-cursor-r01-a01"
+  },
+  {
+    "global_position": 16,
+    "run_id": "main-L1-02-gpt-5-4-r01-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-02-gpt-5-4-r01-a01"
+  },
+  {
+    "global_position": 17,
+    "run_id": "main-L1-02-cursor-r02-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-02-cursor-r02-a01"
+  },
+  {
+    "global_position": 18,
+    "run_id": "main-L1-02-devin-r02-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-02-devin-r02-a01"
+  },
+  {
+    "global_position": 19,
+    "run_id": "main-L1-02-qwen2-5-coder-7b-instruct-r02-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-02-qwen2-5-coder-7b-instruct-r02-a01"
+  },
+  {
+    "global_position": 20,
+    "run_id": "main-L1-02-gpt-5-4-r02-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-02-gpt-5-4-r02-a01"
+  },
+  {
+    "global_position": 21,
+    "run_id": "main-L1-02-qwen2-5-coder-7b-instruct-r03-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-02-qwen2-5-coder-7b-instruct-r03-a01"
+  },
+  {
+    "global_position": 22,
+    "run_id": "main-L1-02-devin-r03-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-02-devin-r03-a01"
+  },
+  {
+    "global_position": 23,
+    "run_id": "main-L1-02-cursor-r03-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-02-cursor-r03-a01"
+  },
+  {
+    "global_position": 24,
+    "run_id": "main-L1-02-gpt-5-4-r03-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-02-gpt-5-4-r03-a01"
+  },
+  {
+    "global_position": 25,
+    "run_id": "main-L1-03-qwen2-5-coder-7b-instruct-r01-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-03-qwen2-5-coder-7b-instruct-r01-a01"
+  },
+  {
+    "global_position": 26,
+    "run_id": "main-L1-03-cursor-r01-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-03-cursor-r01-a01"
+  },
+  {
+    "global_position": 27,
+    "run_id": "main-L1-03-gpt-5-4-r01-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-03-gpt-5-4-r01-a01"
+  },
+  {
+    "global_position": 28,
+    "run_id": "main-L1-03-devin-r01-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-03-devin-r01-a01"
+  },
+  {
+    "global_position": 29,
+    "run_id": "main-L1-03-qwen2-5-coder-7b-instruct-r02-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-03-qwen2-5-coder-7b-instruct-r02-a01"
+  },
+  {
+    "global_position": 30,
+    "run_id": "main-L1-03-cursor-r02-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-03-cursor-r02-a01"
+  },
+  {
+    "global_position": 31,
+    "run_id": "main-L1-03-devin-r02-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-03-devin-r02-a01"
+  },
+  {
+    "global_position": 32,
+    "run_id": "main-L1-03-gpt-5-4-r02-a01",
+    "selected": false,
+    "validity_status": "invalid",
+    "lifecycle_state": "invalidated",
+    "stop_reason": "infrastructure_failure",
+    "exclusion_reason": "OpenAI transport failure (non-retryable)",
+    "selected_run_id": "main-L1-03-gpt-5-4-r02-a02"
+  },
+  {
+    "global_position": 32,
+    "run_id": "main-L1-03-gpt-5-4-r02-a02",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-03-gpt-5-4-r02-a02"
+  },
+  {
+    "global_position": 33,
+    "run_id": "main-L1-03-gpt-5-4-r03-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-03-gpt-5-4-r03-a01"
+  },
+  {
+    "global_position": 34,
+    "run_id": "main-L1-03-qwen2-5-coder-7b-instruct-r03-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-03-qwen2-5-coder-7b-instruct-r03-a01"
+  },
+  {
+    "global_position": 35,
+    "run_id": "main-L1-03-cursor-r03-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-03-cursor-r03-a01"
+  },
+  {
+    "global_position": 36,
+    "run_id": "main-L1-03-devin-r03-a01",
+    "selected": true,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "exclusion_reason": null,
+    "selected_run_id": "main-L1-03-devin-r03-a01"
+  }
+]

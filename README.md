@@ -4,7 +4,7 @@
 
 TSB is the research software for *Benchmarking Agentic Code Generation Tools*, a University of Melbourne thesis by Wenrui Chen, supervised by Prof. Richard Sinnott.
 
-This first release contains the **task suite, evaluation framework, experimental design, and descriptive pilot data**. The 144-run main-experiment results will be added after collection and verification are complete.
+This branch adds the **completed L1 main-experiment results (36 observations)** to the task suite, evaluation framework, experimental design, and pilot data. Start with the [L1 results and data guide](data/L1/README.md). The complete 144-run results will follow after collection and verification.
 
 ## At a glance
 
@@ -30,6 +30,10 @@ The comparison concerns **complete configured systems**, including their interfa
 
 Each task provides a public brief, a faulty starting repository, a deterministic reset, evaluator-only tests, architectural invariants, and a known-good repair. See the [task catalogue](docs/tasks.md).
 
+## L1 results
+
+Cursor, Devin Desktop, and GPT-5.4 each succeeded in 9/9 L1 runs. Qwen succeeded in 0/9, with all nine runs stopping at the no-action response limit. See the [L1 summary, per-run results, and attempt index](data/L1/README.md). These results cover the static-website tier only.
+
 ## Start here
 
 - **Understand the study:** [experimental protocol](docs/protocol.md) and [analysis plan](benchmark/config/analysis_plan.main.json).
@@ -47,6 +51,7 @@ benchmark/
   config/      Research protocol, planned schedule, and analysis specifications
   schemas/     Machine-readable evidence and result contracts
   docs/        Detailed implementation and evidence documentation
+data/L1/       L1 main results, check-level evidence, code diffs, attempt index
 data/pilot/    Selected pilot observations, attempt index, descriptive summary
 docs/          Short guides to the study, tasks, pilot, and reproduction
 ```
