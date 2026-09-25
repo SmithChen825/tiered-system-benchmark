@@ -4,7 +4,7 @@
 
 TSB is the research software for *Benchmarking Agentic Code Generation Tools*, a University of Melbourne thesis by Wenrui Chen, supervised by Prof. Richard Sinnott.
 
-This branch adds the **completed L1 main-experiment results (36 observations)** to the task suite, evaluation framework, experimental design, and pilot data. Start with the [L1 results and data guide](data/L1/README.md). The complete 144-run results will follow after collection and verification.
+This branch adds the **completed L1 and L2 main-experiment results (72 observations)** to the task suite, evaluation framework, experimental design, and pilot data. See the [L1 results](data/L1/README.md) and [L2 results and data guide](data/L2/README.md). The complete 144-run results will follow after collection and verification.
 
 ## At a glance
 
@@ -34,12 +34,17 @@ Each task provides a public brief, a faulty starting repository, a deterministic
 
 Cursor, Devin Desktop, and GPT-5.4 each succeeded in 9/9 L1 runs. Qwen succeeded in 0/9, with all nine runs stopping at the no-action response limit. See the [L1 summary, per-run results, and attempt index](data/L1/README.md). These results cover the static-website tier only.
 
+## L2 results
+
+L2 includes 36 selected observations and 38 retained attempts. See the [L2 summary, check results, code diffs, and exclusions](data/L2/README.md).
+
 ## Start here
 
 - **Understand the study:** [experimental protocol](docs/protocol.md) and [analysis plan](benchmark/config/analysis_plan.main.json).
 - **Inspect a task:** [L3-03 public brief](benchmark/tasks/L3-03/public_task_brief.md), [starting application](benchmark/tasks/L3-03/fixture_repo), and [task package](benchmark/tasks/L3-03).
 - **Try the framework:** follow the [local setup and validation guide](docs/reproduction.md).
-- **Review the pilot:** read the [pilot summary](docs/pilot.md), [16 selected observations](data/pilot/selected_runs.csv), and [27-attempt index](data/pilot/all_attempts.csv).
+- **Review the pilot:** read the [pilot summary](docs/pilot.md), [16 selected observations](data/L2/       L2 main results, check-level evidence, code diffs, attempt index
+data/pilot/selected_runs.csv), and [27-attempt index](data/pilot/all_attempts.csv).
 - **Understand this release:** read the [release scope](docs/release-scope.md).
 
 ## Repository layout

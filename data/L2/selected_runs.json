@@ -1,0 +1,3950 @@
+[
+  {
+    "global_position": 37,
+    "run_id": "main-L2-01-cursor-r01-a01",
+    "task_id": "L2-01",
+    "system_id": "cursor",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-16T08:50:22.094560Z",
+      "ended_at": "2026-09-16T08:51:40.834440Z",
+      "elapsed_seconds": 78.734
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "9706eaacc3d9f989c900b28b8a2cba587f08a2d319cecda37db4efaf36546066"
+    },
+    "start_commit": "f70634aaa8a07b7d88fb5dccfa9573a3f5362196",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "detail_page",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "all_index_links",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "json_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "item_identity_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "public_detail_route_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "unknown_item_404",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "json_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_route_fallback",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/main.py b/app/main.py\nindex 7058f47..90b7b9c 100644\n--- a/app/main.py\n+++ b/app/main.py\n@@ -25,8 +25,8 @@ def create_app() -> FastAPI:\n         return item\n \n     @application.get(\"/items/{item_id}\", response_class=HTMLResponse)\n-    def item_detail(product_id: int) -> str:\n-        item = ITEMS.get(product_id)\n+    def item_detail(item_id: int) -> str:\n+        item = ITEMS.get(item_id)\n         if item is None: raise HTTPException(status_code=404, detail=\"Item not found\")\n         return f'<!doctype html><title>{item[\"name\"]}</title><main data-testid=\"item-detail\"><h1>{item[\"name\"]}</h1><p>{item[\"category\"]}</p><data value=\"{item[\"price\"]:.2f}\">${item[\"price\"]:.2f}</data></main>'\n \n"
+  },
+  {
+    "global_position": 38,
+    "run_id": "main-L2-01-devin-r01-a01",
+    "task_id": "L2-01",
+    "system_id": "devin",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-16T09:04:23.059933Z",
+      "ended_at": "2026-09-16T09:05:45.924591Z",
+      "elapsed_seconds": 82.875
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "f70634aaa8a07b7d88fb5dccfa9573a3f5362196",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "detail_page",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "all_index_links",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "json_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "item_identity_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "public_detail_route_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "unknown_item_404",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "json_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_route_fallback",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/main.py b/app/main.py\nindex 7058f47..90b7b9c 100644\n--- a/app/main.py\n+++ b/app/main.py\n@@ -25,8 +25,8 @@ def create_app() -> FastAPI:\n         return item\n \n     @application.get(\"/items/{item_id}\", response_class=HTMLResponse)\n-    def item_detail(product_id: int) -> str:\n-        item = ITEMS.get(product_id)\n+    def item_detail(item_id: int) -> str:\n+        item = ITEMS.get(item_id)\n         if item is None: raise HTTPException(status_code=404, detail=\"Item not found\")\n         return f'<!doctype html><title>{item[\"name\"]}</title><main data-testid=\"item-detail\"><h1>{item[\"name\"]}</h1><p>{item[\"category\"]}</p><data value=\"{item[\"price\"]:.2f}\">${item[\"price\"]:.2f}</data></main>'\n \n"
+  },
+  {
+    "global_position": 39,
+    "run_id": "main-L2-01-gpt-5-4-r01-a01",
+    "task_id": "L2-01",
+    "system_id": "gpt-5.4",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-16T09:21:57.995950+00:00",
+      "ended_at": "2026-09-16T09:22:18.024598+00:00",
+      "elapsed_seconds": 20.03099999999995
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "09f8f39ea37b3ed37e077288b7d18f5053e4114e0b8dc3fb54a1cff50fd322d1"
+    },
+    "start_commit": "f70634aaa8a07b7d88fb5dccfa9573a3f5362196",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 10619,
+      "output_tokens": 614,
+      "total_tokens": 11233,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "detail_page",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "all_index_links",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "json_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "item_identity_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "public_detail_route_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "unknown_item_404",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "json_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_route_fallback",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/main.py b/app/main.py\nindex 7058f47..b31a804 100644\n--- a/app/main.py\n+++ b/app/main.py\n@@ -1,35 +1,35 @@\n-from fastapi import FastAPI, HTTPException\n-from fastapi.responses import HTMLResponse\n-\n-ITEMS = {\n-    1: {\"id\": 1, \"name\": \"Aurora Lamp\", \"category\": \"Lighting\", \"price\": 79.0},\n-    2: {\"id\": 2, \"name\": \"Harbor Pack\", \"category\": \"Carry\", \"price\": 129.0},\n-    3: {\"id\": 3, \"name\": \"Mesa Mug\", \"category\": \"Drinkware\", \"price\": 24.0},\n-}\n-\n-def create_app() -> FastAPI:\n-    application = FastAPI(title=\"Northstar Items\")\n-\n-    @application.get(\"/health\")\n-    def health() -> dict[str, str]: return {\"status\": \"ok\"}\n-\n-    @application.get(\"/\", response_class=HTMLResponse)\n-    def item_index() -> str:\n-        links = \"\".join(f'<li><a href=\"/items/{item[\"id\"]}\">{item[\"name\"]}</a></li>' for item in ITEMS.values())\n-        return f\"<!doctype html><title>Items</title><main><h1>Items</h1><ul>{links}</ul></main>\"\n-\n-    @application.get(\"/api/items/{item_id}\")\n-    def item_api(item_id: int) -> dict[str, object]:\n-        item = ITEMS.get(item_id)\n-        if item is None: raise HTTPException(status_code=404, detail=\"Item not found\")\n-        return item\n-\n-    @application.get(\"/items/{item_id}\", response_class=HTMLResponse)\n-    def item_detail(product_id: int) -> str:\n-        item = ITEMS.get(product_id)\n-        if item is None: raise HTTPException(status_code=404, detail=\"Item not found\")\n-        return f'<!doctype html><title>{item[\"name\"]}</title><main data-testid=\"item-detail\"><h1>{item[\"name\"]}</h1><p>{item[\"category\"]}</p><data value=\"{item[\"price\"]:.2f}\">${item[\"price\"]:.2f}</data></main>'\n-\n-    return application\n-\n-app = create_app()\n+from fastapi import FastAPI, HTTPException\n+from fastapi.responses import HTMLResponse\n+\n+ITEMS = {\n+    1: {\"id\": 1, \"name\": \"Aurora Lamp\", \"category\": \"Lighting\", \"price\": 79.0},\n+    2: {\"id\": 2, \"name\": \"Harbor Pack\", \"category\": \"Carry\", \"price\": 129.0},\n+    3: {\"id\": 3, \"name\": \"Mesa Mug\", \"category\": \"Drinkware\", \"price\": 24.0},\n+}\n+\n+def create_app() -> FastAPI:\n+    application = FastAPI(title=\"Northstar Items\")\n+\n+    @application.get(\"/health\")\n+    def health() -> dict[str, str]: return {\"status\": \"ok\"}\n+\n+    @application.get(\"/\", response_class=HTMLResponse)\n+    def item_index() -> str:\n+        links = \"\".join(f'<li><a href=\"/items/{item[\"id\"]}\">{item[\"name\"]}</a></li>' for item in ITEMS.values())\n+        return f\"<!doctype html><title>Items</title><main><h1>Items</h1><ul>{links}</ul></main>\"\n+\n+    @application.get(\"/api/items/{item_id}\")\n+    def item_api(item_id: int) -> dict[str, object]:\n+        item = ITEMS.get(item_id)\n+        if item is None: raise HTTPException(status_code=404, detail=\"Item not found\")\n+        return item\n+\n+    @application.get(\"/items/{item_id}\", response_class=HTMLResponse)\n+    def item_detail(item_id: int) -> str:\n+        item = ITEMS.get(item_id)\n+        if item is None: raise HTTPException(status_code=404, detail=\"Item not found\")\n+        return f'<!doctype html><title>{item[\"name\"]}</title><main data-testid=\"item-detail\"><h1>{item[\"name\"]}</h1><p>{item[\"category\"]}</p><data value=\"{item[\"price\"]:.2f}\">${item[\"price\"]:.2f}</data></main>'\n+\n+    return application\n+\n+app = create_app()\n"
+  },
+  {
+    "global_position": 40,
+    "run_id": "main-L2-01-qwen2-5-coder-7b-instruct-r01-a01",
+    "task_id": "L2-01",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-16T10:02:11.522607+00:00",
+      "ended_at": "2026-09-16T10:02:27.180814+00:00",
+      "elapsed_seconds": 15.65599999999904
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "ddbdea5352df90576905640b4fd5b6a878e9dc643d18426fc30026aeb8f0135f"
+    },
+    "start_commit": "f70634aaa8a07b7d88fb5dccfa9573a3f5362196",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 1,
+        "applicable": 3,
+        "proportion": 0.3333333333333333
+      },
+      "architecture_checks": {
+        "passed": 1,
+        "applicable": 5,
+        "proportion": 0.2
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 3242,
+      "output_tokens": 184,
+      "total_tokens": 3426,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "detail_page",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "all_index_links",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "json_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "item_identity_preserved",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "public_detail_route_preserved",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "unknown_item_404",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "json_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_route_fallback",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "final_diff": ""
+  },
+  {
+    "global_position": 41,
+    "run_id": "main-L2-01-gpt-5-4-r02-a01",
+    "task_id": "L2-01",
+    "system_id": "gpt-5.4",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-17T01:06:24.344075+00:00",
+      "ended_at": "2026-09-17T01:06:43.599595+00:00",
+      "elapsed_seconds": 19.265999999995984
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "b444b76341c9165c7c31c23dc77ffaaba47679ac6c16195ab925b623bcdf1743"
+    },
+    "start_commit": "f70634aaa8a07b7d88fb5dccfa9573a3f5362196",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 9501,
+      "output_tokens": 638,
+      "total_tokens": 10139,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "detail_page",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "all_index_links",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "json_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "item_identity_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "public_detail_route_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "unknown_item_404",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "json_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_route_fallback",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/main.py b/app/main.py\nindex 7058f47..b31a804 100644\n--- a/app/main.py\n+++ b/app/main.py\n@@ -1,35 +1,35 @@\n-from fastapi import FastAPI, HTTPException\n-from fastapi.responses import HTMLResponse\n-\n-ITEMS = {\n-    1: {\"id\": 1, \"name\": \"Aurora Lamp\", \"category\": \"Lighting\", \"price\": 79.0},\n-    2: {\"id\": 2, \"name\": \"Harbor Pack\", \"category\": \"Carry\", \"price\": 129.0},\n-    3: {\"id\": 3, \"name\": \"Mesa Mug\", \"category\": \"Drinkware\", \"price\": 24.0},\n-}\n-\n-def create_app() -> FastAPI:\n-    application = FastAPI(title=\"Northstar Items\")\n-\n-    @application.get(\"/health\")\n-    def health() -> dict[str, str]: return {\"status\": \"ok\"}\n-\n-    @application.get(\"/\", response_class=HTMLResponse)\n-    def item_index() -> str:\n-        links = \"\".join(f'<li><a href=\"/items/{item[\"id\"]}\">{item[\"name\"]}</a></li>' for item in ITEMS.values())\n-        return f\"<!doctype html><title>Items</title><main><h1>Items</h1><ul>{links}</ul></main>\"\n-\n-    @application.get(\"/api/items/{item_id}\")\n-    def item_api(item_id: int) -> dict[str, object]:\n-        item = ITEMS.get(item_id)\n-        if item is None: raise HTTPException(status_code=404, detail=\"Item not found\")\n-        return item\n-\n-    @application.get(\"/items/{item_id}\", response_class=HTMLResponse)\n-    def item_detail(product_id: int) -> str:\n-        item = ITEMS.get(product_id)\n-        if item is None: raise HTTPException(status_code=404, detail=\"Item not found\")\n-        return f'<!doctype html><title>{item[\"name\"]}</title><main data-testid=\"item-detail\"><h1>{item[\"name\"]}</h1><p>{item[\"category\"]}</p><data value=\"{item[\"price\"]:.2f}\">${item[\"price\"]:.2f}</data></main>'\n-\n-    return application\n-\n-app = create_app()\n+from fastapi import FastAPI, HTTPException\n+from fastapi.responses import HTMLResponse\n+\n+ITEMS = {\n+    1: {\"id\": 1, \"name\": \"Aurora Lamp\", \"category\": \"Lighting\", \"price\": 79.0},\n+    2: {\"id\": 2, \"name\": \"Harbor Pack\", \"category\": \"Carry\", \"price\": 129.0},\n+    3: {\"id\": 3, \"name\": \"Mesa Mug\", \"category\": \"Drinkware\", \"price\": 24.0},\n+}\n+\n+def create_app() -> FastAPI:\n+    application = FastAPI(title=\"Northstar Items\")\n+\n+    @application.get(\"/health\")\n+    def health() -> dict[str, str]: return {\"status\": \"ok\"}\n+\n+    @application.get(\"/\", response_class=HTMLResponse)\n+    def item_index() -> str:\n+        links = \"\".join(f'<li><a href=\"/items/{item[\"id\"]}\">{item[\"name\"]}</a></li>' for item in ITEMS.values())\n+        return f\"<!doctype html><title>Items</title><main><h1>Items</h1><ul>{links}</ul></main>\"\n+\n+    @application.get(\"/api/items/{item_id}\")\n+    def item_api(item_id: int) -> dict[str, object]:\n+        item = ITEMS.get(item_id)\n+        if item is None: raise HTTPException(status_code=404, detail=\"Item not found\")\n+        return item\n+\n+    @application.get(\"/items/{item_id}\", response_class=HTMLResponse)\n+    def item_detail(item_id: int) -> str:\n+        item = ITEMS.get(item_id)\n+        if item is None: raise HTTPException(status_code=404, detail=\"Item not found\")\n+        return f'<!doctype html><title>{item[\"name\"]}</title><main data-testid=\"item-detail\"><h1>{item[\"name\"]}</h1><p>{item[\"category\"]}</p><data value=\"{item[\"price\"]:.2f}\">${item[\"price\"]:.2f}</data></main>'\n+\n+    return application\n+\n+app = create_app()\n"
+  },
+  {
+    "global_position": 42,
+    "run_id": "main-L2-01-devin-r02-a01",
+    "task_id": "L2-01",
+    "system_id": "devin",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-17T01:19:17.743108Z",
+      "ended_at": "2026-09-17T01:20:34.130169Z",
+      "elapsed_seconds": 76.39
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "f70634aaa8a07b7d88fb5dccfa9573a3f5362196",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "detail_page",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "all_index_links",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "json_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "item_identity_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "public_detail_route_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "unknown_item_404",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "json_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_route_fallback",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/main.py b/app/main.py\nindex 7058f47..90b7b9c 100644\n--- a/app/main.py\n+++ b/app/main.py\n@@ -25,8 +25,8 @@ def create_app() -> FastAPI:\n         return item\n \n     @application.get(\"/items/{item_id}\", response_class=HTMLResponse)\n-    def item_detail(product_id: int) -> str:\n-        item = ITEMS.get(product_id)\n+    def item_detail(item_id: int) -> str:\n+        item = ITEMS.get(item_id)\n         if item is None: raise HTTPException(status_code=404, detail=\"Item not found\")\n         return f'<!doctype html><title>{item[\"name\"]}</title><main data-testid=\"item-detail\"><h1>{item[\"name\"]}</h1><p>{item[\"category\"]}</p><data value=\"{item[\"price\"]:.2f}\">${item[\"price\"]:.2f}</data></main>'\n \n"
+  },
+  {
+    "global_position": 43,
+    "run_id": "main-L2-01-qwen2-5-coder-7b-instruct-r02-a01",
+    "task_id": "L2-01",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-17T03:13:11.081567+00:00",
+      "ended_at": "2026-09-17T03:13:28.071927+00:00",
+      "elapsed_seconds": 16.99036
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "3f109748136a4a737c7545debaf3038ab3bd6b9fb21b1856d87c558dbc083e71"
+    },
+    "start_commit": "f70634aaa8a07b7d88fb5dccfa9573a3f5362196",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 1,
+        "applicable": 3,
+        "proportion": 0.3333333333333333
+      },
+      "architecture_checks": {
+        "passed": 1,
+        "applicable": 5,
+        "proportion": 0.2
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 3252,
+      "output_tokens": 195,
+      "total_tokens": 3447,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "detail_page",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "all_index_links",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "json_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "item_identity_preserved",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "public_detail_route_preserved",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "unknown_item_404",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "json_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_route_fallback",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "final_diff": ""
+  },
+  {
+    "global_position": 44,
+    "run_id": "main-L2-01-cursor-r02-a01",
+    "task_id": "L2-01",
+    "system_id": "cursor",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-17T03:26:17.913128Z",
+      "ended_at": "2026-09-17T03:27:36.143362Z",
+      "elapsed_seconds": 78.234
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "dc2214a7192898c46e57f1ede097a7af0df470160f2b2d80d3d99945baf85a16"
+    },
+    "start_commit": "f70634aaa8a07b7d88fb5dccfa9573a3f5362196",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "detail_page",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "all_index_links",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "json_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "item_identity_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "public_detail_route_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "unknown_item_404",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "json_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_route_fallback",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/main.py b/app/main.py\nindex 7058f47..90b7b9c 100644\n--- a/app/main.py\n+++ b/app/main.py\n@@ -25,8 +25,8 @@ def create_app() -> FastAPI:\n         return item\n \n     @application.get(\"/items/{item_id}\", response_class=HTMLResponse)\n-    def item_detail(product_id: int) -> str:\n-        item = ITEMS.get(product_id)\n+    def item_detail(item_id: int) -> str:\n+        item = ITEMS.get(item_id)\n         if item is None: raise HTTPException(status_code=404, detail=\"Item not found\")\n         return f'<!doctype html><title>{item[\"name\"]}</title><main data-testid=\"item-detail\"><h1>{item[\"name\"]}</h1><p>{item[\"category\"]}</p><data value=\"{item[\"price\"]:.2f}\">${item[\"price\"]:.2f}</data></main>'\n \n"
+  },
+  {
+    "global_position": 45,
+    "run_id": "main-L2-01-devin-r03-a01",
+    "task_id": "L2-01",
+    "system_id": "devin",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-17T03:34:03.009454Z",
+      "ended_at": "2026-09-17T03:35:10.594706Z",
+      "elapsed_seconds": 67.594
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "f70634aaa8a07b7d88fb5dccfa9573a3f5362196",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "detail_page",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "all_index_links",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "json_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "item_identity_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "public_detail_route_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "unknown_item_404",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "json_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_route_fallback",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/main.py b/app/main.py\nindex 7058f47..90b7b9c 100644\n--- a/app/main.py\n+++ b/app/main.py\n@@ -25,8 +25,8 @@ def create_app() -> FastAPI:\n         return item\n \n     @application.get(\"/items/{item_id}\", response_class=HTMLResponse)\n-    def item_detail(product_id: int) -> str:\n-        item = ITEMS.get(product_id)\n+    def item_detail(item_id: int) -> str:\n+        item = ITEMS.get(item_id)\n         if item is None: raise HTTPException(status_code=404, detail=\"Item not found\")\n         return f'<!doctype html><title>{item[\"name\"]}</title><main data-testid=\"item-detail\"><h1>{item[\"name\"]}</h1><p>{item[\"category\"]}</p><data value=\"{item[\"price\"]:.2f}\">${item[\"price\"]:.2f}</data></main>'\n \n"
+  },
+  {
+    "global_position": 46,
+    "run_id": "main-L2-01-gpt-5-4-r03-a01",
+    "task_id": "L2-01",
+    "system_id": "gpt-5.4",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-17T12:25:36.822000+00:00",
+      "ended_at": "2026-09-17T12:26:05.351136+00:00",
+      "elapsed_seconds": 28.531000000002678
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "0a8f886577b4fc7fddbdc6f2f42da771b7dffda48d0067ae5f289e9488a4a120"
+    },
+    "start_commit": "f70634aaa8a07b7d88fb5dccfa9573a3f5362196",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 10163,
+      "output_tokens": 606,
+      "total_tokens": 10769,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "detail_page",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "all_index_links",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "json_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "item_identity_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "public_detail_route_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "unknown_item_404",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "json_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_route_fallback",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/main.py b/app/main.py\nindex 7058f47..b31a804 100644\n--- a/app/main.py\n+++ b/app/main.py\n@@ -1,35 +1,35 @@\n-from fastapi import FastAPI, HTTPException\n-from fastapi.responses import HTMLResponse\n-\n-ITEMS = {\n-    1: {\"id\": 1, \"name\": \"Aurora Lamp\", \"category\": \"Lighting\", \"price\": 79.0},\n-    2: {\"id\": 2, \"name\": \"Harbor Pack\", \"category\": \"Carry\", \"price\": 129.0},\n-    3: {\"id\": 3, \"name\": \"Mesa Mug\", \"category\": \"Drinkware\", \"price\": 24.0},\n-}\n-\n-def create_app() -> FastAPI:\n-    application = FastAPI(title=\"Northstar Items\")\n-\n-    @application.get(\"/health\")\n-    def health() -> dict[str, str]: return {\"status\": \"ok\"}\n-\n-    @application.get(\"/\", response_class=HTMLResponse)\n-    def item_index() -> str:\n-        links = \"\".join(f'<li><a href=\"/items/{item[\"id\"]}\">{item[\"name\"]}</a></li>' for item in ITEMS.values())\n-        return f\"<!doctype html><title>Items</title><main><h1>Items</h1><ul>{links}</ul></main>\"\n-\n-    @application.get(\"/api/items/{item_id}\")\n-    def item_api(item_id: int) -> dict[str, object]:\n-        item = ITEMS.get(item_id)\n-        if item is None: raise HTTPException(status_code=404, detail=\"Item not found\")\n-        return item\n-\n-    @application.get(\"/items/{item_id}\", response_class=HTMLResponse)\n-    def item_detail(product_id: int) -> str:\n-        item = ITEMS.get(product_id)\n-        if item is None: raise HTTPException(status_code=404, detail=\"Item not found\")\n-        return f'<!doctype html><title>{item[\"name\"]}</title><main data-testid=\"item-detail\"><h1>{item[\"name\"]}</h1><p>{item[\"category\"]}</p><data value=\"{item[\"price\"]:.2f}\">${item[\"price\"]:.2f}</data></main>'\n-\n-    return application\n-\n-app = create_app()\n+from fastapi import FastAPI, HTTPException\n+from fastapi.responses import HTMLResponse\n+\n+ITEMS = {\n+    1: {\"id\": 1, \"name\": \"Aurora Lamp\", \"category\": \"Lighting\", \"price\": 79.0},\n+    2: {\"id\": 2, \"name\": \"Harbor Pack\", \"category\": \"Carry\", \"price\": 129.0},\n+    3: {\"id\": 3, \"name\": \"Mesa Mug\", \"category\": \"Drinkware\", \"price\": 24.0},\n+}\n+\n+def create_app() -> FastAPI:\n+    application = FastAPI(title=\"Northstar Items\")\n+\n+    @application.get(\"/health\")\n+    def health() -> dict[str, str]: return {\"status\": \"ok\"}\n+\n+    @application.get(\"/\", response_class=HTMLResponse)\n+    def item_index() -> str:\n+        links = \"\".join(f'<li><a href=\"/items/{item[\"id\"]}\">{item[\"name\"]}</a></li>' for item in ITEMS.values())\n+        return f\"<!doctype html><title>Items</title><main><h1>Items</h1><ul>{links}</ul></main>\"\n+\n+    @application.get(\"/api/items/{item_id}\")\n+    def item_api(item_id: int) -> dict[str, object]:\n+        item = ITEMS.get(item_id)\n+        if item is None: raise HTTPException(status_code=404, detail=\"Item not found\")\n+        return item\n+\n+    @application.get(\"/items/{item_id}\", response_class=HTMLResponse)\n+    def item_detail(item_id: int) -> str:\n+        item = ITEMS.get(item_id)\n+        if item is None: raise HTTPException(status_code=404, detail=\"Item not found\")\n+        return f'<!doctype html><title>{item[\"name\"]}</title><main data-testid=\"item-detail\"><h1>{item[\"name\"]}</h1><p>{item[\"category\"]}</p><data value=\"{item[\"price\"]:.2f}\">${item[\"price\"]:.2f}</data></main>'\n+\n+    return application\n+\n+app = create_app()\n"
+  },
+  {
+    "global_position": 47,
+    "run_id": "main-L2-01-cursor-r03-a01",
+    "task_id": "L2-01",
+    "system_id": "cursor",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-17T12:34:35.406632Z",
+      "ended_at": "2026-09-17T12:35:48.918558Z",
+      "elapsed_seconds": 73.516
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "dc2214a7192898c46e57f1ede097a7af0df470160f2b2d80d3d99945baf85a16"
+    },
+    "start_commit": "f70634aaa8a07b7d88fb5dccfa9573a3f5362196",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "detail_page",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "all_index_links",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "json_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "item_identity_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "public_detail_route_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "unknown_item_404",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "json_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_route_fallback",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/main.py b/app/main.py\nindex 7058f47..90b7b9c 100644\n--- a/app/main.py\n+++ b/app/main.py\n@@ -25,8 +25,8 @@ def create_app() -> FastAPI:\n         return item\n \n     @application.get(\"/items/{item_id}\", response_class=HTMLResponse)\n-    def item_detail(product_id: int) -> str:\n-        item = ITEMS.get(product_id)\n+    def item_detail(item_id: int) -> str:\n+        item = ITEMS.get(item_id)\n         if item is None: raise HTTPException(status_code=404, detail=\"Item not found\")\n         return f'<!doctype html><title>{item[\"name\"]}</title><main data-testid=\"item-detail\"><h1>{item[\"name\"]}</h1><p>{item[\"category\"]}</p><data value=\"{item[\"price\"]:.2f}\">${item[\"price\"]:.2f}</data></main>'\n \n"
+  },
+  {
+    "global_position": 48,
+    "run_id": "main-L2-01-qwen2-5-coder-7b-instruct-r03-a01",
+    "task_id": "L2-01",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-17T13:23:51.817402+00:00",
+      "ended_at": "2026-09-17T13:24:07.440806+00:00",
+      "elapsed_seconds": 15.623404
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "d8329c48690cb70e4b028a0e4ae62e6c4ffa9beb675555755c38a502e3302d16"
+    },
+    "start_commit": "f70634aaa8a07b7d88fb5dccfa9573a3f5362196",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 1,
+        "applicable": 3,
+        "proportion": 0.3333333333333333
+      },
+      "architecture_checks": {
+        "passed": 1,
+        "applicable": 5,
+        "proportion": 0.2
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 3242,
+      "output_tokens": 184,
+      "total_tokens": 3426,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "detail_page",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "all_index_links",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "json_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "item_identity_preserved",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "public_detail_route_preserved",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "unknown_item_404",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "json_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_route_fallback",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "final_diff": ""
+  },
+  {
+    "global_position": 49,
+    "run_id": "main-L2-02-cursor-r01-a02",
+    "task_id": "L2-02",
+    "system_id": "cursor",
+    "repetition": 1,
+    "attempt": 2,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-18T06:13:52.552646Z",
+      "ended_at": "2026-09-18T06:17:27.002095Z",
+      "elapsed_seconds": 214.453
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "dc2214a7192898c46e57f1ede097a7af0df470160f2b2d80d3d99945baf85a16"
+    },
+    "start_commit": "57a97ae50467f6c9c24f8a67c26ba573d656b3e8",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 7,
+        "applicable": 7,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": true,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "omitted_due_date_accepted",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "empty_due_date_accepted",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "valid_iso_date_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "malformed_date_rejected",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "title_remains_required",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "task_survives_restart",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_form_marks_due_date_optional",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "optional_due_date_normalized_to_sql_null",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "supplied_due_date_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "unrelated_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_hard_coded_evaluator_examples",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "creation_retrieval_and_persistence_operational",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/schemas.py b/app/schemas.py\nindex 0e91910..f50853e 100644\n--- a/app/schemas.py\n+++ b/app/schemas.py\n@@ -6,14 +6,14 @@ from pydantic import BaseModel, Field, field_validator\n class TaskCreate(BaseModel):\n     title: str = Field(min_length=1, max_length=200)\n     description: str = Field(default=\"\", max_length=2000)\n-    due_date: date\n+    due_date: date | None = None\n \n     @field_validator(\"due_date\", mode=\"before\")\n     @classmethod\n-    def require_due_date(cls, value: object) -> object:\n-        \"\"\"Reject missing form values before Pydantic performs date parsing.\"\"\"\n+    def normalize_due_date(cls, value: object) -> object:\n+        \"\"\"Treat missing form values as absent before Pydantic performs date parsing.\"\"\"\n         if value is None or value == \"\":\n-            raise ValueError(\"due_date is required\")\n+            return None\n         return value\n \n \n"
+  },
+  {
+    "global_position": 50,
+    "run_id": "main-L2-02-devin-r01-a02",
+    "task_id": "L2-02",
+    "system_id": "devin",
+    "repetition": 1,
+    "attempt": 2,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-18T12:32:13.681112Z",
+      "ended_at": "2026-09-18T12:36:13.379087Z",
+      "elapsed_seconds": 239.703
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "57a97ae50467f6c9c24f8a67c26ba573d656b3e8",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 7,
+        "applicable": 7,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": true,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "omitted_due_date_accepted",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "empty_due_date_accepted",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "valid_iso_date_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "malformed_date_rejected",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "title_remains_required",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "task_survives_restart",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_form_marks_due_date_optional",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "optional_due_date_normalized_to_sql_null",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "supplied_due_date_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "unrelated_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_hard_coded_evaluator_examples",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "creation_retrieval_and_persistence_operational",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/schemas.py b/app/schemas.py\nindex 0e91910..6d0eeca 100644\n--- a/app/schemas.py\n+++ b/app/schemas.py\n@@ -6,14 +6,14 @@ from pydantic import BaseModel, Field, field_validator\n class TaskCreate(BaseModel):\n     title: str = Field(min_length=1, max_length=200)\n     description: str = Field(default=\"\", max_length=2000)\n-    due_date: date\n+    due_date: date | None = None\n \n     @field_validator(\"due_date\", mode=\"before\")\n     @classmethod\n-    def require_due_date(cls, value: object) -> object:\n-        \"\"\"Reject missing form values before Pydantic performs date parsing.\"\"\"\n-        if value is None or value == \"\":\n-            raise ValueError(\"due_date is required\")\n+    def empty_string_to_none(cls, value: object) -> object:\n+        \"\"\"Convert empty strings to None before date parsing.\"\"\"\n+        if value == \"\":\n+            return None\n         return value\n \n \ndiff --git a/data/tasks.db b/data/tasks.db\nnew file mode 100644\nindex 0000000000000000000000000000000000000000..954fa58073c95e136180e0eb27b0f529673ab34c\nGIT binary patch\nliteral 12288\nzcmeI&%TB^T6b9fK5RE1ZyYBS30s<H=apBIYqal`yI3%(n6~@@eMd+Yw<H~pO8GIIB\nz!oAZ%jG&2eWn%u5&P+QwXPSJw)Aanz@wB3=;kfT=DzOCPob3}a#-g)fmN2-PmuC0D\nz5<LGDQMPmUv~IE@8!s%LFcSg-5P$##AOHafKmY;|fB*y_@N0p3WZBAOcuTvNJ>`#j\nzrj>2`YBW)U&f;VAupw+INZJREpoQGj!0oH7sZ2lg`HE#({BbWlQ@j3+A5M|E`f!U<\nzYqStvm&#QsPDF$1jdI0qwCGf{$ZpD7xoS?Rh^owfsnVYADU#wsQnhAA({a8gb(P;4\nzd$-yf4(3zoNF3WuM^ZBRP1QuTyRPZ*r>C2f=iZ(Ud-M1+i@%x)0Rad=00Izz00bZa\nz0SG_<0uX?}p9>TtF;>cLOXX_{K0wgDr>`mK?!&E59|(&1Qa+b2<O;i+JjS+i?4xEe\nqGwA<${Ee9l0Rad=00Izz00bZa0SG_<0uX?}e-c>bQHxLiYIp}de1LEO\n\nliteral 0\nHcmV?d00001\n\n"
+  },
+  {
+    "global_position": 51,
+    "run_id": "main-L2-02-gpt-5-4-r01-a01",
+    "task_id": "L2-02",
+    "system_id": "gpt-5.4",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-19T01:28:34.025224+00:00",
+      "ended_at": "2026-09-19T01:29:14.409309+00:00",
+      "elapsed_seconds": 40.39100000000326
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "3c664c47be7651e10ce0756123b451b13f0fdbab9f4a930bb49a2f3c04011a9f"
+    },
+    "start_commit": "57a97ae50467f6c9c24f8a67c26ba573d656b3e8",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 7,
+        "applicable": 7,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": true,
+      "requests": 1,
+      "authorized_requests": 1,
+      "responses": 1
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 32493,
+      "output_tokens": 1243,
+      "total_tokens": 33736,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "omitted_due_date_accepted",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "empty_due_date_accepted",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "valid_iso_date_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "malformed_date_rejected",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "title_remains_required",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "task_survives_restart",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_form_marks_due_date_optional",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "optional_due_date_normalized_to_sql_null",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "supplied_due_date_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "unrelated_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_hard_coded_evaluator_examples",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "creation_retrieval_and_persistence_operational",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/schemas.py b/app/schemas.py\nindex 0e91910..cda5c15 100644\n--- a/app/schemas.py\n+++ b/app/schemas.py\n@@ -1,24 +1,24 @@\n-from datetime import date\n-\n-from pydantic import BaseModel, Field, field_validator\n-\n-\n-class TaskCreate(BaseModel):\n-    title: str = Field(min_length=1, max_length=200)\n-    description: str = Field(default=\"\", max_length=2000)\n-    due_date: date\n-\n-    @field_validator(\"due_date\", mode=\"before\")\n-    @classmethod\n-    def require_due_date(cls, value: object) -> object:\n-        \"\"\"Reject missing form values before Pydantic performs date parsing.\"\"\"\n-        if value is None or value == \"\":\n-            raise ValueError(\"due_date is required\")\n-        return value\n-\n-\n-class TaskRead(BaseModel):\n-    id: int\n-    title: str\n-    description: str\n-    due_date: date | None\n+from datetime import date\n+\n+from pydantic import BaseModel, Field, field_validator\n+\n+\n+class TaskCreate(BaseModel):\n+    title: str = Field(min_length=1, max_length=200)\n+    description: str = Field(default=\"\", max_length=2000)\n+    due_date: date | None = None\n+\n+    @field_validator(\"due_date\", mode=\"before\")\n+    @classmethod\n+    def normalize_due_date(cls, value: object) -> object:\n+        \"\"\"Treat empty form values as an omitted optional date.\"\"\"\n+        if value is None or value == \"\":\n+            return None\n+        return value\n+\n+\n+class TaskRead(BaseModel):\n+    id: int\n+    title: str\n+    description: str\n+    due_date: date | None\n"
+  },
+  {
+    "global_position": 52,
+    "run_id": "main-L2-02-qwen2-5-coder-7b-instruct-r01-a01",
+    "task_id": "L2-02",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-19T01:47:17.643302+00:00",
+      "ended_at": "2026-09-19T01:47:55.034071+00:00",
+      "elapsed_seconds": 37.39100000000326
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "8c56fc799265c762ebe4c1148fd4fad078bcb2e1c1693851d155333a9ecfb502"
+    },
+    "start_commit": "57a97ae50467f6c9c24f8a67c26ba573d656b3e8",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 7,
+        "proportion": 0.5714285714285714
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 6,
+        "proportion": 0.6666666666666666
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": true,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 8174,
+      "output_tokens": 522,
+      "total_tokens": 8696,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "omitted_due_date_accepted",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "empty_due_date_accepted",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "valid_iso_date_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "malformed_date_rejected",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "title_remains_required",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "task_survives_restart",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "browser_form_marks_due_date_optional",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "optional_due_date_normalized_to_sql_null",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "supplied_due_date_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "unrelated_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_hard_coded_evaluator_examples",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "creation_retrieval_and_persistence_operational",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "final_diff": ""
+  },
+  {
+    "global_position": 53,
+    "run_id": "main-L2-02-gpt-5-4-r02-a01",
+    "task_id": "L2-02",
+    "system_id": "gpt-5.4",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-19T02:15:10.365046+00:00",
+      "ended_at": "2026-09-19T02:15:45.143581+00:00",
+      "elapsed_seconds": 34.778535
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "57bbd3507aba20cfd84e92df1a989a66ea733a8f6ff23f8dc285848a053eec1a"
+    },
+    "start_commit": "57a97ae50467f6c9c24f8a67c26ba573d656b3e8",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 7,
+        "applicable": 7,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": true,
+      "requests": 1,
+      "authorized_requests": 1,
+      "responses": 1
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 48128,
+      "output_tokens": 1645,
+      "total_tokens": 49773,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "omitted_due_date_accepted",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "empty_due_date_accepted",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "valid_iso_date_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "malformed_date_rejected",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "title_remains_required",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "task_survives_restart",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_form_marks_due_date_optional",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "optional_due_date_normalized_to_sql_null",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "supplied_due_date_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "unrelated_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_hard_coded_evaluator_examples",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "creation_retrieval_and_persistence_operational",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/schemas.py b/app/schemas.py\nindex 0e91910..014e0c7 100644\n--- a/app/schemas.py\n+++ b/app/schemas.py\n@@ -1,24 +1,24 @@\n-from datetime import date\n-\n-from pydantic import BaseModel, Field, field_validator\n-\n-\n-class TaskCreate(BaseModel):\n-    title: str = Field(min_length=1, max_length=200)\n-    description: str = Field(default=\"\", max_length=2000)\n-    due_date: date\n-\n-    @field_validator(\"due_date\", mode=\"before\")\n-    @classmethod\n-    def require_due_date(cls, value: object) -> object:\n-        \"\"\"Reject missing form values before Pydantic performs date parsing.\"\"\"\n-        if value is None or value == \"\":\n-            raise ValueError(\"due_date is required\")\n-        return value\n-\n-\n-class TaskRead(BaseModel):\n-    id: int\n-    title: str\n-    description: str\n-    due_date: date | None\n+from datetime import date\n+\n+from pydantic import BaseModel, Field, field_validator\n+\n+\n+class TaskCreate(BaseModel):\n+    title: str = Field(min_length=1, max_length=200)\n+    description: str = Field(default=\"\", max_length=2000)\n+    due_date: date | None = None\n+\n+    @field_validator(\"due_date\", mode=\"before\")\n+    @classmethod\n+    def normalize_due_date(cls, value: object) -> object:\n+        \"\"\"Treat blank form values as an omitted optional date.\"\"\"\n+        if value == \"\":\n+            return None\n+        return value\n+\n+\n+class TaskRead(BaseModel):\n+    id: int\n+    title: str\n+    description: str\n+    due_date: date | None\n"
+  },
+  {
+    "global_position": 54,
+    "run_id": "main-L2-02-qwen2-5-coder-7b-instruct-r02-a01",
+    "task_id": "L2-02",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-19T05:21:31.458842+00:00",
+      "ended_at": "2026-09-19T05:22:09.044316+00:00",
+      "elapsed_seconds": 37.585474
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "226d589c8ecd5191600e35c17f0ea4130688cbad592fe5d3e1a5bc554fbc78e6"
+    },
+    "start_commit": "57a97ae50467f6c9c24f8a67c26ba573d656b3e8",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 7,
+        "proportion": 0.5714285714285714
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 6,
+        "proportion": 0.6666666666666666
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": true,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 8174,
+      "output_tokens": 522,
+      "total_tokens": 8696,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "omitted_due_date_accepted",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "empty_due_date_accepted",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "valid_iso_date_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "malformed_date_rejected",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "title_remains_required",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "task_survives_restart",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "browser_form_marks_due_date_optional",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "optional_due_date_normalized_to_sql_null",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "supplied_due_date_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "unrelated_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_hard_coded_evaluator_examples",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "creation_retrieval_and_persistence_operational",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "final_diff": ""
+  },
+  {
+    "global_position": 55,
+    "run_id": "main-L2-02-cursor-r02-a01",
+    "task_id": "L2-02",
+    "system_id": "cursor",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-19T05:59:07.242821Z",
+      "ended_at": "2026-09-19T06:01:58.144288Z",
+      "elapsed_seconds": 170.906
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "dc2214a7192898c46e57f1ede097a7af0df470160f2b2d80d3d99945baf85a16"
+    },
+    "start_commit": "57a97ae50467f6c9c24f8a67c26ba573d656b3e8",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 7,
+        "applicable": 7,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": true,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "omitted_due_date_accepted",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "empty_due_date_accepted",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "valid_iso_date_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "malformed_date_rejected",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "title_remains_required",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "task_survives_restart",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_form_marks_due_date_optional",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "optional_due_date_normalized_to_sql_null",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "supplied_due_date_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "unrelated_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_hard_coded_evaluator_examples",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "creation_retrieval_and_persistence_operational",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/.pytest-tmp/test_home_page_contains_task_f0/tasks.db b/.pytest-tmp/test_home_page_contains_task_f0/tasks.db\nnew file mode 100644\nindex 0000000000000000000000000000000000000000..d086a0152332f380180689a1bfa69a118514a906\nGIT binary patch\nliteral 12288\nzcmeI#F-yZh6bJCTRulxaTh_O=rNza`&8VjY)3nA5n5o3(gkX}|=GtAH{8D~4FVPN3\nz1#vC^2bb`|doSdd={?-LiB|MHUuKb}GuC08vkM}|7&oVF&L+xyZ<CmNng11>ovuHQ\nzOjYanlbv+T1pxsFKmY;|fB*y_009U<00I#Bx4@*eZw&@K)X`I_ibZNx*=eB`E0xch\nzY5U3-wiG1oOIJ{%wwFhl8k)}jTgDG8%i{0n)l3}~FGY1})%vSP)H|d`Br!Rj6t}{s\nziSLYTKcqVmk{!sg<CzH~;mP4vmriu5NQy^E-q@VLb+?ORRm_&jt4`*5y_BxSjUBj>\nzy4_#8R%#kYX2buUZYI~>-Y<7^v-Be%009U<00Izz00bZa0SG_<0ub0?0qp-f{B!YX\nY5P$##AOHafKmY;|fB*y_0D&KYFJ0eXcK`qY\n\nliteral 0\nHcmV?d00001\n\ndiff --git a/.pytest-tmp/test_task_with_supplied_date_c0/tasks.db b/.pytest-tmp/test_task_with_supplied_date_c0/tasks.db\nnew file mode 100644\nindex 0000000000000000000000000000000000000000..ea17234aa8598ae1ef1529381484edb750f12ac3\nGIT binary patch\nliteral 12288\nzcmeI&Jx{_w7zgmX;(MaFb$uKR5Ws-M7&oh)hFD(2Vq_wf9-)!f_AqfYPJSs@zY((s\nzgaI%yYz+S=y=$*|?rHnmuI=N4?JG&mUeIwB<=7$PoLv$z#thvey3K;?gN@lh@5kf+\nz!eA$FU;8@CIQVAKL){@D009U<00Izz00bZa0SG_<0xJuYjV&{o<Td5Kv}HJG>!oZx\nzl!Kw{HWr7G>x!@(L5_803tGsHcioOm>6wX-4&OFSlYd@JYAQE;4JVy3H-B=9;(N3Z\nzzDN0@Bkn|n%9VV<s?_LS)X1tjrF>CWD2SqyTAHPN)t2OlXNQU<-Kw^|oaD){5%_)O\nz_qy|`bR%x9s_jrL_Q$NDtb49r;ZLjU%5zswjMwHo`or{wfB*y_009U<00Izz00bZa\nz0SG`~y#>zsCOZ~K<v{k`K$0gry(by?&395QN!{_+{Wgu?19;STRqHg9%cL{eboOkz\nr{vWaEXuTg0cLxCoKmY;|fB*y_009U<00Izzz^Vc}JYw!n{$cn94|jJH\n\nliteral 0\nHcmV?d00001\n\ndiff --git a/app/schemas.py b/app/schemas.py\nindex 0e91910..a0a627d 100644\n--- a/app/schemas.py\n+++ b/app/schemas.py\n@@ -6,14 +6,13 @@ from pydantic import BaseModel, Field, field_validator\n class TaskCreate(BaseModel):\n     title: str = Field(min_length=1, max_length=200)\n     description: str = Field(default=\"\", max_length=2000)\n-    due_date: date\n+    due_date: date | None = None\n \n     @field_validator(\"due_date\", mode=\"before\")\n     @classmethod\n-    def require_due_date(cls, value: object) -> object:\n-        \"\"\"Reject missing form values before Pydantic performs date parsing.\"\"\"\n+    def normalize_due_date(cls, value: object) -> object:\n         if value is None or value == \"\":\n-            raise ValueError(\"due_date is required\")\n+            return None\n         return value\n \n \n"
+  },
+  {
+    "global_position": 56,
+    "run_id": "main-L2-02-devin-r02-a01",
+    "task_id": "L2-02",
+    "system_id": "devin",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-19T12:45:10.386003Z",
+      "ended_at": "2026-09-19T12:52:55.803881Z",
+      "elapsed_seconds": 465.422
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "57a97ae50467f6c9c24f8a67c26ba573d656b3e8",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 7,
+        "applicable": 7,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": true,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "omitted_due_date_accepted",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "empty_due_date_accepted",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "valid_iso_date_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "malformed_date_rejected",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "title_remains_required",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "task_survives_restart",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_form_marks_due_date_optional",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "optional_due_date_normalized_to_sql_null",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "supplied_due_date_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "unrelated_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_hard_coded_evaluator_examples",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "creation_retrieval_and_persistence_operational",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/schemas.py b/app/schemas.py\nindex 0e91910..3dff42b 100644\n--- a/app/schemas.py\n+++ b/app/schemas.py\n@@ -6,14 +6,14 @@ from pydantic import BaseModel, Field, field_validator\n class TaskCreate(BaseModel):\n     title: str = Field(min_length=1, max_length=200)\n     description: str = Field(default=\"\", max_length=2000)\n-    due_date: date\n+    due_date: date | None = None\n \n     @field_validator(\"due_date\", mode=\"before\")\n     @classmethod\n-    def require_due_date(cls, value: object) -> object:\n-        \"\"\"Reject missing form values before Pydantic performs date parsing.\"\"\"\n+    def parse_due_date(cls, value: object) -> object:\n+        \"\"\"Parse due_date from form, allowing empty values to be None.\"\"\"\n         if value is None or value == \"\":\n-            raise ValueError(\"due_date is required\")\n+            return None\n         return value\n \n \ndiff --git a/data/tasks.db b/data/tasks.db\nnew file mode 100644\nindex 0000000000000000000000000000000000000000..d086a0152332f380180689a1bfa69a118514a906\nGIT binary patch\nliteral 12288\nzcmeI#F-yZh6bJCTRulxaTh_O=rNza`&8VjY)3nA5n5o3(gkX}|=GtAH{8D~4FVPN3\nz1#vC^2bb`|doSdd={?-LiB|MHUuKb}GuC08vkM}|7&oVF&L+xyZ<CmNng11>ovuHQ\nzOjYanlbv+T1pxsFKmY;|fB*y_009U<00I#Bx4@*eZw&@K)X`I_ibZNx*=eB`E0xch\nzY5U3-wiG1oOIJ{%wwFhl8k)}jTgDG8%i{0n)l3}~FGY1})%vSP)H|d`Br!Rj6t}{s\nziSLYTKcqVmk{!sg<CzH~;mP4vmriu5NQy^E-q@VLb+?ORRm_&jt4`*5y_BxSjUBj>\nzy4_#8R%#kYX2buUZYI~>-Y<7^v-Be%009U<00Izz00bZa0SG_<0ub0?0qp-f{B!YX\nY5P$##AOHafKmY;|fB*y_0D&KYFJ0eXcK`qY\n\nliteral 0\nHcmV?d00001\n\n"
+  },
+  {
+    "global_position": 57,
+    "run_id": "main-L2-02-cursor-r03-a01",
+    "task_id": "L2-02",
+    "system_id": "cursor",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-20T01:00:10.927168Z",
+      "ended_at": "2026-09-20T01:03:21.492972Z",
+      "elapsed_seconds": 190.563
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "dc2214a7192898c46e57f1ede097a7af0df470160f2b2d80d3d99945baf85a16"
+    },
+    "start_commit": "57a97ae50467f6c9c24f8a67c26ba573d656b3e8",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 7,
+        "applicable": 7,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": true,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "omitted_due_date_accepted",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "empty_due_date_accepted",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "valid_iso_date_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "malformed_date_rejected",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "title_remains_required",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "task_survives_restart",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_form_marks_due_date_optional",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "optional_due_date_normalized_to_sql_null",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "supplied_due_date_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "unrelated_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_hard_coded_evaluator_examples",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "creation_retrieval_and_persistence_operational",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/.pytest_tmp/basetemp/test_home_page_contains_task_f0/tasks.db b/.pytest_tmp/basetemp/test_home_page_contains_task_f0/tasks.db\nnew file mode 100644\nindex 0000000000000000000000000000000000000000..d086a0152332f380180689a1bfa69a118514a906\nGIT binary patch\nliteral 12288\nzcmeI#F-yZh6bJCTRulxaTh_O=rNza`&8VjY)3nA5n5o3(gkX}|=GtAH{8D~4FVPN3\nz1#vC^2bb`|doSdd={?-LiB|MHUuKb}GuC08vkM}|7&oVF&L+xyZ<CmNng11>ovuHQ\nzOjYanlbv+T1pxsFKmY;|fB*y_009U<00I#Bx4@*eZw&@K)X`I_ibZNx*=eB`E0xch\nzY5U3-wiG1oOIJ{%wwFhl8k)}jTgDG8%i{0n)l3}~FGY1})%vSP)H|d`Br!Rj6t}{s\nziSLYTKcqVmk{!sg<CzH~;mP4vmriu5NQy^E-q@VLb+?ORRm_&jt4`*5y_BxSjUBj>\nzy4_#8R%#kYX2buUZYI~>-Y<7^v-Be%009U<00Izz00bZa0SG_<0ub0?0qp-f{B!YX\nY5P$##AOHafKmY;|fB*y_0D&KYFJ0eXcK`qY\n\nliteral 0\nHcmV?d00001\n\ndiff --git a/.pytest_tmp/basetemp/test_task_with_supplied_date_c0/tasks.db b/.pytest_tmp/basetemp/test_task_with_supplied_date_c0/tasks.db\nnew file mode 100644\nindex 0000000000000000000000000000000000000000..ea17234aa8598ae1ef1529381484edb750f12ac3\nGIT binary patch\nliteral 12288\nzcmeI&Jx{_w7zgmX;(MaFb$uKR5Ws-M7&oh)hFD(2Vq_wf9-)!f_AqfYPJSs@zY((s\nzgaI%yYz+S=y=$*|?rHnmuI=N4?JG&mUeIwB<=7$PoLv$z#thvey3K;?gN@lh@5kf+\nz!eA$FU;8@CIQVAKL){@D009U<00Izz00bZa0SG_<0xJuYjV&{o<Td5Kv}HJG>!oZx\nzl!Kw{HWr7G>x!@(L5_803tGsHcioOm>6wX-4&OFSlYd@JYAQE;4JVy3H-B=9;(N3Z\nzzDN0@Bkn|n%9VV<s?_LS)X1tjrF>CWD2SqyTAHPN)t2OlXNQU<-Kw^|oaD){5%_)O\nz_qy|`bR%x9s_jrL_Q$NDtb49r;ZLjU%5zswjMwHo`or{wfB*y_009U<00Izz00bZa\nz0SG`~y#>zsCOZ~K<v{k`K$0gry(by?&395QN!{_+{Wgu?19;STRqHg9%cL{eboOkz\nr{vWaEXuTg0cLxCoKmY;|fB*y_009U<00Izzz^Vc}JYw!n{$cn94|jJH\n\nliteral 0\nHcmV?d00001\n\ndiff --git a/.pytest_tmp/test.db b/.pytest_tmp/test.db\nnew file mode 100644\nindex 0000000000000000000000000000000000000000..276202c13cfbd9a8c6c5247696ce9b4fc1783b33\nGIT binary patch\nliteral 12288\nzcmeI&zfZzI6bJCT;_pO@Q`hGN1TY|RV6)0;h^1gX5}8PaGil_9(Bf{K{HOenT$w#e\nzhyhHDEBU_kuD#~HYwokXr1y7D5Gi^Zj{AN@C6;8IvkM}|n4w2Pk413(u(ep|`)vJJ\nz80_@*<4|WAN1x10>Ine>2tWV=5P$##AOHafKmY;|__sjA*s-!%-irLko(e}j-O9E@\nzHJYeFXLXsl@`Nn~N&C_fw33@1_<fbrm6^9b-?c1@zn9}ZBR_l&<H=a6k6%&xfL0>t\nzQq`5>MtIclsx{kd(XD8a-IVpJt9PggSLW8Lq9E!ilHx&<Ti2uMIO|DW6?VqKOB4(T\nz%c)cm*LKs9luG?lHBs%ZuRHwt?t15?uV-exIXAzUz7P<A00bZa0SG_<0uX=z1Rwwb\nz2yBADG2dpUc_J%kg;F73DCUdj^ZtLz%;_c^5NCh@1Rwwb2tWV=5P$##AOHafK;TDU\nLk0-4C_#cLE)<kH7\n\nliteral 0\nHcmV?d00001\n\ndiff --git a/.pytest_tmp/verify.db b/.pytest_tmp/verify.db\nnew file mode 100644\nindex 0000000000000000000000000000000000000000..251894be91f8705b3fff398efd2760ba1e623688\nGIT binary patch\nliteral 12288\nzcmeI&%}T>S5C`zx)(;f4JqS67FdoE;AGC^yH>0jnOw(FZv8NK7Ee6}9Cach+c=B<4\nz0k1xhcQ>h*RzbXp{D<srHq30`cN>z6bIVtfI$_jv745J*<D4B3F~+i=LoaD?Jx_ez\nzCrh&bDY9(q;dxGHW#(U5F0Us91Rwwb2tWV=5P$##AOHafK;YK`wak>UzRsJ<z3$5R\nzuB%(wRxI!CWzZhqW{>K^bObr(p(SW6w-C5JxuGl99(#P+Fbw{*pPs4Q_%=?b%t(Fu\nzhzheb7QRPi+YzUtPPKZuV%D2<CYoe6oNC$DCsc&(Y<#IwzUoSH#FayKRgZ>ceNFOY\nz+>ZRd^21;>m5#-U*{~d1UHzu&UbZ|}clg88^~ob|UrT%Q+zZRS=?MV=2tWV=5P$##\nzAOHafKmY;|fWY4nSjbGW#U*Bkl(hBL$nyg?8tm~&wj!2mk?gyXBv1CjOBwl{0jV2F\nzLGpFKn-+M~ch${yai_RhENzx{lm4IQ-kH7-5P$##AOHafKmY;|fB*y_009X6CxIEB\nJHTdwah7X+Zea`>@\n\nliteral 0\nHcmV?d00001\n\ndiff --git a/app/schemas.py b/app/schemas.py\nindex 0e91910..0593cf8 100644\n--- a/app/schemas.py\n+++ b/app/schemas.py\n@@ -6,14 +6,14 @@ from pydantic import BaseModel, Field, field_validator\n class TaskCreate(BaseModel):\n     title: str = Field(min_length=1, max_length=200)\n     description: str = Field(default=\"\", max_length=2000)\n-    due_date: date\n+    due_date: date | None = None\n \n     @field_validator(\"due_date\", mode=\"before\")\n     @classmethod\n-    def require_due_date(cls, value: object) -> object:\n-        \"\"\"Reject missing form values before Pydantic performs date parsing.\"\"\"\n+    def normalize_due_date(cls, value: object) -> object:\n+        \"\"\"Treat blank form values as absent before Pydantic performs date parsing.\"\"\"\n         if value is None or value == \"\":\n-            raise ValueError(\"due_date is required\")\n+            return None\n         return value\n \n \n"
+  },
+  {
+    "global_position": 58,
+    "run_id": "main-L2-02-gpt-5-4-r03-a01",
+    "task_id": "L2-02",
+    "system_id": "gpt-5.4",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-20T01:24:00.199434+00:00",
+      "ended_at": "2026-09-20T01:24:35.776684+00:00",
+      "elapsed_seconds": 35.57799999997951
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "95a5aebabf539e8c01ad4844342f985f32fe5af95e5b08190dc4938c0c599417"
+    },
+    "start_commit": "57a97ae50467f6c9c24f8a67c26ba573d656b3e8",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 7,
+        "applicable": 7,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": true,
+      "requests": 1,
+      "authorized_requests": 1,
+      "responses": 1
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 31123,
+      "output_tokens": 1069,
+      "total_tokens": 32192,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "omitted_due_date_accepted",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "empty_due_date_accepted",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "valid_iso_date_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "malformed_date_rejected",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "title_remains_required",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "task_survives_restart",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_form_marks_due_date_optional",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "optional_due_date_normalized_to_sql_null",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "supplied_due_date_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "unrelated_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_hard_coded_evaluator_examples",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "creation_retrieval_and_persistence_operational",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/schemas.py b/app/schemas.py\nindex 0e91910..df1a644 100644\n--- a/app/schemas.py\n+++ b/app/schemas.py\n@@ -1,24 +1,24 @@\n-from datetime import date\n-\n-from pydantic import BaseModel, Field, field_validator\n-\n-\n-class TaskCreate(BaseModel):\n-    title: str = Field(min_length=1, max_length=200)\n-    description: str = Field(default=\"\", max_length=2000)\n-    due_date: date\n-\n-    @field_validator(\"due_date\", mode=\"before\")\n-    @classmethod\n-    def require_due_date(cls, value: object) -> object:\n-        \"\"\"Reject missing form values before Pydantic performs date parsing.\"\"\"\n-        if value is None or value == \"\":\n-            raise ValueError(\"due_date is required\")\n-        return value\n-\n-\n-class TaskRead(BaseModel):\n-    id: int\n-    title: str\n-    description: str\n-    due_date: date | None\n+from datetime import date\n+\n+from pydantic import BaseModel, Field, field_validator\n+\n+\n+class TaskCreate(BaseModel):\n+    title: str = Field(min_length=1, max_length=200)\n+    description: str = Field(default=\"\", max_length=2000)\n+    due_date: date | None = None\n+\n+    @field_validator(\"due_date\", mode=\"before\")\n+    @classmethod\n+    def normalize_due_date(cls, value: object) -> object:\n+        \"\"\"Treat empty form values as an omitted optional date.\"\"\"\n+        if value == \"\":\n+            return None\n+        return value\n+\n+\n+class TaskRead(BaseModel):\n+    id: int\n+    title: str\n+    description: str\n+    due_date: date | None\n"
+  },
+  {
+    "global_position": 59,
+    "run_id": "main-L2-02-qwen2-5-coder-7b-instruct-r03-a01",
+    "task_id": "L2-02",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-20T04:20:29.048458+00:00",
+      "ended_at": "2026-09-20T04:20:51.730115+00:00",
+      "elapsed_seconds": 22.67200000002049
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "a6a633111aad9bc3db48c28159a0c2e982d6f7f671b34cb6e8dc4a934b3dbc94"
+    },
+    "start_commit": "57a97ae50467f6c9c24f8a67c26ba573d656b3e8",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 7,
+        "proportion": 0.5714285714285714
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 6,
+        "proportion": 0.6666666666666666
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": true,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 4783,
+      "output_tokens": 295,
+      "total_tokens": 5078,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "omitted_due_date_accepted",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "empty_due_date_accepted",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "valid_iso_date_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "malformed_date_rejected",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "title_remains_required",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "task_survives_restart",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "browser_form_marks_due_date_optional",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "optional_due_date_normalized_to_sql_null",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "supplied_due_date_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "unrelated_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_hard_coded_evaluator_examples",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "creation_retrieval_and_persistence_operational",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "final_diff": ""
+  },
+  {
+    "global_position": 60,
+    "run_id": "main-L2-02-devin-r03-a01",
+    "task_id": "L2-02",
+    "system_id": "devin",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-20T06:21:40.968771Z",
+      "ended_at": "2026-09-20T06:27:55.450747Z",
+      "elapsed_seconds": 374.469
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "57a97ae50467f6c9c24f8a67c26ba573d656b3e8",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 7,
+        "applicable": 7,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": true,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "omitted_due_date_accepted",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "empty_due_date_accepted",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "valid_iso_date_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "malformed_date_rejected",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "title_remains_required",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "task_survives_restart",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_form_marks_due_date_optional",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "optional_due_date_normalized_to_sql_null",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "supplied_due_date_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "unrelated_validation_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_hard_coded_evaluator_examples",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "creation_retrieval_and_persistence_operational",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/schemas.py b/app/schemas.py\nindex 0e91910..40feb32 100644\n--- a/app/schemas.py\n+++ b/app/schemas.py\n@@ -6,14 +6,14 @@ from pydantic import BaseModel, Field, field_validator\n class TaskCreate(BaseModel):\n     title: str = Field(min_length=1, max_length=200)\n     description: str = Field(default=\"\", max_length=2000)\n-    due_date: date\n+    due_date: date | None = None\n \n     @field_validator(\"due_date\", mode=\"before\")\n     @classmethod\n-    def require_due_date(cls, value: object) -> object:\n-        \"\"\"Reject missing form values before Pydantic performs date parsing.\"\"\"\n+    def parse_due_date(cls, value: object) -> object:\n+        \"\"\"Parse due_date from form string, accepting empty values as None.\"\"\"\n         if value is None or value == \"\":\n-            raise ValueError(\"due_date is required\")\n+            return None\n         return value\n \n \n"
+  },
+  {
+    "global_position": 61,
+    "run_id": "main-L2-03-gpt-5-4-r01-a01",
+    "task_id": "L2-03",
+    "system_id": "gpt-5.4",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-20T07:22:53.764091+00:00",
+      "ended_at": "2026-09-20T07:23:35.546944+00:00",
+      "elapsed_seconds": 41.79700000002049
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "efeb014a23f69ad4906af1dd21a496e821234ed1a3a8050361ecf04f1d62a78e"
+    },
+    "start_commit": "1b55bc3e263c60dd97c72c1756a7d37f562695c2",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 6,
+        "proportion": 0.8333333333333334
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 58663,
+      "output_tokens": 2751,
+      "total_tokens": 61414,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "seed_notes",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "import_export",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "restart_persistence",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "invalid_import",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "authoritative_project_store",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "backup_schema_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "routes_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "invalid_import_is_atomic",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "valid_import_persists",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "single_service_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/main.py b/app/main.py\nindex 8cff5fe..d69f139 100644\n--- a/app/main.py\n+++ b/app/main.py\n@@ -10,8 +10,8 @@ from fastapi.responses import HTMLResponse, JSONResponse\n from pydantic import BaseModel, ConfigDict, ValidationError\n \n \n-PROJECT_ROOT = Path(__file__).resolve().parents[1]\n-STORAGE_PATH = Path(os.getenv(\"NOTE_STORAGE_PATH\", \"storage/notes.json\")).expanduser().resolve()\n+DEFAULT_STORAGE_PATH = Path(\"storage/notes.json\")\n+STORAGE_PATH = Path(os.getenv(\"NOTE_STORAGE_PATH\", str(DEFAULT_STORAGE_PATH))).expanduser()\n \n \n class Note(BaseModel):\n@@ -30,12 +30,15 @@ class Backup(BaseModel):\n \n \n def read_backup(path: Path) -> Backup:\n+    path = path.expanduser()\n     if not path.exists():\n         return Backup(schema_version=\"1.0\", notes=[])\n     try:\n         backup = Backup.model_validate_json(path.read_text(encoding=\"utf-8\"))\n-    except (OSError, ValidationError) as error:\n+    except (OSError, ValidationError, json.JSONDecodeError, ValueError) as error:\n         raise RuntimeError(f\"Saved notes are invalid: {error}\") from error\n+    if len({note.id for note in backup.notes}) != len(backup.notes):\n+        raise RuntimeError(\"Saved notes contain duplicate note IDs\")\n     if backup.schema_version != \"1.0\":\n         raise RuntimeError(\"Saved notes use an unsupported schema version\")\n     return backup\n@@ -53,7 +56,7 @@ def write_backup(path: Path, backup: Backup) -> None:\n \n def create_app(storage_path: Path | None = None) -> FastAPI:\n     application = FastAPI(title=\"Fieldnote Archive\")\n-    store = (storage_path or STORAGE_PATH).resolve()\n+    store = (storage_path or STORAGE_PATH).expanduser()\n \n     @application.get(\"/health\")\n     def health() -> dict[str, str]:\n@@ -94,4 +97,3 @@ def create_app(storage_path: Path | None = None) -> FastAPI:\n \n \n app = create_app()\n-\n"
+  },
+  {
+    "global_position": 62,
+    "run_id": "main-L2-03-devin-r01-a01",
+    "task_id": "L2-03",
+    "system_id": "devin",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-20T07:32:08.068199Z",
+      "ended_at": "2026-09-20T07:39:47.917418Z",
+      "elapsed_seconds": 459.844
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "1b55bc3e263c60dd97c72c1756a7d37f562695c2",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "seed_notes",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "import_export",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "restart_persistence",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "invalid_import",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "authoritative_project_store",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "backup_schema_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "routes_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "invalid_import_is_atomic",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "valid_import_persists",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "single_service_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/main.py b/app/main.py\nindex 8cff5fe..daff15e 100644\n--- a/app/main.py\n+++ b/app/main.py\n@@ -11,7 +11,7 @@ from pydantic import BaseModel, ConfigDict, ValidationError\n \n \n PROJECT_ROOT = Path(__file__).resolve().parents[1]\n-STORAGE_PATH = Path(os.getenv(\"NOTE_STORAGE_PATH\", \"storage/notes.json\")).expanduser().resolve()\n+STORAGE_PATH = Path(os.getenv(\"NOTE_STORAGE_PATH\", str(PROJECT_ROOT / \"storage\" / \"notes.json\"))).expanduser().resolve()\n \n \n class Note(BaseModel):\n"
+  },
+  {
+    "global_position": 63,
+    "run_id": "main-L2-03-cursor-r01-a01",
+    "task_id": "L2-03",
+    "system_id": "cursor",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-20T12:01:56.565703Z",
+      "ended_at": "2026-09-20T12:04:52.824685Z",
+      "elapsed_seconds": 176.25
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "dc2214a7192898c46e57f1ede097a7af0df470160f2b2d80d3d99945baf85a16"
+    },
+    "start_commit": "1b55bc3e263c60dd97c72c1756a7d37f562695c2",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "seed_notes",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "import_export",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "restart_persistence",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "invalid_import",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "authoritative_project_store",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "backup_schema_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "routes_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "invalid_import_is_atomic",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "valid_import_persists",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "single_service_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/main.py b/app/main.py\nindex 8cff5fe..52b8428 100644\n--- a/app/main.py\n+++ b/app/main.py\n@@ -11,7 +11,10 @@ from pydantic import BaseModel, ConfigDict, ValidationError\n \n \n PROJECT_ROOT = Path(__file__).resolve().parents[1]\n-STORAGE_PATH = Path(os.getenv(\"NOTE_STORAGE_PATH\", \"storage/notes.json\")).expanduser().resolve()\n+DEFAULT_STORAGE_PATH = PROJECT_ROOT / \"storage\" / \"notes.json\"\n+STORAGE_PATH = Path(\n+    os.getenv(\"NOTE_STORAGE_PATH\", str(DEFAULT_STORAGE_PATH))\n+).expanduser().resolve()\n \n \n class Note(BaseModel):\n"
+  },
+  {
+    "global_position": 64,
+    "run_id": "main-L2-03-qwen2-5-coder-7b-instruct-r01-a01",
+    "task_id": "L2-03",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-20T14:13:47.072532+00:00",
+      "ended_at": "2026-09-20T14:13:59.442814+00:00",
+      "elapsed_seconds": 12.375
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "de8dc20a6473b80fdcdebf3113f85425af05c186aa76c9fe871f18c374cfd282"
+    },
+    "start_commit": "1b55bc3e263c60dd97c72c1756a7d37f562695c2",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 1,
+        "applicable": 4,
+        "proportion": 0.25
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 6,
+        "proportion": 0.6666666666666666
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 3220,
+      "output_tokens": 124,
+      "total_tokens": 3344,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "seed_notes",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "import_export",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "restart_persistence",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "invalid_import",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "authoritative_project_store",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "backup_schema_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "routes_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "invalid_import_is_atomic",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "valid_import_persists",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "single_service_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": ""
+  },
+  {
+    "global_position": 65,
+    "run_id": "main-L2-03-cursor-r02-a01",
+    "task_id": "L2-03",
+    "system_id": "cursor",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-21T01:08:02.896861Z",
+      "ended_at": "2026-09-21T01:09:32.999434Z",
+      "elapsed_seconds": 90.109
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "dc2214a7192898c46e57f1ede097a7af0df470160f2b2d80d3d99945baf85a16"
+    },
+    "start_commit": "1b55bc3e263c60dd97c72c1756a7d37f562695c2",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "seed_notes",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "import_export",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "restart_persistence",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "invalid_import",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "authoritative_project_store",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "backup_schema_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "routes_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "invalid_import_is_atomic",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "valid_import_persists",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "single_service_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/main.py b/app/main.py\nindex 8cff5fe..76a116b 100644\n--- a/app/main.py\n+++ b/app/main.py\n@@ -11,7 +11,17 @@ from pydantic import BaseModel, ConfigDict, ValidationError\n \n \n PROJECT_ROOT = Path(__file__).resolve().parents[1]\n-STORAGE_PATH = Path(os.getenv(\"NOTE_STORAGE_PATH\", \"storage/notes.json\")).expanduser().resolve()\n+\n+\n+def resolve_storage_path(raw: str | None = None) -> Path:\n+    configured = raw if raw is not None else os.getenv(\"NOTE_STORAGE_PATH\", \"storage/notes.json\")\n+    path = Path(configured).expanduser()\n+    if path.is_absolute():\n+        return path.resolve()\n+    return (PROJECT_ROOT / path).resolve()\n+\n+\n+STORAGE_PATH = resolve_storage_path()\n \n \n class Note(BaseModel):\n@@ -53,7 +63,7 @@ def write_backup(path: Path, backup: Backup) -> None:\n \n def create_app(storage_path: Path | None = None) -> FastAPI:\n     application = FastAPI(title=\"Fieldnote Archive\")\n-    store = (storage_path or STORAGE_PATH).resolve()\n+    store = resolve_storage_path(str(storage_path)) if storage_path is not None else STORAGE_PATH\n \n     @application.get(\"/health\")\n     def health() -> dict[str, str]:\n"
+  },
+  {
+    "global_position": 66,
+    "run_id": "main-L2-03-devin-r02-a01",
+    "task_id": "L2-03",
+    "system_id": "devin",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-21T01:18:17.908546Z",
+      "ended_at": "2026-09-21T01:29:18.284462Z",
+      "elapsed_seconds": 660.375
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "1b55bc3e263c60dd97c72c1756a7d37f562695c2",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 1,
+        "applicable": 4,
+        "proportion": 0.25
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 6,
+        "proportion": 0.6666666666666666
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "seed_notes",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "import_export",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "restart_persistence",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "invalid_import",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "authoritative_project_store",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "backup_schema_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "routes_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "invalid_import_is_atomic",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "valid_import_persists",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "single_service_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/Dockerfile b/Dockerfile\nindex f08389a..6af1278 100644\n--- a/Dockerfile\n+++ b/Dockerfile\n@@ -2,7 +2,8 @@ FROM python:3.12.8-slim-bookworm@sha256:2199a62885a12290dc9c5be3ca0681d367576ab7\n \n ENV PYTHONDONTWRITEBYTECODE=1 \\\n     PYTHONUNBUFFERED=1 \\\n-    PYTHONPATH=/workspace\n+    PYTHONPATH=/workspace \\\n+    NOTE_STORAGE_PATH=/workspace/storage/notes.json\n \n WORKDIR /workspace\n \n"
+  },
+  {
+    "global_position": 67,
+    "run_id": "main-L2-03-qwen2-5-coder-7b-instruct-r02-a01",
+    "task_id": "L2-03",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-21T06:26:54.948846+00:00",
+      "ended_at": "2026-09-21T06:27:06.912878+00:00",
+      "elapsed_seconds": 11.96899999998277
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "14749cf82c5f412ddbf467f117c6d35f2adf268b937bcbf18399faa119b7aa0c"
+    },
+    "start_commit": "1b55bc3e263c60dd97c72c1756a7d37f562695c2",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 1,
+        "applicable": 4,
+        "proportion": 0.25
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 6,
+        "proportion": 0.6666666666666666
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 3220,
+      "output_tokens": 124,
+      "total_tokens": 3344,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "seed_notes",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "import_export",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "restart_persistence",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "invalid_import",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "authoritative_project_store",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "backup_schema_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "routes_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "invalid_import_is_atomic",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "valid_import_persists",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "single_service_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": ""
+  },
+  {
+    "global_position": 68,
+    "run_id": "main-L2-03-gpt-5-4-r02-a01",
+    "task_id": "L2-03",
+    "system_id": "gpt-5.4",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-21T06:44:55.267715+00:00",
+      "ended_at": "2026-09-21T06:45:24.347793+00:00",
+      "elapsed_seconds": 29.07800000003772
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "242b7217a03279cefb938bc3849f7ac7c5f21727d20c10b0a75a6d93a1b377bf"
+    },
+    "start_commit": "1b55bc3e263c60dd97c72c1756a7d37f562695c2",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 6,
+        "proportion": 0.8333333333333334
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 40243,
+      "output_tokens": 1160,
+      "total_tokens": 41403,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "seed_notes",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "import_export",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "restart_persistence",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "invalid_import",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "authoritative_project_store",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "backup_schema_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "routes_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "invalid_import_is_atomic",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "valid_import_persists",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "single_service_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/main.py b/app/main.py\nindex 8cff5fe..2d69856 100644\n--- a/app/main.py\n+++ b/app/main.py\n@@ -1,97 +1,105 @@\n-from __future__ import annotations\n-\n-import json\n-import os\n-from pathlib import Path\n-from typing import Any\n-\n-from fastapi import FastAPI, File, HTTPException, UploadFile\n-from fastapi.responses import HTMLResponse, JSONResponse\n-from pydantic import BaseModel, ConfigDict, ValidationError\n-\n-\n-PROJECT_ROOT = Path(__file__).resolve().parents[1]\n-STORAGE_PATH = Path(os.getenv(\"NOTE_STORAGE_PATH\", \"storage/notes.json\")).expanduser().resolve()\n-\n-\n-class Note(BaseModel):\n-    model_config = ConfigDict(extra=\"forbid\")\n-\n-    id: int\n-    title: str\n-    body: str\n-\n-\n-class Backup(BaseModel):\n-    model_config = ConfigDict(extra=\"forbid\")\n-\n-    schema_version: str\n-    notes: list[Note]\n-\n-\n-def read_backup(path: Path) -> Backup:\n-    if not path.exists():\n-        return Backup(schema_version=\"1.0\", notes=[])\n-    try:\n-        backup = Backup.model_validate_json(path.read_text(encoding=\"utf-8\"))\n-    except (OSError, ValidationError) as error:\n-        raise RuntimeError(f\"Saved notes are invalid: {error}\") from error\n-    if backup.schema_version != \"1.0\":\n-        raise RuntimeError(\"Saved notes use an unsupported schema version\")\n-    return backup\n-\n-\n-def write_backup(path: Path, backup: Backup) -> None:\n-    path.parent.mkdir(parents=True, exist_ok=True)\n-    temporary = path.with_suffix(path.suffix + \".tmp\")\n-    temporary.write_text(\n-        json.dumps(backup.model_dump(), indent=2, ensure_ascii=False) + \"\\n\",\n-        encoding=\"utf-8\",\n-    )\n-    temporary.replace(path)\n-\n-\n-def create_app(storage_path: Path | None = None) -> FastAPI:\n-    application = FastAPI(title=\"Fieldnote Archive\")\n-    store = (storage_path or STORAGE_PATH).resolve()\n-\n-    @application.get(\"/health\")\n-    def health() -> dict[str, str]:\n-        return {\"status\": \"ok\"}\n-\n-    @application.get(\"/\", response_class=HTMLResponse)\n-    def index() -> str:\n-        return \"<!doctype html><title>Fieldnote Archive</title><main><h1>Saved notes</h1><p>Use the JSON import and export endpoints to manage backups.</p></main>\"\n-\n-    @application.get(\"/api/notes\")\n-    def list_notes() -> list[dict[str, Any]]:\n-        return [note.model_dump() for note in read_backup(store).notes]\n-\n-    @application.get(\"/api/notes/export\")\n-    def export_notes() -> JSONResponse:\n-        payload = read_backup(store).model_dump()\n-        return JSONResponse(\n-            payload,\n-            headers={\"Content-Disposition\": 'attachment; filename=\"notes-backup.json\"'},\n-        )\n-\n-    @application.post(\"/api/notes/import\")\n-    async def import_notes(backup: UploadFile = File(...)) -> dict[str, int | str]:\n-        try:\n-            raw = await backup.read()\n-            payload = Backup.model_validate_json(raw)\n-            if payload.schema_version != \"1.0\":\n-                raise ValueError(\"unsupported schema version\")\n-            ids = [note.id for note in payload.notes]\n-            if len(ids) != len(set(ids)):\n-                raise ValueError(\"note IDs must be unique\")\n-        except (ValidationError, ValueError, UnicodeDecodeError) as error:\n-            raise HTTPException(status_code=400, detail=\"Invalid notes backup\") from error\n-        write_backup(store, payload)\n-        return {\"status\": \"imported\", \"note_count\": len(payload.notes)}\n-\n-    return application\n-\n-\n-app = create_app()\n-\n+from __future__ import annotations\n+\n+import json\n+import os\n+from pathlib import Path\n+from typing import Any\n+\n+from fastapi import FastAPI, File, HTTPException, UploadFile\n+from fastapi.responses import HTMLResponse, JSONResponse\n+from pydantic import BaseModel, ConfigDict, ValidationError\n+\n+\n+PROJECT_ROOT = Path(__file__).resolve().parents[1]\n+DEFAULT_STORAGE_PATH = PROJECT_ROOT / \"storage\" / \"notes.json\"\n+\n+\n+class Note(BaseModel):\n+    model_config = ConfigDict(extra=\"forbid\")\n+\n+    id: int\n+    title: str\n+    body: str\n+\n+\n+class Backup(BaseModel):\n+    model_config = ConfigDict(extra=\"forbid\")\n+\n+    schema_version: str\n+    notes: list[Note]\n+\n+\n+def read_backup(path: Path) -> Backup:\n+    if not path.exists():\n+        return Backup(schema_version=\"1.0\", notes=[])\n+    try:\n+        backup = Backup.model_validate_json(path.read_text(encoding=\"utf-8\"))\n+    except (OSError, ValidationError) as error:\n+        raise RuntimeError(f\"Saved notes are invalid: {error}\") from error\n+    if backup.schema_version != \"1.0\":\n+        raise RuntimeError(\"Saved notes use an unsupported schema version\")\n+    return backup\n+\n+\n+def write_backup(path: Path, backup: Backup) -> None:\n+    path.parent.mkdir(parents=True, exist_ok=True)\n+    temporary = path.with_suffix(path.suffix + \".tmp\")\n+    temporary.write_text(\n+        json.dumps(backup.model_dump(), indent=2, ensure_ascii=False) + \"\\n\",\n+        encoding=\"utf-8\",\n+    )\n+    temporary.replace(path)\n+\n+\n+def create_app(storage_path: Path | None = None) -> FastAPI:\n+    application = FastAPI(title=\"Fieldnote Archive\")\n+    if storage_path is not None:\n+        store = storage_path.resolve()\n+    else:\n+        configured_path = os.getenv(\"NOTE_STORAGE_PATH\")\n+        store = (\n+            Path(configured_path).expanduser().resolve()\n+            if configured_path\n+            else DEFAULT_STORAGE_PATH.resolve()\n+        )\n+\n+    @application.get(\"/health\")\n+    def health() -> dict[str, str]:\n+        return {\"status\": \"ok\"}\n+\n+    @application.get(\"/\", response_class=HTMLResponse)\n+    def index() -> str:\n+        return \"<!doctype html><title>Fieldnote Archive</title><main><h1>Saved notes</h1><p>Use the JSON import and export endpoints to manage backups.</p></main>\"\n+\n+    @application.get(\"/api/notes\")\n+    def list_notes() -> list[dict[str, Any]]:\n+        return [note.model_dump() for note in read_backup(store).notes]\n+\n+    @application.get(\"/api/notes/export\")\n+    def export_notes() -> JSONResponse:\n+        payload = read_backup(store).model_dump()\n+        return JSONResponse(\n+            payload,\n+            headers={\"Content-Disposition\": 'attachment; filename=\"notes-backup.json\"'},\n+        )\n+\n+    @application.post(\"/api/notes/import\")\n+    async def import_notes(backup: UploadFile = File(...)) -> dict[str, int | str]:\n+        try:\n+            raw = await backup.read()\n+            payload = Backup.model_validate_json(raw)\n+            if payload.schema_version != \"1.0\":\n+                raise ValueError(\"unsupported schema version\")\n+            ids = [note.id for note in payload.notes]\n+            if len(ids) != len(set(ids)):\n+                raise ValueError(\"note IDs must be unique\")\n+        except (ValidationError, ValueError, UnicodeDecodeError) as error:\n+            raise HTTPException(status_code=400, detail=\"Invalid notes backup\") from error\n+        write_backup(store, payload)\n+        return {\"status\": \"imported\", \"note_count\": len(payload.notes)}\n+\n+    return application\n+\n+\n+app = create_app()\n+\n"
+  },
+  {
+    "global_position": 69,
+    "run_id": "main-L2-03-gpt-5-4-r03-a01",
+    "task_id": "L2-03",
+    "system_id": "gpt-5.4",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-21T12:29:40.128459+00:00",
+      "ended_at": "2026-09-21T12:30:07.933572+00:00",
+      "elapsed_seconds": 27.79700000002049
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "591d7c349cdbb9ffdd0e02c7eed31c9259c76c685136dcf2326df057bbddec69"
+    },
+    "start_commit": "1b55bc3e263c60dd97c72c1756a7d37f562695c2",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 29428,
+      "output_tokens": 1102,
+      "total_tokens": 30530,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "seed_notes",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "import_export",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "restart_persistence",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "invalid_import",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "authoritative_project_store",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "backup_schema_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "routes_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "invalid_import_is_atomic",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "valid_import_persists",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "single_service_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/main.py b/app/main.py\nindex 8cff5fe..30d9419 100644\n--- a/app/main.py\n+++ b/app/main.py\n@@ -1,97 +1,106 @@\n-from __future__ import annotations\n-\n-import json\n-import os\n-from pathlib import Path\n-from typing import Any\n-\n-from fastapi import FastAPI, File, HTTPException, UploadFile\n-from fastapi.responses import HTMLResponse, JSONResponse\n-from pydantic import BaseModel, ConfigDict, ValidationError\n-\n-\n-PROJECT_ROOT = Path(__file__).resolve().parents[1]\n-STORAGE_PATH = Path(os.getenv(\"NOTE_STORAGE_PATH\", \"storage/notes.json\")).expanduser().resolve()\n-\n-\n-class Note(BaseModel):\n-    model_config = ConfigDict(extra=\"forbid\")\n-\n-    id: int\n-    title: str\n-    body: str\n-\n-\n-class Backup(BaseModel):\n-    model_config = ConfigDict(extra=\"forbid\")\n-\n-    schema_version: str\n-    notes: list[Note]\n-\n-\n-def read_backup(path: Path) -> Backup:\n-    if not path.exists():\n-        return Backup(schema_version=\"1.0\", notes=[])\n-    try:\n-        backup = Backup.model_validate_json(path.read_text(encoding=\"utf-8\"))\n-    except (OSError, ValidationError) as error:\n-        raise RuntimeError(f\"Saved notes are invalid: {error}\") from error\n-    if backup.schema_version != \"1.0\":\n-        raise RuntimeError(\"Saved notes use an unsupported schema version\")\n-    return backup\n-\n-\n-def write_backup(path: Path, backup: Backup) -> None:\n-    path.parent.mkdir(parents=True, exist_ok=True)\n-    temporary = path.with_suffix(path.suffix + \".tmp\")\n-    temporary.write_text(\n-        json.dumps(backup.model_dump(), indent=2, ensure_ascii=False) + \"\\n\",\n-        encoding=\"utf-8\",\n-    )\n-    temporary.replace(path)\n-\n-\n-def create_app(storage_path: Path | None = None) -> FastAPI:\n-    application = FastAPI(title=\"Fieldnote Archive\")\n-    store = (storage_path or STORAGE_PATH).resolve()\n-\n-    @application.get(\"/health\")\n-    def health() -> dict[str, str]:\n-        return {\"status\": \"ok\"}\n-\n-    @application.get(\"/\", response_class=HTMLResponse)\n-    def index() -> str:\n-        return \"<!doctype html><title>Fieldnote Archive</title><main><h1>Saved notes</h1><p>Use the JSON import and export endpoints to manage backups.</p></main>\"\n-\n-    @application.get(\"/api/notes\")\n-    def list_notes() -> list[dict[str, Any]]:\n-        return [note.model_dump() for note in read_backup(store).notes]\n-\n-    @application.get(\"/api/notes/export\")\n-    def export_notes() -> JSONResponse:\n-        payload = read_backup(store).model_dump()\n-        return JSONResponse(\n-            payload,\n-            headers={\"Content-Disposition\": 'attachment; filename=\"notes-backup.json\"'},\n-        )\n-\n-    @application.post(\"/api/notes/import\")\n-    async def import_notes(backup: UploadFile = File(...)) -> dict[str, int | str]:\n-        try:\n-            raw = await backup.read()\n-            payload = Backup.model_validate_json(raw)\n-            if payload.schema_version != \"1.0\":\n-                raise ValueError(\"unsupported schema version\")\n-            ids = [note.id for note in payload.notes]\n-            if len(ids) != len(set(ids)):\n-                raise ValueError(\"note IDs must be unique\")\n-        except (ValidationError, ValueError, UnicodeDecodeError) as error:\n-            raise HTTPException(status_code=400, detail=\"Invalid notes backup\") from error\n-        write_backup(store, payload)\n-        return {\"status\": \"imported\", \"note_count\": len(payload.notes)}\n-\n-    return application\n-\n-\n-app = create_app()\n-\n+from __future__ import annotations\n+\n+import json\n+import os\n+from pathlib import Path\n+from typing import Any\n+\n+from fastapi import FastAPI, File, HTTPException, UploadFile\n+from fastapi.responses import HTMLResponse, JSONResponse\n+from pydantic import BaseModel, ConfigDict, ValidationError\n+\n+\n+PROJECT_ROOT = Path(__file__).resolve().parents[1]\n+\n+\n+def resolve_storage_path() -> Path:\n+    configured = Path(os.getenv(\"NOTE_STORAGE_PATH\", \"storage/notes.json\")).expanduser()\n+    if configured.is_absolute():\n+        return configured\n+    return (PROJECT_ROOT / configured).resolve()\n+\n+\n+STORAGE_PATH = resolve_storage_path()\n+\n+\n+class Note(BaseModel):\n+    model_config = ConfigDict(extra=\"forbid\")\n+\n+    id: int\n+    title: str\n+    body: str\n+\n+\n+class Backup(BaseModel):\n+    model_config = ConfigDict(extra=\"forbid\")\n+\n+    schema_version: str\n+    notes: list[Note]\n+\n+\n+def read_backup(path: Path) -> Backup:\n+    if not path.exists():\n+        return Backup(schema_version=\"1.0\", notes=[])\n+    try:\n+        backup = Backup.model_validate_json(path.read_text(encoding=\"utf-8\"))\n+    except (OSError, ValidationError) as error:\n+        raise RuntimeError(f\"Saved notes are invalid: {error}\") from error\n+    if backup.schema_version != \"1.0\":\n+        raise RuntimeError(\"Saved notes use an unsupported schema version\")\n+    return backup\n+\n+\n+def write_backup(path: Path, backup: Backup) -> None:\n+    path.parent.mkdir(parents=True, exist_ok=True)\n+    temporary = path.with_suffix(path.suffix + \".tmp\")\n+    temporary.write_text(\n+        json.dumps(backup.model_dump(), indent=2, ensure_ascii=False) + \"\\n\",\n+        encoding=\"utf-8\",\n+    )\n+    temporary.replace(path)\n+\n+\n+def create_app(storage_path: Path | None = None) -> FastAPI:\n+    application = FastAPI(title=\"Fieldnote Archive\")\n+    store = (storage_path or STORAGE_PATH).resolve()\n+\n+    @application.get(\"/health\")\n+    def health() -> dict[str, str]:\n+        return {\"status\": \"ok\"}\n+\n+    @application.get(\"/\", response_class=HTMLResponse)\n+    def index() -> str:\n+        return \"<!doctype html><title>Fieldnote Archive</title><main><h1>Saved notes</h1><p>Use the JSON import and export endpoints to manage backups.</p></main>\"\n+\n+    @application.get(\"/api/notes\")\n+    def list_notes() -> list[dict[str, Any]]:\n+        return [note.model_dump() for note in read_backup(store).notes]\n+\n+    @application.get(\"/api/notes/export\")\n+    def export_notes() -> JSONResponse:\n+        payload = read_backup(store).model_dump()\n+        return JSONResponse(\n+            payload,\n+            headers={\"Content-Disposition\": 'attachment; filename=\"notes-backup.json\"'},\n+        )\n+\n+    @application.post(\"/api/notes/import\")\n+    async def import_notes(backup: UploadFile = File(...)) -> dict[str, int | str]:\n+        try:\n+            raw = await backup.read()\n+            payload = Backup.model_validate_json(raw)\n+            if payload.schema_version != \"1.0\":\n+                raise ValueError(\"unsupported schema version\")\n+            ids = [note.id for note in payload.notes]\n+            if len(ids) != len(set(ids)):\n+                raise ValueError(\"note IDs must be unique\")\n+        except (ValidationError, ValueError, UnicodeDecodeError) as error:\n+            raise HTTPException(status_code=400, detail=\"Invalid notes backup\") from error\n+        write_backup(store, payload)\n+        return {\"status\": \"imported\", \"note_count\": len(payload.notes)}\n+\n+    return application\n+\n+\n+app = create_app()\n+\n"
+  },
+  {
+    "global_position": 70,
+    "run_id": "main-L2-03-cursor-r03-a01",
+    "task_id": "L2-03",
+    "system_id": "cursor",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-21T12:39:39.491415Z",
+      "ended_at": "2026-09-21T12:43:12.522331Z",
+      "elapsed_seconds": 213.031
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "dc2214a7192898c46e57f1ede097a7af0df470160f2b2d80d3d99945baf85a16"
+    },
+    "start_commit": "1b55bc3e263c60dd97c72c1756a7d37f562695c2",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "seed_notes",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "import_export",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "restart_persistence",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "invalid_import",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "authoritative_project_store",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "backup_schema_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "routes_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "invalid_import_is_atomic",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "valid_import_persists",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "single_service_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/main.py b/app/main.py\nindex 8cff5fe..2c1d811 100644\n--- a/app/main.py\n+++ b/app/main.py\n@@ -11,7 +11,9 @@ from pydantic import BaseModel, ConfigDict, ValidationError\n \n \n PROJECT_ROOT = Path(__file__).resolve().parents[1]\n-STORAGE_PATH = Path(os.getenv(\"NOTE_STORAGE_PATH\", \"storage/notes.json\")).expanduser().resolve()\n+STORAGE_PATH = Path(\n+    os.getenv(\"NOTE_STORAGE_PATH\", str(PROJECT_ROOT / \"storage\" / \"notes.json\"))\n+).expanduser().resolve()\n \n \n class Note(BaseModel):\n"
+  },
+  {
+    "global_position": 71,
+    "run_id": "main-L2-03-qwen2-5-coder-7b-instruct-r03-a01",
+    "task_id": "L2-03",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-21T13:10:04.023617+00:00",
+      "ended_at": "2026-09-21T13:10:16.521619+00:00",
+      "elapsed_seconds": 12.5
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "db510f2e7be48a9830bf13a9b97751c166400ac2a5e59c161da457fe16acdeb3"
+    },
+    "start_commit": "1b55bc3e263c60dd97c72c1756a7d37f562695c2",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 1,
+        "applicable": 4,
+        "proportion": 0.25
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 6,
+        "proportion": 0.6666666666666666
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 3220,
+      "output_tokens": 124,
+      "total_tokens": 3344,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "seed_notes",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "import_export",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "restart_persistence",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "invalid_import",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "authoritative_project_store",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "backup_schema_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "routes_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "invalid_import_is_atomic",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "valid_import_persists",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "single_service_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": ""
+  },
+  {
+    "global_position": 72,
+    "run_id": "main-L2-03-devin-r03-a01",
+    "task_id": "L2-03",
+    "system_id": "devin",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-22T00:19:14.727066Z",
+      "ended_at": "2026-09-22T00:38:11.359533Z",
+      "elapsed_seconds": 1136.641
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "1b55bc3e263c60dd97c72c1756a7d37f562695c2",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 4,
+        "proportion": 0.5
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 6,
+        "proportion": 0.8333333333333334
+      },
+      "robustness_eligible": false,
+      "autonomous_success": null
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "seed_notes",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "import_export",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "restart_persistence",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "invalid_import",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "authoritative_project_store",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "backup_schema_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "routes_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "invalid_import_is_atomic",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "valid_import_persists",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "single_service_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/app/main.py b/app/main.py\nindex 8cff5fe..a46e818 100644\n--- a/app/main.py\n+++ b/app/main.py\n@@ -11,7 +11,7 @@ from pydantic import BaseModel, ConfigDict, ValidationError\n \n \n PROJECT_ROOT = Path(__file__).resolve().parents[1]\n-STORAGE_PATH = Path(os.getenv(\"NOTE_STORAGE_PATH\", \"storage/notes.json\")).expanduser().resolve()\n+STORAGE_PATH = (PROJECT_ROOT / os.getenv(\"NOTE_STORAGE_PATH\", \"storage/notes.json\")).expanduser().resolve()\n \n \n class Note(BaseModel):\n@@ -87,8 +87,23 @@ def create_app(storage_path: Path | None = None) -> FastAPI:\n                 raise ValueError(\"note IDs must be unique\")\n         except (ValidationError, ValueError, UnicodeDecodeError) as error:\n             raise HTTPException(status_code=400, detail=\"Invalid notes backup\") from error\n-        write_backup(store, payload)\n-        return {\"status\": \"imported\", \"note_count\": len(payload.notes)}\n+        \n+        # Read existing backup and merge notes\n+        existing_backup = read_backup(store)\n+        existing_note_dict = {note.id: note for note in existing_backup.notes}\n+        \n+        # Merge imported notes with existing ones (imported notes take precedence)\n+        for note in payload.notes:\n+            existing_note_dict[note.id] = note\n+        \n+        # Create merged backup\n+        merged_backup = Backup(\n+            schema_version=\"1.0\",\n+            notes=list(existing_note_dict.values())\n+        )\n+        \n+        write_backup(store, merged_backup)\n+        return {\"status\": \"imported\", \"note_count\": len(merged_backup.notes)}\n \n     return application\n \ndiff --git a/storage/notes.json b/storage/notes.json\nindex 2a70cdd..911aeb4 100644\n--- a/storage/notes.json\n+++ b/storage/notes.json\n@@ -1,16 +1,15 @@\n-{\n-  \"schema_version\": \"1.0\",\n-  \"notes\": [\n-    {\n-      \"id\": 1,\n-      \"title\": \"Tide table\",\n-      \"body\": \"Check the harbour window before departure.\"\n-    },\n-    {\n-      \"id\": 2,\n-      \"title\": \"Repair kit\",\n-      \"body\": \"Pack tape, cord, and the small multitool.\"\n-    }\n-  ]\n-}\n-\n+{\n+  \"schema_version\": \"1.0\",\n+  \"notes\": [\n+    {\n+      \"id\": 1,\n+      \"title\": \"Tide table\",\n+      \"body\": \"Check the harbour window before departure.\"\n+    },\n+    {\n+      \"id\": 2,\n+      \"title\": \"Repair kit\",\n+      \"body\": \"Pack tape, cord, and the small multitool.\"\n+    }\n+  ]\n+}\n"
+  }
+]
