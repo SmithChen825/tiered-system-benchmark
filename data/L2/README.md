@@ -1,4 +1,6 @@
-# L2 experiment results
+# L2 experiment results (original scoring)
+
+**Scoring update (26 September 2026):** This directory preserves the original results. The [uniform review](../evaluation-review/README.md) corrects L2-03 GPT-5.4 Rep 2 to successful (reviewed L2 total 8/9 for GPT-5.4). Rep 1 remains unsuccessful, with corrected storage diagnostics. Use one declared scoring version consistently; do not combine the old table with selected corrected rows.
 
 36 selected observations: 3 FastAPI tasks × 4 systems × 3 repetitions.
 

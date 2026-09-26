@@ -1,0 +1,3150 @@
+{
+  "version": "recorded-original-scores",
+  "selected_slots": 144,
+  "rows": [
+    {
+      "run_id": "main-L1-01-cursor-r01-a01",
+      "task": "L1-01",
+      "system": "cursor",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "product_image_files_resolve": true,
+        "product_images_render_in_nginx": true
+      },
+      "architecture": {
+        "catalogue_identity_preserved": true,
+        "all_product_images_resolve": true,
+        "product_images_remain_local": true,
+        "supplied_assets_preserved": true,
+        "nginx_missing_resources_return_404": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L1-01-cursor-r02-a01",
+      "task": "L1-01",
+      "system": "cursor",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "product_image_files_resolve": true,
+        "product_images_render_in_nginx": true
+      },
+      "architecture": {
+        "catalogue_identity_preserved": true,
+        "all_product_images_resolve": true,
+        "product_images_remain_local": true,
+        "supplied_assets_preserved": true,
+        "nginx_missing_resources_return_404": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L1-01-cursor-r03-a01",
+      "task": "L1-01",
+      "system": "cursor",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "product_image_files_resolve": true,
+        "product_images_render_in_nginx": true
+      },
+      "architecture": {
+        "catalogue_identity_preserved": true,
+        "all_product_images_resolve": true,
+        "product_images_remain_local": true,
+        "supplied_assets_preserved": true,
+        "nginx_missing_resources_return_404": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L1-01-devin-r01-a01",
+      "task": "L1-01",
+      "system": "devin",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "product_image_files_resolve": true,
+        "product_images_render_in_nginx": true
+      },
+      "architecture": {
+        "catalogue_identity_preserved": true,
+        "all_product_images_resolve": true,
+        "product_images_remain_local": true,
+        "supplied_assets_preserved": true,
+        "nginx_missing_resources_return_404": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L1-01-devin-r02-a01",
+      "task": "L1-01",
+      "system": "devin",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "product_image_files_resolve": true,
+        "product_images_render_in_nginx": true
+      },
+      "architecture": {
+        "catalogue_identity_preserved": true,
+        "all_product_images_resolve": true,
+        "product_images_remain_local": true,
+        "supplied_assets_preserved": true,
+        "nginx_missing_resources_return_404": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L1-01-devin-r03-a01",
+      "task": "L1-01",
+      "system": "devin",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "product_image_files_resolve": true,
+        "product_images_render_in_nginx": true
+      },
+      "architecture": {
+        "catalogue_identity_preserved": true,
+        "all_product_images_resolve": true,
+        "product_images_remain_local": true,
+        "supplied_assets_preserved": true,
+        "nginx_missing_resources_return_404": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L1-01-gpt-5-4-r01-a03",
+      "task": "L1-01",
+      "system": "gpt-5.4",
+      "repetition": 1,
+      "attempt": 3,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "product_image_files_resolve": true,
+        "product_images_render_in_nginx": true
+      },
+      "architecture": {
+        "catalogue_identity_preserved": true,
+        "all_product_images_resolve": true,
+        "product_images_remain_local": true,
+        "supplied_assets_preserved": true,
+        "nginx_missing_resources_return_404": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L1-01-gpt-5-4-r02-a03",
+      "task": "L1-01",
+      "system": "gpt-5.4",
+      "repetition": 2,
+      "attempt": 3,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "product_image_files_resolve": true,
+        "product_images_render_in_nginx": true
+      },
+      "architecture": {
+        "catalogue_identity_preserved": true,
+        "all_product_images_resolve": true,
+        "product_images_remain_local": true,
+        "supplied_assets_preserved": true,
+        "nginx_missing_resources_return_404": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L1-01-gpt-5-4-r03-a01",
+      "task": "L1-01",
+      "system": "gpt-5.4",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "product_image_files_resolve": true,
+        "product_images_render_in_nginx": true
+      },
+      "architecture": {
+        "catalogue_identity_preserved": true,
+        "all_product_images_resolve": true,
+        "product_images_remain_local": true,
+        "supplied_assets_preserved": true,
+        "nginx_missing_resources_return_404": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L1-01-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L1-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "product_image_files_resolve": false,
+        "product_images_render_in_nginx": false
+      },
+      "architecture": {
+        "catalogue_identity_preserved": true,
+        "all_product_images_resolve": false,
+        "product_images_remain_local": true,
+        "supplied_assets_preserved": true,
+        "nginx_missing_resources_return_404": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L1-01-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L1-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "product_image_files_resolve": false,
+        "product_images_render_in_nginx": false
+      },
+      "architecture": {
+        "catalogue_identity_preserved": true,
+        "all_product_images_resolve": false,
+        "product_images_remain_local": true,
+        "supplied_assets_preserved": true,
+        "nginx_missing_resources_return_404": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L1-01-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L1-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "product_image_files_resolve": false,
+        "product_images_render_in_nginx": false
+      },
+      "architecture": {
+        "catalogue_identity_preserved": true,
+        "all_product_images_resolve": false,
+        "product_images_remain_local": true,
+        "supplied_assets_preserved": true,
+        "nginx_missing_resources_return_404": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L1-02-cursor-r01-a01",
+      "task": "L1-02",
+      "system": "cursor",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "mobile_navigation_chromium": true
+      },
+      "architecture": {
+        "navigation_identity_preserved": true,
+        "desktop_navigation_preserved": true,
+        "mobile_navigation_visible": true,
+        "no_navigation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-02-cursor-r02-a01",
+      "task": "L1-02",
+      "system": "cursor",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "mobile_navigation_chromium": true
+      },
+      "architecture": {
+        "navigation_identity_preserved": true,
+        "desktop_navigation_preserved": true,
+        "mobile_navigation_visible": true,
+        "no_navigation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-02-cursor-r03-a01",
+      "task": "L1-02",
+      "system": "cursor",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "mobile_navigation_chromium": true
+      },
+      "architecture": {
+        "navigation_identity_preserved": true,
+        "desktop_navigation_preserved": true,
+        "mobile_navigation_visible": true,
+        "no_navigation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-02-devin-r01-a01",
+      "task": "L1-02",
+      "system": "devin",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "mobile_navigation_chromium": true
+      },
+      "architecture": {
+        "navigation_identity_preserved": true,
+        "desktop_navigation_preserved": true,
+        "mobile_navigation_visible": true,
+        "no_navigation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-02-devin-r02-a01",
+      "task": "L1-02",
+      "system": "devin",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "mobile_navigation_chromium": true
+      },
+      "architecture": {
+        "navigation_identity_preserved": true,
+        "desktop_navigation_preserved": true,
+        "mobile_navigation_visible": true,
+        "no_navigation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-02-devin-r03-a01",
+      "task": "L1-02",
+      "system": "devin",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "mobile_navigation_chromium": true
+      },
+      "architecture": {
+        "navigation_identity_preserved": true,
+        "desktop_navigation_preserved": true,
+        "mobile_navigation_visible": true,
+        "no_navigation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-02-gpt-5-4-r01-a01",
+      "task": "L1-02",
+      "system": "gpt-5.4",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "mobile_navigation_chromium": true
+      },
+      "architecture": {
+        "navigation_identity_preserved": true,
+        "desktop_navigation_preserved": true,
+        "mobile_navigation_visible": true,
+        "no_navigation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-02-gpt-5-4-r02-a01",
+      "task": "L1-02",
+      "system": "gpt-5.4",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "mobile_navigation_chromium": true
+      },
+      "architecture": {
+        "navigation_identity_preserved": true,
+        "desktop_navigation_preserved": true,
+        "mobile_navigation_visible": true,
+        "no_navigation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-02-gpt-5-4-r03-a01",
+      "task": "L1-02",
+      "system": "gpt-5.4",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "mobile_navigation_chromium": true
+      },
+      "architecture": {
+        "navigation_identity_preserved": true,
+        "desktop_navigation_preserved": true,
+        "mobile_navigation_visible": true,
+        "no_navigation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-02-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L1-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "mobile_navigation_chromium": false
+      },
+      "architecture": {
+        "navigation_identity_preserved": true,
+        "desktop_navigation_preserved": true,
+        "mobile_navigation_visible": false,
+        "no_navigation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-02-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L1-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "mobile_navigation_chromium": false
+      },
+      "architecture": {
+        "navigation_identity_preserved": true,
+        "desktop_navigation_preserved": true,
+        "mobile_navigation_visible": false,
+        "no_navigation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-02-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L1-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "mobile_navigation_chromium": false
+      },
+      "architecture": {
+        "navigation_identity_preserved": true,
+        "desktop_navigation_preserved": true,
+        "mobile_navigation_visible": false,
+        "no_navigation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-03-cursor-r01-a01",
+      "task": "L1-03",
+      "system": "cursor",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "contact_form_validation_chromium": true
+      },
+      "architecture": {
+        "form_identity_preserved": true,
+        "external_bundle_owns_submission": true,
+        "invalid_input_contract": true,
+        "valid_submission_contract": true,
+        "no_validation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-03-cursor-r02-a01",
+      "task": "L1-03",
+      "system": "cursor",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "contact_form_validation_chromium": true
+      },
+      "architecture": {
+        "form_identity_preserved": true,
+        "external_bundle_owns_submission": true,
+        "invalid_input_contract": true,
+        "valid_submission_contract": true,
+        "no_validation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-03-cursor-r03-a01",
+      "task": "L1-03",
+      "system": "cursor",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "contact_form_validation_chromium": true
+      },
+      "architecture": {
+        "form_identity_preserved": true,
+        "external_bundle_owns_submission": true,
+        "invalid_input_contract": true,
+        "valid_submission_contract": true,
+        "no_validation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-03-devin-r01-a01",
+      "task": "L1-03",
+      "system": "devin",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "contact_form_validation_chromium": true
+      },
+      "architecture": {
+        "form_identity_preserved": true,
+        "external_bundle_owns_submission": true,
+        "invalid_input_contract": true,
+        "valid_submission_contract": true,
+        "no_validation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-03-devin-r02-a01",
+      "task": "L1-03",
+      "system": "devin",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "contact_form_validation_chromium": true
+      },
+      "architecture": {
+        "form_identity_preserved": true,
+        "external_bundle_owns_submission": true,
+        "invalid_input_contract": true,
+        "valid_submission_contract": true,
+        "no_validation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-03-devin-r03-a01",
+      "task": "L1-03",
+      "system": "devin",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "contact_form_validation_chromium": true
+      },
+      "architecture": {
+        "form_identity_preserved": true,
+        "external_bundle_owns_submission": true,
+        "invalid_input_contract": true,
+        "valid_submission_contract": true,
+        "no_validation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-03-gpt-5-4-r01-a01",
+      "task": "L1-03",
+      "system": "gpt-5.4",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "contact_form_validation_chromium": true
+      },
+      "architecture": {
+        "form_identity_preserved": true,
+        "external_bundle_owns_submission": true,
+        "invalid_input_contract": true,
+        "valid_submission_contract": true,
+        "no_validation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-03-gpt-5-4-r02-a02",
+      "task": "L1-03",
+      "system": "gpt-5.4",
+      "repetition": 2,
+      "attempt": 2,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "contact_form_validation_chromium": true
+      },
+      "architecture": {
+        "form_identity_preserved": true,
+        "external_bundle_owns_submission": true,
+        "invalid_input_contract": true,
+        "valid_submission_contract": true,
+        "no_validation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-03-gpt-5-4-r03-a01",
+      "task": "L1-03",
+      "system": "gpt-5.4",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "contact_form_validation_chromium": true
+      },
+      "architecture": {
+        "form_identity_preserved": true,
+        "external_bundle_owns_submission": true,
+        "invalid_input_contract": true,
+        "valid_submission_contract": true,
+        "no_validation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-03-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L1-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "contact_form_validation_chromium": false
+      },
+      "architecture": {
+        "form_identity_preserved": true,
+        "external_bundle_owns_submission": false,
+        "invalid_input_contract": false,
+        "valid_submission_contract": false,
+        "no_validation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-03-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L1-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "contact_form_validation_chromium": false
+      },
+      "architecture": {
+        "form_identity_preserved": true,
+        "external_bundle_owns_submission": false,
+        "invalid_input_contract": false,
+        "valid_submission_contract": false,
+        "no_validation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L1-03-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L1-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "contact_form_validation_chromium": false
+      },
+      "architecture": {
+        "form_identity_preserved": true,
+        "external_bundle_owns_submission": false,
+        "invalid_input_contract": false,
+        "valid_submission_contract": false,
+        "no_validation_workaround": true,
+        "nginx_404_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L2-01-cursor-r01-a01",
+      "task": "L2-01",
+      "system": "cursor",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "detail_page": true,
+        "all_index_links": true,
+        "json_contract": true
+      },
+      "architecture": {
+        "item_identity_preserved": true,
+        "public_detail_route_preserved": true,
+        "unknown_item_404": true,
+        "json_endpoint_preserved": true,
+        "no_route_fallback": true
+      }
+    },
+    {
+      "run_id": "main-L2-01-cursor-r02-a01",
+      "task": "L2-01",
+      "system": "cursor",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "detail_page": true,
+        "all_index_links": true,
+        "json_contract": true
+      },
+      "architecture": {
+        "item_identity_preserved": true,
+        "public_detail_route_preserved": true,
+        "unknown_item_404": true,
+        "json_endpoint_preserved": true,
+        "no_route_fallback": true
+      }
+    },
+    {
+      "run_id": "main-L2-01-cursor-r03-a01",
+      "task": "L2-01",
+      "system": "cursor",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "detail_page": true,
+        "all_index_links": true,
+        "json_contract": true
+      },
+      "architecture": {
+        "item_identity_preserved": true,
+        "public_detail_route_preserved": true,
+        "unknown_item_404": true,
+        "json_endpoint_preserved": true,
+        "no_route_fallback": true
+      }
+    },
+    {
+      "run_id": "main-L2-01-devin-r01-a01",
+      "task": "L2-01",
+      "system": "devin",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "detail_page": true,
+        "all_index_links": true,
+        "json_contract": true
+      },
+      "architecture": {
+        "item_identity_preserved": true,
+        "public_detail_route_preserved": true,
+        "unknown_item_404": true,
+        "json_endpoint_preserved": true,
+        "no_route_fallback": true
+      }
+    },
+    {
+      "run_id": "main-L2-01-devin-r02-a01",
+      "task": "L2-01",
+      "system": "devin",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "detail_page": true,
+        "all_index_links": true,
+        "json_contract": true
+      },
+      "architecture": {
+        "item_identity_preserved": true,
+        "public_detail_route_preserved": true,
+        "unknown_item_404": true,
+        "json_endpoint_preserved": true,
+        "no_route_fallback": true
+      }
+    },
+    {
+      "run_id": "main-L2-01-devin-r03-a01",
+      "task": "L2-01",
+      "system": "devin",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "detail_page": true,
+        "all_index_links": true,
+        "json_contract": true
+      },
+      "architecture": {
+        "item_identity_preserved": true,
+        "public_detail_route_preserved": true,
+        "unknown_item_404": true,
+        "json_endpoint_preserved": true,
+        "no_route_fallback": true
+      }
+    },
+    {
+      "run_id": "main-L2-01-gpt-5-4-r01-a01",
+      "task": "L2-01",
+      "system": "gpt-5.4",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "detail_page": true,
+        "all_index_links": true,
+        "json_contract": true
+      },
+      "architecture": {
+        "item_identity_preserved": true,
+        "public_detail_route_preserved": true,
+        "unknown_item_404": true,
+        "json_endpoint_preserved": true,
+        "no_route_fallback": true
+      }
+    },
+    {
+      "run_id": "main-L2-01-gpt-5-4-r02-a01",
+      "task": "L2-01",
+      "system": "gpt-5.4",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "detail_page": true,
+        "all_index_links": true,
+        "json_contract": true
+      },
+      "architecture": {
+        "item_identity_preserved": true,
+        "public_detail_route_preserved": true,
+        "unknown_item_404": true,
+        "json_endpoint_preserved": true,
+        "no_route_fallback": true
+      }
+    },
+    {
+      "run_id": "main-L2-01-gpt-5-4-r03-a01",
+      "task": "L2-01",
+      "system": "gpt-5.4",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "detail_page": true,
+        "all_index_links": true,
+        "json_contract": true
+      },
+      "architecture": {
+        "item_identity_preserved": true,
+        "public_detail_route_preserved": true,
+        "unknown_item_404": true,
+        "json_endpoint_preserved": true,
+        "no_route_fallback": true
+      }
+    },
+    {
+      "run_id": "main-L2-01-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L2-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "detail_page": false,
+        "all_index_links": false,
+        "json_contract": true
+      },
+      "architecture": {
+        "item_identity_preserved": false,
+        "public_detail_route_preserved": false,
+        "unknown_item_404": false,
+        "json_endpoint_preserved": true,
+        "no_route_fallback": false
+      }
+    },
+    {
+      "run_id": "main-L2-01-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L2-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "detail_page": false,
+        "all_index_links": false,
+        "json_contract": true
+      },
+      "architecture": {
+        "item_identity_preserved": false,
+        "public_detail_route_preserved": false,
+        "unknown_item_404": false,
+        "json_endpoint_preserved": true,
+        "no_route_fallback": false
+      }
+    },
+    {
+      "run_id": "main-L2-01-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L2-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "detail_page": false,
+        "all_index_links": false,
+        "json_contract": true
+      },
+      "architecture": {
+        "item_identity_preserved": false,
+        "public_detail_route_preserved": false,
+        "unknown_item_404": false,
+        "json_endpoint_preserved": true,
+        "no_route_fallback": false
+      }
+    },
+    {
+      "run_id": "main-L2-02-cursor-r01-a02",
+      "task": "L2-02",
+      "system": "cursor",
+      "repetition": 1,
+      "attempt": 2,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "omitted_due_date_accepted": true,
+        "empty_due_date_accepted": true,
+        "valid_iso_date_preserved": true,
+        "malformed_date_rejected": true,
+        "title_remains_required": true,
+        "task_survives_restart": true,
+        "browser_form_marks_due_date_optional": true
+      },
+      "architecture": {
+        "optional_due_date_normalized_to_sql_null": true,
+        "supplied_due_date_validation_preserved": true,
+        "unrelated_validation_preserved": true,
+        "no_hard_coded_evaluator_examples": true,
+        "researcher_materials_unchanged": true,
+        "creation_retrieval_and_persistence_operational": true
+      }
+    },
+    {
+      "run_id": "main-L2-02-cursor-r02-a01",
+      "task": "L2-02",
+      "system": "cursor",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "omitted_due_date_accepted": true,
+        "empty_due_date_accepted": true,
+        "valid_iso_date_preserved": true,
+        "malformed_date_rejected": true,
+        "title_remains_required": true,
+        "task_survives_restart": true,
+        "browser_form_marks_due_date_optional": true
+      },
+      "architecture": {
+        "optional_due_date_normalized_to_sql_null": true,
+        "supplied_due_date_validation_preserved": true,
+        "unrelated_validation_preserved": true,
+        "no_hard_coded_evaluator_examples": true,
+        "researcher_materials_unchanged": true,
+        "creation_retrieval_and_persistence_operational": true
+      }
+    },
+    {
+      "run_id": "main-L2-02-cursor-r03-a01",
+      "task": "L2-02",
+      "system": "cursor",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "omitted_due_date_accepted": true,
+        "empty_due_date_accepted": true,
+        "valid_iso_date_preserved": true,
+        "malformed_date_rejected": true,
+        "title_remains_required": true,
+        "task_survives_restart": true,
+        "browser_form_marks_due_date_optional": true
+      },
+      "architecture": {
+        "optional_due_date_normalized_to_sql_null": true,
+        "supplied_due_date_validation_preserved": true,
+        "unrelated_validation_preserved": true,
+        "no_hard_coded_evaluator_examples": true,
+        "researcher_materials_unchanged": true,
+        "creation_retrieval_and_persistence_operational": true
+      }
+    },
+    {
+      "run_id": "main-L2-02-devin-r01-a02",
+      "task": "L2-02",
+      "system": "devin",
+      "repetition": 1,
+      "attempt": 2,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "omitted_due_date_accepted": true,
+        "empty_due_date_accepted": true,
+        "valid_iso_date_preserved": true,
+        "malformed_date_rejected": true,
+        "title_remains_required": true,
+        "task_survives_restart": true,
+        "browser_form_marks_due_date_optional": true
+      },
+      "architecture": {
+        "optional_due_date_normalized_to_sql_null": true,
+        "supplied_due_date_validation_preserved": true,
+        "unrelated_validation_preserved": true,
+        "no_hard_coded_evaluator_examples": true,
+        "researcher_materials_unchanged": true,
+        "creation_retrieval_and_persistence_operational": true
+      }
+    },
+    {
+      "run_id": "main-L2-02-devin-r02-a01",
+      "task": "L2-02",
+      "system": "devin",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "omitted_due_date_accepted": true,
+        "empty_due_date_accepted": true,
+        "valid_iso_date_preserved": true,
+        "malformed_date_rejected": true,
+        "title_remains_required": true,
+        "task_survives_restart": true,
+        "browser_form_marks_due_date_optional": true
+      },
+      "architecture": {
+        "optional_due_date_normalized_to_sql_null": true,
+        "supplied_due_date_validation_preserved": true,
+        "unrelated_validation_preserved": true,
+        "no_hard_coded_evaluator_examples": true,
+        "researcher_materials_unchanged": true,
+        "creation_retrieval_and_persistence_operational": true
+      }
+    },
+    {
+      "run_id": "main-L2-02-devin-r03-a01",
+      "task": "L2-02",
+      "system": "devin",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "omitted_due_date_accepted": true,
+        "empty_due_date_accepted": true,
+        "valid_iso_date_preserved": true,
+        "malformed_date_rejected": true,
+        "title_remains_required": true,
+        "task_survives_restart": true,
+        "browser_form_marks_due_date_optional": true
+      },
+      "architecture": {
+        "optional_due_date_normalized_to_sql_null": true,
+        "supplied_due_date_validation_preserved": true,
+        "unrelated_validation_preserved": true,
+        "no_hard_coded_evaluator_examples": true,
+        "researcher_materials_unchanged": true,
+        "creation_retrieval_and_persistence_operational": true
+      }
+    },
+    {
+      "run_id": "main-L2-02-gpt-5-4-r01-a01",
+      "task": "L2-02",
+      "system": "gpt-5.4",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "omitted_due_date_accepted": true,
+        "empty_due_date_accepted": true,
+        "valid_iso_date_preserved": true,
+        "malformed_date_rejected": true,
+        "title_remains_required": true,
+        "task_survives_restart": true,
+        "browser_form_marks_due_date_optional": true
+      },
+      "architecture": {
+        "optional_due_date_normalized_to_sql_null": true,
+        "supplied_due_date_validation_preserved": true,
+        "unrelated_validation_preserved": true,
+        "no_hard_coded_evaluator_examples": true,
+        "researcher_materials_unchanged": true,
+        "creation_retrieval_and_persistence_operational": true
+      }
+    },
+    {
+      "run_id": "main-L2-02-gpt-5-4-r02-a01",
+      "task": "L2-02",
+      "system": "gpt-5.4",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "omitted_due_date_accepted": true,
+        "empty_due_date_accepted": true,
+        "valid_iso_date_preserved": true,
+        "malformed_date_rejected": true,
+        "title_remains_required": true,
+        "task_survives_restart": true,
+        "browser_form_marks_due_date_optional": true
+      },
+      "architecture": {
+        "optional_due_date_normalized_to_sql_null": true,
+        "supplied_due_date_validation_preserved": true,
+        "unrelated_validation_preserved": true,
+        "no_hard_coded_evaluator_examples": true,
+        "researcher_materials_unchanged": true,
+        "creation_retrieval_and_persistence_operational": true
+      }
+    },
+    {
+      "run_id": "main-L2-02-gpt-5-4-r03-a01",
+      "task": "L2-02",
+      "system": "gpt-5.4",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "omitted_due_date_accepted": true,
+        "empty_due_date_accepted": true,
+        "valid_iso_date_preserved": true,
+        "malformed_date_rejected": true,
+        "title_remains_required": true,
+        "task_survives_restart": true,
+        "browser_form_marks_due_date_optional": true
+      },
+      "architecture": {
+        "optional_due_date_normalized_to_sql_null": true,
+        "supplied_due_date_validation_preserved": true,
+        "unrelated_validation_preserved": true,
+        "no_hard_coded_evaluator_examples": true,
+        "researcher_materials_unchanged": true,
+        "creation_retrieval_and_persistence_operational": true
+      }
+    },
+    {
+      "run_id": "main-L2-02-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L2-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "omitted_due_date_accepted": false,
+        "empty_due_date_accepted": false,
+        "valid_iso_date_preserved": true,
+        "malformed_date_rejected": true,
+        "title_remains_required": true,
+        "task_survives_restart": false,
+        "browser_form_marks_due_date_optional": true
+      },
+      "architecture": {
+        "optional_due_date_normalized_to_sql_null": false,
+        "supplied_due_date_validation_preserved": true,
+        "unrelated_validation_preserved": true,
+        "no_hard_coded_evaluator_examples": true,
+        "researcher_materials_unchanged": true,
+        "creation_retrieval_and_persistence_operational": false
+      }
+    },
+    {
+      "run_id": "main-L2-02-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L2-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "omitted_due_date_accepted": false,
+        "empty_due_date_accepted": false,
+        "valid_iso_date_preserved": true,
+        "malformed_date_rejected": true,
+        "title_remains_required": true,
+        "task_survives_restart": false,
+        "browser_form_marks_due_date_optional": true
+      },
+      "architecture": {
+        "optional_due_date_normalized_to_sql_null": false,
+        "supplied_due_date_validation_preserved": true,
+        "unrelated_validation_preserved": true,
+        "no_hard_coded_evaluator_examples": true,
+        "researcher_materials_unchanged": true,
+        "creation_retrieval_and_persistence_operational": false
+      }
+    },
+    {
+      "run_id": "main-L2-02-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L2-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "omitted_due_date_accepted": false,
+        "empty_due_date_accepted": false,
+        "valid_iso_date_preserved": true,
+        "malformed_date_rejected": true,
+        "title_remains_required": true,
+        "task_survives_restart": false,
+        "browser_form_marks_due_date_optional": true
+      },
+      "architecture": {
+        "optional_due_date_normalized_to_sql_null": false,
+        "supplied_due_date_validation_preserved": true,
+        "unrelated_validation_preserved": true,
+        "no_hard_coded_evaluator_examples": true,
+        "researcher_materials_unchanged": true,
+        "creation_retrieval_and_persistence_operational": false
+      }
+    },
+    {
+      "run_id": "main-L2-03-cursor-r01-a01",
+      "task": "L2-03",
+      "system": "cursor",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "seed_notes": true,
+        "import_export": true,
+        "restart_persistence": true,
+        "invalid_import": true
+      },
+      "architecture": {
+        "authoritative_project_store": true,
+        "backup_schema_preserved": true,
+        "routes_preserved": true,
+        "invalid_import_is_atomic": true,
+        "valid_import_persists": true,
+        "single_service_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L2-03-cursor-r02-a01",
+      "task": "L2-03",
+      "system": "cursor",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "seed_notes": true,
+        "import_export": true,
+        "restart_persistence": true,
+        "invalid_import": true
+      },
+      "architecture": {
+        "authoritative_project_store": true,
+        "backup_schema_preserved": true,
+        "routes_preserved": true,
+        "invalid_import_is_atomic": true,
+        "valid_import_persists": true,
+        "single_service_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L2-03-cursor-r03-a01",
+      "task": "L2-03",
+      "system": "cursor",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "seed_notes": true,
+        "import_export": true,
+        "restart_persistence": true,
+        "invalid_import": true
+      },
+      "architecture": {
+        "authoritative_project_store": true,
+        "backup_schema_preserved": true,
+        "routes_preserved": true,
+        "invalid_import_is_atomic": true,
+        "valid_import_persists": true,
+        "single_service_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L2-03-devin-r01-a01",
+      "task": "L2-03",
+      "system": "devin",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "seed_notes": true,
+        "import_export": true,
+        "restart_persistence": true,
+        "invalid_import": true
+      },
+      "architecture": {
+        "authoritative_project_store": true,
+        "backup_schema_preserved": true,
+        "routes_preserved": true,
+        "invalid_import_is_atomic": true,
+        "valid_import_persists": true,
+        "single_service_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L2-03-devin-r02-a01",
+      "task": "L2-03",
+      "system": "devin",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": false,
+      "functional": {
+        "seed_notes": false,
+        "import_export": false,
+        "restart_persistence": false,
+        "invalid_import": true
+      },
+      "architecture": {
+        "authoritative_project_store": false,
+        "backup_schema_preserved": true,
+        "routes_preserved": true,
+        "invalid_import_is_atomic": true,
+        "valid_import_persists": false,
+        "single_service_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L2-03-devin-r03-a01",
+      "task": "L2-03",
+      "system": "devin",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": false,
+      "functional": {
+        "seed_notes": true,
+        "import_export": false,
+        "restart_persistence": false,
+        "invalid_import": true
+      },
+      "architecture": {
+        "authoritative_project_store": true,
+        "backup_schema_preserved": true,
+        "routes_preserved": true,
+        "invalid_import_is_atomic": true,
+        "valid_import_persists": false,
+        "single_service_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L2-03-gpt-5-4-r01-a01",
+      "task": "L2-03",
+      "system": "gpt-5.4",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": false,
+      "functional": {
+        "seed_notes": true,
+        "import_export": true,
+        "restart_persistence": true,
+        "invalid_import": true
+      },
+      "architecture": {
+        "authoritative_project_store": false,
+        "backup_schema_preserved": true,
+        "routes_preserved": true,
+        "invalid_import_is_atomic": true,
+        "valid_import_persists": true,
+        "single_service_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L2-03-gpt-5-4-r02-a01",
+      "task": "L2-03",
+      "system": "gpt-5.4",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": false,
+      "functional": {
+        "seed_notes": true,
+        "import_export": true,
+        "restart_persistence": true,
+        "invalid_import": true
+      },
+      "architecture": {
+        "authoritative_project_store": false,
+        "backup_schema_preserved": true,
+        "routes_preserved": true,
+        "invalid_import_is_atomic": true,
+        "valid_import_persists": true,
+        "single_service_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L2-03-gpt-5-4-r03-a01",
+      "task": "L2-03",
+      "system": "gpt-5.4",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "seed_notes": true,
+        "import_export": true,
+        "restart_persistence": true,
+        "invalid_import": true
+      },
+      "architecture": {
+        "authoritative_project_store": true,
+        "backup_schema_preserved": true,
+        "routes_preserved": true,
+        "invalid_import_is_atomic": true,
+        "valid_import_persists": true,
+        "single_service_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L2-03-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L2-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "seed_notes": false,
+        "import_export": false,
+        "restart_persistence": false,
+        "invalid_import": true
+      },
+      "architecture": {
+        "authoritative_project_store": false,
+        "backup_schema_preserved": true,
+        "routes_preserved": true,
+        "invalid_import_is_atomic": true,
+        "valid_import_persists": false,
+        "single_service_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L2-03-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L2-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "seed_notes": false,
+        "import_export": false,
+        "restart_persistence": false,
+        "invalid_import": true
+      },
+      "architecture": {
+        "authoritative_project_store": false,
+        "backup_schema_preserved": true,
+        "routes_preserved": true,
+        "invalid_import_is_atomic": true,
+        "valid_import_persists": false,
+        "single_service_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L2-03-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L2-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "seed_notes": false,
+        "import_export": false,
+        "restart_persistence": false,
+        "invalid_import": true
+      },
+      "architecture": {
+        "authoritative_project_store": false,
+        "backup_schema_preserved": true,
+        "routes_preserved": true,
+        "invalid_import_is_atomic": true,
+        "valid_import_persists": false,
+        "single_service_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-01-cursor-r01-a01",
+      "task": "L3-01",
+      "system": "cursor",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": false,
+      "functional": {
+        "direct_account_endpoint_healthy": true,
+        "expected_origin_get_allowed": true,
+        "expected_origin_preflight_allowed": true,
+        "browser_account_loads": true
+      },
+      "architecture": {
+        "exact_frontend_origin_allowed": true,
+        "wildcard_policy_rejected": false,
+        "stale_and_unrelated_origins_rejected": false,
+        "backend_account_contract_preserved": true,
+        "frontend_backend_address_preserved": true,
+        "frontend_backend_remain_separate": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L3-01-cursor-r02-a02",
+      "task": "L3-01",
+      "system": "cursor",
+      "repetition": 2,
+      "attempt": 2,
+      "stopping_reason": "submitted",
+      "success": false,
+      "functional": {
+        "direct_account_endpoint_healthy": true,
+        "expected_origin_get_allowed": true,
+        "expected_origin_preflight_allowed": true,
+        "browser_account_loads": true
+      },
+      "architecture": {
+        "exact_frontend_origin_allowed": true,
+        "wildcard_policy_rejected": false,
+        "stale_and_unrelated_origins_rejected": false,
+        "backend_account_contract_preserved": true,
+        "frontend_backend_address_preserved": true,
+        "frontend_backend_remain_separate": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L3-01-cursor-r03-a01",
+      "task": "L3-01",
+      "system": "cursor",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": false,
+      "functional": {
+        "direct_account_endpoint_healthy": true,
+        "expected_origin_get_allowed": true,
+        "expected_origin_preflight_allowed": true,
+        "browser_account_loads": true
+      },
+      "architecture": {
+        "exact_frontend_origin_allowed": true,
+        "wildcard_policy_rejected": false,
+        "stale_and_unrelated_origins_rejected": false,
+        "backend_account_contract_preserved": true,
+        "frontend_backend_address_preserved": true,
+        "frontend_backend_remain_separate": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L3-01-devin-r01-a01",
+      "task": "L3-01",
+      "system": "devin",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "direct_account_endpoint_healthy": true,
+        "expected_origin_get_allowed": true,
+        "expected_origin_preflight_allowed": true,
+        "browser_account_loads": true
+      },
+      "architecture": {
+        "exact_frontend_origin_allowed": true,
+        "wildcard_policy_rejected": true,
+        "stale_and_unrelated_origins_rejected": true,
+        "backend_account_contract_preserved": true,
+        "frontend_backend_address_preserved": true,
+        "frontend_backend_remain_separate": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L3-01-devin-r02-a01",
+      "task": "L3-01",
+      "system": "devin",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "direct_account_endpoint_healthy": true,
+        "expected_origin_get_allowed": true,
+        "expected_origin_preflight_allowed": true,
+        "browser_account_loads": true
+      },
+      "architecture": {
+        "exact_frontend_origin_allowed": true,
+        "wildcard_policy_rejected": true,
+        "stale_and_unrelated_origins_rejected": true,
+        "backend_account_contract_preserved": true,
+        "frontend_backend_address_preserved": true,
+        "frontend_backend_remain_separate": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L3-01-devin-r03-a01",
+      "task": "L3-01",
+      "system": "devin",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "direct_account_endpoint_healthy": true,
+        "expected_origin_get_allowed": true,
+        "expected_origin_preflight_allowed": true,
+        "browser_account_loads": true
+      },
+      "architecture": {
+        "exact_frontend_origin_allowed": true,
+        "wildcard_policy_rejected": true,
+        "stale_and_unrelated_origins_rejected": true,
+        "backend_account_contract_preserved": true,
+        "frontend_backend_address_preserved": true,
+        "frontend_backend_remain_separate": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L3-01-gpt-5-4-r01-a01",
+      "task": "L3-01",
+      "system": "gpt-5.4",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": false,
+      "functional": {
+        "direct_account_endpoint_healthy": true,
+        "expected_origin_get_allowed": true,
+        "expected_origin_preflight_allowed": true,
+        "browser_account_loads": true
+      },
+      "architecture": {
+        "exact_frontend_origin_allowed": true,
+        "wildcard_policy_rejected": false,
+        "stale_and_unrelated_origins_rejected": false,
+        "backend_account_contract_preserved": true,
+        "frontend_backend_address_preserved": true,
+        "frontend_backend_remain_separate": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L3-01-gpt-5-4-r02-a01",
+      "task": "L3-01",
+      "system": "gpt-5.4",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": false,
+      "functional": {
+        "direct_account_endpoint_healthy": true,
+        "expected_origin_get_allowed": true,
+        "expected_origin_preflight_allowed": true,
+        "browser_account_loads": true
+      },
+      "architecture": {
+        "exact_frontend_origin_allowed": true,
+        "wildcard_policy_rejected": false,
+        "stale_and_unrelated_origins_rejected": false,
+        "backend_account_contract_preserved": true,
+        "frontend_backend_address_preserved": true,
+        "frontend_backend_remain_separate": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L3-01-gpt-5-4-r03-a01",
+      "task": "L3-01",
+      "system": "gpt-5.4",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "direct_account_endpoint_healthy": true,
+        "expected_origin_get_allowed": true,
+        "expected_origin_preflight_allowed": true,
+        "browser_account_loads": true
+      },
+      "architecture": {
+        "exact_frontend_origin_allowed": true,
+        "wildcard_policy_rejected": true,
+        "stale_and_unrelated_origins_rejected": true,
+        "backend_account_contract_preserved": true,
+        "frontend_backend_address_preserved": true,
+        "frontend_backend_remain_separate": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L3-01-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L3-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "direct_account_endpoint_healthy": true,
+        "expected_origin_get_allowed": false,
+        "expected_origin_preflight_allowed": false,
+        "browser_account_loads": false
+      },
+      "architecture": {
+        "exact_frontend_origin_allowed": false,
+        "wildcard_policy_rejected": false,
+        "stale_and_unrelated_origins_rejected": false,
+        "backend_account_contract_preserved": true,
+        "frontend_backend_address_preserved": true,
+        "frontend_backend_remain_separate": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L3-01-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L3-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "direct_account_endpoint_healthy": true,
+        "expected_origin_get_allowed": false,
+        "expected_origin_preflight_allowed": false,
+        "browser_account_loads": false
+      },
+      "architecture": {
+        "exact_frontend_origin_allowed": false,
+        "wildcard_policy_rejected": false,
+        "stale_and_unrelated_origins_rejected": false,
+        "backend_account_contract_preserved": true,
+        "frontend_backend_address_preserved": true,
+        "frontend_backend_remain_separate": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L3-01-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L3-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "direct_account_endpoint_healthy": true,
+        "expected_origin_get_allowed": false,
+        "expected_origin_preflight_allowed": false,
+        "browser_account_loads": false
+      },
+      "architecture": {
+        "exact_frontend_origin_allowed": false,
+        "wildcard_policy_rejected": false,
+        "stale_and_unrelated_origins_rejected": false,
+        "backend_account_contract_preserved": true,
+        "frontend_backend_address_preserved": true,
+        "frontend_backend_remain_separate": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L3-02-cursor-r01-a01",
+      "task": "L3-02",
+      "system": "cursor",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "backend_order_contract": true,
+        "browser_order_status": true
+      },
+      "architecture": {
+        "backend_contract_preserved": true,
+        "api_derived_status": true,
+        "endpoint_identity_preserved": true,
+        "separate_services_preserved": true,
+        "cors_origin_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-02-cursor-r02-a01",
+      "task": "L3-02",
+      "system": "cursor",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "backend_order_contract": true,
+        "browser_order_status": true
+      },
+      "architecture": {
+        "backend_contract_preserved": true,
+        "api_derived_status": true,
+        "endpoint_identity_preserved": true,
+        "separate_services_preserved": true,
+        "cors_origin_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-02-cursor-r03-a01",
+      "task": "L3-02",
+      "system": "cursor",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "backend_order_contract": true,
+        "browser_order_status": true
+      },
+      "architecture": {
+        "backend_contract_preserved": true,
+        "api_derived_status": true,
+        "endpoint_identity_preserved": true,
+        "separate_services_preserved": true,
+        "cors_origin_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-02-devin-r01-a01",
+      "task": "L3-02",
+      "system": "devin",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "backend_order_contract": true,
+        "browser_order_status": true
+      },
+      "architecture": {
+        "backend_contract_preserved": true,
+        "api_derived_status": true,
+        "endpoint_identity_preserved": true,
+        "separate_services_preserved": true,
+        "cors_origin_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-02-devin-r02-a01",
+      "task": "L3-02",
+      "system": "devin",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "backend_order_contract": true,
+        "browser_order_status": true
+      },
+      "architecture": {
+        "backend_contract_preserved": true,
+        "api_derived_status": true,
+        "endpoint_identity_preserved": true,
+        "separate_services_preserved": true,
+        "cors_origin_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-02-devin-r03-a02",
+      "task": "L3-02",
+      "system": "devin",
+      "repetition": 3,
+      "attempt": 2,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "backend_order_contract": true,
+        "browser_order_status": true
+      },
+      "architecture": {
+        "backend_contract_preserved": true,
+        "api_derived_status": true,
+        "endpoint_identity_preserved": true,
+        "separate_services_preserved": true,
+        "cors_origin_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-02-gpt-5-4-r01-a01",
+      "task": "L3-02",
+      "system": "gpt-5.4",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "backend_order_contract": true,
+        "browser_order_status": true
+      },
+      "architecture": {
+        "backend_contract_preserved": true,
+        "api_derived_status": true,
+        "endpoint_identity_preserved": true,
+        "separate_services_preserved": true,
+        "cors_origin_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-02-gpt-5-4-r02-a01",
+      "task": "L3-02",
+      "system": "gpt-5.4",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "backend_order_contract": true,
+        "browser_order_status": true
+      },
+      "architecture": {
+        "backend_contract_preserved": true,
+        "api_derived_status": true,
+        "endpoint_identity_preserved": true,
+        "separate_services_preserved": true,
+        "cors_origin_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-02-gpt-5-4-r03-a01",
+      "task": "L3-02",
+      "system": "gpt-5.4",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "backend_order_contract": true,
+        "browser_order_status": true
+      },
+      "architecture": {
+        "backend_contract_preserved": true,
+        "api_derived_status": true,
+        "endpoint_identity_preserved": true,
+        "separate_services_preserved": true,
+        "cors_origin_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-02-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L3-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "backend_order_contract": true,
+        "browser_order_status": false
+      },
+      "architecture": {
+        "backend_contract_preserved": true,
+        "api_derived_status": false,
+        "endpoint_identity_preserved": true,
+        "separate_services_preserved": true,
+        "cors_origin_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-02-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L3-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "backend_order_contract": true,
+        "browser_order_status": false
+      },
+      "architecture": {
+        "backend_contract_preserved": true,
+        "api_derived_status": false,
+        "endpoint_identity_preserved": true,
+        "separate_services_preserved": true,
+        "cors_origin_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-02-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L3-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": false,
+      "functional": {
+        "backend_order_contract": true,
+        "browser_order_status": false
+      },
+      "architecture": {
+        "backend_contract_preserved": true,
+        "api_derived_status": false,
+        "endpoint_identity_preserved": true,
+        "separate_services_preserved": true,
+        "cors_origin_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-03-cursor-r01-a01",
+      "task": "L3-03",
+      "system": "cursor",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "current_reset_api": true,
+        "retired_route_404": true,
+        "browser_reset_network": true
+      },
+      "architecture": {
+        "current_endpoint_preserved": true,
+        "retired_endpoint_absent": true,
+        "form_response_contract": true,
+        "direct_backend_request": true,
+        "service_ports_preserved": true,
+        "cors_boundary_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-03-cursor-r02-a01",
+      "task": "L3-03",
+      "system": "cursor",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "current_reset_api": true,
+        "retired_route_404": true,
+        "browser_reset_network": true
+      },
+      "architecture": {
+        "current_endpoint_preserved": true,
+        "retired_endpoint_absent": true,
+        "form_response_contract": true,
+        "direct_backend_request": true,
+        "service_ports_preserved": true,
+        "cors_boundary_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-03-cursor-r03-a01",
+      "task": "L3-03",
+      "system": "cursor",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "current_reset_api": true,
+        "retired_route_404": true,
+        "browser_reset_network": true
+      },
+      "architecture": {
+        "current_endpoint_preserved": true,
+        "retired_endpoint_absent": true,
+        "form_response_contract": true,
+        "direct_backend_request": true,
+        "service_ports_preserved": true,
+        "cors_boundary_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-03-devin-r01-a01",
+      "task": "L3-03",
+      "system": "devin",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "current_reset_api": true,
+        "retired_route_404": true,
+        "browser_reset_network": true
+      },
+      "architecture": {
+        "current_endpoint_preserved": true,
+        "retired_endpoint_absent": true,
+        "form_response_contract": true,
+        "direct_backend_request": true,
+        "service_ports_preserved": true,
+        "cors_boundary_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-03-devin-r02-a01",
+      "task": "L3-03",
+      "system": "devin",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "current_reset_api": true,
+        "retired_route_404": true,
+        "browser_reset_network": true
+      },
+      "architecture": {
+        "current_endpoint_preserved": true,
+        "retired_endpoint_absent": true,
+        "form_response_contract": true,
+        "direct_backend_request": true,
+        "service_ports_preserved": true,
+        "cors_boundary_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-03-devin-r03-a01",
+      "task": "L3-03",
+      "system": "devin",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "current_reset_api": true,
+        "retired_route_404": true,
+        "browser_reset_network": true
+      },
+      "architecture": {
+        "current_endpoint_preserved": true,
+        "retired_endpoint_absent": true,
+        "form_response_contract": true,
+        "direct_backend_request": true,
+        "service_ports_preserved": true,
+        "cors_boundary_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-03-gpt-5-4-r01-a01",
+      "task": "L3-03",
+      "system": "gpt-5.4",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "current_reset_api": true,
+        "retired_route_404": true,
+        "browser_reset_network": true
+      },
+      "architecture": {
+        "current_endpoint_preserved": true,
+        "retired_endpoint_absent": true,
+        "form_response_contract": true,
+        "direct_backend_request": true,
+        "service_ports_preserved": true,
+        "cors_boundary_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-03-gpt-5-4-r02-a01",
+      "task": "L3-03",
+      "system": "gpt-5.4",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "current_reset_api": true,
+        "retired_route_404": true,
+        "browser_reset_network": true
+      },
+      "architecture": {
+        "current_endpoint_preserved": true,
+        "retired_endpoint_absent": true,
+        "form_response_contract": true,
+        "direct_backend_request": true,
+        "service_ports_preserved": true,
+        "cors_boundary_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-03-gpt-5-4-r03-a01",
+      "task": "L3-03",
+      "system": "gpt-5.4",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "current_reset_api": true,
+        "retired_route_404": true,
+        "browser_reset_network": true
+      },
+      "architecture": {
+        "current_endpoint_preserved": true,
+        "retired_endpoint_absent": true,
+        "form_response_contract": true,
+        "direct_backend_request": true,
+        "service_ports_preserved": true,
+        "cors_boundary_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-03-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L3-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "current_reset_api": true,
+        "retired_route_404": true,
+        "browser_reset_network": false
+      },
+      "architecture": {
+        "current_endpoint_preserved": true,
+        "retired_endpoint_absent": true,
+        "form_response_contract": false,
+        "direct_backend_request": false,
+        "service_ports_preserved": true,
+        "cors_boundary_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-03-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L3-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "current_reset_api": true,
+        "retired_route_404": true,
+        "browser_reset_network": false
+      },
+      "architecture": {
+        "current_endpoint_preserved": true,
+        "retired_endpoint_absent": true,
+        "form_response_contract": false,
+        "direct_backend_request": false,
+        "service_ports_preserved": true,
+        "cors_boundary_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L3-03-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L3-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "current_reset_api": true,
+        "retired_route_404": true,
+        "browser_reset_network": false
+      },
+      "architecture": {
+        "current_endpoint_preserved": true,
+        "retired_endpoint_absent": true,
+        "form_response_contract": false,
+        "direct_backend_request": false,
+        "service_ports_preserved": true,
+        "cors_boundary_preserved": true
+      }
+    },
+    {
+      "run_id": "main-L4-01-cursor-r01-a01",
+      "task": "L4-01",
+      "system": "cursor",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "users_api_returns_remaining_contract": true,
+        "browser_user_table_loads": true
+      },
+      "architecture": {
+        "database_age_column_absent": true,
+        "no_age_reintroduction": true,
+        "orm_age_mapping_absent": true,
+        "api_age_field_absent": true,
+        "frontend_age_reference_absent": true,
+        "remaining_fields_and_rows_preserved": true,
+        "three_services_preserved": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L4-01-cursor-r02-a01",
+      "task": "L4-01",
+      "system": "cursor",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "users_api_returns_remaining_contract": true,
+        "browser_user_table_loads": true
+      },
+      "architecture": {
+        "database_age_column_absent": true,
+        "no_age_reintroduction": true,
+        "orm_age_mapping_absent": true,
+        "api_age_field_absent": true,
+        "frontend_age_reference_absent": true,
+        "remaining_fields_and_rows_preserved": true,
+        "three_services_preserved": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L4-01-cursor-r03-a01",
+      "task": "L4-01",
+      "system": "cursor",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "users_api_returns_remaining_contract": true,
+        "browser_user_table_loads": true
+      },
+      "architecture": {
+        "database_age_column_absent": true,
+        "no_age_reintroduction": true,
+        "orm_age_mapping_absent": true,
+        "api_age_field_absent": true,
+        "frontend_age_reference_absent": true,
+        "remaining_fields_and_rows_preserved": true,
+        "three_services_preserved": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L4-01-devin-r01-a02",
+      "task": "L4-01",
+      "system": "devin",
+      "repetition": 1,
+      "attempt": 2,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "users_api_returns_remaining_contract": true,
+        "browser_user_table_loads": true
+      },
+      "architecture": {
+        "database_age_column_absent": true,
+        "no_age_reintroduction": true,
+        "orm_age_mapping_absent": true,
+        "api_age_field_absent": true,
+        "frontend_age_reference_absent": true,
+        "remaining_fields_and_rows_preserved": true,
+        "three_services_preserved": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L4-01-devin-r02-a01",
+      "task": "L4-01",
+      "system": "devin",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "users_api_returns_remaining_contract": true,
+        "browser_user_table_loads": true
+      },
+      "architecture": {
+        "database_age_column_absent": true,
+        "no_age_reintroduction": true,
+        "orm_age_mapping_absent": true,
+        "api_age_field_absent": true,
+        "frontend_age_reference_absent": true,
+        "remaining_fields_and_rows_preserved": true,
+        "three_services_preserved": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L4-01-devin-r03-a01",
+      "task": "L4-01",
+      "system": "devin",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "users_api_returns_remaining_contract": true,
+        "browser_user_table_loads": true
+      },
+      "architecture": {
+        "database_age_column_absent": true,
+        "no_age_reintroduction": true,
+        "orm_age_mapping_absent": true,
+        "api_age_field_absent": true,
+        "frontend_age_reference_absent": true,
+        "remaining_fields_and_rows_preserved": true,
+        "three_services_preserved": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L4-01-gpt-5-4-r01-a01",
+      "task": "L4-01",
+      "system": "gpt-5.4",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "users_api_returns_remaining_contract": true,
+        "browser_user_table_loads": true
+      },
+      "architecture": {
+        "database_age_column_absent": true,
+        "no_age_reintroduction": true,
+        "orm_age_mapping_absent": true,
+        "api_age_field_absent": true,
+        "frontend_age_reference_absent": true,
+        "remaining_fields_and_rows_preserved": true,
+        "three_services_preserved": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L4-01-gpt-5-4-r02-a01",
+      "task": "L4-01",
+      "system": "gpt-5.4",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "users_api_returns_remaining_contract": true,
+        "browser_user_table_loads": true
+      },
+      "architecture": {
+        "database_age_column_absent": true,
+        "no_age_reintroduction": true,
+        "orm_age_mapping_absent": true,
+        "api_age_field_absent": true,
+        "frontend_age_reference_absent": true,
+        "remaining_fields_and_rows_preserved": true,
+        "three_services_preserved": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L4-01-gpt-5-4-r03-a01",
+      "task": "L4-01",
+      "system": "gpt-5.4",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "users_api_returns_remaining_contract": true,
+        "browser_user_table_loads": true
+      },
+      "architecture": {
+        "database_age_column_absent": true,
+        "no_age_reintroduction": true,
+        "orm_age_mapping_absent": true,
+        "api_age_field_absent": true,
+        "frontend_age_reference_absent": true,
+        "remaining_fields_and_rows_preserved": true,
+        "three_services_preserved": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L4-01-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L4-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "users_api_returns_remaining_contract": false,
+        "browser_user_table_loads": false
+      },
+      "architecture": {
+        "database_age_column_absent": true,
+        "no_age_reintroduction": true,
+        "orm_age_mapping_absent": false,
+        "api_age_field_absent": false,
+        "frontend_age_reference_absent": false,
+        "remaining_fields_and_rows_preserved": false,
+        "three_services_preserved": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L4-01-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L4-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "users_api_returns_remaining_contract": false,
+        "browser_user_table_loads": false
+      },
+      "architecture": {
+        "database_age_column_absent": true,
+        "no_age_reintroduction": true,
+        "orm_age_mapping_absent": false,
+        "api_age_field_absent": false,
+        "frontend_age_reference_absent": false,
+        "remaining_fields_and_rows_preserved": false,
+        "three_services_preserved": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L4-01-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L4-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "users_api_returns_remaining_contract": false,
+        "browser_user_table_loads": false
+      },
+      "architecture": {
+        "database_age_column_absent": true,
+        "no_age_reintroduction": true,
+        "orm_age_mapping_absent": false,
+        "api_age_field_absent": false,
+        "frontend_age_reference_absent": false,
+        "remaining_fields_and_rows_preserved": false,
+        "three_services_preserved": true,
+        "researcher_materials_unchanged": true
+      }
+    },
+    {
+      "run_id": "main-L4-02-cursor-r01-a01",
+      "task": "L4-02",
+      "system": "cursor",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": false,
+      "functional": {
+        "customer_create_read": true,
+        "browser_customer_creation": true
+      },
+      "architecture": {
+        "required_status_preserved": true,
+        "seed_status_preserved": true,
+        "validated_active_default": false,
+        "status_domain_preserved": false,
+        "uniqueness_and_boundary_preserved": true,
+        "api_derived_frontend_status": true
+      }
+    },
+    {
+      "run_id": "main-L4-02-cursor-r02-a01",
+      "task": "L4-02",
+      "system": "cursor",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": false,
+      "functional": {
+        "customer_create_read": true,
+        "browser_customer_creation": true
+      },
+      "architecture": {
+        "required_status_preserved": true,
+        "seed_status_preserved": true,
+        "validated_active_default": false,
+        "status_domain_preserved": false,
+        "uniqueness_and_boundary_preserved": true,
+        "api_derived_frontend_status": true
+      }
+    },
+    {
+      "run_id": "main-L4-02-cursor-r03-a01",
+      "task": "L4-02",
+      "system": "cursor",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": false,
+      "functional": {
+        "customer_create_read": true,
+        "browser_customer_creation": true
+      },
+      "architecture": {
+        "required_status_preserved": true,
+        "seed_status_preserved": true,
+        "validated_active_default": false,
+        "status_domain_preserved": false,
+        "uniqueness_and_boundary_preserved": true,
+        "api_derived_frontend_status": true
+      }
+    },
+    {
+      "run_id": "main-L4-02-devin-r01-a01",
+      "task": "L4-02",
+      "system": "devin",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": false,
+      "functional": {
+        "customer_create_read": true,
+        "browser_customer_creation": true
+      },
+      "architecture": {
+        "required_status_preserved": true,
+        "seed_status_preserved": true,
+        "validated_active_default": false,
+        "status_domain_preserved": false,
+        "uniqueness_and_boundary_preserved": true,
+        "api_derived_frontend_status": true
+      }
+    },
+    {
+      "run_id": "main-L4-02-devin-r02-a01",
+      "task": "L4-02",
+      "system": "devin",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": false,
+      "functional": {
+        "customer_create_read": true,
+        "browser_customer_creation": true
+      },
+      "architecture": {
+        "required_status_preserved": true,
+        "seed_status_preserved": true,
+        "validated_active_default": false,
+        "status_domain_preserved": false,
+        "uniqueness_and_boundary_preserved": true,
+        "api_derived_frontend_status": true
+      }
+    },
+    {
+      "run_id": "main-L4-02-devin-r03-a01",
+      "task": "L4-02",
+      "system": "devin",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": false,
+      "functional": {
+        "customer_create_read": true,
+        "browser_customer_creation": true
+      },
+      "architecture": {
+        "required_status_preserved": true,
+        "seed_status_preserved": true,
+        "validated_active_default": false,
+        "status_domain_preserved": false,
+        "uniqueness_and_boundary_preserved": true,
+        "api_derived_frontend_status": true
+      }
+    },
+    {
+      "run_id": "main-L4-02-gpt-5-4-r01-a01",
+      "task": "L4-02",
+      "system": "gpt-5.4",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "customer_create_read": true,
+        "browser_customer_creation": true
+      },
+      "architecture": {
+        "required_status_preserved": true,
+        "seed_status_preserved": true,
+        "validated_active_default": true,
+        "status_domain_preserved": true,
+        "uniqueness_and_boundary_preserved": true,
+        "api_derived_frontend_status": true
+      }
+    },
+    {
+      "run_id": "main-L4-02-gpt-5-4-r02-a01",
+      "task": "L4-02",
+      "system": "gpt-5.4",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "customer_create_read": true,
+        "browser_customer_creation": true
+      },
+      "architecture": {
+        "required_status_preserved": true,
+        "seed_status_preserved": true,
+        "validated_active_default": true,
+        "status_domain_preserved": true,
+        "uniqueness_and_boundary_preserved": true,
+        "api_derived_frontend_status": true
+      }
+    },
+    {
+      "run_id": "main-L4-02-gpt-5-4-r03-a01",
+      "task": "L4-02",
+      "system": "gpt-5.4",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "customer_create_read": true,
+        "browser_customer_creation": true
+      },
+      "architecture": {
+        "required_status_preserved": true,
+        "seed_status_preserved": true,
+        "validated_active_default": true,
+        "status_domain_preserved": true,
+        "uniqueness_and_boundary_preserved": true,
+        "api_derived_frontend_status": true
+      }
+    },
+    {
+      "run_id": "main-L4-02-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L4-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "customer_create_read": false,
+        "browser_customer_creation": false
+      },
+      "architecture": {
+        "required_status_preserved": false,
+        "seed_status_preserved": true,
+        "validated_active_default": false,
+        "status_domain_preserved": false,
+        "uniqueness_and_boundary_preserved": true,
+        "api_derived_frontend_status": false
+      }
+    },
+    {
+      "run_id": "main-L4-02-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L4-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "customer_create_read": false,
+        "browser_customer_creation": false
+      },
+      "architecture": {
+        "required_status_preserved": false,
+        "seed_status_preserved": true,
+        "validated_active_default": false,
+        "status_domain_preserved": false,
+        "uniqueness_and_boundary_preserved": true,
+        "api_derived_frontend_status": false
+      }
+    },
+    {
+      "run_id": "main-L4-02-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L4-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "customer_create_read": false,
+        "browser_customer_creation": false
+      },
+      "architecture": {
+        "required_status_preserved": false,
+        "seed_status_preserved": true,
+        "validated_active_default": false,
+        "status_domain_preserved": false,
+        "uniqueness_and_boundary_preserved": true,
+        "api_derived_frontend_status": false
+      }
+    },
+    {
+      "run_id": "main-L4-03-cursor-r01-a01",
+      "task": "L4-03",
+      "system": "cursor",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "compose_health": true,
+        "dashboard_api": true,
+        "browser_dashboard": true
+      },
+      "architecture": {
+        "compose_service_hostname": true,
+        "database_network_target": true,
+        "startup_and_health_database_checks": true,
+        "postgres_backed_dashboard": true,
+        "frontend_not_hard_coded": true,
+        "frozen_stack_contract": true
+      }
+    },
+    {
+      "run_id": "main-L4-03-cursor-r02-a01",
+      "task": "L4-03",
+      "system": "cursor",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "compose_health": true,
+        "dashboard_api": true,
+        "browser_dashboard": true
+      },
+      "architecture": {
+        "compose_service_hostname": true,
+        "database_network_target": true,
+        "startup_and_health_database_checks": true,
+        "postgres_backed_dashboard": true,
+        "frontend_not_hard_coded": true,
+        "frozen_stack_contract": true
+      }
+    },
+    {
+      "run_id": "main-L4-03-cursor-r03-a01",
+      "task": "L4-03",
+      "system": "cursor",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "compose_health": true,
+        "dashboard_api": true,
+        "browser_dashboard": true
+      },
+      "architecture": {
+        "compose_service_hostname": true,
+        "database_network_target": true,
+        "startup_and_health_database_checks": true,
+        "postgres_backed_dashboard": true,
+        "frontend_not_hard_coded": true,
+        "frozen_stack_contract": true
+      }
+    },
+    {
+      "run_id": "main-L4-03-devin-r01-a01",
+      "task": "L4-03",
+      "system": "devin",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "compose_health": true,
+        "dashboard_api": true,
+        "browser_dashboard": true
+      },
+      "architecture": {
+        "compose_service_hostname": true,
+        "database_network_target": true,
+        "startup_and_health_database_checks": true,
+        "postgres_backed_dashboard": true,
+        "frontend_not_hard_coded": true,
+        "frozen_stack_contract": true
+      }
+    },
+    {
+      "run_id": "main-L4-03-devin-r02-a01",
+      "task": "L4-03",
+      "system": "devin",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "compose_health": true,
+        "dashboard_api": true,
+        "browser_dashboard": true
+      },
+      "architecture": {
+        "compose_service_hostname": true,
+        "database_network_target": true,
+        "startup_and_health_database_checks": true,
+        "postgres_backed_dashboard": true,
+        "frontend_not_hard_coded": true,
+        "frozen_stack_contract": true
+      }
+    },
+    {
+      "run_id": "main-L4-03-devin-r03-a01",
+      "task": "L4-03",
+      "system": "devin",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "compose_health": true,
+        "dashboard_api": true,
+        "browser_dashboard": true
+      },
+      "architecture": {
+        "compose_service_hostname": true,
+        "database_network_target": true,
+        "startup_and_health_database_checks": true,
+        "postgres_backed_dashboard": true,
+        "frontend_not_hard_coded": true,
+        "frozen_stack_contract": true
+      }
+    },
+    {
+      "run_id": "main-L4-03-gpt-5-4-r01-a02",
+      "task": "L4-03",
+      "system": "gpt-5.4",
+      "repetition": 1,
+      "attempt": 2,
+      "stopping_reason": "submitted",
+      "success": false,
+      "functional": {
+        "compose_health": true,
+        "dashboard_api": true,
+        "browser_dashboard": false
+      },
+      "architecture": {
+        "compose_service_hostname": true,
+        "database_network_target": true,
+        "startup_and_health_database_checks": true,
+        "postgres_backed_dashboard": true,
+        "frontend_not_hard_coded": false,
+        "frozen_stack_contract": true
+      }
+    },
+    {
+      "run_id": "main-L4-03-gpt-5-4-r02-a01",
+      "task": "L4-03",
+      "system": "gpt-5.4",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "compose_health": true,
+        "dashboard_api": true,
+        "browser_dashboard": true
+      },
+      "architecture": {
+        "compose_service_hostname": true,
+        "database_network_target": true,
+        "startup_and_health_database_checks": true,
+        "postgres_backed_dashboard": true,
+        "frontend_not_hard_coded": true,
+        "frozen_stack_contract": true
+      }
+    },
+    {
+      "run_id": "main-L4-03-gpt-5-4-r03-a01",
+      "task": "L4-03",
+      "system": "gpt-5.4",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "submitted",
+      "success": true,
+      "functional": {
+        "compose_health": true,
+        "dashboard_api": true,
+        "browser_dashboard": true
+      },
+      "architecture": {
+        "compose_service_hostname": true,
+        "database_network_target": true,
+        "startup_and_health_database_checks": true,
+        "postgres_backed_dashboard": true,
+        "frontend_not_hard_coded": true,
+        "frozen_stack_contract": true
+      }
+    },
+    {
+      "run_id": "main-L4-03-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L4-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 1,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "compose_health": false,
+        "dashboard_api": false,
+        "browser_dashboard": false
+      },
+      "architecture": {
+        "compose_service_hostname": false,
+        "database_network_target": false,
+        "startup_and_health_database_checks": false,
+        "postgres_backed_dashboard": false,
+        "frontend_not_hard_coded": false,
+        "frozen_stack_contract": true
+      }
+    },
+    {
+      "run_id": "main-L4-03-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L4-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 2,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "compose_health": false,
+        "dashboard_api": false,
+        "browser_dashboard": false
+      },
+      "architecture": {
+        "compose_service_hostname": false,
+        "database_network_target": false,
+        "startup_and_health_database_checks": false,
+        "postgres_backed_dashboard": false,
+        "frontend_not_hard_coded": false,
+        "frozen_stack_contract": true
+      }
+    },
+    {
+      "run_id": "main-L4-03-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L4-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "repetition": 3,
+      "attempt": 1,
+      "stopping_reason": "protocol_no_progress_limit",
+      "success": false,
+      "functional": {
+        "compose_health": false,
+        "dashboard_api": false,
+        "browser_dashboard": false
+      },
+      "architecture": {
+        "compose_service_hostname": false,
+        "database_network_target": false,
+        "startup_and_health_database_checks": false,
+        "postgres_backed_dashboard": false,
+        "frontend_not_hard_coded": false,
+        "frozen_stack_contract": true
+      }
+    }
+  ]
+}
