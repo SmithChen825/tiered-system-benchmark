@@ -1,10 +1,12 @@
 # Release scope
 
-This repository is a curated research-materials export initially prepared on 23 September 2026 and extended with L2 results on 25 September 2026. It publishes the design and implementation used to prepare the main study, together with the completed pilot's descriptive tables. The `L1-experiment` branch additionally publishes 36 completed L1 main observations and an index of all 41 L1 attempts.
+This repository is a curated research-materials export initially prepared on 23 September 2026, extended with L2 results on 25 September, and updated on `supplement1` with the uniform evaluator review on 26 September. Main collection is complete: 144 selected valid observations. This supplement adds original/reviewed score pairs for all slots, while retaining the detailed L1/L2 exports and the completed pilot's descriptive tables.
 
 ## Included
 
 - L1 main results, timing, individual check outcomes, final diffs, and attempt/exclusion provenance in `data/L1/`.
+- L2 original results and attempt/exclusion provenance in `data/L2/`.
+- All 144 selected original/reviewed score pairs, selection audit, reduced diagnostic evidence, diagnostic probe source and an offline score-reproduction script in `data/evaluation-review/`.
 
 - All 12 task packages, including fixtures, briefs, tests, oracle repairs, dependency files, and validation reports.
 - The shared runner, evaluator, native recorder, provider adapters, required supporting modules, and focused offline tests.
@@ -13,7 +15,7 @@ This repository is a curated research-materials export initially prepared on 23 
 
 ## Export boundary
 
-The files were selected from the maintained research workspace. This is not a byte-for-byte historical snapshot of the original pre-main freeze: maintenance corrections made since that freeze may be present in implementation or metadata. The L1 and L2 results are exported from recorded main-experiment evidence; L3 and L4 remain outside this data release.
+The files were selected from the maintained research workspace. This is not a byte-for-byte historical snapshot of the original pre-main freeze: maintenance corrections made since that freeze may be present in implementation or metadata. Detailed execution-level L1/L2 exports are included. L3/L4 are now represented in the score-level review, but their full submission snapshots, timing/usage tables, transcripts and runtime archives remain outside this release. Reviewed scores are a separate analysis layer, not a silent replacement of original results or historical evaluators.
 
 Operational freeze manifests, amendment archives, account-specific authorization files, billing records, credentials, local IDE profiles, transient workspaces, and raw experiment transcripts are retained separately. As a result, source specification references to private operational records are provenance references, not a claim that the complete sealed execution environment is present here.
 
@@ -21,8 +23,8 @@ The `.gitattributes` file disables automatic line-ending conversion so that copi
 
 ## Next data release
 
-After all 144 scheduled observations are complete and verified, add the final selected-run table, attempt/exclusion provenance, analysis scripts or notebook, tables, and figures. Keep pilot and main records separate.
+Remaining work is the complete execution-level release, final comparative analysis, original-versus-reviewed sensitivity, tables and figures. The included offline script reproduces score mapping from exported evidence; it does not reproduce agent executions or replace the planned statistical analysis. Keep pilot and main records separate.
 
 ## L2 experiment addition
 
-The L2-experiment branch adds 36 selected L2 main observations and all 38 attempts in data/L2, including the two documented exclusions and replacements. L1 and L2 results are published; L3 and L4 outcomes are outside this release.
+The earlier L2-experiment addition contains 36 selected L2 main observations and all 38 attempts, including two documented exclusions and replacements. Its original result files are preserved. The `supplement1` review adds the L2-03 scoring amendment and score-level L3/L4 coverage; see the [review guide](../data/evaluation-review/README.md).

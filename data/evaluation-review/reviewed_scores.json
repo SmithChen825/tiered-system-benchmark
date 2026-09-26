@@ -1,0 +1,3462 @@
+{
+  "version": "public-contract-audit/2026-09-26",
+  "original_records_preserved": true,
+  "rows": [
+    {
+      "run_id": "main-L1-01-cursor-r01-a01",
+      "task": "L1-01",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-01-cursor-r02-a01",
+      "task": "L1-01",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-01-cursor-r03-a01",
+      "task": "L1-01",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-01-devin-r01-a01",
+      "task": "L1-01",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-01-devin-r02-a01",
+      "task": "L1-01",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-01-devin-r03-a01",
+      "task": "L1-01",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-01-gpt-5-4-r01-a03",
+      "task": "L1-01",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-01-gpt-5-4-r02-a03",
+      "task": "L1-01",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-01-gpt-5-4-r03-a01",
+      "task": "L1-01",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-01-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L1-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 0,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 0,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-01-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L1-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 0,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 0,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-01-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L1-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 0,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 0,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-02-cursor-r01-a01",
+      "task": "L1-02",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L1-02-cursor-r02-a01",
+      "task": "L1-02",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L1-02-cursor-r03-a01",
+      "task": "L1-02",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L1-02-devin-r01-a01",
+      "task": "L1-02",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L1-02-devin-r02-a01",
+      "task": "L1-02",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L1-02-devin-r03-a01",
+      "task": "L1-02",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L1-02-gpt-5-4-r01-a01",
+      "task": "L1-02",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L1-02-gpt-5-4-r02-a01",
+      "task": "L1-02",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L1-02-gpt-5-4-r03-a01",
+      "task": "L1-02",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L1-02-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L1-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 0,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 0,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 4,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L1-02-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L1-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 0,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 0,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 4,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L1-02-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L1-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 0,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 0,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 4,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L1-03-cursor-r01-a01",
+      "task": "L1-03",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-03-cursor-r02-a01",
+      "task": "L1-03",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-03-cursor-r03-a01",
+      "task": "L1-03",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-03-devin-r01-a01",
+      "task": "L1-03",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-03-devin-r02-a01",
+      "task": "L1-03",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-03-devin-r03-a01",
+      "task": "L1-03",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-03-gpt-5-4-r01-a01",
+      "task": "L1-03",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-03-gpt-5-4-r02-a02",
+      "task": "L1-03",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-03-gpt-5-4-r03-a01",
+      "task": "L1-03",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-03-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L1-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 0,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 3,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 0,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 3,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-03-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L1-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 0,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 3,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 0,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 3,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L1-03-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L1-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 0,
+        "applicable": 1
+      },
+      "original_architecture": {
+        "passed": 3,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 0,
+        "applicable": 1
+      },
+      "architecture": {
+        "passed": 3,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-01-cursor-r01-a01",
+      "task": "L2-01",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L2-01-cursor-r02-a01",
+      "task": "L2-01",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L2-01-cursor-r03-a01",
+      "task": "L2-01",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L2-01-devin-r01-a01",
+      "task": "L2-01",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L2-01-devin-r02-a01",
+      "task": "L2-01",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L2-01-devin-r03-a01",
+      "task": "L2-01",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L2-01-gpt-5-4-r01-a01",
+      "task": "L2-01",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L2-01-gpt-5-4-r02-a01",
+      "task": "L2-01",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L2-01-gpt-5-4-r03-a01",
+      "task": "L2-01",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L2-01-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L2-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 1,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 1,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L2-01-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L2-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 1,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 1,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L2-01-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L2-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 1,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 1,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L2-02-cursor-r01-a02",
+      "task": "L2-02",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 7,
+        "applicable": 7
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 7,
+        "applicable": 7
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-02-cursor-r02-a01",
+      "task": "L2-02",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 7,
+        "applicable": 7
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 7,
+        "applicable": 7
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-02-cursor-r03-a01",
+      "task": "L2-02",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 7,
+        "applicable": 7
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 7,
+        "applicable": 7
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-02-devin-r01-a02",
+      "task": "L2-02",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 7,
+        "applicable": 7
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 7,
+        "applicable": 7
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-02-devin-r02-a01",
+      "task": "L2-02",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 7,
+        "applicable": 7
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 7,
+        "applicable": 7
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-02-devin-r03-a01",
+      "task": "L2-02",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 7,
+        "applicable": 7
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 7,
+        "applicable": 7
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-02-gpt-5-4-r01-a01",
+      "task": "L2-02",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 7,
+        "applicable": 7
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 7,
+        "applicable": 7
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-02-gpt-5-4-r02-a01",
+      "task": "L2-02",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 7,
+        "applicable": 7
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 7,
+        "applicable": 7
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-02-gpt-5-4-r03-a01",
+      "task": "L2-02",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 7,
+        "applicable": 7
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 7,
+        "applicable": 7
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-02-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L2-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 4,
+        "applicable": 7
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 4,
+        "applicable": 7
+      },
+      "architecture": {
+        "passed": 4,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-02-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L2-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 4,
+        "applicable": 7
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 4,
+        "applicable": 7
+      },
+      "architecture": {
+        "passed": 4,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-02-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L2-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 4,
+        "applicable": 7
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 4,
+        "applicable": 7
+      },
+      "architecture": {
+        "passed": 4,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-03-cursor-r01-a01",
+      "task": "L2-03",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-03-cursor-r02-a01",
+      "task": "L2-03",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-03-cursor-r03-a01",
+      "task": "L2-03",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-03-devin-r01-a01",
+      "task": "L2-03",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-03-devin-r02-a01",
+      "task": "L2-03",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 4,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-03-devin-r03-a01",
+      "task": "L2-03",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 4,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-03-gpt-5-4-r01-a01",
+      "task": "L2-03",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 4,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-03-gpt-5-4-r02-a01",
+      "task": "L2-03",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": false,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-03-gpt-5-4-r03-a01",
+      "task": "L2-03",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-03-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L2-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 4,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-03-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L2-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 4,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L2-03-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L2-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 4,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L3-01-cursor-r01-a01",
+      "task": "L3-01",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": false,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 7
+      },
+      "functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 7,
+        "applicable": 7
+      }
+    },
+    {
+      "run_id": "main-L3-01-cursor-r02-a02",
+      "task": "L3-01",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": false,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 7
+      },
+      "functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 7,
+        "applicable": 7
+      }
+    },
+    {
+      "run_id": "main-L3-01-cursor-r03-a01",
+      "task": "L3-01",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": false,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 7
+      },
+      "functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 7,
+        "applicable": 7
+      }
+    },
+    {
+      "run_id": "main-L3-01-devin-r01-a01",
+      "task": "L3-01",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 7,
+        "applicable": 7
+      },
+      "functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 7,
+        "applicable": 7
+      }
+    },
+    {
+      "run_id": "main-L3-01-devin-r02-a01",
+      "task": "L3-01",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 7,
+        "applicable": 7
+      },
+      "functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 7,
+        "applicable": 7
+      }
+    },
+    {
+      "run_id": "main-L3-01-devin-r03-a01",
+      "task": "L3-01",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 7,
+        "applicable": 7
+      },
+      "functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 7,
+        "applicable": 7
+      }
+    },
+    {
+      "run_id": "main-L3-01-gpt-5-4-r01-a01",
+      "task": "L3-01",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": false,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 7
+      },
+      "functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 7,
+        "applicable": 7
+      }
+    },
+    {
+      "run_id": "main-L3-01-gpt-5-4-r02-a01",
+      "task": "L3-01",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": false,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 7
+      },
+      "functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 7,
+        "applicable": 7
+      }
+    },
+    {
+      "run_id": "main-L3-01-gpt-5-4-r03-a01",
+      "task": "L3-01",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 7,
+        "applicable": 7
+      },
+      "functional": {
+        "passed": 4,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 7,
+        "applicable": 7
+      }
+    },
+    {
+      "run_id": "main-L3-01-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L3-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 7
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 7
+      }
+    },
+    {
+      "run_id": "main-L3-01-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L3-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 7
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 7
+      }
+    },
+    {
+      "run_id": "main-L3-01-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L3-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 4
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 7
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 4
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 7
+      }
+    },
+    {
+      "run_id": "main-L3-02-cursor-r01-a01",
+      "task": "L3-02",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L3-02-cursor-r02-a01",
+      "task": "L3-02",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L3-02-cursor-r03-a01",
+      "task": "L3-02",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L3-02-devin-r01-a01",
+      "task": "L3-02",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L3-02-devin-r02-a01",
+      "task": "L3-02",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L3-02-devin-r03-a02",
+      "task": "L3-02",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L3-02-gpt-5-4-r01-a01",
+      "task": "L3-02",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L3-02-gpt-5-4-r02-a01",
+      "task": "L3-02",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L3-02-gpt-5-4-r03-a01",
+      "task": "L3-02",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L3-02-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L3-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 4,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L3-02-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L3-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 4,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L3-02-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L3-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "submitted",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 1,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 5
+      },
+      "functional": {
+        "passed": 1,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 4,
+        "applicable": 5
+      }
+    },
+    {
+      "run_id": "main-L3-03-cursor-r01-a01",
+      "task": "L3-03",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L3-03-cursor-r02-a01",
+      "task": "L3-03",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L3-03-cursor-r03-a01",
+      "task": "L3-03",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L3-03-devin-r01-a01",
+      "task": "L3-03",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L3-03-devin-r02-a01",
+      "task": "L3-03",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L3-03-devin-r03-a01",
+      "task": "L3-03",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L3-03-gpt-5-4-r01-a01",
+      "task": "L3-03",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L3-03-gpt-5-4-r02-a01",
+      "task": "L3-03",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L3-03-gpt-5-4-r03-a01",
+      "task": "L3-03",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L3-03-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L3-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 4,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L3-03-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L3-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 4,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L3-03-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L3-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 4,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-01-cursor-r01-a01",
+      "task": "L4-01",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 8,
+        "applicable": 8
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 8,
+        "applicable": 8
+      }
+    },
+    {
+      "run_id": "main-L4-01-cursor-r02-a01",
+      "task": "L4-01",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 8,
+        "applicable": 8
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 8,
+        "applicable": 8
+      }
+    },
+    {
+      "run_id": "main-L4-01-cursor-r03-a01",
+      "task": "L4-01",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 8,
+        "applicable": 8
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 8,
+        "applicable": 8
+      }
+    },
+    {
+      "run_id": "main-L4-01-devin-r01-a02",
+      "task": "L4-01",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 8,
+        "applicable": 8
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 8,
+        "applicable": 8
+      }
+    },
+    {
+      "run_id": "main-L4-01-devin-r02-a01",
+      "task": "L4-01",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 8,
+        "applicable": 8
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 8,
+        "applicable": 8
+      }
+    },
+    {
+      "run_id": "main-L4-01-devin-r03-a01",
+      "task": "L4-01",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 8,
+        "applicable": 8
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 8,
+        "applicable": 8
+      }
+    },
+    {
+      "run_id": "main-L4-01-gpt-5-4-r01-a01",
+      "task": "L4-01",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 8,
+        "applicable": 8
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 8,
+        "applicable": 8
+      }
+    },
+    {
+      "run_id": "main-L4-01-gpt-5-4-r02-a01",
+      "task": "L4-01",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 8,
+        "applicable": 8
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 8,
+        "applicable": 8
+      }
+    },
+    {
+      "run_id": "main-L4-01-gpt-5-4-r03-a01",
+      "task": "L4-01",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 8,
+        "applicable": 8
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 8,
+        "applicable": 8
+      }
+    },
+    {
+      "run_id": "main-L4-01-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L4-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 0,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 8
+      },
+      "functional": {
+        "passed": 0,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 4,
+        "applicable": 8
+      }
+    },
+    {
+      "run_id": "main-L4-01-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L4-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 0,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 8
+      },
+      "functional": {
+        "passed": 0,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 4,
+        "applicable": 8
+      }
+    },
+    {
+      "run_id": "main-L4-01-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L4-01",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 0,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 8
+      },
+      "functional": {
+        "passed": 0,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 4,
+        "applicable": 8
+      }
+    },
+    {
+      "run_id": "main-L4-02-cursor-r01-a01",
+      "task": "L4-02",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": false,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-02-cursor-r02-a01",
+      "task": "L4-02",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-02-cursor-r03-a01",
+      "task": "L4-02",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": false,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-02-devin-r01-a01",
+      "task": "L4-02",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-02-devin-r02-a01",
+      "task": "L4-02",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": false,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-02-devin-r03-a01",
+      "task": "L4-02",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": false,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 4,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-02-gpt-5-4-r01-a01",
+      "task": "L4-02",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-02-gpt-5-4-r02-a01",
+      "task": "L4-02",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-02-gpt-5-4-r03-a01",
+      "task": "L4-02",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-02-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L4-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 0,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 2,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 0,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 2,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-02-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L4-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 0,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 2,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 0,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 2,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-02-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L4-02",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 0,
+        "applicable": 2
+      },
+      "original_architecture": {
+        "passed": 2,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 0,
+        "applicable": 2
+      },
+      "architecture": {
+        "passed": 2,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-03-cursor-r01-a01",
+      "task": "L4-03",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-03-cursor-r02-a01",
+      "task": "L4-03",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-03-cursor-r03-a01",
+      "task": "L4-03",
+      "system": "cursor",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-03-devin-r01-a01",
+      "task": "L4-03",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-03-devin-r02-a01",
+      "task": "L4-03",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-03-devin-r03-a01",
+      "task": "L4-03",
+      "system": "devin",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-03-gpt-5-4-r01-a02",
+      "task": "L4-03",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 2,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 5,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 2,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 5,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-03-gpt-5-4-r02-a01",
+      "task": "L4-03",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-03-gpt-5-4-r03-a01",
+      "task": "L4-03",
+      "system": "gpt-5.4",
+      "stopping_reason": "submitted",
+      "original_success": true,
+      "reviewed_success": true,
+      "original_functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 6,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 3,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 6,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-03-qwen2-5-coder-7b-instruct-r01-a01",
+      "task": "L4-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 0,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 1,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 0,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 1,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-03-qwen2-5-coder-7b-instruct-r02-a01",
+      "task": "L4-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 0,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 1,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 0,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 1,
+        "applicable": 6
+      }
+    },
+    {
+      "run_id": "main-L4-03-qwen2-5-coder-7b-instruct-r03-a01",
+      "task": "L4-03",
+      "system": "qwen2.5-coder-7b-instruct",
+      "stopping_reason": "protocol_no_progress_limit",
+      "original_success": false,
+      "reviewed_success": false,
+      "original_functional": {
+        "passed": 0,
+        "applicable": 3
+      },
+      "original_architecture": {
+        "passed": 1,
+        "applicable": 6
+      },
+      "functional": {
+        "passed": 0,
+        "applicable": 3
+      },
+      "architecture": {
+        "passed": 1,
+        "applicable": 6
+      }
+    }
+  ]
+}

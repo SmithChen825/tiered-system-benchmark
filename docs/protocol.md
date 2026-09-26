@@ -26,7 +26,7 @@ The API sandbox disables external network access and host-Docker control. The ev
 
 ## Clarification
 
-Only L2-02 deliberately omits one essential non-technical requirement. A qualifying request receives its fixed response card. Other briefs are complete. Permission approvals are not clarification, and technical faults do not justify debugging assistance.
+Only L2-02 deliberately omits one essential non-technical requirement. A qualifying request receives its fixed response card. Other briefs were designed to be complete. Permission approvals are not clarification, and technical faults do not justify debugging assistance.
 
 ## Outcomes and analysis
 
@@ -35,3 +35,9 @@ A successful run must submit normally and pass every applicable functional check
 Report binary success, functional and architectural diagnostic proportions, successful-run completion times, all-valid-run stopping times, clarification measures, and autonomous recovery separately. There is no weighted aggregate score.
 
 The planned analysis uses descriptive Wilson intervals, task-level bootstrap risk differences, exact paired task-label-swap tests with Holm adjustment, and median/IQR timing summaries. All comparative inference is exploratory. The task, rather than an individual repetition, is the resampling unit. See the [machine-readable analysis plan](../benchmark/config/analysis_plan.main.json) and [data dictionary](../benchmark/docs/run_data_dictionary.md).
+
+## Post-collection evaluator review
+
+All 144 selected observations are complete. A [uniform review](evaluation-review.md) checks scoring against the public requirements and visible repository contracts. Evidence-supported corrections apply to all systems and repetitions of an affected task. Syntax, variable names and unspecified implementation layers are not independent requirements. Both original and reviewed scoring require normal submission and all applicable checks passing.
+
+The [reviewed score export](../data/evaluation-review/README.md) is a separate, versioned analysis layer. It preserves original records and does not change execution settings, timing, stopping reasons or validity. The historical evaluator and analysis-plan files remain as published; their original source-pattern checks must not be mistaken for the reviewed score mapping. Original-versus-reviewed sensitivity is required before interpreting comparative findings.

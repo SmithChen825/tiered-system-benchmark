@@ -1,0 +1,77 @@
+{
+  "selected_count": 144,
+  "unique_slots": 144,
+  "stopping_counts": {
+    "submitted": 109,
+    "protocol_no_progress_limit": 35
+  },
+  "excluded_attempts": [
+    {
+      "run_id": "main-L1-01-gpt-5-4-r01-a01",
+      "validity": "invalid",
+      "lifecycle": "invalidated",
+      "post_run_excluded": false
+    },
+    {
+      "run_id": "main-L1-01-gpt-5-4-r01-a02",
+      "validity": "invalid",
+      "lifecycle": "invalidated",
+      "post_run_excluded": false
+    },
+    {
+      "run_id": "main-L1-01-gpt-5-4-r02-a01",
+      "validity": "invalid",
+      "lifecycle": "invalidated",
+      "post_run_excluded": false
+    },
+    {
+      "run_id": "main-L1-01-gpt-5-4-r02-a02",
+      "validity": "invalid",
+      "lifecycle": "invalidated",
+      "post_run_excluded": false
+    },
+    {
+      "run_id": "main-L1-03-gpt-5-4-r02-a01",
+      "validity": "invalid",
+      "lifecycle": "invalidated",
+      "post_run_excluded": false
+    },
+    {
+      "run_id": "main-L2-02-cursor-r01-a01",
+      "validity": "valid",
+      "lifecycle": "unsuccessful",
+      "post_run_excluded": true
+    },
+    {
+      "run_id": "main-L2-02-devin-r01-a01",
+      "validity": "pending",
+      "lifecycle": "submitted",
+      "post_run_excluded": true
+    },
+    {
+      "run_id": "main-L3-01-cursor-r02-a01",
+      "validity": "pending",
+      "lifecycle": "submitted",
+      "post_run_excluded": true
+    },
+    {
+      "run_id": "main-L3-02-devin-r03-a01",
+      "validity": "invalid",
+      "lifecycle": "invalidated",
+      "post_run_excluded": false
+    },
+    {
+      "run_id": "main-L4-01-devin-r01-a01",
+      "validity": "invalid",
+      "lifecycle": "invalidated",
+      "post_run_excluded": false
+    },
+    {
+      "run_id": "main-L4-03-gpt-5-4-r01-a01",
+      "validity": "invalid",
+      "lifecycle": "invalidated",
+      "post_run_excluded": false
+    }
+  ],
+  "success_rule_mismatches": []
+}

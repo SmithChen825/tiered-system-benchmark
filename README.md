@@ -4,7 +4,7 @@
 
 TSB is the research software for *Benchmarking Agentic Code Generation Tools*, a University of Melbourne thesis by Wenrui Chen, supervised by Prof. Richard Sinnott.
 
-This branch adds the **completed L1 and L2 main-experiment results (72 observations)** to the task suite, evaluation framework, experimental design, and pilot data. See the [L1 results](data/L1/README.md) and [L2 results and data guide](data/L2/README.md). The complete 144-run results will follow after collection and verification.
+Main collection is complete: **144 selected valid observations**, including valid unsuccessful outcomes. This branch retains the detailed [L1 results](data/L1/README.md) and [L2 results](data/L2/README.md), and adds a [uniform evaluator review](docs/evaluation-review.md) with original/reviewed scores for all 144 slots and an offline reproduction script. Full L3/L4 execution evidence and final comparative analysis are not included in this supplement.
 
 ## At a glance
 
@@ -43,8 +43,7 @@ L2 includes 36 selected observations and 38 retained attempts. See the [L2 summa
 - **Understand the study:** [experimental protocol](docs/protocol.md) and [analysis plan](benchmark/config/analysis_plan.main.json).
 - **Inspect a task:** [L3-03 public brief](benchmark/tasks/L3-03/public_task_brief.md), [starting application](benchmark/tasks/L3-03/fixture_repo), and [task package](benchmark/tasks/L3-03).
 - **Try the framework:** follow the [local setup and validation guide](docs/reproduction.md).
-- **Review the pilot:** read the [pilot summary](docs/pilot.md), [16 selected observations](data/L2/       L2 main results, check-level evidence, code diffs, attempt index
-data/pilot/selected_runs.csv), and [27-attempt index](data/pilot/all_attempts.csv).
+- **Review the pilot:** read the [pilot summary](docs/pilot.md), [16 selected observations](data/pilot/selected_runs.csv), and [27-attempt index](data/pilot/all_attempts.csv).
 - **Understand this release:** read the [release scope](docs/release-scope.md).
 
 ## Repository layout
@@ -57,6 +56,8 @@ benchmark/
   schemas/     Machine-readable evidence and result contracts
   docs/        Detailed implementation and evidence documentation
 data/L1/       L1 main results, check-level evidence, code diffs, attempt index
+data/L2/       L2 original results, check-level evidence, code diffs, attempt index
+data/evaluation-review/  144 paired scores, diagnostic evidence, review reproduction
 data/pilot/    Selected pilot observations, attempt index, descriptive summary
 docs/          Short guides to the study, tasks, pilot, and reproduction
 ```
@@ -72,10 +73,10 @@ python -m unittest benchmark.runner.tests.test_api_wrapper benchmark.runner.test
 
 The first command checks all 12 deterministic starting commits. The second exercises the API wrapper and logical tools with local test doubles; neither command calls a model provider. Docker and browser checks are documented separately in the [reproduction guide](docs/reproduction.md).
 
-## Pilot and next release
+## Pilot and remaining analysis
 
 The pilot validated execution, resets, evidence capture, and operational limits. All 16 selected records passed the common evidence validator; the eight selected native-IDE records also passed native validation. The pilot led to increasing the common API action limit from 15 to 30 before the main experiment.
 
-Pilot outcomes are **descriptive process evidence**, excluded from the main dataset and unsuitable for system rankings. The next data release will contain the verified main run table, reported exclusions and replacements, analysis outputs, and final comparative figures.
+Pilot outcomes are **descriptive process evidence**, excluded from the main dataset and unsuitable for system rankings. The score-level review is now available for all 144 selected slots. The next data release will add the complete execution-level dataset, comparative analysis outputs, and final figures.
 
 Keep evaluated agents inside their assigned `workspaces/<run_id>/repo` directory. The full repository contains evaluator-only tests and oracle repairs that must remain outside the evaluated agent's information boundary.

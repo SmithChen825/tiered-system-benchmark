@@ -1,0 +1,1835 @@
+{
+  "L2-03": [
+    {
+      "run_id": "main-L2-03-cursor-r01-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "versions": {
+        "fastapi": "0.115.6",
+        "pydantic": "2.10.4"
+      },
+      "seed_from_app_cwd": true,
+      "import_export_authoritative": true,
+      "restart_other_cwd": true,
+      "invalid_preserves": true,
+      "seed_observed": [
+        {
+          "id": 1,
+          "title": "Tide table",
+          "body": "Check the harbour window before departure."
+        },
+        {
+          "id": 2,
+          "title": "Repair kit",
+          "body": "Pack tape, cord, and the small multitool."
+        }
+      ],
+      "physical_after_import": {
+        "schema_version": "1.0",
+        "notes": [
+          {
+            "id": 71,
+            "title": "Audit note",
+            "body": "Persistence check"
+          }
+        ]
+      },
+      "after_restart": [
+        {
+          "id": 71,
+          "title": "Audit note",
+          "body": "Persistence check"
+        }
+      ]
+    },
+    {
+      "run_id": "main-L2-03-cursor-r02-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "versions": {
+        "fastapi": "0.115.6",
+        "pydantic": "2.10.4"
+      },
+      "seed_from_app_cwd": true,
+      "import_export_authoritative": true,
+      "restart_other_cwd": true,
+      "invalid_preserves": true,
+      "seed_observed": [
+        {
+          "id": 1,
+          "title": "Tide table",
+          "body": "Check the harbour window before departure."
+        },
+        {
+          "id": 2,
+          "title": "Repair kit",
+          "body": "Pack tape, cord, and the small multitool."
+        }
+      ],
+      "physical_after_import": {
+        "schema_version": "1.0",
+        "notes": [
+          {
+            "id": 71,
+            "title": "Audit note",
+            "body": "Persistence check"
+          }
+        ]
+      },
+      "after_restart": [
+        {
+          "id": 71,
+          "title": "Audit note",
+          "body": "Persistence check"
+        }
+      ]
+    },
+    {
+      "run_id": "main-L2-03-cursor-r03-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "versions": {
+        "fastapi": "0.115.6",
+        "pydantic": "2.10.4"
+      },
+      "seed_from_app_cwd": true,
+      "import_export_authoritative": true,
+      "restart_other_cwd": true,
+      "invalid_preserves": true,
+      "seed_observed": [
+        {
+          "id": 1,
+          "title": "Tide table",
+          "body": "Check the harbour window before departure."
+        },
+        {
+          "id": 2,
+          "title": "Repair kit",
+          "body": "Pack tape, cord, and the small multitool."
+        }
+      ],
+      "physical_after_import": {
+        "schema_version": "1.0",
+        "notes": [
+          {
+            "id": 71,
+            "title": "Audit note",
+            "body": "Persistence check"
+          }
+        ]
+      },
+      "after_restart": [
+        {
+          "id": 71,
+          "title": "Audit note",
+          "body": "Persistence check"
+        }
+      ]
+    },
+    {
+      "run_id": "main-L2-03-devin-r01-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "versions": {
+        "fastapi": "0.115.6",
+        "pydantic": "2.10.4"
+      },
+      "seed_from_app_cwd": true,
+      "import_export_authoritative": true,
+      "restart_other_cwd": true,
+      "invalid_preserves": true,
+      "seed_observed": [
+        {
+          "id": 1,
+          "title": "Tide table",
+          "body": "Check the harbour window before departure."
+        },
+        {
+          "id": 2,
+          "title": "Repair kit",
+          "body": "Pack tape, cord, and the small multitool."
+        }
+      ],
+      "physical_after_import": {
+        "schema_version": "1.0",
+        "notes": [
+          {
+            "id": 71,
+            "title": "Audit note",
+            "body": "Persistence check"
+          }
+        ]
+      },
+      "after_restart": [
+        {
+          "id": 71,
+          "title": "Audit note",
+          "body": "Persistence check"
+        }
+      ]
+    },
+    {
+      "run_id": "main-L2-03-devin-r02-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "versions": {
+        "fastapi": "0.115.6",
+        "pydantic": "2.10.4"
+      },
+      "seed_from_app_cwd": false,
+      "import_export_authoritative": false,
+      "restart_other_cwd": false,
+      "invalid_preserves": true,
+      "seed_observed": [],
+      "physical_after_import": {
+        "schema_version": "1.0",
+        "notes": [
+          {
+            "id": 1,
+            "title": "Tide table",
+            "body": "Check the harbour window before departure."
+          },
+          {
+            "id": 2,
+            "title": "Repair kit",
+            "body": "Pack tape, cord, and the small multitool."
+          }
+        ]
+      },
+      "after_restart": [
+        {
+          "id": 1,
+          "title": "Tide table",
+          "body": "Check the harbour window before departure."
+        },
+        {
+          "id": 2,
+          "title": "Repair kit",
+          "body": "Pack tape, cord, and the small multitool."
+        }
+      ]
+    },
+    {
+      "run_id": "main-L2-03-devin-r03-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "versions": {
+        "fastapi": "0.115.6",
+        "pydantic": "2.10.4"
+      },
+      "seed_from_app_cwd": true,
+      "import_export_authoritative": false,
+      "restart_other_cwd": false,
+      "invalid_preserves": true,
+      "seed_observed": [
+        {
+          "id": 1,
+          "title": "Tide table",
+          "body": "Check the harbour window before departure."
+        },
+        {
+          "id": 2,
+          "title": "Repair kit",
+          "body": "Pack tape, cord, and the small multitool."
+        }
+      ],
+      "physical_after_import": {
+        "schema_version": "1.0",
+        "notes": [
+          {
+            "id": 1,
+            "title": "Tide table",
+            "body": "Check the harbour window before departure."
+          },
+          {
+            "id": 2,
+            "title": "Repair kit",
+            "body": "Pack tape, cord, and the small multitool."
+          },
+          {
+            "id": 71,
+            "title": "Audit note",
+            "body": "Persistence check"
+          }
+        ]
+      },
+      "after_restart": [
+        {
+          "id": 1,
+          "title": "Tide table",
+          "body": "Check the harbour window before departure."
+        },
+        {
+          "id": 2,
+          "title": "Repair kit",
+          "body": "Pack tape, cord, and the small multitool."
+        },
+        {
+          "id": 71,
+          "title": "Audit note",
+          "body": "Persistence check"
+        }
+      ]
+    },
+    {
+      "run_id": "main-L2-03-gpt-5-4-r01-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "versions": {
+        "fastapi": "0.115.6",
+        "pydantic": "2.10.4"
+      },
+      "seed_from_app_cwd": false,
+      "import_export_authoritative": false,
+      "restart_other_cwd": false,
+      "invalid_preserves": true,
+      "seed_observed": [],
+      "physical_after_import": {
+        "schema_version": "1.0",
+        "notes": [
+          {
+            "id": 1,
+            "title": "Tide table",
+            "body": "Check the harbour window before departure."
+          },
+          {
+            "id": 2,
+            "title": "Repair kit",
+            "body": "Pack tape, cord, and the small multitool."
+          }
+        ]
+      },
+      "after_restart": [
+        {
+          "id": 1,
+          "title": "Tide table",
+          "body": "Check the harbour window before departure."
+        },
+        {
+          "id": 2,
+          "title": "Repair kit",
+          "body": "Pack tape, cord, and the small multitool."
+        }
+      ]
+    },
+    {
+      "run_id": "main-L2-03-gpt-5-4-r02-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "versions": {
+        "fastapi": "0.115.6",
+        "pydantic": "2.10.4"
+      },
+      "seed_from_app_cwd": true,
+      "import_export_authoritative": true,
+      "restart_other_cwd": true,
+      "invalid_preserves": true,
+      "seed_observed": [
+        {
+          "id": 1,
+          "title": "Tide table",
+          "body": "Check the harbour window before departure."
+        },
+        {
+          "id": 2,
+          "title": "Repair kit",
+          "body": "Pack tape, cord, and the small multitool."
+        }
+      ],
+      "physical_after_import": {
+        "schema_version": "1.0",
+        "notes": [
+          {
+            "id": 71,
+            "title": "Audit note",
+            "body": "Persistence check"
+          }
+        ]
+      },
+      "after_restart": [
+        {
+          "id": 71,
+          "title": "Audit note",
+          "body": "Persistence check"
+        }
+      ]
+    },
+    {
+      "run_id": "main-L2-03-gpt-5-4-r03-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "versions": {
+        "fastapi": "0.115.6",
+        "pydantic": "2.10.4"
+      },
+      "seed_from_app_cwd": true,
+      "import_export_authoritative": true,
+      "restart_other_cwd": true,
+      "invalid_preserves": true,
+      "seed_observed": [
+        {
+          "id": 1,
+          "title": "Tide table",
+          "body": "Check the harbour window before departure."
+        },
+        {
+          "id": 2,
+          "title": "Repair kit",
+          "body": "Pack tape, cord, and the small multitool."
+        }
+      ],
+      "physical_after_import": {
+        "schema_version": "1.0",
+        "notes": [
+          {
+            "id": 71,
+            "title": "Audit note",
+            "body": "Persistence check"
+          }
+        ]
+      },
+      "after_restart": [
+        {
+          "id": 71,
+          "title": "Audit note",
+          "body": "Persistence check"
+        }
+      ]
+    },
+    {
+      "run_id": "main-L2-03-qwen2-5-coder-7b-instruct-r01-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "versions": {
+        "fastapi": "0.115.6",
+        "pydantic": "2.10.4"
+      },
+      "seed_from_app_cwd": false,
+      "import_export_authoritative": false,
+      "restart_other_cwd": false,
+      "invalid_preserves": true,
+      "seed_observed": [],
+      "physical_after_import": {
+        "schema_version": "1.0",
+        "notes": [
+          {
+            "id": 1,
+            "title": "Tide table",
+            "body": "Check the harbour window before departure."
+          },
+          {
+            "id": 2,
+            "title": "Repair kit",
+            "body": "Pack tape, cord, and the small multitool."
+          }
+        ]
+      },
+      "after_restart": [
+        {
+          "id": 1,
+          "title": "Tide table",
+          "body": "Check the harbour window before departure."
+        },
+        {
+          "id": 2,
+          "title": "Repair kit",
+          "body": "Pack tape, cord, and the small multitool."
+        }
+      ]
+    },
+    {
+      "run_id": "main-L2-03-qwen2-5-coder-7b-instruct-r02-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "versions": {
+        "fastapi": "0.115.6",
+        "pydantic": "2.10.4"
+      },
+      "seed_from_app_cwd": false,
+      "import_export_authoritative": false,
+      "restart_other_cwd": false,
+      "invalid_preserves": true,
+      "seed_observed": [],
+      "physical_after_import": {
+        "schema_version": "1.0",
+        "notes": [
+          {
+            "id": 1,
+            "title": "Tide table",
+            "body": "Check the harbour window before departure."
+          },
+          {
+            "id": 2,
+            "title": "Repair kit",
+            "body": "Pack tape, cord, and the small multitool."
+          }
+        ]
+      },
+      "after_restart": [
+        {
+          "id": 1,
+          "title": "Tide table",
+          "body": "Check the harbour window before departure."
+        },
+        {
+          "id": 2,
+          "title": "Repair kit",
+          "body": "Pack tape, cord, and the small multitool."
+        }
+      ]
+    },
+    {
+      "run_id": "main-L2-03-qwen2-5-coder-7b-instruct-r03-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "versions": {
+        "fastapi": "0.115.6",
+        "pydantic": "2.10.4"
+      },
+      "seed_from_app_cwd": false,
+      "import_export_authoritative": false,
+      "restart_other_cwd": false,
+      "invalid_preserves": true,
+      "seed_observed": [],
+      "physical_after_import": {
+        "schema_version": "1.0",
+        "notes": [
+          {
+            "id": 1,
+            "title": "Tide table",
+            "body": "Check the harbour window before departure."
+          },
+          {
+            "id": 2,
+            "title": "Repair kit",
+            "body": "Pack tape, cord, and the small multitool."
+          }
+        ]
+      },
+      "after_restart": [
+        {
+          "id": 1,
+          "title": "Tide table",
+          "body": "Check the harbour window before departure."
+        },
+        {
+          "id": 2,
+          "title": "Repair kit",
+          "body": "Pack tape, cord, and the small multitool."
+        }
+      ]
+    }
+  ],
+  "L3-01": [
+    {
+      "run_id": "main-L3-01-cursor-r01-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "finite_policy_within_public_boundary": true,
+      "required_origin_works": true,
+      "unrelated_origins_rejected": true,
+      "cases": [
+        {
+          "origin": "http://127.0.0.1:8080",
+          "get": 200,
+          "acao": "http://127.0.0.1:8080",
+          "options": 200,
+          "options_acao": "http://127.0.0.1:8080"
+        },
+        {
+          "origin": "http://127.0.0.1:5173",
+          "get": 200,
+          "acao": "http://127.0.0.1:5173",
+          "options": 200,
+          "options_acao": "http://127.0.0.1:5173"
+        },
+        {
+          "origin": "https://unrelated.example",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://localhost:5173",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://127.0.0.1:9999",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "null",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        }
+      ]
+    },
+    {
+      "run_id": "main-L3-01-cursor-r02-a02",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "finite_policy_within_public_boundary": true,
+      "required_origin_works": true,
+      "unrelated_origins_rejected": true,
+      "cases": [
+        {
+          "origin": "http://127.0.0.1:8080",
+          "get": 200,
+          "acao": "http://127.0.0.1:8080",
+          "options": 200,
+          "options_acao": "http://127.0.0.1:8080"
+        },
+        {
+          "origin": "http://127.0.0.1:5173",
+          "get": 200,
+          "acao": "http://127.0.0.1:5173",
+          "options": 200,
+          "options_acao": "http://127.0.0.1:5173"
+        },
+        {
+          "origin": "https://unrelated.example",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://localhost:5173",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://127.0.0.1:9999",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "null",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        }
+      ]
+    },
+    {
+      "run_id": "main-L3-01-cursor-r03-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "finite_policy_within_public_boundary": true,
+      "required_origin_works": true,
+      "unrelated_origins_rejected": true,
+      "cases": [
+        {
+          "origin": "http://127.0.0.1:8080",
+          "get": 200,
+          "acao": "http://127.0.0.1:8080",
+          "options": 200,
+          "options_acao": "http://127.0.0.1:8080"
+        },
+        {
+          "origin": "http://127.0.0.1:5173",
+          "get": 200,
+          "acao": "http://127.0.0.1:5173",
+          "options": 200,
+          "options_acao": "http://127.0.0.1:5173"
+        },
+        {
+          "origin": "https://unrelated.example",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://localhost:5173",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://127.0.0.1:9999",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "null",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        }
+      ]
+    },
+    {
+      "run_id": "main-L3-01-devin-r01-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "finite_policy_within_public_boundary": true,
+      "required_origin_works": true,
+      "unrelated_origins_rejected": true,
+      "cases": [
+        {
+          "origin": "http://127.0.0.1:8080",
+          "get": 200,
+          "acao": "http://127.0.0.1:8080",
+          "options": 200,
+          "options_acao": "http://127.0.0.1:8080"
+        },
+        {
+          "origin": "http://127.0.0.1:5173",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "https://unrelated.example",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://localhost:5173",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://127.0.0.1:9999",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "null",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        }
+      ]
+    },
+    {
+      "run_id": "main-L3-01-devin-r02-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "finite_policy_within_public_boundary": true,
+      "required_origin_works": true,
+      "unrelated_origins_rejected": true,
+      "cases": [
+        {
+          "origin": "http://127.0.0.1:8080",
+          "get": 200,
+          "acao": "http://127.0.0.1:8080",
+          "options": 200,
+          "options_acao": "http://127.0.0.1:8080"
+        },
+        {
+          "origin": "http://127.0.0.1:5173",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "https://unrelated.example",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://localhost:5173",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://127.0.0.1:9999",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "null",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        }
+      ]
+    },
+    {
+      "run_id": "main-L3-01-devin-r03-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "finite_policy_within_public_boundary": true,
+      "required_origin_works": true,
+      "unrelated_origins_rejected": true,
+      "cases": [
+        {
+          "origin": "http://127.0.0.1:8080",
+          "get": 200,
+          "acao": "http://127.0.0.1:8080",
+          "options": 200,
+          "options_acao": "http://127.0.0.1:8080"
+        },
+        {
+          "origin": "http://127.0.0.1:5173",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "https://unrelated.example",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://localhost:5173",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://127.0.0.1:9999",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "null",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        }
+      ]
+    },
+    {
+      "run_id": "main-L3-01-gpt-5-4-r01-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "finite_policy_within_public_boundary": true,
+      "required_origin_works": true,
+      "unrelated_origins_rejected": true,
+      "cases": [
+        {
+          "origin": "http://127.0.0.1:8080",
+          "get": 200,
+          "acao": "http://127.0.0.1:8080",
+          "options": 200,
+          "options_acao": "http://127.0.0.1:8080"
+        },
+        {
+          "origin": "http://127.0.0.1:5173",
+          "get": 200,
+          "acao": "http://127.0.0.1:5173",
+          "options": 200,
+          "options_acao": "http://127.0.0.1:5173"
+        },
+        {
+          "origin": "https://unrelated.example",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://localhost:5173",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://127.0.0.1:9999",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "null",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        }
+      ]
+    },
+    {
+      "run_id": "main-L3-01-gpt-5-4-r02-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "finite_policy_within_public_boundary": true,
+      "required_origin_works": true,
+      "unrelated_origins_rejected": true,
+      "cases": [
+        {
+          "origin": "http://127.0.0.1:8080",
+          "get": 200,
+          "acao": "http://127.0.0.1:8080",
+          "options": 200,
+          "options_acao": "http://127.0.0.1:8080"
+        },
+        {
+          "origin": "http://127.0.0.1:5173",
+          "get": 200,
+          "acao": "http://127.0.0.1:5173",
+          "options": 200,
+          "options_acao": "http://127.0.0.1:5173"
+        },
+        {
+          "origin": "https://unrelated.example",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://localhost:5173",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://127.0.0.1:9999",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "null",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        }
+      ]
+    },
+    {
+      "run_id": "main-L3-01-gpt-5-4-r03-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "finite_policy_within_public_boundary": true,
+      "required_origin_works": true,
+      "unrelated_origins_rejected": true,
+      "cases": [
+        {
+          "origin": "http://127.0.0.1:8080",
+          "get": 200,
+          "acao": "http://127.0.0.1:8080",
+          "options": 200,
+          "options_acao": "http://127.0.0.1:8080"
+        },
+        {
+          "origin": "http://127.0.0.1:5173",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "https://unrelated.example",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://localhost:5173",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://127.0.0.1:9999",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "null",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        }
+      ]
+    },
+    {
+      "run_id": "main-L3-01-qwen2-5-coder-7b-instruct-r01-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "finite_policy_within_public_boundary": true,
+      "required_origin_works": false,
+      "unrelated_origins_rejected": true,
+      "cases": [
+        {
+          "origin": "http://127.0.0.1:8080",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://127.0.0.1:5173",
+          "get": 200,
+          "acao": "http://127.0.0.1:5173",
+          "options": 200,
+          "options_acao": "http://127.0.0.1:5173"
+        },
+        {
+          "origin": "https://unrelated.example",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://localhost:5173",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://127.0.0.1:9999",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "null",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        }
+      ]
+    },
+    {
+      "run_id": "main-L3-01-qwen2-5-coder-7b-instruct-r02-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "finite_policy_within_public_boundary": true,
+      "required_origin_works": false,
+      "unrelated_origins_rejected": true,
+      "cases": [
+        {
+          "origin": "http://127.0.0.1:8080",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://127.0.0.1:5173",
+          "get": 200,
+          "acao": "http://127.0.0.1:5173",
+          "options": 200,
+          "options_acao": "http://127.0.0.1:5173"
+        },
+        {
+          "origin": "https://unrelated.example",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://localhost:5173",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://127.0.0.1:9999",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "null",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        }
+      ]
+    },
+    {
+      "run_id": "main-L3-01-qwen2-5-coder-7b-instruct-r03-a01",
+      "diagnostic_only": true,
+      "returncode": 0,
+      "finite_policy_within_public_boundary": true,
+      "required_origin_works": false,
+      "unrelated_origins_rejected": true,
+      "cases": [
+        {
+          "origin": "http://127.0.0.1:8080",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://127.0.0.1:5173",
+          "get": 200,
+          "acao": "http://127.0.0.1:5173",
+          "options": 200,
+          "options_acao": "http://127.0.0.1:5173"
+        },
+        {
+          "origin": "https://unrelated.example",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://localhost:5173",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "http://127.0.0.1:9999",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        },
+        {
+          "origin": "null",
+          "get": 200,
+          "acao": null,
+          "options": 400,
+          "options_acao": null
+        }
+      ]
+    }
+  ],
+  "L4-02": [
+    {
+      "run_id": "main-L4-02-cursor-r01-a01",
+      "evidence_date": "2026-09-25",
+      "initial_records_preserved": true,
+      "cases": [
+        {
+          "case": "omitted",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "active",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "inactive",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "None",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "'pending'",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "''",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "0",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "True",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "[]",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "{}",
+          "http_status": 422,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "run_id": "main-L4-02-cursor-r02-a01",
+      "evidence_date": "2026-09-25",
+      "initial_records_preserved": true,
+      "cases": [
+        {
+          "case": "omitted",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "active",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "inactive",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "None",
+          "http_status": 201,
+          "passed": false
+        },
+        {
+          "case": "'pending'",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "''",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "0",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "True",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "[]",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "{}",
+          "http_status": 422,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "run_id": "main-L4-02-cursor-r03-a01",
+      "evidence_date": "2026-09-25",
+      "initial_records_preserved": true,
+      "cases": [
+        {
+          "case": "omitted",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "active",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "inactive",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "None",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "'pending'",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "''",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "0",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "True",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "[]",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "{}",
+          "http_status": 422,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "run_id": "main-L4-02-devin-r01-a01",
+      "evidence_date": "2026-09-25",
+      "initial_records_preserved": true,
+      "cases": [
+        {
+          "case": "omitted",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "active",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "inactive",
+          "http_status": 201,
+          "passed": false
+        },
+        {
+          "case": "None",
+          "http_status": 201,
+          "passed": false
+        },
+        {
+          "case": "'pending'",
+          "http_status": 201,
+          "passed": false
+        },
+        {
+          "case": "''",
+          "http_status": 201,
+          "passed": false
+        },
+        {
+          "case": "0",
+          "http_status": 201,
+          "passed": false
+        },
+        {
+          "case": "True",
+          "http_status": 201,
+          "passed": false
+        },
+        {
+          "case": "[]",
+          "http_status": 201,
+          "passed": false
+        },
+        {
+          "case": "{}",
+          "http_status": 201,
+          "passed": false
+        }
+      ]
+    },
+    {
+      "run_id": "main-L4-02-devin-r02-a01",
+      "evidence_date": "2026-09-25",
+      "initial_records_preserved": true,
+      "cases": [
+        {
+          "case": "omitted",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "active",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "inactive",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "None",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "'pending'",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "''",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "0",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "True",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "[]",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "{}",
+          "http_status": 422,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "run_id": "main-L4-02-devin-r03-a01",
+      "evidence_date": "2026-09-25",
+      "initial_records_preserved": true,
+      "cases": [
+        {
+          "case": "omitted",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "active",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "inactive",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "None",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "'pending'",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "''",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "0",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "True",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "[]",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "{}",
+          "http_status": 422,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "run_id": "main-L4-02-gpt-5-4-r01-a01",
+      "evidence_date": "2026-09-25",
+      "initial_records_preserved": true,
+      "cases": [
+        {
+          "case": "omitted",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "active",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "inactive",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "None",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "'pending'",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "''",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "0",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "True",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "[]",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "{}",
+          "http_status": 422,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "run_id": "main-L4-02-gpt-5-4-r02-a01",
+      "evidence_date": "2026-09-25",
+      "initial_records_preserved": true,
+      "cases": [
+        {
+          "case": "omitted",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "active",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "inactive",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "None",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "'pending'",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "''",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "0",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "True",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "[]",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "{}",
+          "http_status": 422,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "run_id": "main-L4-02-gpt-5-4-r03-a01",
+      "evidence_date": "2026-09-25",
+      "initial_records_preserved": true,
+      "cases": [
+        {
+          "case": "omitted",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "active",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "inactive",
+          "http_status": 201,
+          "passed": true
+        },
+        {
+          "case": "None",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "'pending'",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "''",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "0",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "True",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "[]",
+          "http_status": 422,
+          "passed": true
+        },
+        {
+          "case": "{}",
+          "http_status": 422,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "run_id": "main-L4-02-qwen2-5-coder-7b-instruct-r01-a01",
+      "evidence_date": "2026-09-25",
+      "initial_records_preserved": true,
+      "cases": [
+        {
+          "case": "omitted",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "active",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "inactive",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "None",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "'pending'",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "''",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "0",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "True",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "[]",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "{}",
+          "http_status": 500,
+          "passed": false
+        }
+      ]
+    },
+    {
+      "run_id": "main-L4-02-qwen2-5-coder-7b-instruct-r02-a01",
+      "evidence_date": "2026-09-25",
+      "initial_records_preserved": true,
+      "cases": [
+        {
+          "case": "omitted",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "active",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "inactive",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "None",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "'pending'",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "''",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "0",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "True",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "[]",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "{}",
+          "http_status": 500,
+          "passed": false
+        }
+      ]
+    },
+    {
+      "run_id": "main-L4-02-qwen2-5-coder-7b-instruct-r03-a01",
+      "evidence_date": "2026-09-25",
+      "initial_records_preserved": true,
+      "cases": [
+        {
+          "case": "omitted",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "active",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "inactive",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "None",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "'pending'",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "''",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "0",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "True",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "[]",
+          "http_status": 500,
+          "passed": false
+        },
+        {
+          "case": "{}",
+          "http_status": 500,
+          "passed": false
+        }
+      ]
+    }
+  ]
+}
