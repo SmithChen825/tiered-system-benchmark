@@ -1,0 +1,4502 @@
+[
+  {
+    "global_position": 109,
+    "run_id": "main-L4-01-cursor-r01-a01",
+    "task_id": "L4-01",
+    "system_id": "cursor",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-24T02:24:19.508688Z",
+      "ended_at": "2026-09-24T02:28:23.572587Z",
+      "elapsed_seconds": 244.063
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "689abde47e2efd0e73124bd154b69facd5dd16c12b0f173efc4c4c24cb6a5a3f"
+    },
+    "start_commit": "7470fd6eed6b46e6ea066131717b3d0b28363643",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 8,
+        "applicable": 8,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 8,
+        "applicable": 8,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "users_api_returns_remaining_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_user_table_loads",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "database_age_column_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_age_reintroduction",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "orm_age_mapping_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_age_field_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_age_reference_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "remaining_fields_and_rows_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "three_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/models.py b/backend/app/models.py\nindex 78c2f41..3b051b8 100644\n--- a/backend/app/models.py\n+++ b/backend/app/models.py\n@@ -13,4 +13,3 @@ class User(Base):\n     name: Mapped[str] = mapped_column(String, nullable=False)\n     email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\n     role: Mapped[str] = mapped_column(String, nullable=False)\n-    age: Mapped[int] = mapped_column(Integer, nullable=False)\ndiff --git a/backend/app/schemas.py b/backend/app/schemas.py\nindex 4f7c0a4..eab6957 100644\n--- a/backend/app/schemas.py\n+++ b/backend/app/schemas.py\n@@ -8,4 +8,3 @@ class UserRead(BaseModel):\n     name: str\n     email: str\n     role: str\n-    age: int\ndiff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex 37bf97a..f6b9b4d 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -36,7 +36,6 @@ onMounted(async () => {\n             <th>Name</th>\n             <th>Email</th>\n             <th>Role</th>\n-            <th>Age</th>\n           </tr>\n         </thead>\n         <tbody>\n@@ -44,7 +43,6 @@ onMounted(async () => {\n             <td>{{ user.name }}</td>\n             <td>{{ user.email }}</td>\n             <td>{{ user.role }}</td>\n-            <td>{{ user.age }}</td>\n           </tr>\n         </tbody>\n       </table>\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 110,
+    "run_id": "main-L4-01-devin-r01-a02",
+    "task_id": "L4-01",
+    "system_id": "devin",
+    "repetition": 1,
+    "attempt": 2,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-25T02:26:22.674111Z",
+      "ended_at": "2026-09-25T02:29:51.684334Z",
+      "elapsed_seconds": 209.0
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "7470fd6eed6b46e6ea066131717b3d0b28363643",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 8,
+        "applicable": 8,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 8,
+        "applicable": 8,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "users_api_returns_remaining_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_user_table_loads",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "database_age_column_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_age_reintroduction",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "orm_age_mapping_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_age_field_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_age_reference_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "remaining_fields_and_rows_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "three_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/models.py b/backend/app/models.py\nindex 78c2f41..3b051b8 100644\n--- a/backend/app/models.py\n+++ b/backend/app/models.py\n@@ -13,4 +13,3 @@ class User(Base):\n     name: Mapped[str] = mapped_column(String, nullable=False)\n     email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\n     role: Mapped[str] = mapped_column(String, nullable=False)\n-    age: Mapped[int] = mapped_column(Integer, nullable=False)\ndiff --git a/backend/app/schemas.py b/backend/app/schemas.py\nindex 4f7c0a4..eab6957 100644\n--- a/backend/app/schemas.py\n+++ b/backend/app/schemas.py\n@@ -8,4 +8,3 @@ class UserRead(BaseModel):\n     name: str\n     email: str\n     role: str\n-    age: int\ndiff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex 37bf97a..f6b9b4d 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -36,7 +36,6 @@ onMounted(async () => {\n             <th>Name</th>\n             <th>Email</th>\n             <th>Role</th>\n-            <th>Age</th>\n           </tr>\n         </thead>\n         <tbody>\n@@ -44,7 +43,6 @@ onMounted(async () => {\n             <td>{{ user.name }}</td>\n             <td>{{ user.email }}</td>\n             <td>{{ user.role }}</td>\n-            <td>{{ user.age }}</td>\n           </tr>\n         </tbody>\n       </table>\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 111,
+    "run_id": "main-L4-01-gpt-5-4-r01-a01",
+    "task_id": "L4-01",
+    "system_id": "gpt-5.4",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-24T02:42:56.479860+00:00",
+      "ended_at": "2026-09-24T02:43:33.435410+00:00",
+      "elapsed_seconds": 36.95299999997951
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "133cb5d3415fc914e2ed79d0c95241e44c5813423fccaa3ca2e3d85fa9b5f519"
+    },
+    "start_commit": "7470fd6eed6b46e6ea066131717b3d0b28363643",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 8,
+        "applicable": 8,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 8,
+        "applicable": 8,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 27237,
+      "output_tokens": 1380,
+      "total_tokens": 28617,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "users_api_returns_remaining_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_user_table_loads",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "database_age_column_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_age_reintroduction",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "orm_age_mapping_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_age_field_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_age_reference_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "remaining_fields_and_rows_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "three_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/models.py b/backend/app/models.py\nindex 78c2f41..bf6a993 100644\n--- a/backend/app/models.py\n+++ b/backend/app/models.py\n@@ -1,16 +1,15 @@\n-from sqlalchemy import Integer, String\n-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\n-\n-\n-class Base(DeclarativeBase):\n-    pass\n-\n-\n-class User(Base):\n-    __tablename__ = \"users\"\n-\n-    id: Mapped[int] = mapped_column(Integer, primary_key=True)\n-    name: Mapped[str] = mapped_column(String, nullable=False)\n-    email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\n-    role: Mapped[str] = mapped_column(String, nullable=False)\n-    age: Mapped[int] = mapped_column(Integer, nullable=False)\n+from sqlalchemy import Integer, String\r\n+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\r\n+\r\n+\r\n+class Base(DeclarativeBase):\r\n+    pass\r\n+\r\n+\r\n+class User(Base):\r\n+    __tablename__ = \"users\"\r\n+\r\n+    id: Mapped[int] = mapped_column(Integer, primary_key=True)\r\n+    name: Mapped[str] = mapped_column(String, nullable=False)\r\n+    email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\r\n+    role: Mapped[str] = mapped_column(String, nullable=False)\r\ndiff --git a/backend/app/schemas.py b/backend/app/schemas.py\nindex 4f7c0a4..f34aca3 100644\n--- a/backend/app/schemas.py\n+++ b/backend/app/schemas.py\n@@ -1,11 +1,10 @@\n-from pydantic import BaseModel, ConfigDict\n-\n-\n-class UserRead(BaseModel):\n-    model_config = ConfigDict(from_attributes=True)\n-\n-    id: int\n-    name: str\n-    email: str\n-    role: str\n-    age: int\n+from pydantic import BaseModel, ConfigDict\r\n+\r\n+\r\n+class UserRead(BaseModel):\r\n+    model_config = ConfigDict(from_attributes=True)\r\n+\r\n+    id: int\r\n+    name: str\r\n+    email: str\r\n+    role: str\r\ndiff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex 37bf97a..2d85462 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -1,53 +1,51 @@\n-<script setup>\n-import { onMounted, ref } from \"vue\";\n-\n-\n-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\n-const users = ref([]);\n-const loading = ref(true);\n-const error = ref(\"\");\n-\n-onMounted(async () => {\n-  try {\n-    const response = await fetch(`${apiBaseUrl}/api/users`);\n-    if (!response.ok) {\n-      throw new Error(`Users request failed with HTTP ${response.status}`);\n-    }\n-    users.value = await response.json();\n-  } catch (requestError) {\n-    error.value = \"Unable to load the user directory.\";\n-    console.error(requestError);\n-  } finally {\n-    loading.value = false;\n-  }\n-});\n-</script>\n-\n-<template>\n-  <main class=\"directory-shell\">\n-    <p class=\"eyebrow\">Northstar Operations</p>\n-    <h1>User directory</h1>\n-    <section class=\"directory-panel\" aria-live=\"polite\">\n-      <p v-if=\"loading\" data-testid=\"loading\">Loading users…</p>\n-      <p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p>\n-      <table v-else data-testid=\"user-table\">\n-        <thead>\n-          <tr>\n-            <th>Name</th>\n-            <th>Email</th>\n-            <th>Role</th>\n-            <th>Age</th>\n-          </tr>\n-        </thead>\n-        <tbody>\n-          <tr v-for=\"user in users\" :key=\"user.id\" data-testid=\"user-row\">\n-            <td>{{ user.name }}</td>\n-            <td>{{ user.email }}</td>\n-            <td>{{ user.role }}</td>\n-            <td>{{ user.age }}</td>\n-          </tr>\n-        </tbody>\n-      </table>\n-    </section>\n-  </main>\n-</template>\n+<script setup>\r\n+import { onMounted, ref } from \"vue\";\r\n+\r\n+\r\n+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\r\n+const users = ref([]);\r\n+const loading = ref(true);\r\n+const error = ref(\"\");\r\n+\r\n+onMounted(async () => {\r\n+  try {\r\n+    const response = await fetch(`${apiBaseUrl}/api/users`);\r\n+    if (!response.ok) {\r\n+      throw new Error(`Users request failed with HTTP ${response.status}`);\r\n+    }\r\n+    users.value = await response.json();\r\n+  } catch (requestError) {\r\n+    error.value = \"Unable to load the user directory.\";\r\n+    console.error(requestError);\r\n+  } finally {\r\n+    loading.value = false;\r\n+  }\r\n+});\r\n+</script>\r\n+\r\n+<template>\r\n+  <main class=\"directory-shell\">\r\n+    <p class=\"eyebrow\">Northstar Operations</p>\r\n+    <h1>User directory</h1>\r\n+    <section class=\"directory-panel\" aria-live=\"polite\">\r\n+      <p v-if=\"loading\" data-testid=\"loading\">Loading users…</p>\r\n+      <p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p>\r\n+      <table v-else data-testid=\"user-table\">\r\n+        <thead>\r\n+          <tr>\r\n+            <th>Name</th>\r\n+            <th>Email</th>\r\n+            <th>Role</th>\r\n+          </tr>\r\n+        </thead>\r\n+        <tbody>\r\n+          <tr v-for=\"user in users\" :key=\"user.id\" data-testid=\"user-row\">\r\n+            <td>{{ user.name }}</td>\r\n+            <td>{{ user.email }}</td>\r\n+            <td>{{ user.role }}</td>\r\n+          </tr>\r\n+        </tbody>\r\n+      </table>\r\n+    </section>\r\n+  </main>\r\n+</template>\r\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 112,
+    "run_id": "main-L4-01-qwen2-5-coder-7b-instruct-r01-a01",
+    "task_id": "L4-01",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-24T02:55:58.244613+00:00",
+      "ended_at": "2026-09-24T02:56:44.225844+00:00",
+      "elapsed_seconds": 45.98400000005495
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "f6ef38417f79ad59bc6677a6df15800d581a21f531460b07d9e523a1e73d89ae"
+    },
+    "start_commit": "7470fd6eed6b46e6ea066131717b3d0b28363643",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 0,
+        "applicable": 2,
+        "proportion": 0.0
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 8,
+        "proportion": 0.5
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": false,
+      "functional_tests": {
+        "passed": 0,
+        "applicable": 2,
+        "proportion": 0.0
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 8,
+        "proportion": 0.5
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 5449,
+      "output_tokens": 451,
+      "total_tokens": 5900,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "users_api_returns_remaining_contract",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "browser_user_table_loads",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "checks": [
+      {
+        "id": "database_age_column_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_age_reintroduction",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "orm_age_mapping_absent",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "api_age_field_absent",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "frontend_age_reference_absent",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "remaining_fields_and_rows_preserved",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "three_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 113,
+    "run_id": "main-L4-01-qwen2-5-coder-7b-instruct-r02-a01",
+    "task_id": "L4-01",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-24T13:17:11.408286+00:00",
+      "ended_at": "2026-09-24T13:17:45.252261+00:00",
+      "elapsed_seconds": 33.84299999999348
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "a52d535f9ad2f368b8ee7d6f0ecaa2e41350bdd271a9035b5d0bfdf6c6283371"
+    },
+    "start_commit": "7470fd6eed6b46e6ea066131717b3d0b28363643",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 0,
+        "applicable": 2,
+        "proportion": 0.0
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 8,
+        "proportion": 0.5
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": false,
+      "functional_tests": {
+        "passed": 0,
+        "applicable": 2,
+        "proportion": 0.0
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 8,
+        "proportion": 0.5
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 5449,
+      "output_tokens": 451,
+      "total_tokens": 5900,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "users_api_returns_remaining_contract",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "browser_user_table_loads",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "checks": [
+      {
+        "id": "database_age_column_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_age_reintroduction",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "orm_age_mapping_absent",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "api_age_field_absent",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "frontend_age_reference_absent",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "remaining_fields_and_rows_preserved",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "three_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 114,
+    "run_id": "main-L4-01-gpt-5-4-r02-a01",
+    "task_id": "L4-01",
+    "system_id": "gpt-5.4",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-24T13:21:04.115917+00:00",
+      "ended_at": "2026-09-24T13:21:51.827667+00:00",
+      "elapsed_seconds": 47.71900000004098
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "aa25f4d400bfda9b1a552a5e9b770b2bddef42247210af0bfb92acadc3c937e0"
+    },
+    "start_commit": "7470fd6eed6b46e6ea066131717b3d0b28363643",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 8,
+        "applicable": 8,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 8,
+        "applicable": 8,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 43521,
+      "output_tokens": 1580,
+      "total_tokens": 45101,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "users_api_returns_remaining_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_user_table_loads",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "database_age_column_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_age_reintroduction",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "orm_age_mapping_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_age_field_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_age_reference_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "remaining_fields_and_rows_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "three_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/models.py b/backend/app/models.py\nindex 78c2f41..bf6a993 100644\n--- a/backend/app/models.py\n+++ b/backend/app/models.py\n@@ -1,16 +1,15 @@\n-from sqlalchemy import Integer, String\n-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\n-\n-\n-class Base(DeclarativeBase):\n-    pass\n-\n-\n-class User(Base):\n-    __tablename__ = \"users\"\n-\n-    id: Mapped[int] = mapped_column(Integer, primary_key=True)\n-    name: Mapped[str] = mapped_column(String, nullable=False)\n-    email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\n-    role: Mapped[str] = mapped_column(String, nullable=False)\n-    age: Mapped[int] = mapped_column(Integer, nullable=False)\n+from sqlalchemy import Integer, String\r\n+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\r\n+\r\n+\r\n+class Base(DeclarativeBase):\r\n+    pass\r\n+\r\n+\r\n+class User(Base):\r\n+    __tablename__ = \"users\"\r\n+\r\n+    id: Mapped[int] = mapped_column(Integer, primary_key=True)\r\n+    name: Mapped[str] = mapped_column(String, nullable=False)\r\n+    email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\r\n+    role: Mapped[str] = mapped_column(String, nullable=False)\r\ndiff --git a/backend/app/schemas.py b/backend/app/schemas.py\nindex 4f7c0a4..f34aca3 100644\n--- a/backend/app/schemas.py\n+++ b/backend/app/schemas.py\n@@ -1,11 +1,10 @@\n-from pydantic import BaseModel, ConfigDict\n-\n-\n-class UserRead(BaseModel):\n-    model_config = ConfigDict(from_attributes=True)\n-\n-    id: int\n-    name: str\n-    email: str\n-    role: str\n-    age: int\n+from pydantic import BaseModel, ConfigDict\r\n+\r\n+\r\n+class UserRead(BaseModel):\r\n+    model_config = ConfigDict(from_attributes=True)\r\n+\r\n+    id: int\r\n+    name: str\r\n+    email: str\r\n+    role: str\r\ndiff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex 37bf97a..2d85462 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -1,53 +1,51 @@\n-<script setup>\n-import { onMounted, ref } from \"vue\";\n-\n-\n-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\n-const users = ref([]);\n-const loading = ref(true);\n-const error = ref(\"\");\n-\n-onMounted(async () => {\n-  try {\n-    const response = await fetch(`${apiBaseUrl}/api/users`);\n-    if (!response.ok) {\n-      throw new Error(`Users request failed with HTTP ${response.status}`);\n-    }\n-    users.value = await response.json();\n-  } catch (requestError) {\n-    error.value = \"Unable to load the user directory.\";\n-    console.error(requestError);\n-  } finally {\n-    loading.value = false;\n-  }\n-});\n-</script>\n-\n-<template>\n-  <main class=\"directory-shell\">\n-    <p class=\"eyebrow\">Northstar Operations</p>\n-    <h1>User directory</h1>\n-    <section class=\"directory-panel\" aria-live=\"polite\">\n-      <p v-if=\"loading\" data-testid=\"loading\">Loading users…</p>\n-      <p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p>\n-      <table v-else data-testid=\"user-table\">\n-        <thead>\n-          <tr>\n-            <th>Name</th>\n-            <th>Email</th>\n-            <th>Role</th>\n-            <th>Age</th>\n-          </tr>\n-        </thead>\n-        <tbody>\n-          <tr v-for=\"user in users\" :key=\"user.id\" data-testid=\"user-row\">\n-            <td>{{ user.name }}</td>\n-            <td>{{ user.email }}</td>\n-            <td>{{ user.role }}</td>\n-            <td>{{ user.age }}</td>\n-          </tr>\n-        </tbody>\n-      </table>\n-    </section>\n-  </main>\n-</template>\n+<script setup>\r\n+import { onMounted, ref } from \"vue\";\r\n+\r\n+\r\n+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\r\n+const users = ref([]);\r\n+const loading = ref(true);\r\n+const error = ref(\"\");\r\n+\r\n+onMounted(async () => {\r\n+  try {\r\n+    const response = await fetch(`${apiBaseUrl}/api/users`);\r\n+    if (!response.ok) {\r\n+      throw new Error(`Users request failed with HTTP ${response.status}`);\r\n+    }\r\n+    users.value = await response.json();\r\n+  } catch (requestError) {\r\n+    error.value = \"Unable to load the user directory.\";\r\n+    console.error(requestError);\r\n+  } finally {\r\n+    loading.value = false;\r\n+  }\r\n+});\r\n+</script>\r\n+\r\n+<template>\r\n+  <main class=\"directory-shell\">\r\n+    <p class=\"eyebrow\">Northstar Operations</p>\r\n+    <h1>User directory</h1>\r\n+    <section class=\"directory-panel\" aria-live=\"polite\">\r\n+      <p v-if=\"loading\" data-testid=\"loading\">Loading users…</p>\r\n+      <p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p>\r\n+      <table v-else data-testid=\"user-table\">\r\n+        <thead>\r\n+          <tr>\r\n+            <th>Name</th>\r\n+            <th>Email</th>\r\n+            <th>Role</th>\r\n+          </tr>\r\n+        </thead>\r\n+        <tbody>\r\n+          <tr v-for=\"user in users\" :key=\"user.id\" data-testid=\"user-row\">\r\n+            <td>{{ user.name }}</td>\r\n+            <td>{{ user.email }}</td>\r\n+            <td>{{ user.role }}</td>\r\n+          </tr>\r\n+        </tbody>\r\n+      </table>\r\n+    </section>\r\n+  </main>\r\n+</template>\r\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 115,
+    "run_id": "main-L4-01-cursor-r02-a01",
+    "task_id": "L4-01",
+    "system_id": "cursor",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-24T13:25:00.428977Z",
+      "ended_at": "2026-09-24T13:30:27.280399Z",
+      "elapsed_seconds": 326.86
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "689abde47e2efd0e73124bd154b69facd5dd16c12b0f173efc4c4c24cb6a5a3f"
+    },
+    "start_commit": "7470fd6eed6b46e6ea066131717b3d0b28363643",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 8,
+        "applicable": 8,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 8,
+        "applicable": 8,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "users_api_returns_remaining_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_user_table_loads",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "database_age_column_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_age_reintroduction",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "orm_age_mapping_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_age_field_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_age_reference_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "remaining_fields_and_rows_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "three_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/models.py b/backend/app/models.py\nindex 78c2f41..3b051b8 100644\n--- a/backend/app/models.py\n+++ b/backend/app/models.py\n@@ -13,4 +13,3 @@ class User(Base):\n     name: Mapped[str] = mapped_column(String, nullable=False)\n     email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\n     role: Mapped[str] = mapped_column(String, nullable=False)\n-    age: Mapped[int] = mapped_column(Integer, nullable=False)\ndiff --git a/backend/app/schemas.py b/backend/app/schemas.py\nindex 4f7c0a4..eab6957 100644\n--- a/backend/app/schemas.py\n+++ b/backend/app/schemas.py\n@@ -8,4 +8,3 @@ class UserRead(BaseModel):\n     name: str\n     email: str\n     role: str\n-    age: int\ndiff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex 37bf97a..f6b9b4d 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -36,7 +36,6 @@ onMounted(async () => {\n             <th>Name</th>\n             <th>Email</th>\n             <th>Role</th>\n-            <th>Age</th>\n           </tr>\n         </thead>\n         <tbody>\n@@ -44,7 +43,6 @@ onMounted(async () => {\n             <td>{{ user.name }}</td>\n             <td>{{ user.email }}</td>\n             <td>{{ user.role }}</td>\n-            <td>{{ user.age }}</td>\n           </tr>\n         </tbody>\n       </table>\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 116,
+    "run_id": "main-L4-01-devin-r02-a01",
+    "task_id": "L4-01",
+    "system_id": "devin",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-24T13:34:36.243555Z",
+      "ended_at": "2026-09-24T13:37:43.609539Z",
+      "elapsed_seconds": 187.375
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "7470fd6eed6b46e6ea066131717b3d0b28363643",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 8,
+        "applicable": 8,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 8,
+        "applicable": 8,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "users_api_returns_remaining_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_user_table_loads",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "database_age_column_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_age_reintroduction",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "orm_age_mapping_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_age_field_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_age_reference_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "remaining_fields_and_rows_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "three_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/models.py b/backend/app/models.py\nindex 78c2f41..3b051b8 100644\n--- a/backend/app/models.py\n+++ b/backend/app/models.py\n@@ -13,4 +13,3 @@ class User(Base):\n     name: Mapped[str] = mapped_column(String, nullable=False)\n     email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\n     role: Mapped[str] = mapped_column(String, nullable=False)\n-    age: Mapped[int] = mapped_column(Integer, nullable=False)\ndiff --git a/backend/app/schemas.py b/backend/app/schemas.py\nindex 4f7c0a4..eab6957 100644\n--- a/backend/app/schemas.py\n+++ b/backend/app/schemas.py\n@@ -8,4 +8,3 @@ class UserRead(BaseModel):\n     name: str\n     email: str\n     role: str\n-    age: int\ndiff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex 37bf97a..f6b9b4d 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -36,7 +36,6 @@ onMounted(async () => {\n             <th>Name</th>\n             <th>Email</th>\n             <th>Role</th>\n-            <th>Age</th>\n           </tr>\n         </thead>\n         <tbody>\n@@ -44,7 +43,6 @@ onMounted(async () => {\n             <td>{{ user.name }}</td>\n             <td>{{ user.email }}</td>\n             <td>{{ user.role }}</td>\n-            <td>{{ user.age }}</td>\n           </tr>\n         </tbody>\n       </table>\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 117,
+    "run_id": "main-L4-01-gpt-5-4-r03-a01",
+    "task_id": "L4-01",
+    "system_id": "gpt-5.4",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-25T01:56:42.332264+00:00",
+      "ended_at": "2026-09-25T01:57:18.175757+00:00",
+      "elapsed_seconds": 35.84400000004098
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "ad29b7ebb83ddbf1e3dbec260ab8c7ab82210845db126e067a206f7482aefbd4"
+    },
+    "start_commit": "7470fd6eed6b46e6ea066131717b3d0b28363643",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 8,
+        "applicable": 8,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 8,
+        "applicable": 8,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 28977,
+      "output_tokens": 1198,
+      "total_tokens": 30175,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "users_api_returns_remaining_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_user_table_loads",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "database_age_column_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_age_reintroduction",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "orm_age_mapping_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_age_field_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_age_reference_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "remaining_fields_and_rows_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "three_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/models.py b/backend/app/models.py\nindex 78c2f41..bf6a993 100644\n--- a/backend/app/models.py\n+++ b/backend/app/models.py\n@@ -1,16 +1,15 @@\n-from sqlalchemy import Integer, String\n-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\n-\n-\n-class Base(DeclarativeBase):\n-    pass\n-\n-\n-class User(Base):\n-    __tablename__ = \"users\"\n-\n-    id: Mapped[int] = mapped_column(Integer, primary_key=True)\n-    name: Mapped[str] = mapped_column(String, nullable=False)\n-    email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\n-    role: Mapped[str] = mapped_column(String, nullable=False)\n-    age: Mapped[int] = mapped_column(Integer, nullable=False)\n+from sqlalchemy import Integer, String\r\n+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\r\n+\r\n+\r\n+class Base(DeclarativeBase):\r\n+    pass\r\n+\r\n+\r\n+class User(Base):\r\n+    __tablename__ = \"users\"\r\n+\r\n+    id: Mapped[int] = mapped_column(Integer, primary_key=True)\r\n+    name: Mapped[str] = mapped_column(String, nullable=False)\r\n+    email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\r\n+    role: Mapped[str] = mapped_column(String, nullable=False)\r\ndiff --git a/backend/app/schemas.py b/backend/app/schemas.py\nindex 4f7c0a4..f34aca3 100644\n--- a/backend/app/schemas.py\n+++ b/backend/app/schemas.py\n@@ -1,11 +1,10 @@\n-from pydantic import BaseModel, ConfigDict\n-\n-\n-class UserRead(BaseModel):\n-    model_config = ConfigDict(from_attributes=True)\n-\n-    id: int\n-    name: str\n-    email: str\n-    role: str\n-    age: int\n+from pydantic import BaseModel, ConfigDict\r\n+\r\n+\r\n+class UserRead(BaseModel):\r\n+    model_config = ConfigDict(from_attributes=True)\r\n+\r\n+    id: int\r\n+    name: str\r\n+    email: str\r\n+    role: str\r\ndiff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex 37bf97a..2d85462 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -1,53 +1,51 @@\n-<script setup>\n-import { onMounted, ref } from \"vue\";\n-\n-\n-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\n-const users = ref([]);\n-const loading = ref(true);\n-const error = ref(\"\");\n-\n-onMounted(async () => {\n-  try {\n-    const response = await fetch(`${apiBaseUrl}/api/users`);\n-    if (!response.ok) {\n-      throw new Error(`Users request failed with HTTP ${response.status}`);\n-    }\n-    users.value = await response.json();\n-  } catch (requestError) {\n-    error.value = \"Unable to load the user directory.\";\n-    console.error(requestError);\n-  } finally {\n-    loading.value = false;\n-  }\n-});\n-</script>\n-\n-<template>\n-  <main class=\"directory-shell\">\n-    <p class=\"eyebrow\">Northstar Operations</p>\n-    <h1>User directory</h1>\n-    <section class=\"directory-panel\" aria-live=\"polite\">\n-      <p v-if=\"loading\" data-testid=\"loading\">Loading users…</p>\n-      <p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p>\n-      <table v-else data-testid=\"user-table\">\n-        <thead>\n-          <tr>\n-            <th>Name</th>\n-            <th>Email</th>\n-            <th>Role</th>\n-            <th>Age</th>\n-          </tr>\n-        </thead>\n-        <tbody>\n-          <tr v-for=\"user in users\" :key=\"user.id\" data-testid=\"user-row\">\n-            <td>{{ user.name }}</td>\n-            <td>{{ user.email }}</td>\n-            <td>{{ user.role }}</td>\n-            <td>{{ user.age }}</td>\n-          </tr>\n-        </tbody>\n-      </table>\n-    </section>\n-  </main>\n-</template>\n+<script setup>\r\n+import { onMounted, ref } from \"vue\";\r\n+\r\n+\r\n+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\r\n+const users = ref([]);\r\n+const loading = ref(true);\r\n+const error = ref(\"\");\r\n+\r\n+onMounted(async () => {\r\n+  try {\r\n+    const response = await fetch(`${apiBaseUrl}/api/users`);\r\n+    if (!response.ok) {\r\n+      throw new Error(`Users request failed with HTTP ${response.status}`);\r\n+    }\r\n+    users.value = await response.json();\r\n+  } catch (requestError) {\r\n+    error.value = \"Unable to load the user directory.\";\r\n+    console.error(requestError);\r\n+  } finally {\r\n+    loading.value = false;\r\n+  }\r\n+});\r\n+</script>\r\n+\r\n+<template>\r\n+  <main class=\"directory-shell\">\r\n+    <p class=\"eyebrow\">Northstar Operations</p>\r\n+    <h1>User directory</h1>\r\n+    <section class=\"directory-panel\" aria-live=\"polite\">\r\n+      <p v-if=\"loading\" data-testid=\"loading\">Loading users…</p>\r\n+      <p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p>\r\n+      <table v-else data-testid=\"user-table\">\r\n+        <thead>\r\n+          <tr>\r\n+            <th>Name</th>\r\n+            <th>Email</th>\r\n+            <th>Role</th>\r\n+          </tr>\r\n+        </thead>\r\n+        <tbody>\r\n+          <tr v-for=\"user in users\" :key=\"user.id\" data-testid=\"user-row\">\r\n+            <td>{{ user.name }}</td>\r\n+            <td>{{ user.email }}</td>\r\n+            <td>{{ user.role }}</td>\r\n+          </tr>\r\n+        </tbody>\r\n+      </table>\r\n+    </section>\r\n+  </main>\r\n+</template>\r\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 118,
+    "run_id": "main-L4-01-cursor-r03-a01",
+    "task_id": "L4-01",
+    "system_id": "cursor",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-25T02:02:57.976069Z",
+      "ended_at": "2026-09-25T02:06:24.488122Z",
+      "elapsed_seconds": 206.516
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "689abde47e2efd0e73124bd154b69facd5dd16c12b0f173efc4c4c24cb6a5a3f"
+    },
+    "start_commit": "7470fd6eed6b46e6ea066131717b3d0b28363643",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 8,
+        "applicable": 8,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 8,
+        "applicable": 8,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "users_api_returns_remaining_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_user_table_loads",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "database_age_column_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_age_reintroduction",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "orm_age_mapping_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_age_field_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_age_reference_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "remaining_fields_and_rows_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "three_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/models.py b/backend/app/models.py\nindex 78c2f41..3b051b8 100644\n--- a/backend/app/models.py\n+++ b/backend/app/models.py\n@@ -13,4 +13,3 @@ class User(Base):\n     name: Mapped[str] = mapped_column(String, nullable=False)\n     email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\n     role: Mapped[str] = mapped_column(String, nullable=False)\n-    age: Mapped[int] = mapped_column(Integer, nullable=False)\ndiff --git a/backend/app/schemas.py b/backend/app/schemas.py\nindex 4f7c0a4..eab6957 100644\n--- a/backend/app/schemas.py\n+++ b/backend/app/schemas.py\n@@ -8,4 +8,3 @@ class UserRead(BaseModel):\n     name: str\n     email: str\n     role: str\n-    age: int\ndiff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex 37bf97a..f6b9b4d 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -36,7 +36,6 @@ onMounted(async () => {\n             <th>Name</th>\n             <th>Email</th>\n             <th>Role</th>\n-            <th>Age</th>\n           </tr>\n         </thead>\n         <tbody>\n@@ -44,7 +43,6 @@ onMounted(async () => {\n             <td>{{ user.name }}</td>\n             <td>{{ user.email }}</td>\n             <td>{{ user.role }}</td>\n-            <td>{{ user.age }}</td>\n           </tr>\n         </tbody>\n       </table>\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 119,
+    "run_id": "main-L4-01-qwen2-5-coder-7b-instruct-r03-a01",
+    "task_id": "L4-01",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-25T02:12:13.896041+00:00",
+      "ended_at": "2026-09-25T02:12:50.713892+00:00",
+      "elapsed_seconds": 36.81200000003446
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "91289c98a9fb34502f203a0d4f56de24cb97553b6c9751ee5c33fcb20a5050ad"
+    },
+    "start_commit": "7470fd6eed6b46e6ea066131717b3d0b28363643",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 0,
+        "applicable": 2,
+        "proportion": 0.0
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 8,
+        "proportion": 0.5
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": false,
+      "functional_tests": {
+        "passed": 0,
+        "applicable": 2,
+        "proportion": 0.0
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 8,
+        "proportion": 0.5
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 5531,
+      "output_tokens": 479,
+      "total_tokens": 6010,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "users_api_returns_remaining_contract",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "browser_user_table_loads",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "checks": [
+      {
+        "id": "database_age_column_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_age_reintroduction",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "orm_age_mapping_absent",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "api_age_field_absent",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "frontend_age_reference_absent",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "remaining_fields_and_rows_preserved",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "three_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 120,
+    "run_id": "main-L4-01-devin-r03-a01",
+    "task_id": "L4-01",
+    "system_id": "devin",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-25T02:18:08.432408Z",
+      "ended_at": "2026-09-25T02:20:40.148437Z",
+      "elapsed_seconds": 151.719
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "7470fd6eed6b46e6ea066131717b3d0b28363643",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 8,
+        "applicable": 8,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 8,
+        "applicable": 8,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "users_api_returns_remaining_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_user_table_loads",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "database_age_column_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "no_age_reintroduction",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "orm_age_mapping_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_age_field_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_age_reference_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "remaining_fields_and_rows_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "three_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/models.py b/backend/app/models.py\nindex 78c2f41..3b051b8 100644\n--- a/backend/app/models.py\n+++ b/backend/app/models.py\n@@ -13,4 +13,3 @@ class User(Base):\n     name: Mapped[str] = mapped_column(String, nullable=False)\n     email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\n     role: Mapped[str] = mapped_column(String, nullable=False)\n-    age: Mapped[int] = mapped_column(Integer, nullable=False)\ndiff --git a/backend/app/schemas.py b/backend/app/schemas.py\nindex 4f7c0a4..eab6957 100644\n--- a/backend/app/schemas.py\n+++ b/backend/app/schemas.py\n@@ -8,4 +8,3 @@ class UserRead(BaseModel):\n     name: str\n     email: str\n     role: str\n-    age: int\ndiff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex 37bf97a..f6b9b4d 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -36,7 +36,6 @@ onMounted(async () => {\n             <th>Name</th>\n             <th>Email</th>\n             <th>Role</th>\n-            <th>Age</th>\n           </tr>\n         </thead>\n         <tbody>\n@@ -44,7 +43,6 @@ onMounted(async () => {\n             <td>{{ user.name }}</td>\n             <td>{{ user.email }}</td>\n             <td>{{ user.role }}</td>\n-            <td>{{ user.age }}</td>\n           </tr>\n         </tbody>\n       </table>\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 121,
+    "run_id": "main-L4-02-gpt-5-4-r01-a01",
+    "task_id": "L4-02",
+    "system_id": "gpt-5.4",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-25T02:35:40.789181+00:00",
+      "ended_at": "2026-09-25T02:36:02.162932+00:00",
+      "elapsed_seconds": 21.375
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "82a5e8a557e05a2b50f48df7f34df576109f8129e2c58d69e5ef51a2eea13027"
+    },
+    "start_commit": "e4afa5197b521a1ac76de5f2de20839ef1ee8635",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 20398,
+      "output_tokens": 1084,
+      "total_tokens": 21482,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "customer_create_read",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_customer_creation",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "required_status_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "seed_status_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "validated_active_default",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "status_domain_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "uniqueness_and_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_frontend_status",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/main.py b/backend/app/main.py\nindex e5a7937..fa75105 100644\n--- a/backend/app/main.py\n+++ b/backend/app/main.py\n@@ -1,24 +1,24 @@\n-from fastapi import Depends, FastAPI\n-from fastapi.middleware.cors import CORSMiddleware\n-from sqlalchemy import select\n-from sqlalchemy.orm import Session\n-from .database import get_session\n-from .models import Customer\n-from .schemas import CustomerCreate, CustomerRead\n-\n-FRONTEND_ORIGIN = \"http://127.0.0.1:8080\"\n-\n-def create_app() -> FastAPI:\n-    application = FastAPI(title=\"Customer Directory API\")\n-    application.add_middleware(CORSMiddleware, allow_origins=[FRONTEND_ORIGIN], allow_credentials=True, allow_methods=[\"GET\",\"POST\"], allow_headers=[\"Content-Type\"])\n-    @application.get(\"/health\")\n-    def health() -> dict[str,str]: return {\"status\":\"ok\"}\n-    @application.get(\"/api/customers\", response_model=list[CustomerRead])\n-    def customers(session: Session = Depends(get_session)) -> list[Customer]: return list(session.scalars(select(Customer).order_by(Customer.id)))\n-    @application.post(\"/api/customers\", response_model=CustomerRead, status_code=201)\n-    def create_customer(payload: CustomerCreate, session: Session = Depends(get_session)) -> Customer:\n-        customer = Customer(name=payload.name, email=payload.email)\n-        session.add(customer); session.commit(); session.refresh(customer); return customer\n-    return application\n-\n-app = create_app()\n+from fastapi import Depends, FastAPI\r\n+from fastapi.middleware.cors import CORSMiddleware\r\n+from sqlalchemy import select\r\n+from sqlalchemy.orm import Session\r\n+from .database import get_session\r\n+from .models import Customer\r\n+from .schemas import CustomerCreate, CustomerRead\r\n+\r\n+FRONTEND_ORIGIN = \"http://127.0.0.1:8080\"\r\n+\r\n+def create_app() -> FastAPI:\r\n+    application = FastAPI(title=\"Customer Directory API\")\r\n+    application.add_middleware(CORSMiddleware, allow_origins=[FRONTEND_ORIGIN], allow_credentials=True, allow_methods=[\"GET\",\"POST\"], allow_headers=[\"Content-Type\"])\r\n+    @application.get(\"/health\")\r\n+    def health() -> dict[str,str]: return {\"status\":\"ok\"}\r\n+    @application.get(\"/api/customers\", response_model=list[CustomerRead])\r\n+    def customers(session: Session = Depends(get_session)) -> list[Customer]: return list(session.scalars(select(Customer).order_by(Customer.id)))\r\n+    @application.post(\"/api/customers\", response_model=CustomerRead, status_code=201)\r\n+    def create_customer(payload: CustomerCreate, session: Session = Depends(get_session)) -> Customer:\r\n+        customer = Customer(name=payload.name, email=payload.email, status=payload.status)\r\n+        session.add(customer); session.commit(); session.refresh(customer); return customer\r\n+    return application\r\n+\r\n+app = create_app()\r\ndiff --git a/backend/app/models.py b/backend/app/models.py\nindex 14375bf..1296cee 100644\n--- a/backend/app/models.py\n+++ b/backend/app/models.py\n@@ -1,10 +1,11 @@\n-from sqlalchemy import Integer, String\n-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\n-\n-class Base(DeclarativeBase): pass\n-\n-class Customer(Base):\n-    __tablename__ = \"customers\"\n-    id: Mapped[int] = mapped_column(Integer, primary_key=True)\n-    name: Mapped[str] = mapped_column(String, nullable=False)\n-    email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\n+from sqlalchemy import Integer, String\r\n+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\r\n+\r\n+class Base(DeclarativeBase): pass\r\n+\r\n+class Customer(Base):\r\n+    __tablename__ = \"customers\"\r\n+    id: Mapped[int] = mapped_column(Integer, primary_key=True)\r\n+    name: Mapped[str] = mapped_column(String, nullable=False)\r\n+    email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\r\n+    status: Mapped[str] = mapped_column(String, nullable=False, default=\"active\")\r\ndiff --git a/backend/app/schemas.py b/backend/app/schemas.py\nindex 24ec7b3..9a11e84 100644\n--- a/backend/app/schemas.py\n+++ b/backend/app/schemas.py\n@@ -1,11 +1,15 @@\n-from pydantic import BaseModel, ConfigDict\n-\n-class CustomerCreate(BaseModel):\n-    name: str\n-    email: str\n-\n-class CustomerRead(BaseModel):\n-    model_config = ConfigDict(from_attributes=True)\n-    id: int\n-    name: str\n-    email: str\n+from typing import Literal\r\n+\r\n+from pydantic import BaseModel, ConfigDict\r\n+\r\n+class CustomerCreate(BaseModel):\r\n+    name: str\r\n+    email: str\r\n+    status: Literal[\"active\", \"inactive\"] = \"active\"\r\n+\r\n+class CustomerRead(BaseModel):\r\n+    model_config = ConfigDict(from_attributes=True)\r\n+    id: int\r\n+    name: str\r\n+    email: str\r\n+    status: Literal[\"active\", \"inactive\"]\r\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 122,
+    "run_id": "main-L4-02-qwen2-5-coder-7b-instruct-r01-a01",
+    "task_id": "L4-02",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-25T02:43:57.365598+00:00",
+      "ended_at": "2026-09-25T02:44:18.570231+00:00",
+      "elapsed_seconds": 21.20299999997951
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "7101a7bcf66124321a8a2be9406bc9b603b98d47afd057afc133d7cf47c25a84"
+    },
+    "start_commit": "e4afa5197b521a1ac76de5f2de20839ef1ee8635",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 0,
+        "applicable": 2,
+        "proportion": 0.0
+      },
+      "architecture_checks": {
+        "passed": 2,
+        "applicable": 6,
+        "proportion": 0.3333333333333333
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": false,
+      "functional_tests": {
+        "passed": 0,
+        "applicable": 2,
+        "proportion": 0.0
+      },
+      "architecture_checks": {
+        "passed": 2,
+        "applicable": 6,
+        "proportion": 0.3333333333333333
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 4687,
+      "output_tokens": 250,
+      "total_tokens": 4937,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "customer_create_read",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "browser_customer_creation",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "checks": [
+      {
+        "id": "required_status_preserved",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "seed_status_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "validated_active_default",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "status_domain_preserved",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "uniqueness_and_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_frontend_status",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "final_diff": "",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 123,
+    "run_id": "main-L4-02-devin-r01-a01",
+    "task_id": "L4-02",
+    "system_id": "devin",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-25T02:48:12.278432Z",
+      "ended_at": "2026-09-25T02:52:28.434850Z",
+      "elapsed_seconds": 256.156
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "e4afa5197b521a1ac76de5f2de20839ef1ee8635",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 6,
+        "proportion": 0.6666666666666666
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": false,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 6,
+        "proportion": 0.8333333333333334
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "customer_create_read",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_customer_creation",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "required_status_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "seed_status_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "validated_active_default",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "status_domain_preserved",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "uniqueness_and_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_frontend_status",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/main.py b/backend/app/main.py\nindex e5a7937..1bd1637 100644\n--- a/backend/app/main.py\n+++ b/backend/app/main.py\n@@ -17,7 +17,7 @@ def create_app() -> FastAPI:\n     def customers(session: Session = Depends(get_session)) -> list[Customer]: return list(session.scalars(select(Customer).order_by(Customer.id)))\n     @application.post(\"/api/customers\", response_model=CustomerRead, status_code=201)\n     def create_customer(payload: CustomerCreate, session: Session = Depends(get_session)) -> Customer:\n-        customer = Customer(name=payload.name, email=payload.email)\n+        customer = Customer(name=payload.name, email=payload.email, status='active')\n         session.add(customer); session.commit(); session.refresh(customer); return customer\n     return application\n \ndiff --git a/backend/app/models.py b/backend/app/models.py\nindex 14375bf..3147892 100644\n--- a/backend/app/models.py\n+++ b/backend/app/models.py\n@@ -8,3 +8,4 @@ class Customer(Base):\n     id: Mapped[int] = mapped_column(Integer, primary_key=True)\n     name: Mapped[str] = mapped_column(String, nullable=False)\n     email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\n+    status: Mapped[str] = mapped_column(String, nullable=False, default='active')\ndiff --git a/backend/app/schemas.py b/backend/app/schemas.py\nindex 24ec7b3..abee53e 100644\n--- a/backend/app/schemas.py\n+++ b/backend/app/schemas.py\n@@ -9,3 +9,4 @@ class CustomerRead(BaseModel):\n     id: int\n     name: str\n     email: str\n+    status: str\ndiff --git a/database/init.sql b/database/init.sql\nindex a9ad696..873f390 100644\n--- a/database/init.sql\n+++ b/database/init.sql\n@@ -2,7 +2,7 @@ CREATE TABLE customers (\n     id INTEGER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,\n     name TEXT NOT NULL,\n     email TEXT NOT NULL UNIQUE,\n-    status TEXT NOT NULL\n+    status TEXT NOT NULL CHECK (status IN ('active', 'inactive'))\n );\n \n INSERT INTO customers (name, email, status) VALUES\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 124,
+    "run_id": "main-L4-02-cursor-r01-a01",
+    "task_id": "L4-02",
+    "system_id": "cursor",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-25T02:57:36.354318Z",
+      "ended_at": "2026-09-25T02:58:25.765436Z",
+      "elapsed_seconds": 49.422
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "689abde47e2efd0e73124bd154b69facd5dd16c12b0f173efc4c4c24cb6a5a3f"
+    },
+    "start_commit": "e4afa5197b521a1ac76de5f2de20839ef1ee8635",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 6,
+        "proportion": 0.6666666666666666
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "customer_create_read",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_customer_creation",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "required_status_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "seed_status_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "validated_active_default",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "status_domain_preserved",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "uniqueness_and_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_frontend_status",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/main.py b/backend/app/main.py\nindex e5a7937..7c5b365 100644\n--- a/backend/app/main.py\n+++ b/backend/app/main.py\n@@ -17,7 +17,7 @@ def create_app() -> FastAPI:\n     def customers(session: Session = Depends(get_session)) -> list[Customer]: return list(session.scalars(select(Customer).order_by(Customer.id)))\n     @application.post(\"/api/customers\", response_model=CustomerRead, status_code=201)\n     def create_customer(payload: CustomerCreate, session: Session = Depends(get_session)) -> Customer:\n-        customer = Customer(name=payload.name, email=payload.email)\n+        customer = Customer(name=payload.name, email=payload.email, status=payload.status)\n         session.add(customer); session.commit(); session.refresh(customer); return customer\n     return application\n \ndiff --git a/backend/app/models.py b/backend/app/models.py\nindex 14375bf..c856d55 100644\n--- a/backend/app/models.py\n+++ b/backend/app/models.py\n@@ -8,3 +8,4 @@ class Customer(Base):\n     id: Mapped[int] = mapped_column(Integer, primary_key=True)\n     name: Mapped[str] = mapped_column(String, nullable=False)\n     email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\n+    status: Mapped[str] = mapped_column(String, nullable=False)\ndiff --git a/backend/app/schemas.py b/backend/app/schemas.py\nindex 24ec7b3..9fc5194 100644\n--- a/backend/app/schemas.py\n+++ b/backend/app/schemas.py\n@@ -1,11 +1,17 @@\n+from typing import Literal\n+\n from pydantic import BaseModel, ConfigDict\n \n+CustomerStatus = Literal[\"active\", \"inactive\"]\n+\n class CustomerCreate(BaseModel):\n     name: str\n     email: str\n+    status: CustomerStatus = \"active\"\n \n class CustomerRead(BaseModel):\n     model_config = ConfigDict(from_attributes=True)\n     id: int\n     name: str\n     email: str\n+    status: CustomerStatus\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 125,
+    "run_id": "main-L4-02-devin-r02-a01",
+    "task_id": "L4-02",
+    "system_id": "devin",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-25T05:00:02.256448Z",
+      "ended_at": "2026-09-25T05:04:13.631822Z",
+      "elapsed_seconds": 251.375
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "e4afa5197b521a1ac76de5f2de20839ef1ee8635",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 6,
+        "proportion": 0.6666666666666666
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "customer_create_read",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_customer_creation",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "required_status_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "seed_status_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "validated_active_default",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "status_domain_preserved",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "uniqueness_and_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_frontend_status",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/main.py b/backend/app/main.py\nindex e5a7937..7c5b365 100644\n--- a/backend/app/main.py\n+++ b/backend/app/main.py\n@@ -17,7 +17,7 @@ def create_app() -> FastAPI:\n     def customers(session: Session = Depends(get_session)) -> list[Customer]: return list(session.scalars(select(Customer).order_by(Customer.id)))\n     @application.post(\"/api/customers\", response_model=CustomerRead, status_code=201)\n     def create_customer(payload: CustomerCreate, session: Session = Depends(get_session)) -> Customer:\n-        customer = Customer(name=payload.name, email=payload.email)\n+        customer = Customer(name=payload.name, email=payload.email, status=payload.status)\n         session.add(customer); session.commit(); session.refresh(customer); return customer\n     return application\n \ndiff --git a/backend/app/models.py b/backend/app/models.py\nindex 14375bf..c856d55 100644\n--- a/backend/app/models.py\n+++ b/backend/app/models.py\n@@ -8,3 +8,4 @@ class Customer(Base):\n     id: Mapped[int] = mapped_column(Integer, primary_key=True)\n     name: Mapped[str] = mapped_column(String, nullable=False)\n     email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\n+    status: Mapped[str] = mapped_column(String, nullable=False)\ndiff --git a/backend/app/schemas.py b/backend/app/schemas.py\nindex 24ec7b3..b80aa4c 100644\n--- a/backend/app/schemas.py\n+++ b/backend/app/schemas.py\n@@ -1,11 +1,20 @@\n-from pydantic import BaseModel, ConfigDict\n+from pydantic import BaseModel, ConfigDict, field_validator\n \n class CustomerCreate(BaseModel):\n     name: str\n     email: str\n+    status: str = \"active\"\n+\n+    @field_validator(\"status\")\n+    @classmethod\n+    def validate_status(cls, v: str) -> str:\n+        if v not in [\"active\", \"inactive\"]:\n+            raise ValueError(\"status must be either 'active' or 'inactive'\")\n+        return v\n \n class CustomerRead(BaseModel):\n     model_config = ConfigDict(from_attributes=True)\n     id: int\n     name: str\n     email: str\n+    status: str\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 126,
+    "run_id": "main-L4-02-qwen2-5-coder-7b-instruct-r02-a01",
+    "task_id": "L4-02",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-25T05:14:27.879747+00:00",
+      "ended_at": "2026-09-25T05:15:21.036203+00:00",
+      "elapsed_seconds": 53.15599999995902
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "3b4bc172a09505c38c3e9eeb8b618c87086c212c5b17cedbfe817de0a8b60548"
+    },
+    "start_commit": "e4afa5197b521a1ac76de5f2de20839ef1ee8635",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 0,
+        "applicable": 2,
+        "proportion": 0.0
+      },
+      "architecture_checks": {
+        "passed": 2,
+        "applicable": 6,
+        "proportion": 0.3333333333333333
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": false,
+      "functional_tests": {
+        "passed": 0,
+        "applicable": 2,
+        "proportion": 0.0
+      },
+      "architecture_checks": {
+        "passed": 2,
+        "applicable": 6,
+        "proportion": 0.3333333333333333
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 4,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 12475,
+      "output_tokens": 770,
+      "total_tokens": 13245,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "customer_create_read",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "browser_customer_creation",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "checks": [
+      {
+        "id": "required_status_preserved",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "seed_status_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "validated_active_default",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "status_domain_preserved",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "uniqueness_and_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_frontend_status",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "final_diff": "",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 127,
+    "run_id": "main-L4-02-gpt-5-4-r02-a01",
+    "task_id": "L4-02",
+    "system_id": "gpt-5.4",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-25T05:20:05.733021+00:00",
+      "ended_at": "2026-09-25T05:20:30.472173+00:00",
+      "elapsed_seconds": 24.75
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "541a2b539eeae95d2806e925b16efc19809c00a869048467d522d32ca8c9a5c8"
+    },
+    "start_commit": "e4afa5197b521a1ac76de5f2de20839ef1ee8635",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 22010,
+      "output_tokens": 1068,
+      "total_tokens": 23078,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "customer_create_read",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_customer_creation",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "required_status_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "seed_status_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "validated_active_default",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "status_domain_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "uniqueness_and_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_frontend_status",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/main.py b/backend/app/main.py\nindex e5a7937..fa75105 100644\n--- a/backend/app/main.py\n+++ b/backend/app/main.py\n@@ -1,24 +1,24 @@\n-from fastapi import Depends, FastAPI\n-from fastapi.middleware.cors import CORSMiddleware\n-from sqlalchemy import select\n-from sqlalchemy.orm import Session\n-from .database import get_session\n-from .models import Customer\n-from .schemas import CustomerCreate, CustomerRead\n-\n-FRONTEND_ORIGIN = \"http://127.0.0.1:8080\"\n-\n-def create_app() -> FastAPI:\n-    application = FastAPI(title=\"Customer Directory API\")\n-    application.add_middleware(CORSMiddleware, allow_origins=[FRONTEND_ORIGIN], allow_credentials=True, allow_methods=[\"GET\",\"POST\"], allow_headers=[\"Content-Type\"])\n-    @application.get(\"/health\")\n-    def health() -> dict[str,str]: return {\"status\":\"ok\"}\n-    @application.get(\"/api/customers\", response_model=list[CustomerRead])\n-    def customers(session: Session = Depends(get_session)) -> list[Customer]: return list(session.scalars(select(Customer).order_by(Customer.id)))\n-    @application.post(\"/api/customers\", response_model=CustomerRead, status_code=201)\n-    def create_customer(payload: CustomerCreate, session: Session = Depends(get_session)) -> Customer:\n-        customer = Customer(name=payload.name, email=payload.email)\n-        session.add(customer); session.commit(); session.refresh(customer); return customer\n-    return application\n-\n-app = create_app()\n+from fastapi import Depends, FastAPI\r\n+from fastapi.middleware.cors import CORSMiddleware\r\n+from sqlalchemy import select\r\n+from sqlalchemy.orm import Session\r\n+from .database import get_session\r\n+from .models import Customer\r\n+from .schemas import CustomerCreate, CustomerRead\r\n+\r\n+FRONTEND_ORIGIN = \"http://127.0.0.1:8080\"\r\n+\r\n+def create_app() -> FastAPI:\r\n+    application = FastAPI(title=\"Customer Directory API\")\r\n+    application.add_middleware(CORSMiddleware, allow_origins=[FRONTEND_ORIGIN], allow_credentials=True, allow_methods=[\"GET\",\"POST\"], allow_headers=[\"Content-Type\"])\r\n+    @application.get(\"/health\")\r\n+    def health() -> dict[str,str]: return {\"status\":\"ok\"}\r\n+    @application.get(\"/api/customers\", response_model=list[CustomerRead])\r\n+    def customers(session: Session = Depends(get_session)) -> list[Customer]: return list(session.scalars(select(Customer).order_by(Customer.id)))\r\n+    @application.post(\"/api/customers\", response_model=CustomerRead, status_code=201)\r\n+    def create_customer(payload: CustomerCreate, session: Session = Depends(get_session)) -> Customer:\r\n+        customer = Customer(name=payload.name, email=payload.email, status=payload.status)\r\n+        session.add(customer); session.commit(); session.refresh(customer); return customer\r\n+    return application\r\n+\r\n+app = create_app()\r\ndiff --git a/backend/app/models.py b/backend/app/models.py\nindex 14375bf..1296cee 100644\n--- a/backend/app/models.py\n+++ b/backend/app/models.py\n@@ -1,10 +1,11 @@\n-from sqlalchemy import Integer, String\n-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\n-\n-class Base(DeclarativeBase): pass\n-\n-class Customer(Base):\n-    __tablename__ = \"customers\"\n-    id: Mapped[int] = mapped_column(Integer, primary_key=True)\n-    name: Mapped[str] = mapped_column(String, nullable=False)\n-    email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\n+from sqlalchemy import Integer, String\r\n+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\r\n+\r\n+class Base(DeclarativeBase): pass\r\n+\r\n+class Customer(Base):\r\n+    __tablename__ = \"customers\"\r\n+    id: Mapped[int] = mapped_column(Integer, primary_key=True)\r\n+    name: Mapped[str] = mapped_column(String, nullable=False)\r\n+    email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\r\n+    status: Mapped[str] = mapped_column(String, nullable=False, default=\"active\")\r\ndiff --git a/backend/app/schemas.py b/backend/app/schemas.py\nindex 24ec7b3..9a11e84 100644\n--- a/backend/app/schemas.py\n+++ b/backend/app/schemas.py\n@@ -1,11 +1,15 @@\n-from pydantic import BaseModel, ConfigDict\n-\n-class CustomerCreate(BaseModel):\n-    name: str\n-    email: str\n-\n-class CustomerRead(BaseModel):\n-    model_config = ConfigDict(from_attributes=True)\n-    id: int\n-    name: str\n-    email: str\n+from typing import Literal\r\n+\r\n+from pydantic import BaseModel, ConfigDict\r\n+\r\n+class CustomerCreate(BaseModel):\r\n+    name: str\r\n+    email: str\r\n+    status: Literal[\"active\", \"inactive\"] = \"active\"\r\n+\r\n+class CustomerRead(BaseModel):\r\n+    model_config = ConfigDict(from_attributes=True)\r\n+    id: int\r\n+    name: str\r\n+    email: str\r\n+    status: Literal[\"active\", \"inactive\"]\r\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 128,
+    "run_id": "main-L4-02-cursor-r02-a01",
+    "task_id": "L4-02",
+    "system_id": "cursor",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-25T05:24:32.677944Z",
+      "ended_at": "2026-09-25T05:25:53.824770Z",
+      "elapsed_seconds": 81.141
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "689abde47e2efd0e73124bd154b69facd5dd16c12b0f173efc4c4c24cb6a5a3f"
+    },
+    "start_commit": "e4afa5197b521a1ac76de5f2de20839ef1ee8635",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 6,
+        "proportion": 0.6666666666666666
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": false,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 6,
+        "proportion": 0.8333333333333334
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "customer_create_read",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_customer_creation",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "required_status_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "seed_status_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "validated_active_default",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "status_domain_preserved",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "uniqueness_and_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_frontend_status",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/main.py b/backend/app/main.py\nindex e5a7937..33c5940 100644\n--- a/backend/app/main.py\n+++ b/backend/app/main.py\n@@ -17,7 +17,7 @@ def create_app() -> FastAPI:\n     def customers(session: Session = Depends(get_session)) -> list[Customer]: return list(session.scalars(select(Customer).order_by(Customer.id)))\n     @application.post(\"/api/customers\", response_model=CustomerRead, status_code=201)\n     def create_customer(payload: CustomerCreate, session: Session = Depends(get_session)) -> Customer:\n-        customer = Customer(name=payload.name, email=payload.email)\n+        customer = Customer(name=payload.name, email=payload.email, status=payload.status or \"active\")\n         session.add(customer); session.commit(); session.refresh(customer); return customer\n     return application\n \ndiff --git a/backend/app/models.py b/backend/app/models.py\nindex 14375bf..1b17c4a 100644\n--- a/backend/app/models.py\n+++ b/backend/app/models.py\n@@ -8,3 +8,4 @@ class Customer(Base):\n     id: Mapped[int] = mapped_column(Integer, primary_key=True)\n     name: Mapped[str] = mapped_column(String, nullable=False)\n     email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\n+    status: Mapped[str] = mapped_column(String, nullable=False, default=\"active\")\ndiff --git a/backend/app/schemas.py b/backend/app/schemas.py\nindex 24ec7b3..2ca8080 100644\n--- a/backend/app/schemas.py\n+++ b/backend/app/schemas.py\n@@ -1,11 +1,17 @@\n+from typing import Literal\n+\n from pydantic import BaseModel, ConfigDict\n \n+CustomerStatus = Literal[\"active\", \"inactive\"]\n+\n class CustomerCreate(BaseModel):\n     name: str\n     email: str\n+    status: CustomerStatus | None = None\n \n class CustomerRead(BaseModel):\n     model_config = ConfigDict(from_attributes=True)\n     id: int\n     name: str\n     email: str\n+    status: CustomerStatus\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 129,
+    "run_id": "main-L4-02-cursor-r03-a01",
+    "task_id": "L4-02",
+    "system_id": "cursor",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-25T05:37:07.969154Z",
+      "ended_at": "2026-09-25T05:38:01.030246Z",
+      "elapsed_seconds": 53.047
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "689abde47e2efd0e73124bd154b69facd5dd16c12b0f173efc4c4c24cb6a5a3f"
+    },
+    "start_commit": "e4afa5197b521a1ac76de5f2de20839ef1ee8635",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 6,
+        "proportion": 0.6666666666666666
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "customer_create_read",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_customer_creation",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "required_status_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "seed_status_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "validated_active_default",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "status_domain_preserved",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "uniqueness_and_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_frontend_status",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/main.py b/backend/app/main.py\nindex e5a7937..7c5b365 100644\n--- a/backend/app/main.py\n+++ b/backend/app/main.py\n@@ -17,7 +17,7 @@ def create_app() -> FastAPI:\n     def customers(session: Session = Depends(get_session)) -> list[Customer]: return list(session.scalars(select(Customer).order_by(Customer.id)))\n     @application.post(\"/api/customers\", response_model=CustomerRead, status_code=201)\n     def create_customer(payload: CustomerCreate, session: Session = Depends(get_session)) -> Customer:\n-        customer = Customer(name=payload.name, email=payload.email)\n+        customer = Customer(name=payload.name, email=payload.email, status=payload.status)\n         session.add(customer); session.commit(); session.refresh(customer); return customer\n     return application\n \ndiff --git a/backend/app/models.py b/backend/app/models.py\nindex 14375bf..1b17c4a 100644\n--- a/backend/app/models.py\n+++ b/backend/app/models.py\n@@ -8,3 +8,4 @@ class Customer(Base):\n     id: Mapped[int] = mapped_column(Integer, primary_key=True)\n     name: Mapped[str] = mapped_column(String, nullable=False)\n     email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\n+    status: Mapped[str] = mapped_column(String, nullable=False, default=\"active\")\ndiff --git a/backend/app/schemas.py b/backend/app/schemas.py\nindex 24ec7b3..9fc5194 100644\n--- a/backend/app/schemas.py\n+++ b/backend/app/schemas.py\n@@ -1,11 +1,17 @@\n+from typing import Literal\n+\n from pydantic import BaseModel, ConfigDict\n \n+CustomerStatus = Literal[\"active\", \"inactive\"]\n+\n class CustomerCreate(BaseModel):\n     name: str\n     email: str\n+    status: CustomerStatus = \"active\"\n \n class CustomerRead(BaseModel):\n     model_config = ConfigDict(from_attributes=True)\n     id: int\n     name: str\n     email: str\n+    status: CustomerStatus\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 130,
+    "run_id": "main-L4-02-devin-r03-a01",
+    "task_id": "L4-02",
+    "system_id": "devin",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-25T05:41:47.741351Z",
+      "ended_at": "2026-09-25T05:47:08.783392Z",
+      "elapsed_seconds": 321.046
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "e4afa5197b521a1ac76de5f2de20839ef1ee8635",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 6,
+        "proportion": 0.6666666666666666
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "customer_create_read",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_customer_creation",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "required_status_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "seed_status_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "validated_active_default",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "status_domain_preserved",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "uniqueness_and_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_frontend_status",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/main.py b/backend/app/main.py\nindex e5a7937..7c5b365 100644\n--- a/backend/app/main.py\n+++ b/backend/app/main.py\n@@ -17,7 +17,7 @@ def create_app() -> FastAPI:\n     def customers(session: Session = Depends(get_session)) -> list[Customer]: return list(session.scalars(select(Customer).order_by(Customer.id)))\n     @application.post(\"/api/customers\", response_model=CustomerRead, status_code=201)\n     def create_customer(payload: CustomerCreate, session: Session = Depends(get_session)) -> Customer:\n-        customer = Customer(name=payload.name, email=payload.email)\n+        customer = Customer(name=payload.name, email=payload.email, status=payload.status)\n         session.add(customer); session.commit(); session.refresh(customer); return customer\n     return application\n \ndiff --git a/backend/app/models.py b/backend/app/models.py\nindex 14375bf..3147892 100644\n--- a/backend/app/models.py\n+++ b/backend/app/models.py\n@@ -8,3 +8,4 @@ class Customer(Base):\n     id: Mapped[int] = mapped_column(Integer, primary_key=True)\n     name: Mapped[str] = mapped_column(String, nullable=False)\n     email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\n+    status: Mapped[str] = mapped_column(String, nullable=False, default='active')\ndiff --git a/backend/app/schemas.py b/backend/app/schemas.py\nindex 24ec7b3..e3b049c 100644\n--- a/backend/app/schemas.py\n+++ b/backend/app/schemas.py\n@@ -1,11 +1,20 @@\n-from pydantic import BaseModel, ConfigDict\n+from pydantic import BaseModel, ConfigDict, Field, field_validator\n \n class CustomerCreate(BaseModel):\n     name: str\n     email: str\n+    status: str = Field(default='active')\n+\n+    @field_validator('status')\n+    @classmethod\n+    def validate_status(cls, v):\n+        if v not in ('active', 'inactive'):\n+            raise ValueError('status must be either \"active\" or \"inactive\"')\n+        return v\n \n class CustomerRead(BaseModel):\n     model_config = ConfigDict(from_attributes=True)\n     id: int\n     name: str\n     email: str\n+    status: str\ndiff --git a/database/init.sql b/database/init.sql\nindex a9ad696..873f390 100644\n--- a/database/init.sql\n+++ b/database/init.sql\n@@ -2,7 +2,7 @@ CREATE TABLE customers (\n     id INTEGER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,\n     name TEXT NOT NULL,\n     email TEXT NOT NULL UNIQUE,\n-    status TEXT NOT NULL\n+    status TEXT NOT NULL CHECK (status IN ('active', 'inactive'))\n );\n \n INSERT INTO customers (name, email, status) VALUES\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 131,
+    "run_id": "main-L4-02-gpt-5-4-r03-a01",
+    "task_id": "L4-02",
+    "system_id": "gpt-5.4",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-25T05:55:13.874692+00:00",
+      "ended_at": "2026-09-25T05:55:42.193283+00:00",
+      "elapsed_seconds": 28.31299999996554
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "8bd61f40c2a020064b2b8febf9b109449731143023d8e9f7fc71eeae5b4d4bed"
+    },
+    "start_commit": "e4afa5197b521a1ac76de5f2de20839ef1ee8635",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 26175,
+      "output_tokens": 1484,
+      "total_tokens": 27659,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "customer_create_read",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_customer_creation",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "required_status_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "seed_status_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "validated_active_default",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "status_domain_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "uniqueness_and_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_frontend_status",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/main.py b/backend/app/main.py\nindex e5a7937..fa75105 100644\n--- a/backend/app/main.py\n+++ b/backend/app/main.py\n@@ -1,24 +1,24 @@\n-from fastapi import Depends, FastAPI\n-from fastapi.middleware.cors import CORSMiddleware\n-from sqlalchemy import select\n-from sqlalchemy.orm import Session\n-from .database import get_session\n-from .models import Customer\n-from .schemas import CustomerCreate, CustomerRead\n-\n-FRONTEND_ORIGIN = \"http://127.0.0.1:8080\"\n-\n-def create_app() -> FastAPI:\n-    application = FastAPI(title=\"Customer Directory API\")\n-    application.add_middleware(CORSMiddleware, allow_origins=[FRONTEND_ORIGIN], allow_credentials=True, allow_methods=[\"GET\",\"POST\"], allow_headers=[\"Content-Type\"])\n-    @application.get(\"/health\")\n-    def health() -> dict[str,str]: return {\"status\":\"ok\"}\n-    @application.get(\"/api/customers\", response_model=list[CustomerRead])\n-    def customers(session: Session = Depends(get_session)) -> list[Customer]: return list(session.scalars(select(Customer).order_by(Customer.id)))\n-    @application.post(\"/api/customers\", response_model=CustomerRead, status_code=201)\n-    def create_customer(payload: CustomerCreate, session: Session = Depends(get_session)) -> Customer:\n-        customer = Customer(name=payload.name, email=payload.email)\n-        session.add(customer); session.commit(); session.refresh(customer); return customer\n-    return application\n-\n-app = create_app()\n+from fastapi import Depends, FastAPI\r\n+from fastapi.middleware.cors import CORSMiddleware\r\n+from sqlalchemy import select\r\n+from sqlalchemy.orm import Session\r\n+from .database import get_session\r\n+from .models import Customer\r\n+from .schemas import CustomerCreate, CustomerRead\r\n+\r\n+FRONTEND_ORIGIN = \"http://127.0.0.1:8080\"\r\n+\r\n+def create_app() -> FastAPI:\r\n+    application = FastAPI(title=\"Customer Directory API\")\r\n+    application.add_middleware(CORSMiddleware, allow_origins=[FRONTEND_ORIGIN], allow_credentials=True, allow_methods=[\"GET\",\"POST\"], allow_headers=[\"Content-Type\"])\r\n+    @application.get(\"/health\")\r\n+    def health() -> dict[str,str]: return {\"status\":\"ok\"}\r\n+    @application.get(\"/api/customers\", response_model=list[CustomerRead])\r\n+    def customers(session: Session = Depends(get_session)) -> list[Customer]: return list(session.scalars(select(Customer).order_by(Customer.id)))\r\n+    @application.post(\"/api/customers\", response_model=CustomerRead, status_code=201)\r\n+    def create_customer(payload: CustomerCreate, session: Session = Depends(get_session)) -> Customer:\r\n+        customer = Customer(name=payload.name, email=payload.email, status=payload.status)\r\n+        session.add(customer); session.commit(); session.refresh(customer); return customer\r\n+    return application\r\n+\r\n+app = create_app()\r\ndiff --git a/backend/app/models.py b/backend/app/models.py\nindex 14375bf..1296cee 100644\n--- a/backend/app/models.py\n+++ b/backend/app/models.py\n@@ -1,10 +1,11 @@\n-from sqlalchemy import Integer, String\n-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\n-\n-class Base(DeclarativeBase): pass\n-\n-class Customer(Base):\n-    __tablename__ = \"customers\"\n-    id: Mapped[int] = mapped_column(Integer, primary_key=True)\n-    name: Mapped[str] = mapped_column(String, nullable=False)\n-    email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\n+from sqlalchemy import Integer, String\r\n+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\r\n+\r\n+class Base(DeclarativeBase): pass\r\n+\r\n+class Customer(Base):\r\n+    __tablename__ = \"customers\"\r\n+    id: Mapped[int] = mapped_column(Integer, primary_key=True)\r\n+    name: Mapped[str] = mapped_column(String, nullable=False)\r\n+    email: Mapped[str] = mapped_column(String, nullable=False, unique=True)\r\n+    status: Mapped[str] = mapped_column(String, nullable=False, default=\"active\")\r\ndiff --git a/backend/app/schemas.py b/backend/app/schemas.py\nindex 24ec7b3..9a11e84 100644\n--- a/backend/app/schemas.py\n+++ b/backend/app/schemas.py\n@@ -1,11 +1,15 @@\n-from pydantic import BaseModel, ConfigDict\n-\n-class CustomerCreate(BaseModel):\n-    name: str\n-    email: str\n-\n-class CustomerRead(BaseModel):\n-    model_config = ConfigDict(from_attributes=True)\n-    id: int\n-    name: str\n-    email: str\n+from typing import Literal\r\n+\r\n+from pydantic import BaseModel, ConfigDict\r\n+\r\n+class CustomerCreate(BaseModel):\r\n+    name: str\r\n+    email: str\r\n+    status: Literal[\"active\", \"inactive\"] = \"active\"\r\n+\r\n+class CustomerRead(BaseModel):\r\n+    model_config = ConfigDict(from_attributes=True)\r\n+    id: int\r\n+    name: str\r\n+    email: str\r\n+    status: Literal[\"active\", \"inactive\"]\r\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 132,
+    "run_id": "main-L4-02-qwen2-5-coder-7b-instruct-r03-a01",
+    "task_id": "L4-02",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-25T06:02:16.520002+00:00",
+      "ended_at": "2026-09-25T06:03:09.830769+00:00",
+      "elapsed_seconds": 53.31200000003446
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "69e8bbe98b7c0f9b9055f25f95d3affccbf802fd99bf4962ad03f159b20b7e1b"
+    },
+    "start_commit": "e4afa5197b521a1ac76de5f2de20839ef1ee8635",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 0,
+        "applicable": 2,
+        "proportion": 0.0
+      },
+      "architecture_checks": {
+        "passed": 2,
+        "applicable": 6,
+        "proportion": 0.3333333333333333
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": false,
+      "functional_tests": {
+        "passed": 0,
+        "applicable": 2,
+        "proportion": 0.0
+      },
+      "architecture_checks": {
+        "passed": 2,
+        "applicable": 6,
+        "proportion": 0.3333333333333333
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 4,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 12475,
+      "output_tokens": 770,
+      "total_tokens": 13245,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "customer_create_read",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "browser_customer_creation",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "checks": [
+      {
+        "id": "required_status_preserved",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "seed_status_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "validated_active_default",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "status_domain_preserved",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "uniqueness_and_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_frontend_status",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "final_diff": "",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 133,
+    "run_id": "main-L4-03-devin-r01-a01",
+    "task_id": "L4-03",
+    "system_id": "devin",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-26T07:32:30.313119Z",
+      "ended_at": "2026-09-26T07:34:54.053147Z",
+      "elapsed_seconds": 143.734
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "385ccf77fe94826043b49cfb11dbdf5741c317e9",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "compose_health",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "dashboard_api",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_dashboard",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "compose_service_hostname",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "database_network_target",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "startup_and_health_database_checks",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "postgres_backed_dashboard",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_not_hard_coded",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frozen_stack_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/compose.yaml b/compose.yaml\nindex 6b5de84..552be13 100644\n--- a/compose.yaml\n+++ b/compose.yaml\n@@ -19,7 +19,7 @@ services:\n     build:\n       context: ./backend\n     environment:\n-      DATABASE_URL: postgresql+psycopg://benchmark:benchmark@postgres:5432/benchmark\n+      DATABASE_URL: postgresql+psycopg://benchmark:benchmark@db:5432/benchmark\n     ports:\n       - \"127.0.0.1:8000:8000\"\n     depends_on:\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 134,
+    "run_id": "main-L4-03-cursor-r01-a01",
+    "task_id": "L4-03",
+    "system_id": "cursor",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-26T07:42:54.073032Z",
+      "ended_at": "2026-09-26T07:46:02.336393Z",
+      "elapsed_seconds": 188.265
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "689abde47e2efd0e73124bd154b69facd5dd16c12b0f173efc4c4c24cb6a5a3f"
+    },
+    "start_commit": "385ccf77fe94826043b49cfb11dbdf5741c317e9",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "compose_health",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "dashboard_api",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_dashboard",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "compose_service_hostname",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "database_network_target",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "startup_and_health_database_checks",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "postgres_backed_dashboard",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_not_hard_coded",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frozen_stack_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/compose.yaml b/compose.yaml\nindex 6b5de84..552be13 100644\n--- a/compose.yaml\n+++ b/compose.yaml\n@@ -19,7 +19,7 @@ services:\n     build:\n       context: ./backend\n     environment:\n-      DATABASE_URL: postgresql+psycopg://benchmark:benchmark@postgres:5432/benchmark\n+      DATABASE_URL: postgresql+psycopg://benchmark:benchmark@db:5432/benchmark\n     ports:\n       - \"127.0.0.1:8000:8000\"\n     depends_on:\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 135,
+    "run_id": "main-L4-03-qwen2-5-coder-7b-instruct-r01-a01",
+    "task_id": "L4-03",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-26T08:10:32.478545+00:00",
+      "ended_at": "2026-09-26T08:11:22.050782+00:00",
+      "elapsed_seconds": 49.57799999997951
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "6808a86ee1307a177995bf4d2c80b8b6ae1f950affedd3f9bb9c9559cf2210df"
+    },
+    "start_commit": "385ccf77fe94826043b49cfb11dbdf5741c317e9",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 0,
+        "applicable": 3,
+        "proportion": 0.0
+      },
+      "architecture_checks": {
+        "passed": 1,
+        "applicable": 6,
+        "proportion": 0.16666666666666666
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": false,
+      "functional_tests": {
+        "passed": 0,
+        "applicable": 3,
+        "proportion": 0.0
+      },
+      "architecture_checks": {
+        "passed": 1,
+        "applicable": 6,
+        "proportion": 0.16666666666666666
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 6516,
+      "output_tokens": 750,
+      "total_tokens": 7266,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "compose_health",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "dashboard_api",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "browser_dashboard",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "checks": [
+      {
+        "id": "compose_service_hostname",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "database_network_target",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "startup_and_health_database_checks",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "postgres_backed_dashboard",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "frontend_not_hard_coded",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "frozen_stack_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 136,
+    "run_id": "main-L4-03-gpt-5-4-r01-a02",
+    "task_id": "L4-03",
+    "system_id": "gpt-5.4",
+    "repetition": 1,
+    "attempt": 2,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-26T08:24:11.252543+00:00",
+      "ended_at": "2026-09-26T08:24:39.008216+00:00",
+      "elapsed_seconds": 27.75
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "124d9d8314701737090ead056180ae54e368f77761655255833718ce871e02a5"
+    },
+    "start_commit": "385ccf77fe94826043b49cfb11dbdf5741c317e9",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 3,
+        "proportion": 0.6666666666666666
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 6,
+        "proportion": 0.8333333333333334
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": false,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 3,
+        "proportion": 0.6666666666666666
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 6,
+        "proportion": 0.8333333333333334
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 52654,
+      "output_tokens": 1463,
+      "total_tokens": 54117,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "compose_health",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "dashboard_api",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_dashboard",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "checks": [
+      {
+        "id": "compose_service_hostname",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "database_network_target",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "startup_and_health_database_checks",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "postgres_backed_dashboard",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_not_hard_coded",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "frozen_stack_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/compose.yaml b/compose.yaml\nindex 6b5de84..bf5edad 100644\n--- a/compose.yaml\n+++ b/compose.yaml\n@@ -1,58 +1,58 @@\n-services:\n-  db:\n-    image: postgres:16.6-alpine@sha256:1d04b9ba1d4996401f2552b51beda8187f175c0645c091e4781134fc9c9a3eef\n-    environment:\n-      POSTGRES_DB: benchmark\n-      POSTGRES_USER: benchmark\n-      POSTGRES_PASSWORD: benchmark\n-    volumes:\n-      - database_data:/var/lib/postgresql/data\n-      - ./database/init.sql:/docker-entrypoint-initdb.d/001-init.sql:ro\n-    healthcheck:\n-      test: [\"CMD-SHELL\", \"pg_isready -U benchmark -d benchmark\"]\n-      interval: 2s\n-      timeout: 3s\n-      retries: 30\n-    restart: \"no\"\n-\n-  backend:\n-    build:\n-      context: ./backend\n-    environment:\n-      DATABASE_URL: postgresql+psycopg://benchmark:benchmark@postgres:5432/benchmark\n-    ports:\n-      - \"127.0.0.1:8000:8000\"\n-    depends_on:\n-      db:\n-        condition: service_healthy\n-    healthcheck:\n-      test:\n-        - CMD\n-        - python\n-        - -c\n-        - \"import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2)\"\n-      interval: 2s\n-      timeout: 3s\n-      retries: 20\n-    restart: \"no\"\n-\n-  frontend:\n-    build:\n-      context: ./frontend\n-      args:\n-        VITE_API_BASE_URL: \"http://127.0.0.1:8000\"\n-    ports:\n-      - \"127.0.0.1:8080:80\"\n-    depends_on:\n-      backend:\n-        condition: service_started\n-    healthcheck:\n-      test: [\"CMD\", \"wget\", \"--quiet\", \"--output-document=-\", \"http://127.0.0.1/\"]\n-      interval: 2s\n-      timeout: 3s\n-      retries: 20\n-    restart: \"no\"\n-\n-volumes:\n-  database_data:\n-\n+services:\r\n+  db:\r\n+    image: postgres:16.6-alpine@sha256:1d04b9ba1d4996401f2552b51beda8187f175c0645c091e4781134fc9c9a3eef\r\n+    environment:\r\n+      POSTGRES_DB: benchmark\r\n+      POSTGRES_USER: benchmark\r\n+      POSTGRES_PASSWORD: benchmark\r\n+    volumes:\r\n+      - database_data:/var/lib/postgresql/data\r\n+      - ./database/init.sql:/docker-entrypoint-initdb.d/001-init.sql:ro\r\n+    healthcheck:\r\n+      test: [\"CMD-SHELL\", \"pg_isready -U benchmark -d benchmark\"]\r\n+      interval: 2s\r\n+      timeout: 3s\r\n+      retries: 30\r\n+    restart: \"no\"\r\n+\r\n+  backend:\r\n+    build:\r\n+      context: ./backend\r\n+    environment:\r\n+      DATABASE_URL: postgresql+psycopg://benchmark:benchmark@db:5432/benchmark\r\n+    ports:\r\n+      - \"127.0.0.1:8000:8000\"\r\n+    depends_on:\r\n+      db:\r\n+        condition: service_healthy\r\n+    healthcheck:\r\n+      test:\r\n+        - CMD\r\n+        - python\r\n+        - -c\r\n+        - \"import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2)\"\r\n+      interval: 2s\r\n+      timeout: 3s\r\n+      retries: 20\r\n+    restart: \"no\"\r\n+\r\n+  frontend:\r\n+    build:\r\n+      context: ./frontend\r\n+      args:\r\n+        VITE_API_BASE_URL: \"/api\"\r\n+    ports:\r\n+      - \"127.0.0.1:8080:80\"\r\n+    depends_on:\r\n+      backend:\r\n+        condition: service_started\r\n+    healthcheck:\r\n+      test: [\"CMD\", \"wget\", \"--quiet\", \"--output-document=-\", \"http://127.0.0.1/\"]\r\n+      interval: 2s\r\n+      timeout: 3s\r\n+      retries: 20\r\n+    restart: \"no\"\r\n+\r\n+volumes:\r\n+  database_data:\r\n+\r\ndiff --git a/frontend/nginx.conf b/frontend/nginx.conf\nindex a3c7400..1d7ab20 100644\n--- a/frontend/nginx.conf\n+++ b/frontend/nginx.conf\n@@ -1,12 +1,17 @@\n-server {\n-    listen 80;\n-    server_name _;\n-\n-    root /usr/share/nginx/html;\n-    index index.html;\n-\n-    location / {\n-        try_files $uri $uri/ /index.html;\n-    }\n-}\n-\n+server {\r\n+    listen 80;\r\n+    server_name _;\r\n+\r\n+    root /usr/share/nginx/html;\r\n+    index index.html;\r\n+\r\n+    location /api/ {\r\n+        proxy_pass http://backend:8000/;\r\n+        proxy_set_header Host $host;\r\n+    }\r\n+\r\n+    location / {\r\n+        try_files $uri $uri/ /index.html;\r\n+    }\r\n+}\r\n+\r\ndiff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex 25e88d7..9663281 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -1,42 +1,42 @@\n-<script setup>\n-import { onMounted, ref } from \"vue\";\n-\n-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\n-const dashboard = ref(null);\n-const error = ref(\"\");\n-\n-async function loadDashboard() {\n-  error.value = \"\";\n-  try {\n-    const response = await fetch(`${apiBaseUrl}/api/dashboard`);\n-    if (!response.ok) throw new Error(`HTTP ${response.status}`);\n-    dashboard.value = await response.json();\n-  } catch (requestError) {\n-    error.value = \"Dashboard unavailable.\";\n-    console.error(requestError);\n-  }\n-}\n-\n-onMounted(loadDashboard);\n-</script>\n-\n-<template>\n-  <main class=\"dashboard-shell\">\n-    <p class=\"eyebrow\">Northstar operations</p>\n-    <h1>System dashboard</h1>\n-    <p v-if=\"error\" class=\"error\" data-testid=\"dashboard-error\" role=\"alert\">{{ error }}</p>\n-    <section v-else-if=\"dashboard\" data-testid=\"dashboard\">\n-      <div class=\"summary\">\n-        <div><span>System</span><strong data-testid=\"system-status\">{{ dashboard.status }}</strong></div>\n-        <div><span>Database</span><strong data-testid=\"database-status\">{{ dashboard.database }}</strong></div>\n-      </div>\n-      <div class=\"metrics\">\n-        <article v-for=\"metric in dashboard.metrics\" :key=\"metric.name\" data-testid=\"metric-card\">\n-          <span>{{ metric.name }}</span><strong>{{ metric.value }}</strong>\n-        </article>\n-      </div>\n-    </section>\n-    <p v-else data-testid=\"dashboard-loading\">Checking services…</p>\n-  </main>\n-</template>\n-\n+<script setup>\r\n+import { onMounted, ref } from \"vue\";\r\n+\r\n+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"/api\";\r\n+const dashboard = ref(null);\r\n+const error = ref(\"\");\r\n+\r\n+async function loadDashboard() {\r\n+  error.value = \"\";\r\n+  try {\r\n+    const response = await fetch(`${apiBaseUrl}/dashboard`);\r\n+    if (!response.ok) throw new Error(`HTTP ${response.status}`);\r\n+    dashboard.value = await response.json();\r\n+  } catch (requestError) {\r\n+    error.value = \"Dashboard unavailable.\";\r\n+    console.error(requestError);\r\n+  }\r\n+}\r\n+\r\n+onMounted(loadDashboard);\r\n+</script>\r\n+\r\n+<template>\r\n+  <main class=\"dashboard-shell\">\r\n+    <p class=\"eyebrow\">Northstar operations</p>\r\n+    <h1>System dashboard</h1>\r\n+    <p v-if=\"error\" class=\"error\" data-testid=\"dashboard-error\" role=\"alert\">{{ error }}</p>\r\n+    <section v-else-if=\"dashboard\" data-testid=\"dashboard\">\r\n+      <div class=\"summary\">\r\n+        <div><span>System</span><strong data-testid=\"system-status\">{{ dashboard.status }}</strong></div>\r\n+        <div><span>Database</span><strong data-testid=\"database-status\">{{ dashboard.database }}</strong></div>\r\n+      </div>\r\n+      <div class=\"metrics\">\r\n+        <article v-for=\"metric in dashboard.metrics\" :key=\"metric.name\" data-testid=\"metric-card\">\r\n+          <span>{{ metric.name }}</span><strong>{{ metric.value }}</strong>\r\n+        </article>\r\n+      </div>\r\n+    </section>\r\n+    <p v-else data-testid=\"dashboard-loading\">Checking services…</p>\r\n+  </main>\r\n+</template>\r\n+\r\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 137,
+    "run_id": "main-L4-03-qwen2-5-coder-7b-instruct-r02-a01",
+    "task_id": "L4-03",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-26T08:50:26.593008+00:00",
+      "ended_at": "2026-09-26T08:51:16.083194+00:00",
+      "elapsed_seconds": 49.5
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "3c2809b20e57e5a5b6f6b9499792457a832c2d0a0df3af24ffa2847324109053"
+    },
+    "start_commit": "385ccf77fe94826043b49cfb11dbdf5741c317e9",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 0,
+        "applicable": 3,
+        "proportion": 0.0
+      },
+      "architecture_checks": {
+        "passed": 1,
+        "applicable": 6,
+        "proportion": 0.16666666666666666
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": false,
+      "functional_tests": {
+        "passed": 0,
+        "applicable": 3,
+        "proportion": 0.0
+      },
+      "architecture_checks": {
+        "passed": 1,
+        "applicable": 6,
+        "proportion": 0.16666666666666666
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 6516,
+      "output_tokens": 750,
+      "total_tokens": 7266,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "compose_health",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "dashboard_api",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "browser_dashboard",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "checks": [
+      {
+        "id": "compose_service_hostname",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "database_network_target",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "startup_and_health_database_checks",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "postgres_backed_dashboard",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "frontend_not_hard_coded",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "frozen_stack_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 138,
+    "run_id": "main-L4-03-gpt-5-4-r02-a01",
+    "task_id": "L4-03",
+    "system_id": "gpt-5.4",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-26T08:55:26.796251+00:00",
+      "ended_at": "2026-09-26T08:55:47.276770+00:00",
+      "elapsed_seconds": 20.468999999924563
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "202d1b1b5d49693edebf4da9f4d47b95365e53dc15c645265f80feff1f59e6e0"
+    },
+    "start_commit": "385ccf77fe94826043b49cfb11dbdf5741c317e9",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 38996,
+      "output_tokens": 905,
+      "total_tokens": 39901,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "compose_health",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "dashboard_api",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_dashboard",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "compose_service_hostname",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "database_network_target",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "startup_and_health_database_checks",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "postgres_backed_dashboard",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_not_hard_coded",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frozen_stack_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/compose.yaml b/compose.yaml\nindex 6b5de84..40939a2 100644\n--- a/compose.yaml\n+++ b/compose.yaml\n@@ -1,58 +1,58 @@\n-services:\n-  db:\n-    image: postgres:16.6-alpine@sha256:1d04b9ba1d4996401f2552b51beda8187f175c0645c091e4781134fc9c9a3eef\n-    environment:\n-      POSTGRES_DB: benchmark\n-      POSTGRES_USER: benchmark\n-      POSTGRES_PASSWORD: benchmark\n-    volumes:\n-      - database_data:/var/lib/postgresql/data\n-      - ./database/init.sql:/docker-entrypoint-initdb.d/001-init.sql:ro\n-    healthcheck:\n-      test: [\"CMD-SHELL\", \"pg_isready -U benchmark -d benchmark\"]\n-      interval: 2s\n-      timeout: 3s\n-      retries: 30\n-    restart: \"no\"\n-\n-  backend:\n-    build:\n-      context: ./backend\n-    environment:\n-      DATABASE_URL: postgresql+psycopg://benchmark:benchmark@postgres:5432/benchmark\n-    ports:\n-      - \"127.0.0.1:8000:8000\"\n-    depends_on:\n-      db:\n-        condition: service_healthy\n-    healthcheck:\n-      test:\n-        - CMD\n-        - python\n-        - -c\n-        - \"import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2)\"\n-      interval: 2s\n-      timeout: 3s\n-      retries: 20\n-    restart: \"no\"\n-\n-  frontend:\n-    build:\n-      context: ./frontend\n-      args:\n-        VITE_API_BASE_URL: \"http://127.0.0.1:8000\"\n-    ports:\n-      - \"127.0.0.1:8080:80\"\n-    depends_on:\n-      backend:\n-        condition: service_started\n-    healthcheck:\n-      test: [\"CMD\", \"wget\", \"--quiet\", \"--output-document=-\", \"http://127.0.0.1/\"]\n-      interval: 2s\n-      timeout: 3s\n-      retries: 20\n-    restart: \"no\"\n-\n-volumes:\n-  database_data:\n-\n+services:\r\n+  db:\r\n+    image: postgres:16.6-alpine@sha256:1d04b9ba1d4996401f2552b51beda8187f175c0645c091e4781134fc9c9a3eef\r\n+    environment:\r\n+      POSTGRES_DB: benchmark\r\n+      POSTGRES_USER: benchmark\r\n+      POSTGRES_PASSWORD: benchmark\r\n+    volumes:\r\n+      - database_data:/var/lib/postgresql/data\r\n+      - ./database/init.sql:/docker-entrypoint-initdb.d/001-init.sql:ro\r\n+    healthcheck:\r\n+      test: [\"CMD-SHELL\", \"pg_isready -U benchmark -d benchmark\"]\r\n+      interval: 2s\r\n+      timeout: 3s\r\n+      retries: 30\r\n+    restart: \"no\"\r\n+\r\n+  backend:\r\n+    build:\r\n+      context: ./backend\r\n+    environment:\r\n+      DATABASE_URL: postgresql+psycopg://benchmark:benchmark@db:5432/benchmark\r\n+    ports:\r\n+      - \"127.0.0.1:8000:8000\"\r\n+    depends_on:\r\n+      db:\r\n+        condition: service_healthy\r\n+    healthcheck:\r\n+      test:\r\n+        - CMD\r\n+        - python\r\n+        - -c\r\n+        - \"import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2)\"\r\n+      interval: 2s\r\n+      timeout: 3s\r\n+      retries: 20\r\n+    restart: \"no\"\r\n+\r\n+  frontend:\r\n+    build:\r\n+      context: ./frontend\r\n+      args:\r\n+        VITE_API_BASE_URL: \"http://127.0.0.1:8000\"\r\n+    ports:\r\n+      - \"127.0.0.1:8080:80\"\r\n+    depends_on:\r\n+      backend:\r\n+        condition: service_started\r\n+    healthcheck:\r\n+      test: [\"CMD\", \"wget\", \"--quiet\", \"--output-document=-\", \"http://127.0.0.1/\"]\r\n+      interval: 2s\r\n+      timeout: 3s\r\n+      retries: 20\r\n+    restart: \"no\"\r\n+\r\n+volumes:\r\n+  database_data:\r\n+\r\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 139,
+    "run_id": "main-L4-03-cursor-r02-a01",
+    "task_id": "L4-03",
+    "system_id": "cursor",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-26T09:03:08.633744Z",
+      "ended_at": "2026-09-26T09:04:39.760342Z",
+      "elapsed_seconds": 91.125
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "689abde47e2efd0e73124bd154b69facd5dd16c12b0f173efc4c4c24cb6a5a3f"
+    },
+    "start_commit": "385ccf77fe94826043b49cfb11dbdf5741c317e9",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "compose_health",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "dashboard_api",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_dashboard",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "compose_service_hostname",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "database_network_target",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "startup_and_health_database_checks",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "postgres_backed_dashboard",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_not_hard_coded",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frozen_stack_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/compose.yaml b/compose.yaml\nindex 6b5de84..552be13 100644\n--- a/compose.yaml\n+++ b/compose.yaml\n@@ -19,7 +19,7 @@ services:\n     build:\n       context: ./backend\n     environment:\n-      DATABASE_URL: postgresql+psycopg://benchmark:benchmark@postgres:5432/benchmark\n+      DATABASE_URL: postgresql+psycopg://benchmark:benchmark@db:5432/benchmark\n     ports:\n       - \"127.0.0.1:8000:8000\"\n     depends_on:\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 140,
+    "run_id": "main-L4-03-devin-r02-a01",
+    "task_id": "L4-03",
+    "system_id": "devin",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-26T09:10:28.530570Z",
+      "ended_at": "2026-09-26T09:12:17.699761Z",
+      "elapsed_seconds": 109.157
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "385ccf77fe94826043b49cfb11dbdf5741c317e9",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "compose_health",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "dashboard_api",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_dashboard",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "compose_service_hostname",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "database_network_target",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "startup_and_health_database_checks",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "postgres_backed_dashboard",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_not_hard_coded",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frozen_stack_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/compose.yaml b/compose.yaml\nindex 6b5de84..552be13 100644\n--- a/compose.yaml\n+++ b/compose.yaml\n@@ -19,7 +19,7 @@ services:\n     build:\n       context: ./backend\n     environment:\n-      DATABASE_URL: postgresql+psycopg://benchmark:benchmark@postgres:5432/benchmark\n+      DATABASE_URL: postgresql+psycopg://benchmark:benchmark@db:5432/benchmark\n     ports:\n       - \"127.0.0.1:8000:8000\"\n     depends_on:\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 141,
+    "run_id": "main-L4-03-devin-r03-a01",
+    "task_id": "L4-03",
+    "system_id": "devin",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-26T11:09:51.863453Z",
+      "ended_at": "2026-09-26T11:12:21.034875Z",
+      "elapsed_seconds": 149.171
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "385ccf77fe94826043b49cfb11dbdf5741c317e9",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "compose_health",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "dashboard_api",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_dashboard",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "compose_service_hostname",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "database_network_target",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "startup_and_health_database_checks",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "postgres_backed_dashboard",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_not_hard_coded",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frozen_stack_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/compose.yaml b/compose.yaml\nindex 6b5de84..552be13 100644\n--- a/compose.yaml\n+++ b/compose.yaml\n@@ -19,7 +19,7 @@ services:\n     build:\n       context: ./backend\n     environment:\n-      DATABASE_URL: postgresql+psycopg://benchmark:benchmark@postgres:5432/benchmark\n+      DATABASE_URL: postgresql+psycopg://benchmark:benchmark@db:5432/benchmark\n     ports:\n       - \"127.0.0.1:8000:8000\"\n     depends_on:\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 142,
+    "run_id": "main-L4-03-gpt-5-4-r03-a01",
+    "task_id": "L4-03",
+    "system_id": "gpt-5.4",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-26T11:19:05.504794+00:00",
+      "ended_at": "2026-09-26T11:19:23.785977+00:00",
+      "elapsed_seconds": 18.280999999959022
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "7c81b6599de39998c8c0871980df1b33f6317c13620cd125df64a826fb328a9b"
+    },
+    "start_commit": "385ccf77fe94826043b49cfb11dbdf5741c317e9",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 29862,
+      "output_tokens": 621,
+      "total_tokens": 30483,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "compose_health",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "dashboard_api",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_dashboard",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "compose_service_hostname",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "database_network_target",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "startup_and_health_database_checks",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "postgres_backed_dashboard",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_not_hard_coded",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frozen_stack_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/compose.yaml b/compose.yaml\nindex 6b5de84..40939a2 100644\n--- a/compose.yaml\n+++ b/compose.yaml\n@@ -1,58 +1,58 @@\n-services:\n-  db:\n-    image: postgres:16.6-alpine@sha256:1d04b9ba1d4996401f2552b51beda8187f175c0645c091e4781134fc9c9a3eef\n-    environment:\n-      POSTGRES_DB: benchmark\n-      POSTGRES_USER: benchmark\n-      POSTGRES_PASSWORD: benchmark\n-    volumes:\n-      - database_data:/var/lib/postgresql/data\n-      - ./database/init.sql:/docker-entrypoint-initdb.d/001-init.sql:ro\n-    healthcheck:\n-      test: [\"CMD-SHELL\", \"pg_isready -U benchmark -d benchmark\"]\n-      interval: 2s\n-      timeout: 3s\n-      retries: 30\n-    restart: \"no\"\n-\n-  backend:\n-    build:\n-      context: ./backend\n-    environment:\n-      DATABASE_URL: postgresql+psycopg://benchmark:benchmark@postgres:5432/benchmark\n-    ports:\n-      - \"127.0.0.1:8000:8000\"\n-    depends_on:\n-      db:\n-        condition: service_healthy\n-    healthcheck:\n-      test:\n-        - CMD\n-        - python\n-        - -c\n-        - \"import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2)\"\n-      interval: 2s\n-      timeout: 3s\n-      retries: 20\n-    restart: \"no\"\n-\n-  frontend:\n-    build:\n-      context: ./frontend\n-      args:\n-        VITE_API_BASE_URL: \"http://127.0.0.1:8000\"\n-    ports:\n-      - \"127.0.0.1:8080:80\"\n-    depends_on:\n-      backend:\n-        condition: service_started\n-    healthcheck:\n-      test: [\"CMD\", \"wget\", \"--quiet\", \"--output-document=-\", \"http://127.0.0.1/\"]\n-      interval: 2s\n-      timeout: 3s\n-      retries: 20\n-    restart: \"no\"\n-\n-volumes:\n-  database_data:\n-\n+services:\r\n+  db:\r\n+    image: postgres:16.6-alpine@sha256:1d04b9ba1d4996401f2552b51beda8187f175c0645c091e4781134fc9c9a3eef\r\n+    environment:\r\n+      POSTGRES_DB: benchmark\r\n+      POSTGRES_USER: benchmark\r\n+      POSTGRES_PASSWORD: benchmark\r\n+    volumes:\r\n+      - database_data:/var/lib/postgresql/data\r\n+      - ./database/init.sql:/docker-entrypoint-initdb.d/001-init.sql:ro\r\n+    healthcheck:\r\n+      test: [\"CMD-SHELL\", \"pg_isready -U benchmark -d benchmark\"]\r\n+      interval: 2s\r\n+      timeout: 3s\r\n+      retries: 30\r\n+    restart: \"no\"\r\n+\r\n+  backend:\r\n+    build:\r\n+      context: ./backend\r\n+    environment:\r\n+      DATABASE_URL: postgresql+psycopg://benchmark:benchmark@db:5432/benchmark\r\n+    ports:\r\n+      - \"127.0.0.1:8000:8000\"\r\n+    depends_on:\r\n+      db:\r\n+        condition: service_healthy\r\n+    healthcheck:\r\n+      test:\r\n+        - CMD\r\n+        - python\r\n+        - -c\r\n+        - \"import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2)\"\r\n+      interval: 2s\r\n+      timeout: 3s\r\n+      retries: 20\r\n+    restart: \"no\"\r\n+\r\n+  frontend:\r\n+    build:\r\n+      context: ./frontend\r\n+      args:\r\n+        VITE_API_BASE_URL: \"http://127.0.0.1:8000\"\r\n+    ports:\r\n+      - \"127.0.0.1:8080:80\"\r\n+    depends_on:\r\n+      backend:\r\n+        condition: service_started\r\n+    healthcheck:\r\n+      test: [\"CMD\", \"wget\", \"--quiet\", \"--output-document=-\", \"http://127.0.0.1/\"]\r\n+      interval: 2s\r\n+      timeout: 3s\r\n+      retries: 20\r\n+    restart: \"no\"\r\n+\r\n+volumes:\r\n+  database_data:\r\n+\r\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 143,
+    "run_id": "main-L4-03-cursor-r03-a01",
+    "task_id": "L4-03",
+    "system_id": "cursor",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-26T11:24:48.669252Z",
+      "ended_at": "2026-09-26T11:27:24.329551Z",
+      "elapsed_seconds": 155.672
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "689abde47e2efd0e73124bd154b69facd5dd16c12b0f173efc4c4c24cb6a5a3f"
+    },
+    "start_commit": "385ccf77fe94826043b49cfb11dbdf5741c317e9",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "compose_health",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "dashboard_api",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_dashboard",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "compose_service_hostname",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "database_network_target",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "startup_and_health_database_checks",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "postgres_backed_dashboard",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_not_hard_coded",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frozen_stack_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/compose.yaml b/compose.yaml\nindex 6b5de84..552be13 100644\n--- a/compose.yaml\n+++ b/compose.yaml\n@@ -19,7 +19,7 @@ services:\n     build:\n       context: ./backend\n     environment:\n-      DATABASE_URL: postgresql+psycopg://benchmark:benchmark@postgres:5432/benchmark\n+      DATABASE_URL: postgresql+psycopg://benchmark:benchmark@db:5432/benchmark\n     ports:\n       - \"127.0.0.1:8000:8000\"\n     depends_on:\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 144,
+    "run_id": "main-L4-03-qwen2-5-coder-7b-instruct-r03-a01",
+    "task_id": "L4-03",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-26T11:46:13.023950+00:00",
+      "ended_at": "2026-09-26T11:47:02.796218+00:00",
+      "elapsed_seconds": 49.76600000000002
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "a337d2fbcc484a36d956bfa298db192b4b24664f79afbd4b06dad31b34cb271c"
+    },
+    "start_commit": "385ccf77fe94826043b49cfb11dbdf5741c317e9",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 0,
+        "applicable": 3,
+        "proportion": 0.0
+      },
+      "architecture_checks": {
+        "passed": 1,
+        "applicable": 6,
+        "proportion": 0.16666666666666666
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": false,
+      "functional_tests": {
+        "passed": 0,
+        "applicable": 3,
+        "proportion": 0.0
+      },
+      "architecture_checks": {
+        "passed": 1,
+        "applicable": 6,
+        "proportion": 0.16666666666666666
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 6516,
+      "output_tokens": 750,
+      "total_tokens": 7266,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "compose_health",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "dashboard_api",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "browser_dashboard",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "checks": [
+      {
+        "id": "compose_service_hostname",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "database_network_target",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "startup_and_health_database_checks",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "postgres_backed_dashboard",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "frontend_not_hard_coded",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "frozen_stack_contract",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  }
+]
