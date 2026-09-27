@@ -1,8 +1,10 @@
 # Release scope
 
-This repository is a curated research-materials export initially prepared on 23 September 2026, extended with L2 results on 25 September, and updated on `supplement1` with the uniform evaluator review on 26 September. Main collection is complete: 144 selected valid observations. This supplement adds original/reviewed score pairs for all slots, while retaining the detailed L1/L2 exports and the completed pilot's descriptive tables.
+This repository publishes curated research materials and detailed selected-run exports for all four tiers: 144 valid main observations. It includes the pilot's descriptive tables, original/reviewed score pairs, and a unified analysis dataset with reproducible generation and validation. Formal comparative statistics and final thesis figures remain pending.
 
 ## Included
+
+- Unified 144-row CSV, field dictionary and validation summary in `data/main/`, generated and verified by `analysis/build_dataset.py`; no statistical comparisons or figures are produced by this step.
 
 - L1 main results, timing, individual check outcomes, final diffs, and attempt/exclusion provenance in `data/L1/`.
 - L2 original results and attempt/exclusion provenance in `data/L2/`.
@@ -40,3 +42,8 @@ The `L3-experiment` addition publishes 36 selected observations and all 38 attem
 ## L4 experiment addition
 
 The `L4-experiment` addition publishes 36 selected observations and all 38 attempts, selecting L4-01 Devin Rep 1 a02 and L4-03 GPT-5.4 Rep 1 a02. The latter remains valid unsuccessful. Original scores and reviewed summaries are separate; the existing L4-02 semantic review is included once. All selected records passed the common evidence validator and match the existing 144-run score review. See the [L4 data guide](../data/L4/README.md). This release completes the curated selected-run exports for all four tiers; it does not publish the complete sealed runtime archive or final statistical analysis.
+
+
+## Unified dataset addition
+
+The `analysisData` addition joins the four tier exports to the versioned original/reviewed scores, validates schedule and replacement selection, and preserves unavailable usage/cost as missing. It adds a standard-library generator, check mode and focused regression tests. See the [dataset guide](../data/main/README.md). Existing experimental source files and scoring decisions are unchanged.

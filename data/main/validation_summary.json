@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "scope": "Dataset assembly and consistency validation only; no comparative statistics or figures.",
+  "selected_rows": 144,
+  "unique_slots": 144,
+  "retained_attempts": 155,
+  "excluded_attempts": 11,
+  "review_version": "public-contract-audit/2026-09-26",
+  "by_system": {
+    "cursor": 36,
+    "devin": 36,
+    "gpt-5.4": 36,
+    "qwen2.5-coder-7b-instruct": 36
+  },
+  "by_tier": {
+    "1": 36,
+    "2": 36,
+    "3": 36,
+    "4": 36
+  },
+  "by_task": {
+    "L1-01": 12,
+    "L1-02": 12,
+    "L1-03": 12,
+    "L2-01": 12,
+    "L2-02": 12,
+    "L2-03": 12,
+    "L3-01": 12,
+    "L3-02": 12,
+    "L3-03": 12,
+    "L4-01": 12,
+    "L4-02": 12,
+    "L4-03": 12
+  },
+  "stopping_counts": {
+    "protocol_no_progress_limit": 35,
+    "submitted": 109
+  },
+  "clarification_opportunity_rows": 12,
+  "robustness_eligible_rows": 72,
+  "missing_cells": {
+    "original_autonomous_success": 72,
+    "reviewed_autonomous_success": 72,
+    "usage_input_tokens": 72,
+    "usage_output_tokens": 72,
+    "usage_total_tokens": 72,
+    "usage_monetary_cost": 144,
+    "usage_currency": 144,
+    "product_version": 72
+  },
+  "checks": [
+    "144 unique scheduled slots; all four tiers",
+    "155 indexed attempts; 11 exclusions; selected replacement links",
+    "Exact run_id join to original and reviewed scoring",
+    "Individual original checks, counts and proportions reconcile",
+    "Normal submission and all-checks-pass gate for both scoring versions",
+    "Published embedded review reconciles",
+    "Timing order, nonnegative elapsed and token counts",
+    "Clarification opportunity and robustness eligibility",
+    "Missing values preserved; no imputation"
+  ],
+  "limitations": [
+    "Source evidence coverage is unchanged by these checks.",
+    "Elapsed time is the recorded duration, not recomputed from rounded timestamps.",
+    "Usage is not available comparably across interfaces; null is not zero.",
+    "Partial native transcripts and unknown permission counts are not reconstructed."
+  ]
+}
