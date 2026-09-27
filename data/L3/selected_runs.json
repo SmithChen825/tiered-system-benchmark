@@ -1,0 +1,4504 @@
+[
+  {
+    "global_position": 73,
+    "run_id": "main-L3-01-devin-r01-a01",
+    "task_id": "L3-01",
+    "system_id": "devin",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-22T05:55:09.863667Z",
+      "ended_at": "2026-09-22T05:59:37.004862Z",
+      "elapsed_seconds": 267.14
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "e13ac46d44e6c971b23820afc33e1a37642aa6d9",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 7,
+        "applicable": 7,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 7,
+        "applicable": 7,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "direct_account_endpoint_healthy",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "expected_origin_get_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "expected_origin_preflight_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_account_loads",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "exact_frontend_origin_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "wildcard_policy_rejected",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "stale_and_unrelated_origins_rejected",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "backend_account_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_address_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_remain_separate",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/main.py b/backend/app/main.py\nindex 7ecfce4..b03849f 100644\n--- a/backend/app/main.py\n+++ b/backend/app/main.py\n@@ -2,7 +2,7 @@ from fastapi import FastAPI\n from fastapi.middleware.cors import CORSMiddleware\n \n \n-ALLOWED_ORIGINS = [\"http://127.0.0.1:5173\"]\n+ALLOWED_ORIGINS = [\"http://127.0.0.1:8080\"]\n \n \n def create_app() -> FastAPI:\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 74,
+    "run_id": "main-L3-01-gpt-5-4-r01-a01",
+    "task_id": "L3-01",
+    "system_id": "gpt-5.4",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-22T06:21:06.579860+00:00",
+      "ended_at": "2026-09-22T06:22:56.967188+00:00",
+      "elapsed_seconds": 110.375
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "9a377de7e9148c09d4be346d62e79d5ead4b95dd3799bdd1bc96fd093e0849bc"
+    },
+    "start_commit": "e13ac46d44e6c971b23820afc33e1a37642aa6d9",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 7,
+        "proportion": 0.7142857142857143
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 7,
+        "applicable": 7,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 37544,
+      "output_tokens": 1175,
+      "total_tokens": 38719,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "direct_account_endpoint_healthy",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "expected_origin_get_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "expected_origin_preflight_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_account_loads",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "exact_frontend_origin_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "wildcard_policy_rejected",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "stale_and_unrelated_origins_rejected",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "backend_account_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_address_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_remain_separate",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/main.py b/backend/app/main.py\nindex 7ecfce4..2a262fc 100644\n--- a/backend/app/main.py\n+++ b/backend/app/main.py\n@@ -1,35 +1,38 @@\n-from fastapi import FastAPI\n-from fastapi.middleware.cors import CORSMiddleware\n-\n-\n-ALLOWED_ORIGINS = [\"http://127.0.0.1:5173\"]\n-\n-\n-def create_app() -> FastAPI:\n-    application = FastAPI(title=\"Account API\")\n-    application.add_middleware(\n-        CORSMiddleware,\n-        allow_origins=ALLOWED_ORIGINS,\n-        allow_credentials=True,\n-        allow_methods=[\"GET\"],\n-        allow_headers=[\"Content-Type\"],\n-    )\n-\n-    @application.get(\"/health\")\n-    def health() -> dict[str, str]:\n-        return {\"status\": \"ok\"}\n-\n-    @application.get(\"/api/account\")\n-    def account() -> dict[str, object]:\n-        return {\n-            \"id\": 1042,\n-            \"name\": \"Ada Lovelace\",\n-            \"role\": \"Platform Engineer\",\n-            \"plan\": \"Research\",\n-            \"active\": True,\n-        }\n-\n-    return application\n-\n-\n-app = create_app()\n+from fastapi import FastAPI\r\n+from fastapi.middleware.cors import CORSMiddleware\r\n+\r\n+\r\n+ALLOWED_ORIGINS = [\r\n+    \"http://127.0.0.1:5173\",\r\n+    \"http://127.0.0.1:8080\",\r\n+]\r\n+\r\n+\r\n+def create_app() -> FastAPI:\r\n+    application = FastAPI(title=\"Account API\")\r\n+    application.add_middleware(\r\n+        CORSMiddleware,\r\n+        allow_origins=ALLOWED_ORIGINS,\r\n+        allow_credentials=True,\r\n+        allow_methods=[\"GET\"],\r\n+        allow_headers=[\"Content-Type\"],\r\n+    )\r\n+\r\n+    @application.get(\"/health\")\r\n+    def health() -> dict[str, str]:\r\n+        return {\"status\": \"ok\"}\r\n+\r\n+    @application.get(\"/api/account\")\r\n+    def account() -> dict[str, object]:\r\n+        return {\r\n+            \"id\": 1042,\r\n+            \"name\": \"Ada Lovelace\",\r\n+            \"role\": \"Platform Engineer\",\r\n+            \"plan\": \"Research\",\r\n+            \"active\": True,\r\n+        }\r\n+\r\n+    return application\r\n+\r\n+\r\n+app = create_app()\r\n",
+    "final_diff_export": {
+      "omitted_prefixes": [
+        ".venv/"
+      ],
+      "omitted_file_sections": 451,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 75,
+    "run_id": "main-L3-01-cursor-r01-a01",
+    "task_id": "L3-01",
+    "system_id": "cursor",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-22T07:03:13.085826Z",
+      "ended_at": "2026-09-22T07:07:13.774697Z",
+      "elapsed_seconds": 240.687
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "dc2214a7192898c46e57f1ede097a7af0df470160f2b2d80d3d99945baf85a16"
+    },
+    "start_commit": "e13ac46d44e6c971b23820afc33e1a37642aa6d9",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 7,
+        "proportion": 0.7142857142857143
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 7,
+        "applicable": 7,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "direct_account_endpoint_healthy",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "expected_origin_get_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "expected_origin_preflight_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_account_loads",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "exact_frontend_origin_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "wildcard_policy_rejected",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "stale_and_unrelated_origins_rejected",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "backend_account_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_address_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_remain_separate",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/main.py b/backend/app/main.py\nindex 7ecfce4..340223f 100644\n--- a/backend/app/main.py\n+++ b/backend/app/main.py\n@@ -2,7 +2,10 @@ from fastapi import FastAPI\n from fastapi.middleware.cors import CORSMiddleware\n \n \n-ALLOWED_ORIGINS = [\"http://127.0.0.1:5173\"]\n+ALLOWED_ORIGINS = [\n+    \"http://127.0.0.1:5173\",\n+    \"http://127.0.0.1:8080\",\n+]\n \n \n def create_app() -> FastAPI:\n@@ -12,7 +15,7 @@ def create_app() -> FastAPI:\n         allow_origins=ALLOWED_ORIGINS,\n         allow_credentials=True,\n         allow_methods=[\"GET\"],\n-        allow_headers=[\"Content-Type\"],\n+        allow_headers=[\"Accept\", \"Content-Type\"],\n     )\n \n     @application.get(\"/health\")\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 76,
+    "run_id": "main-L3-01-qwen2-5-coder-7b-instruct-r01-a01",
+    "task_id": "L3-01",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-22T07:33:48.080874+00:00",
+      "ended_at": "2026-09-22T07:34:04.690560+00:00",
+      "elapsed_seconds": 16.60899999999674
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "c62aac793f907ad2044ac086197b3286ebf946d64e7757cc9a18b55ac87db994"
+    },
+    "start_commit": "e13ac46d44e6c971b23820afc33e1a37642aa6d9",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 1,
+        "applicable": 4,
+        "proportion": 0.25
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 7,
+        "proportion": 0.5714285714285714
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": false,
+      "functional_tests": {
+        "passed": 1,
+        "applicable": 4,
+        "proportion": 0.25
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 7,
+        "proportion": 0.8571428571428571
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 3483,
+      "output_tokens": 201,
+      "total_tokens": 3684,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "direct_account_endpoint_healthy",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "expected_origin_get_allowed",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "expected_origin_preflight_allowed",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "browser_account_loads",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "checks": [
+      {
+        "id": "exact_frontend_origin_allowed",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "wildcard_policy_rejected",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "stale_and_unrelated_origins_rejected",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "backend_account_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_address_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_remain_separate",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 77,
+    "run_id": "main-L3-01-devin-r02-a01",
+    "task_id": "L3-01",
+    "system_id": "devin",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-22T08:20:01.094472Z",
+      "ended_at": "2026-09-22T08:23:58.525152Z",
+      "elapsed_seconds": 237.422
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "e13ac46d44e6c971b23820afc33e1a37642aa6d9",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 7,
+        "applicable": 7,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 7,
+        "applicable": 7,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "direct_account_endpoint_healthy",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "expected_origin_get_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "expected_origin_preflight_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_account_loads",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "exact_frontend_origin_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "wildcard_policy_rejected",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "stale_and_unrelated_origins_rejected",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "backend_account_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_address_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_remain_separate",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/main.py b/backend/app/main.py\nindex 7ecfce4..b03849f 100644\n--- a/backend/app/main.py\n+++ b/backend/app/main.py\n@@ -2,7 +2,7 @@ from fastapi import FastAPI\n from fastapi.middleware.cors import CORSMiddleware\n \n \n-ALLOWED_ORIGINS = [\"http://127.0.0.1:5173\"]\n+ALLOWED_ORIGINS = [\"http://127.0.0.1:8080\"]\n \n \n def create_app() -> FastAPI:\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 78,
+    "run_id": "main-L3-01-cursor-r02-a02",
+    "task_id": "L3-01",
+    "system_id": "cursor",
+    "repetition": 2,
+    "attempt": 2,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-22T08:31:57.782064Z",
+      "ended_at": "2026-09-22T08:36:27.461854Z",
+      "elapsed_seconds": 269.672
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "689abde47e2efd0e73124bd154b69facd5dd16c12b0f173efc4c4c24cb6a5a3f"
+    },
+    "start_commit": "e13ac46d44e6c971b23820afc33e1a37642aa6d9",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 7,
+        "proportion": 0.7142857142857143
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 7,
+        "applicable": 7,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "direct_account_endpoint_healthy",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "expected_origin_get_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "expected_origin_preflight_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_account_loads",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "exact_frontend_origin_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "wildcard_policy_rejected",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "stale_and_unrelated_origins_rejected",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "backend_account_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_address_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_remain_separate",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/main.py b/backend/app/main.py\nindex 7ecfce4..f43c10a 100644\n--- a/backend/app/main.py\n+++ b/backend/app/main.py\n@@ -2,7 +2,10 @@ from fastapi import FastAPI\n from fastapi.middleware.cors import CORSMiddleware\n \n \n-ALLOWED_ORIGINS = [\"http://127.0.0.1:5173\"]\n+ALLOWED_ORIGINS = [\n+    \"http://127.0.0.1:5173\",\n+    \"http://127.0.0.1:8080\",\n+]\n \n \n def create_app() -> FastAPI:\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 79,
+    "run_id": "main-L3-01-gpt-5-4-r02-a01",
+    "task_id": "L3-01",
+    "system_id": "gpt-5.4",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-22T08:49:45.044816+00:00",
+      "ended_at": "2026-09-22T08:50:49.577915+00:00",
+      "elapsed_seconds": 64.54700000002049
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "1f419a5ae09a400e2443046e1b383d0f07d94dd1f941bde093a8b3ad086248f3"
+    },
+    "start_commit": "e13ac46d44e6c971b23820afc33e1a37642aa6d9",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 7,
+        "proportion": 0.7142857142857143
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 7,
+        "applicable": 7,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 38690,
+      "output_tokens": 1109,
+      "total_tokens": 39799,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "direct_account_endpoint_healthy",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "expected_origin_get_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "expected_origin_preflight_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_account_loads",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "exact_frontend_origin_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "wildcard_policy_rejected",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "stale_and_unrelated_origins_rejected",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "backend_account_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_address_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_remain_separate",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/main.py b/backend/app/main.py\nindex 7ecfce4..ed53f91 100644\n--- a/backend/app/main.py\n+++ b/backend/app/main.py\n@@ -1,35 +1,35 @@\n-from fastapi import FastAPI\n-from fastapi.middleware.cors import CORSMiddleware\n-\n-\n-ALLOWED_ORIGINS = [\"http://127.0.0.1:5173\"]\n-\n-\n-def create_app() -> FastAPI:\n-    application = FastAPI(title=\"Account API\")\n-    application.add_middleware(\n-        CORSMiddleware,\n-        allow_origins=ALLOWED_ORIGINS,\n-        allow_credentials=True,\n-        allow_methods=[\"GET\"],\n-        allow_headers=[\"Content-Type\"],\n-    )\n-\n-    @application.get(\"/health\")\n-    def health() -> dict[str, str]:\n-        return {\"status\": \"ok\"}\n-\n-    @application.get(\"/api/account\")\n-    def account() -> dict[str, object]:\n-        return {\n-            \"id\": 1042,\n-            \"name\": \"Ada Lovelace\",\n-            \"role\": \"Platform Engineer\",\n-            \"plan\": \"Research\",\n-            \"active\": True,\n-        }\n-\n-    return application\n-\n-\n-app = create_app()\n+from fastapi import FastAPI\r\n+from fastapi.middleware.cors import CORSMiddleware\r\n+\r\n+\r\n+ALLOWED_ORIGINS = [\"http://127.0.0.1:5173\", \"http://127.0.0.1:8080\"]\r\n+\r\n+\r\n+def create_app() -> FastAPI:\r\n+    application = FastAPI(title=\"Account API\")\r\n+    application.add_middleware(\r\n+        CORSMiddleware,\r\n+        allow_origins=ALLOWED_ORIGINS,\r\n+        allow_credentials=True,\r\n+        allow_methods=[\"GET\"],\r\n+        allow_headers=[\"Content-Type\"],\r\n+    )\r\n+\r\n+    @application.get(\"/health\")\r\n+    def health() -> dict[str, str]:\r\n+        return {\"status\": \"ok\"}\r\n+\r\n+    @application.get(\"/api/account\")\r\n+    def account() -> dict[str, object]:\r\n+        return {\r\n+            \"id\": 1042,\r\n+            \"name\": \"Ada Lovelace\",\r\n+            \"role\": \"Platform Engineer\",\r\n+            \"plan\": \"Research\",\r\n+            \"active\": True,\r\n+        }\r\n+\r\n+    return application\r\n+\r\n+\r\n+app = create_app()\r\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 80,
+    "run_id": "main-L3-01-qwen2-5-coder-7b-instruct-r02-a01",
+    "task_id": "L3-01",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-22T09:01:10.594650+00:00",
+      "ended_at": "2026-09-22T09:01:27.142826+00:00",
+      "elapsed_seconds": 16.54699999996228
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "60e235ee60a677d934373bfc58feb694ab71b99d683492c08ecdaffa8a59960f"
+    },
+    "start_commit": "e13ac46d44e6c971b23820afc33e1a37642aa6d9",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 1,
+        "applicable": 4,
+        "proportion": 0.25
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 7,
+        "proportion": 0.5714285714285714
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": false,
+      "functional_tests": {
+        "passed": 1,
+        "applicable": 4,
+        "proportion": 0.25
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 7,
+        "proportion": 0.8571428571428571
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 3483,
+      "output_tokens": 201,
+      "total_tokens": 3684,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "direct_account_endpoint_healthy",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "expected_origin_get_allowed",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "expected_origin_preflight_allowed",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "browser_account_loads",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "checks": [
+      {
+        "id": "exact_frontend_origin_allowed",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "wildcard_policy_rejected",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "stale_and_unrelated_origins_rejected",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "backend_account_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_address_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_remain_separate",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 81,
+    "run_id": "main-L3-01-gpt-5-4-r03-a01",
+    "task_id": "L3-01",
+    "system_id": "gpt-5.4",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-22T09:12:12.040554+00:00",
+      "ended_at": "2026-09-22T09:12:55.622540+00:00",
+      "elapsed_seconds": 43.57799999997951
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "37c2539f3eee8f7f24b4b14c0c897d864f72246a3472463134a436b5bc3d8677"
+    },
+    "start_commit": "e13ac46d44e6c971b23820afc33e1a37642aa6d9",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 7,
+        "applicable": 7,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 7,
+        "applicable": 7,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 31758,
+      "output_tokens": 966,
+      "total_tokens": 32724,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "direct_account_endpoint_healthy",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "expected_origin_get_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "expected_origin_preflight_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_account_loads",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "exact_frontend_origin_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "wildcard_policy_rejected",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "stale_and_unrelated_origins_rejected",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "backend_account_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_address_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_remain_separate",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/main.py b/backend/app/main.py\nindex 7ecfce4..912c394 100644\n--- a/backend/app/main.py\n+++ b/backend/app/main.py\n@@ -1,35 +1,35 @@\n-from fastapi import FastAPI\n-from fastapi.middleware.cors import CORSMiddleware\n-\n-\n-ALLOWED_ORIGINS = [\"http://127.0.0.1:5173\"]\n-\n-\n-def create_app() -> FastAPI:\n-    application = FastAPI(title=\"Account API\")\n-    application.add_middleware(\n-        CORSMiddleware,\n-        allow_origins=ALLOWED_ORIGINS,\n-        allow_credentials=True,\n-        allow_methods=[\"GET\"],\n-        allow_headers=[\"Content-Type\"],\n-    )\n-\n-    @application.get(\"/health\")\n-    def health() -> dict[str, str]:\n-        return {\"status\": \"ok\"}\n-\n-    @application.get(\"/api/account\")\n-    def account() -> dict[str, object]:\n-        return {\n-            \"id\": 1042,\n-            \"name\": \"Ada Lovelace\",\n-            \"role\": \"Platform Engineer\",\n-            \"plan\": \"Research\",\n-            \"active\": True,\n-        }\n-\n-    return application\n-\n-\n-app = create_app()\n+from fastapi import FastAPI\r\n+from fastapi.middleware.cors import CORSMiddleware\r\n+\r\n+\r\n+ALLOWED_ORIGINS = [\"http://127.0.0.1:8080\"]\r\n+\r\n+\r\n+def create_app() -> FastAPI:\r\n+    application = FastAPI(title=\"Account API\")\r\n+    application.add_middleware(\r\n+        CORSMiddleware,\r\n+        allow_origins=ALLOWED_ORIGINS,\r\n+        allow_credentials=True,\r\n+        allow_methods=[\"GET\"],\r\n+        allow_headers=[\"Content-Type\"],\r\n+    )\r\n+\r\n+    @application.get(\"/health\")\r\n+    def health() -> dict[str, str]:\r\n+        return {\"status\": \"ok\"}\r\n+\r\n+    @application.get(\"/api/account\")\r\n+    def account() -> dict[str, object]:\r\n+        return {\r\n+            \"id\": 1042,\r\n+            \"name\": \"Ada Lovelace\",\r\n+            \"role\": \"Platform Engineer\",\r\n+            \"plan\": \"Research\",\r\n+            \"active\": True,\r\n+        }\r\n+\r\n+    return application\r\n+\r\n+\r\n+app = create_app()\r\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 82,
+    "run_id": "main-L3-01-cursor-r03-a01",
+    "task_id": "L3-01",
+    "system_id": "cursor",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-22T09:16:18.752781Z",
+      "ended_at": "2026-09-22T09:19:30.885429Z",
+      "elapsed_seconds": 192.125
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "689abde47e2efd0e73124bd154b69facd5dd16c12b0f173efc4c4c24cb6a5a3f"
+    },
+    "start_commit": "e13ac46d44e6c971b23820afc33e1a37642aa6d9",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 7,
+        "proportion": 0.7142857142857143
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 7,
+        "applicable": 7,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "direct_account_endpoint_healthy",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "expected_origin_get_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "expected_origin_preflight_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_account_loads",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "exact_frontend_origin_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "wildcard_policy_rejected",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "stale_and_unrelated_origins_rejected",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "backend_account_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_address_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_remain_separate",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/main.py b/backend/app/main.py\nindex 7ecfce4..f43c10a 100644\n--- a/backend/app/main.py\n+++ b/backend/app/main.py\n@@ -2,7 +2,10 @@ from fastapi import FastAPI\n from fastapi.middleware.cors import CORSMiddleware\n \n \n-ALLOWED_ORIGINS = [\"http://127.0.0.1:5173\"]\n+ALLOWED_ORIGINS = [\n+    \"http://127.0.0.1:5173\",\n+    \"http://127.0.0.1:8080\",\n+]\n \n \n def create_app() -> FastAPI:\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 83,
+    "run_id": "main-L3-01-devin-r03-a01",
+    "task_id": "L3-01",
+    "system_id": "devin",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-22T11:30:34.524000Z",
+      "ended_at": "2026-09-22T11:34:52.868819Z",
+      "elapsed_seconds": 258.344
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "e13ac46d44e6c971b23820afc33e1a37642aa6d9",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 7,
+        "applicable": 7,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 4,
+        "applicable": 4,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 7,
+        "applicable": 7,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "direct_account_endpoint_healthy",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "expected_origin_get_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "expected_origin_preflight_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_account_loads",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "exact_frontend_origin_allowed",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "wildcard_policy_rejected",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "stale_and_unrelated_origins_rejected",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "backend_account_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_address_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_remain_separate",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/backend/app/main.py b/backend/app/main.py\nindex 7ecfce4..b03849f 100644\n--- a/backend/app/main.py\n+++ b/backend/app/main.py\n@@ -2,7 +2,7 @@ from fastapi import FastAPI\n from fastapi.middleware.cors import CORSMiddleware\n \n \n-ALLOWED_ORIGINS = [\"http://127.0.0.1:5173\"]\n+ALLOWED_ORIGINS = [\"http://127.0.0.1:8080\"]\n \n \n def create_app() -> FastAPI:\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 84,
+    "run_id": "main-L3-01-qwen2-5-coder-7b-instruct-r03-a01",
+    "task_id": "L3-01",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-22T11:44:25.627933+00:00",
+      "ended_at": "2026-09-22T11:44:41.479906+00:00",
+      "elapsed_seconds": 15.844000000040978
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "d514e8247f9d1e22a85489088f854ee286e022ac5d8c807b481d1eb8bcce7cf0"
+    },
+    "start_commit": "e13ac46d44e6c971b23820afc33e1a37642aa6d9",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 1,
+        "applicable": 4,
+        "proportion": 0.25
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 7,
+        "proportion": 0.5714285714285714
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": false,
+      "functional_tests": {
+        "passed": 1,
+        "applicable": 4,
+        "proportion": 0.25
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 7,
+        "proportion": 0.8571428571428571
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 3495,
+      "output_tokens": 189,
+      "total_tokens": 3684,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "direct_account_endpoint_healthy",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "expected_origin_get_allowed",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "expected_origin_preflight_allowed",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "browser_account_loads",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "checks": [
+      {
+        "id": "exact_frontend_origin_allowed",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "wildcard_policy_rejected",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "stale_and_unrelated_origins_rejected",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "backend_account_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_address_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "frontend_backend_remain_separate",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "researcher_materials_unchanged",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 85,
+    "run_id": "main-L3-02-qwen2-5-coder-7b-instruct-r01-a01",
+    "task_id": "L3-02",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-23T00:35:13.094851+00:00",
+      "ended_at": "2026-09-23T00:35:28.447177+00:00",
+      "elapsed_seconds": 15.344000000040978
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "9f2f8fd97a682b691ebf6ea0c1c5cb3008cdae5f646b435ecf2c350abb07d309"
+    },
+    "start_commit": "40665af38a62f2e2f2d138a2e68ec543e570cfbf",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 1,
+        "applicable": 2,
+        "proportion": 0.5
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 5,
+        "proportion": 0.8
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": false,
+      "functional_tests": {
+        "passed": 1,
+        "applicable": 2,
+        "proportion": 0.5
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 5,
+        "proportion": 0.8
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 3319,
+      "output_tokens": 179,
+      "total_tokens": 3498,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "backend_order_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_order_status",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "checks": [
+      {
+        "id": "backend_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_status",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "endpoint_identity_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "separate_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_origin_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 86,
+    "run_id": "main-L3-02-cursor-r01-a01",
+    "task_id": "L3-02",
+    "system_id": "cursor",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-23T00:45:07.504752Z",
+      "ended_at": "2026-09-23T00:45:49.962326Z",
+      "elapsed_seconds": 42.454
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "689abde47e2efd0e73124bd154b69facd5dd16c12b0f173efc4c4c24cb6a5a3f"
+    },
+    "start_commit": "40665af38a62f2e2f2d138a2e68ec543e570cfbf",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "backend_order_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_order_status",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "backend_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_status",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "endpoint_identity_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "separate_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_origin_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex dca7479..c80580a 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -4,4 +4,4 @@ const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\n const order = ref(null); const loading = ref(true); const error = ref(\"\");\n onMounted(async () => { try { const response = await fetch(`${apiBaseUrl}/api/orders/ORD-2048`); if (!response.ok) throw new Error(`HTTP ${response.status}`); order.value = await response.json(); } catch (requestError) { error.value = \"Unable to load order status.\"; console.error(requestError); } finally { loading.value = false; } });\n </script>\n-<template><main class=\"account-shell\"><p class=\"eyebrow\">Northstar Dispatch</p><h1>Order status</h1><section class=\"account-panel\" aria-live=\"polite\"><p v-if=\"loading\" data-testid=\"loading\">Loading order…</p><p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p><dl v-else-if=\"order\" data-testid=\"order-panel\"><div><dt>Order</dt><dd data-testid=\"order-id\">{{ order.id }}</dd></div><div><dt>Customer</dt><dd>{{ order.customer }}</dd></div><div><dt>Status</dt><dd data-testid=\"order-status\">{{ order.status }}</dd></div></dl></section></main></template>\n+<template><main class=\"account-shell\"><p class=\"eyebrow\">Northstar Dispatch</p><h1>Order status</h1><section class=\"account-panel\" aria-live=\"polite\"><p v-if=\"loading\" data-testid=\"loading\">Loading order…</p><p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p><dl v-else-if=\"order\" data-testid=\"order-panel\"><div><dt>Order</dt><dd data-testid=\"order-id\">{{ order.id }}</dd></div><div><dt>Customer</dt><dd>{{ order.customer }}</dd></div><div><dt>Status</dt><dd data-testid=\"order-status\">{{ order.order_status }}</dd></div></dl></section></main></template>\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 87,
+    "run_id": "main-L3-02-gpt-5-4-r01-a01",
+    "task_id": "L3-02",
+    "system_id": "gpt-5.4",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-23T00:51:12.955012+00:00",
+      "ended_at": "2026-09-23T00:51:32.694725+00:00",
+      "elapsed_seconds": 19.734000000054948
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "11c4b36a69b81721883fff0f4310e179402cd6b6cfc6e1506519a3600dc6b56a"
+    },
+    "start_commit": "40665af38a62f2e2f2d138a2e68ec543e570cfbf",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 16885,
+      "output_tokens": 869,
+      "total_tokens": 17754,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "backend_order_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_order_status",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "backend_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_status",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "endpoint_identity_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "separate_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_origin_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex dca7479..c80580a 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -4,4 +4,4 @@ const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\n const order = ref(null); const loading = ref(true); const error = ref(\"\");\n onMounted(async () => { try { const response = await fetch(`${apiBaseUrl}/api/orders/ORD-2048`); if (!response.ok) throw new Error(`HTTP ${response.status}`); order.value = await response.json(); } catch (requestError) { error.value = \"Unable to load order status.\"; console.error(requestError); } finally { loading.value = false; } });\n </script>\n-<template><main class=\"account-shell\"><p class=\"eyebrow\">Northstar Dispatch</p><h1>Order status</h1><section class=\"account-panel\" aria-live=\"polite\"><p v-if=\"loading\" data-testid=\"loading\">Loading order…</p><p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p><dl v-else-if=\"order\" data-testid=\"order-panel\"><div><dt>Order</dt><dd data-testid=\"order-id\">{{ order.id }}</dd></div><div><dt>Customer</dt><dd>{{ order.customer }}</dd></div><div><dt>Status</dt><dd data-testid=\"order-status\">{{ order.status }}</dd></div></dl></section></main></template>\n+<template><main class=\"account-shell\"><p class=\"eyebrow\">Northstar Dispatch</p><h1>Order status</h1><section class=\"account-panel\" aria-live=\"polite\"><p v-if=\"loading\" data-testid=\"loading\">Loading order…</p><p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p><dl v-else-if=\"order\" data-testid=\"order-panel\"><div><dt>Order</dt><dd data-testid=\"order-id\">{{ order.id }}</dd></div><div><dt>Customer</dt><dd>{{ order.customer }}</dd></div><div><dt>Status</dt><dd data-testid=\"order-status\">{{ order.order_status }}</dd></div></dl></section></main></template>\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 88,
+    "run_id": "main-L3-02-devin-r01-a01",
+    "task_id": "L3-02",
+    "system_id": "devin",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-23T00:57:07.443082Z",
+      "ended_at": "2026-09-23T00:57:31.253648Z",
+      "elapsed_seconds": 23.812
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "40665af38a62f2e2f2d138a2e68ec543e570cfbf",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "backend_order_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_order_status",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "backend_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_status",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "endpoint_identity_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "separate_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_origin_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex dca7479..c80580a 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -4,4 +4,4 @@ const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\n const order = ref(null); const loading = ref(true); const error = ref(\"\");\n onMounted(async () => { try { const response = await fetch(`${apiBaseUrl}/api/orders/ORD-2048`); if (!response.ok) throw new Error(`HTTP ${response.status}`); order.value = await response.json(); } catch (requestError) { error.value = \"Unable to load order status.\"; console.error(requestError); } finally { loading.value = false; } });\n </script>\n-<template><main class=\"account-shell\"><p class=\"eyebrow\">Northstar Dispatch</p><h1>Order status</h1><section class=\"account-panel\" aria-live=\"polite\"><p v-if=\"loading\" data-testid=\"loading\">Loading order…</p><p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p><dl v-else-if=\"order\" data-testid=\"order-panel\"><div><dt>Order</dt><dd data-testid=\"order-id\">{{ order.id }}</dd></div><div><dt>Customer</dt><dd>{{ order.customer }}</dd></div><div><dt>Status</dt><dd data-testid=\"order-status\">{{ order.status }}</dd></div></dl></section></main></template>\n+<template><main class=\"account-shell\"><p class=\"eyebrow\">Northstar Dispatch</p><h1>Order status</h1><section class=\"account-panel\" aria-live=\"polite\"><p v-if=\"loading\" data-testid=\"loading\">Loading order…</p><p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p><dl v-else-if=\"order\" data-testid=\"order-panel\"><div><dt>Order</dt><dd data-testid=\"order-id\">{{ order.id }}</dd></div><div><dt>Customer</dt><dd>{{ order.customer }}</dd></div><div><dt>Status</dt><dd data-testid=\"order-status\">{{ order.order_status }}</dd></div></dl></section></main></template>\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 89,
+    "run_id": "main-L3-02-devin-r02-a01",
+    "task_id": "L3-02",
+    "system_id": "devin",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-23T01:02:51.394889Z",
+      "ended_at": "2026-09-23T01:06:36.465679Z",
+      "elapsed_seconds": 225.063
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "40665af38a62f2e2f2d138a2e68ec543e570cfbf",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "backend_order_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_order_status",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "backend_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_status",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "endpoint_identity_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "separate_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_origin_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex dca7479..c80580a 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -4,4 +4,4 @@ const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\n const order = ref(null); const loading = ref(true); const error = ref(\"\");\n onMounted(async () => { try { const response = await fetch(`${apiBaseUrl}/api/orders/ORD-2048`); if (!response.ok) throw new Error(`HTTP ${response.status}`); order.value = await response.json(); } catch (requestError) { error.value = \"Unable to load order status.\"; console.error(requestError); } finally { loading.value = false; } });\n </script>\n-<template><main class=\"account-shell\"><p class=\"eyebrow\">Northstar Dispatch</p><h1>Order status</h1><section class=\"account-panel\" aria-live=\"polite\"><p v-if=\"loading\" data-testid=\"loading\">Loading order…</p><p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p><dl v-else-if=\"order\" data-testid=\"order-panel\"><div><dt>Order</dt><dd data-testid=\"order-id\">{{ order.id }}</dd></div><div><dt>Customer</dt><dd>{{ order.customer }}</dd></div><div><dt>Status</dt><dd data-testid=\"order-status\">{{ order.status }}</dd></div></dl></section></main></template>\n+<template><main class=\"account-shell\"><p class=\"eyebrow\">Northstar Dispatch</p><h1>Order status</h1><section class=\"account-panel\" aria-live=\"polite\"><p v-if=\"loading\" data-testid=\"loading\">Loading order…</p><p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p><dl v-else-if=\"order\" data-testid=\"order-panel\"><div><dt>Order</dt><dd data-testid=\"order-id\">{{ order.id }}</dd></div><div><dt>Customer</dt><dd>{{ order.customer }}</dd></div><div><dt>Status</dt><dd data-testid=\"order-status\">{{ order.order_status }}</dd></div></dl></section></main></template>\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 90,
+    "run_id": "main-L3-02-qwen2-5-coder-7b-instruct-r02-a01",
+    "task_id": "L3-02",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-23T01:15:19.726658+00:00",
+      "ended_at": "2026-09-23T01:15:34.956097+00:00",
+      "elapsed_seconds": 15.23499999998603
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "f3a9e094fb13e4bdfef1eb64aec9aca1b664a927563d4065e1a388a6dd86b94d"
+    },
+    "start_commit": "40665af38a62f2e2f2d138a2e68ec543e570cfbf",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 1,
+        "applicable": 2,
+        "proportion": 0.5
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 5,
+        "proportion": 0.8
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": false,
+      "functional_tests": {
+        "passed": 1,
+        "applicable": 2,
+        "proportion": 0.5
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 5,
+        "proportion": 0.8
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 3319,
+      "output_tokens": 179,
+      "total_tokens": 3498,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "backend_order_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_order_status",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "checks": [
+      {
+        "id": "backend_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_status",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "endpoint_identity_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "separate_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_origin_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 91,
+    "run_id": "main-L3-02-gpt-5-4-r02-a01",
+    "task_id": "L3-02",
+    "system_id": "gpt-5.4",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-23T01:20:51.995381+00:00",
+      "ended_at": "2026-09-23T01:21:09.294497+00:00",
+      "elapsed_seconds": 17.29700000002049
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "2e2191c778547153dbdb216fd329f4f2e3554919545cdf3d745ba3246fb53dc2"
+    },
+    "start_commit": "40665af38a62f2e2f2d138a2e68ec543e570cfbf",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 25415,
+      "output_tokens": 1029,
+      "total_tokens": 26444,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "backend_order_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_order_status",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "backend_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_status",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "endpoint_identity_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "separate_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_origin_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex dca7479..00d72c0 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -1,7 +1,7 @@\n-<script setup>\n-import { onMounted, ref } from \"vue\";\n-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\n-const order = ref(null); const loading = ref(true); const error = ref(\"\");\n-onMounted(async () => { try { const response = await fetch(`${apiBaseUrl}/api/orders/ORD-2048`); if (!response.ok) throw new Error(`HTTP ${response.status}`); order.value = await response.json(); } catch (requestError) { error.value = \"Unable to load order status.\"; console.error(requestError); } finally { loading.value = false; } });\n-</script>\n-<template><main class=\"account-shell\"><p class=\"eyebrow\">Northstar Dispatch</p><h1>Order status</h1><section class=\"account-panel\" aria-live=\"polite\"><p v-if=\"loading\" data-testid=\"loading\">Loading order…</p><p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p><dl v-else-if=\"order\" data-testid=\"order-panel\"><div><dt>Order</dt><dd data-testid=\"order-id\">{{ order.id }}</dd></div><div><dt>Customer</dt><dd>{{ order.customer }}</dd></div><div><dt>Status</dt><dd data-testid=\"order-status\">{{ order.status }}</dd></div></dl></section></main></template>\n+<script setup>\r\n+import { onMounted, ref } from \"vue\";\r\n+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\r\n+const order = ref(null); const loading = ref(true); const error = ref(\"\");\r\n+onMounted(async () => { try { const response = await fetch(`${apiBaseUrl}/api/orders/ORD-2048`); if (!response.ok) throw new Error(`HTTP ${response.status}`); order.value = await response.json(); } catch (requestError) { error.value = \"Unable to load order status.\"; console.error(requestError); } finally { loading.value = false; } });\r\n+</script>\r\n+<template><main class=\"account-shell\"><p class=\"eyebrow\">Northstar Dispatch</p><h1>Order status</h1><section class=\"account-panel\" aria-live=\"polite\"><p v-if=\"loading\" data-testid=\"loading\">Loading order…</p><p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p><dl v-else-if=\"order\" data-testid=\"order-panel\"><div><dt>Order</dt><dd data-testid=\"order-id\">{{ order.id }}</dd></div><div><dt>Customer</dt><dd>{{ order.customer }}</dd></div><div><dt>Status</dt><dd data-testid=\"order-status\">{{ order.order_status }}</dd></div></dl></section></main></template>\r\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 92,
+    "run_id": "main-L3-02-cursor-r02-a01",
+    "task_id": "L3-02",
+    "system_id": "cursor",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-23T01:25:38.136626Z",
+      "ended_at": "2026-09-23T01:26:17.601915Z",
+      "elapsed_seconds": 39.469
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "689abde47e2efd0e73124bd154b69facd5dd16c12b0f173efc4c4c24cb6a5a3f"
+    },
+    "start_commit": "40665af38a62f2e2f2d138a2e68ec543e570cfbf",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "backend_order_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_order_status",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "backend_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_status",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "endpoint_identity_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "separate_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_origin_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex dca7479..c80580a 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -4,4 +4,4 @@ const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\n const order = ref(null); const loading = ref(true); const error = ref(\"\");\n onMounted(async () => { try { const response = await fetch(`${apiBaseUrl}/api/orders/ORD-2048`); if (!response.ok) throw new Error(`HTTP ${response.status}`); order.value = await response.json(); } catch (requestError) { error.value = \"Unable to load order status.\"; console.error(requestError); } finally { loading.value = false; } });\n </script>\n-<template><main class=\"account-shell\"><p class=\"eyebrow\">Northstar Dispatch</p><h1>Order status</h1><section class=\"account-panel\" aria-live=\"polite\"><p v-if=\"loading\" data-testid=\"loading\">Loading order…</p><p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p><dl v-else-if=\"order\" data-testid=\"order-panel\"><div><dt>Order</dt><dd data-testid=\"order-id\">{{ order.id }}</dd></div><div><dt>Customer</dt><dd>{{ order.customer }}</dd></div><div><dt>Status</dt><dd data-testid=\"order-status\">{{ order.status }}</dd></div></dl></section></main></template>\n+<template><main class=\"account-shell\"><p class=\"eyebrow\">Northstar Dispatch</p><h1>Order status</h1><section class=\"account-panel\" aria-live=\"polite\"><p v-if=\"loading\" data-testid=\"loading\">Loading order…</p><p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p><dl v-else-if=\"order\" data-testid=\"order-panel\"><div><dt>Order</dt><dd data-testid=\"order-id\">{{ order.id }}</dd></div><div><dt>Customer</dt><dd>{{ order.customer }}</dd></div><div><dt>Status</dt><dd data-testid=\"order-status\">{{ order.order_status }}</dd></div></dl></section></main></template>\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 93,
+    "run_id": "main-L3-02-qwen2-5-coder-7b-instruct-r03-a01",
+    "task_id": "L3-02",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-23T03:19:23.172840+00:00",
+      "ended_at": "2026-09-23T03:20:12.128225+00:00",
+      "elapsed_seconds": 48.95299999997951
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "6d16a6b95bc275526415bdcfbc1e3b699e5f7c6fe7bbfba3677008368dc3bc2f"
+    },
+    "start_commit": "40665af38a62f2e2f2d138a2e68ec543e570cfbf",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 1,
+        "applicable": 2,
+        "proportion": 0.5
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 5,
+        "proportion": 0.8
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": false,
+      "functional_tests": {
+        "passed": 1,
+        "applicable": 2,
+        "proportion": 0.5
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 5,
+        "proportion": 0.8
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 1018,
+      "output_tokens": 805,
+      "total_tokens": 1823,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "backend_order_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_order_status",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "checks": [
+      {
+        "id": "backend_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_status",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "endpoint_identity_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "separate_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_origin_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 94,
+    "run_id": "main-L3-02-devin-r03-a02",
+    "task_id": "L3-02",
+    "system_id": "devin",
+    "repetition": 3,
+    "attempt": 2,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-23T03:41:06.995617Z",
+      "ended_at": "2026-09-23T03:41:32.253340Z",
+      "elapsed_seconds": 25.265
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "40665af38a62f2e2f2d138a2e68ec543e570cfbf",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "backend_order_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_order_status",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "backend_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_status",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "endpoint_identity_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "separate_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_origin_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex dca7479..c80580a 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -4,4 +4,4 @@ const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\n const order = ref(null); const loading = ref(true); const error = ref(\"\");\n onMounted(async () => { try { const response = await fetch(`${apiBaseUrl}/api/orders/ORD-2048`); if (!response.ok) throw new Error(`HTTP ${response.status}`); order.value = await response.json(); } catch (requestError) { error.value = \"Unable to load order status.\"; console.error(requestError); } finally { loading.value = false; } });\n </script>\n-<template><main class=\"account-shell\"><p class=\"eyebrow\">Northstar Dispatch</p><h1>Order status</h1><section class=\"account-panel\" aria-live=\"polite\"><p v-if=\"loading\" data-testid=\"loading\">Loading order…</p><p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p><dl v-else-if=\"order\" data-testid=\"order-panel\"><div><dt>Order</dt><dd data-testid=\"order-id\">{{ order.id }}</dd></div><div><dt>Customer</dt><dd>{{ order.customer }}</dd></div><div><dt>Status</dt><dd data-testid=\"order-status\">{{ order.status }}</dd></div></dl></section></main></template>\n+<template><main class=\"account-shell\"><p class=\"eyebrow\">Northstar Dispatch</p><h1>Order status</h1><section class=\"account-panel\" aria-live=\"polite\"><p v-if=\"loading\" data-testid=\"loading\">Loading order…</p><p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p><dl v-else-if=\"order\" data-testid=\"order-panel\"><div><dt>Order</dt><dd data-testid=\"order-id\">{{ order.id }}</dd></div><div><dt>Customer</dt><dd>{{ order.customer }}</dd></div><div><dt>Status</dt><dd data-testid=\"order-status\">{{ order.order_status }}</dd></div></dl></section></main></template>\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 95,
+    "run_id": "main-L3-02-gpt-5-4-r03-a01",
+    "task_id": "L3-02",
+    "system_id": "gpt-5.4",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-23T03:35:45.023561+00:00",
+      "ended_at": "2026-09-23T03:36:11.353557+00:00",
+      "elapsed_seconds": 26.32799999997951
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "afae902f3fee875ce09128df692343844b05e544d14fb1ac3c93a34d1f6a92a3"
+    },
+    "start_commit": "40665af38a62f2e2f2d138a2e68ec543e570cfbf",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 13915,
+      "output_tokens": 872,
+      "total_tokens": 14787,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "backend_order_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_order_status",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "backend_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_status",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "endpoint_identity_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "separate_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_origin_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex dca7479..00d72c0 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -1,7 +1,7 @@\n-<script setup>\n-import { onMounted, ref } from \"vue\";\n-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\n-const order = ref(null); const loading = ref(true); const error = ref(\"\");\n-onMounted(async () => { try { const response = await fetch(`${apiBaseUrl}/api/orders/ORD-2048`); if (!response.ok) throw new Error(`HTTP ${response.status}`); order.value = await response.json(); } catch (requestError) { error.value = \"Unable to load order status.\"; console.error(requestError); } finally { loading.value = false; } });\n-</script>\n-<template><main class=\"account-shell\"><p class=\"eyebrow\">Northstar Dispatch</p><h1>Order status</h1><section class=\"account-panel\" aria-live=\"polite\"><p v-if=\"loading\" data-testid=\"loading\">Loading order…</p><p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p><dl v-else-if=\"order\" data-testid=\"order-panel\"><div><dt>Order</dt><dd data-testid=\"order-id\">{{ order.id }}</dd></div><div><dt>Customer</dt><dd>{{ order.customer }}</dd></div><div><dt>Status</dt><dd data-testid=\"order-status\">{{ order.status }}</dd></div></dl></section></main></template>\n+<script setup>\r\n+import { onMounted, ref } from \"vue\";\r\n+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\r\n+const order = ref(null); const loading = ref(true); const error = ref(\"\");\r\n+onMounted(async () => { try { const response = await fetch(`${apiBaseUrl}/api/orders/ORD-2048`); if (!response.ok) throw new Error(`HTTP ${response.status}`); order.value = await response.json(); } catch (requestError) { error.value = \"Unable to load order status.\"; console.error(requestError); } finally { loading.value = false; } });\r\n+</script>\r\n+<template><main class=\"account-shell\"><p class=\"eyebrow\">Northstar Dispatch</p><h1>Order status</h1><section class=\"account-panel\" aria-live=\"polite\"><p v-if=\"loading\" data-testid=\"loading\">Loading order…</p><p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p><dl v-else-if=\"order\" data-testid=\"order-panel\"><div><dt>Order</dt><dd data-testid=\"order-id\">{{ order.id }}</dd></div><div><dt>Customer</dt><dd>{{ order.customer }}</dd></div><div><dt>Status</dt><dd data-testid=\"order-status\">{{ order.order_status }}</dd></div></dl></section></main></template>\r\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 96,
+    "run_id": "main-L3-02-cursor-r03-a01",
+    "task_id": "L3-02",
+    "system_id": "cursor",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-23T03:46:43.945519Z",
+      "ended_at": "2026-09-23T03:47:37.855813Z",
+      "elapsed_seconds": 53.906
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "689abde47e2efd0e73124bd154b69facd5dd16c12b0f173efc4c4c24cb6a5a3f"
+    },
+    "start_commit": "40665af38a62f2e2f2d138a2e68ec543e570cfbf",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 2,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 5,
+        "applicable": 5,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "backend_order_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_order_status",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "backend_contract_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "api_derived_status",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "endpoint_identity_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "separate_services_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_origin_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex dca7479..c80580a 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -4,4 +4,4 @@ const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\n const order = ref(null); const loading = ref(true); const error = ref(\"\");\n onMounted(async () => { try { const response = await fetch(`${apiBaseUrl}/api/orders/ORD-2048`); if (!response.ok) throw new Error(`HTTP ${response.status}`); order.value = await response.json(); } catch (requestError) { error.value = \"Unable to load order status.\"; console.error(requestError); } finally { loading.value = false; } });\n </script>\n-<template><main class=\"account-shell\"><p class=\"eyebrow\">Northstar Dispatch</p><h1>Order status</h1><section class=\"account-panel\" aria-live=\"polite\"><p v-if=\"loading\" data-testid=\"loading\">Loading order…</p><p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p><dl v-else-if=\"order\" data-testid=\"order-panel\"><div><dt>Order</dt><dd data-testid=\"order-id\">{{ order.id }}</dd></div><div><dt>Customer</dt><dd>{{ order.customer }}</dd></div><div><dt>Status</dt><dd data-testid=\"order-status\">{{ order.status }}</dd></div></dl></section></main></template>\n+<template><main class=\"account-shell\"><p class=\"eyebrow\">Northstar Dispatch</p><h1>Order status</h1><section class=\"account-panel\" aria-live=\"polite\"><p v-if=\"loading\" data-testid=\"loading\">Loading order…</p><p v-else-if=\"error\" class=\"error\" data-testid=\"error\">{{ error }}</p><dl v-else-if=\"order\" data-testid=\"order-panel\"><div><dt>Order</dt><dd data-testid=\"order-id\">{{ order.id }}</dd></div><div><dt>Customer</dt><dd>{{ order.customer }}</dd></div><div><dt>Status</dt><dd data-testid=\"order-status\">{{ order.order_status }}</dd></div></dl></section></main></template>\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 97,
+    "run_id": "main-L3-03-devin-r01-a01",
+    "task_id": "L3-03",
+    "system_id": "devin",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-23T04:23:13.366555Z",
+      "ended_at": "2026-09-23T04:24:30.992163Z",
+      "elapsed_seconds": 77.625
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "5283043f9c9f1c6df919ae737e6088e820a633a3",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "current_reset_api",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_route_404",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_reset_network",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "current_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_endpoint_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "form_response_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "direct_backend_request",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "service_ports_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex 7f079b3..7641642 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -2,7 +2,7 @@\n import { ref } from \"vue\";\n \n const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\n-const resetEndpoint = `${apiBaseUrl}/api/v1/auth/password-reset`;\n+const resetEndpoint = `${apiBaseUrl}/api/v2/auth/password-reset`;\n const email = ref(\"\");\n const submitting = ref(false);\n const error = ref(\"\");\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 98,
+    "run_id": "main-L3-03-gpt-5-4-r01-a01",
+    "task_id": "L3-03",
+    "system_id": "gpt-5.4",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-23T04:32:30.045458+00:00",
+      "ended_at": "2026-09-23T04:32:56.258781+00:00",
+      "elapsed_seconds": 26.21799999999348
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "c9f7b2d25746f20155ea729b064d41b171f2196b1ec4c1883ad56fcc45aadaf9"
+    },
+    "start_commit": "5283043f9c9f1c6df919ae737e6088e820a633a3",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 11063,
+      "output_tokens": 612,
+      "total_tokens": 11675,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "current_reset_api",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_route_404",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_reset_network",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "current_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_endpoint_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "form_response_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "direct_backend_request",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "service_ports_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex 7f079b3..6a162b7 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -1,49 +1,49 @@\n-<script setup>\n-import { ref } from \"vue\";\n-\n-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\n-const resetEndpoint = `${apiBaseUrl}/api/v1/auth/password-reset`;\n-const email = ref(\"\");\n-const submitting = ref(false);\n-const error = ref(\"\");\n-const confirmation = ref(\"\");\n-\n-async function submitReset() {\n-  submitting.value = true;\n-  error.value = \"\";\n-  confirmation.value = \"\";\n-  try {\n-    const response = await fetch(resetEndpoint, {\n-      method: \"POST\",\n-      headers: { \"Content-Type\": \"application/json\" },\n-      body: JSON.stringify({ email: email.value }),\n-    });\n-    if (!response.ok) throw new Error(`HTTP ${response.status}`);\n-    const result = await response.json();\n-    confirmation.value = `If an account exists for ${result.email}, reset instructions are on the way.`;\n-  } catch (requestError) {\n-    error.value = \"Unable to submit password reset.\";\n-    console.error(requestError);\n-  } finally {\n-    submitting.value = false;\n-  }\n-}\n-</script>\n-\n-<template>\n-  <main class=\"recovery-shell\">\n-    <p class=\"eyebrow\">Northstar account</p>\n-    <h1>Reset your password</h1>\n-    <p class=\"intro\">Enter the email connected to your account.</p>\n-    <form class=\"recovery-panel\" data-testid=\"reset-form\" @submit.prevent=\"submitReset\">\n-      <label for=\"reset-email\">Email address</label>\n-      <input id=\"reset-email\" v-model=\"email\" data-testid=\"reset-email\" name=\"email\" type=\"email\" required>\n-      <button data-testid=\"reset-submit\" type=\"submit\" :disabled=\"submitting\">\n-        {{ submitting ? \"Sending…\" : \"Send reset instructions\" }}\n-      </button>\n-      <p v-if=\"error\" class=\"error\" data-testid=\"reset-error\" role=\"alert\">{{ error }}</p>\n-      <p v-if=\"confirmation\" class=\"success\" data-testid=\"reset-success\" role=\"status\">{{ confirmation }}</p>\n-    </form>\n-  </main>\n-</template>\n-\n+<script setup>\r\n+import { ref } from \"vue\";\r\n+\r\n+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\r\n+const resetEndpoint = `${apiBaseUrl}/api/v2/auth/password-reset`;\r\n+const email = ref(\"\");\r\n+const submitting = ref(false);\r\n+const error = ref(\"\");\r\n+const confirmation = ref(\"\");\r\n+\r\n+async function submitReset() {\r\n+  submitting.value = true;\r\n+  error.value = \"\";\r\n+  confirmation.value = \"\";\r\n+  try {\r\n+    const response = await fetch(resetEndpoint, {\r\n+      method: \"POST\",\r\n+      headers: { \"Content-Type\": \"application/json\" },\r\n+      body: JSON.stringify({ email: email.value }),\r\n+    });\r\n+    if (!response.ok) throw new Error(`HTTP ${response.status}`);\r\n+    const result = await response.json();\r\n+    confirmation.value = `If an account exists for ${result.email}, reset instructions are on the way.`;\r\n+  } catch (requestError) {\r\n+    error.value = \"Unable to submit password reset.\";\r\n+    console.error(requestError);\r\n+  } finally {\r\n+    submitting.value = false;\r\n+  }\r\n+}\r\n+</script>\r\n+\r\n+<template>\r\n+  <main class=\"recovery-shell\">\r\n+    <p class=\"eyebrow\">Northstar account</p>\r\n+    <h1>Reset your password</h1>\r\n+    <p class=\"intro\">Enter the email connected to your account.</p>\r\n+    <form class=\"recovery-panel\" data-testid=\"reset-form\" @submit.prevent=\"submitReset\">\r\n+      <label for=\"reset-email\">Email address</label>\r\n+      <input id=\"reset-email\" v-model=\"email\" data-testid=\"reset-email\" name=\"email\" type=\"email\" required>\r\n+      <button data-testid=\"reset-submit\" type=\"submit\" :disabled=\"submitting\">\r\n+        {{ submitting ? \"Sending…\" : \"Send reset instructions\" }}\r\n+      </button>\r\n+      <p v-if=\"error\" class=\"error\" data-testid=\"reset-error\" role=\"alert\">{{ error }}</p>\r\n+      <p v-if=\"confirmation\" class=\"success\" data-testid=\"reset-success\" role=\"status\">{{ confirmation }}</p>\r\n+    </form>\r\n+  </main>\r\n+</template>\r\n+\r\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 99,
+    "run_id": "main-L3-03-cursor-r01-a01",
+    "task_id": "L3-03",
+    "system_id": "cursor",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-23T04:37:37.330014Z",
+      "ended_at": "2026-09-23T04:38:19.291598Z",
+      "elapsed_seconds": 41.953
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "689abde47e2efd0e73124bd154b69facd5dd16c12b0f173efc4c4c24cb6a5a3f"
+    },
+    "start_commit": "5283043f9c9f1c6df919ae737e6088e820a633a3",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "current_reset_api",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_route_404",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_reset_network",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "current_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_endpoint_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "form_response_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "direct_backend_request",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "service_ports_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex 7f079b3..7641642 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -2,7 +2,7 @@\n import { ref } from \"vue\";\n \n const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\n-const resetEndpoint = `${apiBaseUrl}/api/v1/auth/password-reset`;\n+const resetEndpoint = `${apiBaseUrl}/api/v2/auth/password-reset`;\n const email = ref(\"\");\n const submitting = ref(false);\n const error = ref(\"\");\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 100,
+    "run_id": "main-L3-03-qwen2-5-coder-7b-instruct-r01-a01",
+    "task_id": "L3-03",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 1,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-23T04:46:39.045011+00:00",
+      "ended_at": "2026-09-23T04:46:53.104730+00:00",
+      "elapsed_seconds": 14.062000000034459
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "802a71dd6baf6b5c129d3fcbda3489fdba7a88843878be8507638884ec433dda"
+    },
+    "start_commit": "5283043f9c9f1c6df919ae737e6088e820a633a3",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 3,
+        "proportion": 0.6666666666666666
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 6,
+        "proportion": 0.6666666666666666
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": false,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 3,
+        "proportion": 0.6666666666666666
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 6,
+        "proportion": 0.6666666666666666
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 3300,
+      "output_tokens": 161,
+      "total_tokens": 3461,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "current_reset_api",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_route_404",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_reset_network",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "checks": [
+      {
+        "id": "current_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_endpoint_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "form_response_contract",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "direct_backend_request",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "service_ports_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 101,
+    "run_id": "main-L3-03-devin-r02-a01",
+    "task_id": "L3-03",
+    "system_id": "devin",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-23T05:01:02.365060Z",
+      "ended_at": "2026-09-23T05:06:17.109842Z",
+      "elapsed_seconds": 314.75
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "5283043f9c9f1c6df919ae737e6088e820a633a3",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "current_reset_api",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_route_404",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_reset_network",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "current_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_endpoint_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "form_response_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "direct_backend_request",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "service_ports_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex 7f079b3..7641642 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -2,7 +2,7 @@\n import { ref } from \"vue\";\n \n const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\n-const resetEndpoint = `${apiBaseUrl}/api/v1/auth/password-reset`;\n+const resetEndpoint = `${apiBaseUrl}/api/v2/auth/password-reset`;\n const email = ref(\"\");\n const submitting = ref(false);\n const error = ref(\"\");\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 102,
+    "run_id": "main-L3-03-gpt-5-4-r02-a01",
+    "task_id": "L3-03",
+    "system_id": "gpt-5.4",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-23T05:10:18.814300+00:00",
+      "ended_at": "2026-09-23T05:10:38.755716+00:00",
+      "elapsed_seconds": 19.936999999918044
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "50b7c06abf557a0d316a8fab31f94344ec9ea8730cf496ee577892e85e26f337"
+    },
+    "start_commit": "5283043f9c9f1c6df919ae737e6088e820a633a3",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 21413,
+      "output_tokens": 622,
+      "total_tokens": 22035,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "current_reset_api",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_route_404",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_reset_network",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "current_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_endpoint_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "form_response_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "direct_backend_request",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "service_ports_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex 7f079b3..6a162b7 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -1,49 +1,49 @@\n-<script setup>\n-import { ref } from \"vue\";\n-\n-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\n-const resetEndpoint = `${apiBaseUrl}/api/v1/auth/password-reset`;\n-const email = ref(\"\");\n-const submitting = ref(false);\n-const error = ref(\"\");\n-const confirmation = ref(\"\");\n-\n-async function submitReset() {\n-  submitting.value = true;\n-  error.value = \"\";\n-  confirmation.value = \"\";\n-  try {\n-    const response = await fetch(resetEndpoint, {\n-      method: \"POST\",\n-      headers: { \"Content-Type\": \"application/json\" },\n-      body: JSON.stringify({ email: email.value }),\n-    });\n-    if (!response.ok) throw new Error(`HTTP ${response.status}`);\n-    const result = await response.json();\n-    confirmation.value = `If an account exists for ${result.email}, reset instructions are on the way.`;\n-  } catch (requestError) {\n-    error.value = \"Unable to submit password reset.\";\n-    console.error(requestError);\n-  } finally {\n-    submitting.value = false;\n-  }\n-}\n-</script>\n-\n-<template>\n-  <main class=\"recovery-shell\">\n-    <p class=\"eyebrow\">Northstar account</p>\n-    <h1>Reset your password</h1>\n-    <p class=\"intro\">Enter the email connected to your account.</p>\n-    <form class=\"recovery-panel\" data-testid=\"reset-form\" @submit.prevent=\"submitReset\">\n-      <label for=\"reset-email\">Email address</label>\n-      <input id=\"reset-email\" v-model=\"email\" data-testid=\"reset-email\" name=\"email\" type=\"email\" required>\n-      <button data-testid=\"reset-submit\" type=\"submit\" :disabled=\"submitting\">\n-        {{ submitting ? \"Sending…\" : \"Send reset instructions\" }}\n-      </button>\n-      <p v-if=\"error\" class=\"error\" data-testid=\"reset-error\" role=\"alert\">{{ error }}</p>\n-      <p v-if=\"confirmation\" class=\"success\" data-testid=\"reset-success\" role=\"status\">{{ confirmation }}</p>\n-    </form>\n-  </main>\n-</template>\n-\n+<script setup>\r\n+import { ref } from \"vue\";\r\n+\r\n+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\r\n+const resetEndpoint = `${apiBaseUrl}/api/v2/auth/password-reset`;\r\n+const email = ref(\"\");\r\n+const submitting = ref(false);\r\n+const error = ref(\"\");\r\n+const confirmation = ref(\"\");\r\n+\r\n+async function submitReset() {\r\n+  submitting.value = true;\r\n+  error.value = \"\";\r\n+  confirmation.value = \"\";\r\n+  try {\r\n+    const response = await fetch(resetEndpoint, {\r\n+      method: \"POST\",\r\n+      headers: { \"Content-Type\": \"application/json\" },\r\n+      body: JSON.stringify({ email: email.value }),\r\n+    });\r\n+    if (!response.ok) throw new Error(`HTTP ${response.status}`);\r\n+    const result = await response.json();\r\n+    confirmation.value = `If an account exists for ${result.email}, reset instructions are on the way.`;\r\n+  } catch (requestError) {\r\n+    error.value = \"Unable to submit password reset.\";\r\n+    console.error(requestError);\r\n+  } finally {\r\n+    submitting.value = false;\r\n+  }\r\n+}\r\n+</script>\r\n+\r\n+<template>\r\n+  <main class=\"recovery-shell\">\r\n+    <p class=\"eyebrow\">Northstar account</p>\r\n+    <h1>Reset your password</h1>\r\n+    <p class=\"intro\">Enter the email connected to your account.</p>\r\n+    <form class=\"recovery-panel\" data-testid=\"reset-form\" @submit.prevent=\"submitReset\">\r\n+      <label for=\"reset-email\">Email address</label>\r\n+      <input id=\"reset-email\" v-model=\"email\" data-testid=\"reset-email\" name=\"email\" type=\"email\" required>\r\n+      <button data-testid=\"reset-submit\" type=\"submit\" :disabled=\"submitting\">\r\n+        {{ submitting ? \"Sending…\" : \"Send reset instructions\" }}\r\n+      </button>\r\n+      <p v-if=\"error\" class=\"error\" data-testid=\"reset-error\" role=\"alert\">{{ error }}</p>\r\n+      <p v-if=\"confirmation\" class=\"success\" data-testid=\"reset-success\" role=\"status\">{{ confirmation }}</p>\r\n+    </form>\r\n+  </main>\r\n+</template>\r\n+\r\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 103,
+    "run_id": "main-L3-03-cursor-r02-a01",
+    "task_id": "L3-03",
+    "system_id": "cursor",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-23T05:14:50.626701Z",
+      "ended_at": "2026-09-23T05:16:02.018708Z",
+      "elapsed_seconds": 71.391
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "689abde47e2efd0e73124bd154b69facd5dd16c12b0f173efc4c4c24cb6a5a3f"
+    },
+    "start_commit": "5283043f9c9f1c6df919ae737e6088e820a633a3",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "current_reset_api",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_route_404",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_reset_network",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "current_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_endpoint_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "form_response_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "direct_backend_request",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "service_ports_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex 7f079b3..7641642 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -2,7 +2,7 @@\n import { ref } from \"vue\";\n \n const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\n-const resetEndpoint = `${apiBaseUrl}/api/v1/auth/password-reset`;\n+const resetEndpoint = `${apiBaseUrl}/api/v2/auth/password-reset`;\n const email = ref(\"\");\n const submitting = ref(false);\n const error = ref(\"\");\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 104,
+    "run_id": "main-L3-03-qwen2-5-coder-7b-instruct-r02-a01",
+    "task_id": "L3-03",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 2,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-23T05:23:04.973920+00:00",
+      "ended_at": "2026-09-23T05:23:19.235854+00:00",
+      "elapsed_seconds": 14.265999999945052
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "c0911929ad976af49c8ceabd84cdfd6d8ec2d0df80bec503efb5361e5ee807eb"
+    },
+    "start_commit": "5283043f9c9f1c6df919ae737e6088e820a633a3",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 3,
+        "proportion": 0.6666666666666666
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 6,
+        "proportion": 0.6666666666666666
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": false,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 3,
+        "proportion": 0.6666666666666666
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 6,
+        "proportion": 0.6666666666666666
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 3300,
+      "output_tokens": 161,
+      "total_tokens": 3461,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "current_reset_api",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_route_404",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_reset_network",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "checks": [
+      {
+        "id": "current_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_endpoint_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "form_response_contract",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "direct_backend_request",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "service_ports_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 105,
+    "run_id": "main-L3-03-cursor-r03-a01",
+    "task_id": "L3-03",
+    "system_id": "cursor",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 1,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-24T01:39:21.804637Z",
+      "ended_at": "2026-09-24T01:40:39.780048Z",
+      "elapsed_seconds": 77.969
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.17.8",
+      "model_identifier": "Composer 2.5 Fast",
+      "configuration_sha256": "689abde47e2efd0e73124bd154b69facd5dd16c12b0f173efc4c4c24cb6a5a3f"
+    },
+    "start_commit": "5283043f9c9f1c6df919ae737e6088e820a633a3",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "current_reset_api",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_route_404",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_reset_network",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "current_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_endpoint_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "form_response_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "direct_backend_request",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "service_ports_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex 7f079b3..7641642 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -2,7 +2,7 @@\n import { ref } from \"vue\";\n \n const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\n-const resetEndpoint = `${apiBaseUrl}/api/v1/auth/password-reset`;\n+const resetEndpoint = `${apiBaseUrl}/api/v2/auth/password-reset`;\n const email = ref(\"\");\n const submitting = ref(false);\n const error = ref(\"\");\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 106,
+    "run_id": "main-L3-03-gpt-5-4-r03-a01",
+    "task_id": "L3-03",
+    "system_id": "gpt-5.4",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 2,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-24T01:45:13.646251+00:00",
+      "ended_at": "2026-09-24T01:45:36.244268+00:00",
+      "elapsed_seconds": 22.593999999924563
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "gpt-5.4-2026-03-05",
+      "configuration_sha256": "26a010c273e07cf5252125359dd57e4488f79dee617f3d7fa04d2f703a18621a"
+    },
+    "start_commit": "5283043f9c9f1c6df919ae737e6088e820a633a3",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 13232,
+      "output_tokens": 643,
+      "total_tokens": 13875,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "current_reset_api",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_route_404",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_reset_network",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "current_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_endpoint_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "form_response_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "direct_backend_request",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "service_ports_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex 7f079b3..6a162b7 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -1,49 +1,49 @@\n-<script setup>\n-import { ref } from \"vue\";\n-\n-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\n-const resetEndpoint = `${apiBaseUrl}/api/v1/auth/password-reset`;\n-const email = ref(\"\");\n-const submitting = ref(false);\n-const error = ref(\"\");\n-const confirmation = ref(\"\");\n-\n-async function submitReset() {\n-  submitting.value = true;\n-  error.value = \"\";\n-  confirmation.value = \"\";\n-  try {\n-    const response = await fetch(resetEndpoint, {\n-      method: \"POST\",\n-      headers: { \"Content-Type\": \"application/json\" },\n-      body: JSON.stringify({ email: email.value }),\n-    });\n-    if (!response.ok) throw new Error(`HTTP ${response.status}`);\n-    const result = await response.json();\n-    confirmation.value = `If an account exists for ${result.email}, reset instructions are on the way.`;\n-  } catch (requestError) {\n-    error.value = \"Unable to submit password reset.\";\n-    console.error(requestError);\n-  } finally {\n-    submitting.value = false;\n-  }\n-}\n-</script>\n-\n-<template>\n-  <main class=\"recovery-shell\">\n-    <p class=\"eyebrow\">Northstar account</p>\n-    <h1>Reset your password</h1>\n-    <p class=\"intro\">Enter the email connected to your account.</p>\n-    <form class=\"recovery-panel\" data-testid=\"reset-form\" @submit.prevent=\"submitReset\">\n-      <label for=\"reset-email\">Email address</label>\n-      <input id=\"reset-email\" v-model=\"email\" data-testid=\"reset-email\" name=\"email\" type=\"email\" required>\n-      <button data-testid=\"reset-submit\" type=\"submit\" :disabled=\"submitting\">\n-        {{ submitting ? \"Sending…\" : \"Send reset instructions\" }}\n-      </button>\n-      <p v-if=\"error\" class=\"error\" data-testid=\"reset-error\" role=\"alert\">{{ error }}</p>\n-      <p v-if=\"confirmation\" class=\"success\" data-testid=\"reset-success\" role=\"status\">{{ confirmation }}</p>\n-    </form>\n-  </main>\n-</template>\n-\n+<script setup>\r\n+import { ref } from \"vue\";\r\n+\r\n+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\r\n+const resetEndpoint = `${apiBaseUrl}/api/v2/auth/password-reset`;\r\n+const email = ref(\"\");\r\n+const submitting = ref(false);\r\n+const error = ref(\"\");\r\n+const confirmation = ref(\"\");\r\n+\r\n+async function submitReset() {\r\n+  submitting.value = true;\r\n+  error.value = \"\";\r\n+  confirmation.value = \"\";\r\n+  try {\r\n+    const response = await fetch(resetEndpoint, {\r\n+      method: \"POST\",\r\n+      headers: { \"Content-Type\": \"application/json\" },\r\n+      body: JSON.stringify({ email: email.value }),\r\n+    });\r\n+    if (!response.ok) throw new Error(`HTTP ${response.status}`);\r\n+    const result = await response.json();\r\n+    confirmation.value = `If an account exists for ${result.email}, reset instructions are on the way.`;\r\n+  } catch (requestError) {\r\n+    error.value = \"Unable to submit password reset.\";\r\n+    console.error(requestError);\r\n+  } finally {\r\n+    submitting.value = false;\r\n+  }\r\n+}\r\n+</script>\r\n+\r\n+<template>\r\n+  <main class=\"recovery-shell\">\r\n+    <p class=\"eyebrow\">Northstar account</p>\r\n+    <h1>Reset your password</h1>\r\n+    <p class=\"intro\">Enter the email connected to your account.</p>\r\n+    <form class=\"recovery-panel\" data-testid=\"reset-form\" @submit.prevent=\"submitReset\">\r\n+      <label for=\"reset-email\">Email address</label>\r\n+      <input id=\"reset-email\" v-model=\"email\" data-testid=\"reset-email\" name=\"email\" type=\"email\" required>\r\n+      <button data-testid=\"reset-submit\" type=\"submit\" :disabled=\"submitting\">\r\n+        {{ submitting ? \"Sending…\" : \"Send reset instructions\" }}\r\n+      </button>\r\n+      <p v-if=\"error\" class=\"error\" data-testid=\"reset-error\" role=\"alert\">{{ error }}</p>\r\n+      <p v-if=\"confirmation\" class=\"success\" data-testid=\"reset-success\" role=\"status\">{{ confirmation }}</p>\r\n+    </form>\r\n+  </main>\r\n+</template>\r\n+\r\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 107,
+    "run_id": "main-L3-03-devin-r03-a01",
+    "task_id": "L3-03",
+    "system_id": "devin",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 3,
+    "validity_status": "valid",
+    "lifecycle_state": "successful",
+    "stop_reason": "submitted",
+    "timing": {
+      "started_at": "2026-09-24T01:50:11.580405Z",
+      "ended_at": "2026-09-24T02:00:25.956046Z",
+      "elapsed_seconds": 614.375
+    },
+    "system": {
+      "evaluation_interface": "native_ide",
+      "product_version": "3.7.25",
+      "model_identifier": "SWE-1.6 Slow",
+      "configuration_sha256": "717e9f3d4357f9501c151d0a9c24118da1734cfa4b68b0f78bd20036a8f89319"
+    },
+    "start_commit": "5283043f9c9f1c6df919ae737e6088e820a633a3",
+    "results": {
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": true,
+      "functional_tests": {
+        "passed": 3,
+        "applicable": 3,
+        "proportion": 1.0
+      },
+      "architecture_checks": {
+        "passed": 6,
+        "applicable": 6,
+        "proportion": 1.0
+      },
+      "robustness_eligible": true,
+      "autonomous_success": true
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "unavailable",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "current_reset_api",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_route_404",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_reset_network",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "checks": [
+      {
+        "id": "current_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_endpoint_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "form_response_contract",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "direct_backend_request",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "service_ports_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "diff --git a/frontend/src/App.vue b/frontend/src/App.vue\nindex 7f079b3..7641642 100644\n--- a/frontend/src/App.vue\n+++ b/frontend/src/App.vue\n@@ -2,7 +2,7 @@\n import { ref } from \"vue\";\n \n const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || \"http://127.0.0.1:8000\";\n-const resetEndpoint = `${apiBaseUrl}/api/v1/auth/password-reset`;\n+const resetEndpoint = `${apiBaseUrl}/api/v2/auth/password-reset`;\n const email = ref(\"\");\n const submitting = ref(false);\n const error = ref(\"\");\n",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  },
+  {
+    "global_position": 108,
+    "run_id": "main-L3-03-qwen2-5-coder-7b-instruct-r03-a01",
+    "task_id": "L3-03",
+    "system_id": "qwen2.5-coder-7b-instruct",
+    "repetition": 3,
+    "attempt": 1,
+    "order_position": 4,
+    "validity_status": "valid",
+    "lifecycle_state": "unsuccessful",
+    "stop_reason": "protocol_no_progress_limit",
+    "timing": {
+      "started_at": "2026-09-24T02:07:31.255965+00:00",
+      "ended_at": "2026-09-24T02:07:45.451193+00:00",
+      "elapsed_seconds": 14.188000000081956
+    },
+    "system": {
+      "evaluation_interface": "api_wrapper",
+      "product_version": null,
+      "model_identifier": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "configuration_sha256": "00c75c91479ab1b217295101e09963fa5abd444436b45d03b837ba7a89715f2f"
+    },
+    "start_commit": "5283043f9c9f1c6df919ae737e6088e820a633a3",
+    "results": {
+      "success": false,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 3,
+        "proportion": 0.6666666666666666
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 6,
+        "proportion": 0.6666666666666666
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "reviewed_results": {
+      "version": "public-contract-audit/2026-09-26",
+      "success": false,
+      "functional_tests": {
+        "passed": 2,
+        "applicable": 3,
+        "proportion": 0.6666666666666666
+      },
+      "architecture_checks": {
+        "passed": 4,
+        "applicable": 6,
+        "proportion": 0.6666666666666666
+      },
+      "robustness_eligible": true,
+      "autonomous_success": false
+    },
+    "clarification": {
+      "opportunity": false,
+      "requests": 0,
+      "authorized_requests": 0,
+      "responses": 0
+    },
+    "usage": {
+      "status": "available",
+      "input_tokens": 3300,
+      "output_tokens": 161,
+      "total_tokens": 3461,
+      "monetary_cost": null,
+      "currency": null
+    },
+    "tests": [
+      {
+        "id": "current_reset_api",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_route_404",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "browser_reset_network",
+        "applicable": true,
+        "passed": false
+      }
+    ],
+    "checks": [
+      {
+        "id": "current_endpoint_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "retired_endpoint_absent",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "form_response_contract",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "direct_backend_request",
+        "applicable": true,
+        "passed": false
+      },
+      {
+        "id": "service_ports_preserved",
+        "applicable": true,
+        "passed": true
+      },
+      {
+        "id": "cors_boundary_preserved",
+        "applicable": true,
+        "passed": true
+      }
+    ],
+    "final_diff": "",
+    "final_diff_export": {
+      "omitted_prefixes": [],
+      "omitted_file_sections": 0,
+      "retained_line_endings": true,
+      "original_archive_modified": false
+    }
+  }
+]
