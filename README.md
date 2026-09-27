@@ -46,6 +46,10 @@ L3 includes 36 selected observations and 38 retained attempts. Original and revi
 
 L4 includes 36 selected observations and 38 retained attempts. Original and reviewed scoring are explicitly separated. See the [L4 summary, checks, final code diffs, and replacement provenance](data/L4/README.md).
 
+## Analysis-ready data
+
+The [unified 144-row dataset](data/main/README.md) combines all four tiers with separate original/reviewed scores, timing and recorded behavior fields. Run `python analysis/build_dataset.py --check` to verify the published outputs. This is data preparation only; no comparative statistical analysis or thesis figures are included.
+
 ## Start here
 
 - **Understand the study:** [experimental protocol](docs/protocol.md) and [analysis plan](benchmark/config/analysis_plan.main.json).
@@ -67,6 +71,8 @@ data/L1/       L1 main results, check-level evidence, code diffs, attempt index
 data/L2/       L2 original results, check-level evidence, code diffs, attempt index
 data/L3/       L3 original/reviewed results, timing, curated diffs, attempt index
 data/L4/       L4 original/reviewed results, timing, final diffs, attempt index
+data/main/     Unified 144-row analysis dataset, field guide, validation summary
+analysis/      Standard-library dataset builder and validation tests
 data/evaluation-review/  144 paired scores, diagnostic evidence, review reproduction
 data/pilot/    Selected pilot observations, attempt index, descriptive summary
 docs/          Short guides to the study, tasks, pilot, and reproduction
