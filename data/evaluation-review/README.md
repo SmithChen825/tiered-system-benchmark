@@ -39,7 +39,7 @@ Use **disposable copies** of submitted repositories. Storage and status probes w
 
 The L4-02 evidence was collected on 25 September in the task's PostgreSQL environment. `probe_status.py runtime` requires that running task environment and its `DATABASE_URL`. Its historical `schema` mode is retained for provenance only: **request-model defaults and validation are not independent scoring gates in this review**. The exported status evidence contains case outcomes and HTTP statuses, not the complete per-case database row archive.
 
-The later [L3 detailed export](../L3/README.md) adds selected metadata, timing, available usage, original checks and curated code diffs. Full L3/L4 submission snapshots, raw transcripts, sealed runtime logs, billing and operational records are not included. The probe source documents how evidence was obtained; regenerating it requires the retained submission archive. No credentials or model account are required for the offline score mapping.
+The later [L3 detailed export](../L3/README.md) and [L4 detailed export](../L4/README.md) add selected metadata, timing, available usage, original checks and code diffs, with L3's stated dependency-file omission. Full L3/L4 submission snapshots, raw transcripts, sealed runtime logs, billing and operational records are not included. The probe source documents how evidence was obtained; regenerating it requires the retained submission archive. No credentials or model account are required for the offline score mapping.
 
 ## Use in analysis
 

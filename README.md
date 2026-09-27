@@ -4,7 +4,7 @@
 
 TSB is the research software for *Benchmarking Agentic Code Generation Tools*, a University of Melbourne thesis by Wenrui Chen, supervised by Prof. Richard Sinnott.
 
-Main collection is complete: **144 selected valid observations**, including valid unsuccessful outcomes. This branch retains the detailed [L1 results](data/L1/README.md), [L2 results](data/L2/README.md), and [L3 results](data/L3/README.md), and adds a [uniform evaluator review](docs/evaluation-review.md) with original/reviewed scores for all 144 slots and an offline reproduction script. The L3 addition includes 36 selected records and all 38 attempts with timing, checks and curated code diffs. Detailed L4 records, full runtime archives and final comparative analysis remain outside this release.
+Main collection is complete: **144 selected valid observations**, including valid unsuccessful outcomes. This branch retains the detailed [L1 results](data/L1/README.md), [L2 results](data/L2/README.md), [L3 results](data/L3/README.md), and [L4 results](data/L4/README.md), and adds a [uniform evaluator review](docs/evaluation-review.md) with original/reviewed scores for all 144 slots and an offline reproduction script. The L3 addition includes 36 selected records and all 38 attempts with timing, checks and curated code diffs. The L4 addition likewise includes 36 selected records and 38 attempts. Full runtime archives and final comparative analysis remain outside this release.
 
 ## At a glance
 
@@ -42,6 +42,10 @@ L2 includes 36 selected observations and 38 retained attempts. See the [L2 summa
 
 L3 includes 36 selected observations and 38 retained attempts. Original and reviewed scoring are explicitly separated. See the [L3 summary, check results, code diffs, and exclusions](data/L3/README.md).
 
+## L4 results
+
+L4 includes 36 selected observations and 38 retained attempts. Original and reviewed scoring are explicitly separated. See the [L4 summary, checks, final code diffs, and replacement provenance](data/L4/README.md).
+
 ## Start here
 
 - **Understand the study:** [experimental protocol](docs/protocol.md) and [analysis plan](benchmark/config/analysis_plan.main.json).
@@ -62,6 +66,7 @@ benchmark/
 data/L1/       L1 main results, check-level evidence, code diffs, attempt index
 data/L2/       L2 original results, check-level evidence, code diffs, attempt index
 data/L3/       L3 original/reviewed results, timing, curated diffs, attempt index
+data/L4/       L4 original/reviewed results, timing, final diffs, attempt index
 data/evaluation-review/  144 paired scores, diagnostic evidence, review reproduction
 data/pilot/    Selected pilot observations, attempt index, descriptive summary
 docs/          Short guides to the study, tasks, pilot, and reproduction
@@ -82,6 +87,6 @@ The first command checks all 12 deterministic starting commits. The second exerc
 
 The pilot validated execution, resets, evidence capture, and operational limits. All 16 selected records passed the common evidence validator; the eight selected native-IDE records also passed native validation. The pilot led to increasing the common API action limit from 15 to 30 before the main experiment.
 
-Pilot outcomes are **descriptive process evidence**, excluded from the main dataset and unsuitable for system rankings. The score-level review is now available for all 144 selected slots. The next data release will add detailed L4 records, comparative analysis outputs, and final figures.
+Pilot outcomes are **descriptive process evidence**, excluded from the main dataset and unsuitable for system rankings. The score-level review is now available for all 144 selected slots. Detailed selected-run records are now available for all four tiers. Comparative analysis outputs and final figures remain pending.
 
 Keep evaluated agents inside their assigned `workspaces/<run_id>/repo` directory. The full repository contains evaluator-only tests and oracle repairs that must remain outside the evaluated agent's information boundary.
