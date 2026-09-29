@@ -1,0 +1,22 @@
+{
+  "source_commit": "43c29bc4e01bdb2898c3c36e70bc1668872d1255",
+  "dataset_sha256": "b24c3c126dcbe707307ea9bfe1e9e937b754e75ec2955cbfc9d0030e9016dfaa",
+  "script_sha256": "9f122350e57ed0a378b71be37782892e2967476c0b6a1981157ec5e404b3b558",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "quantiles": "NumPy linear",
+  "review_version": "public-contract-audit/2026-09-26",
+  "scope": "Descriptive secondary outcomes and scoring sensitivity, not failure-cause coding.",
+  "success_transitions": 10,
+  "diagnostic_transitions": 17,
+  "invariants": {
+    "all_valid_elapsed_unchanged": true,
+    "clarification_inputs": "Single shared set of recorded request/response fields; no scoring-version transformation"
+  },
+  "notes": [
+    "Same 144 run IDs and elapsed times under both scoring versions; successful-only populations may change.",
+    "Request precision is null if no requests; successful-only timing is null if no successes.",
+    "Diagnostic summaries weight runs equally; no pooled check denominator or weighted total score.",
+    "Robustness is successful without evaluator clarification response, not proof of recovery from every fault."
+  ]
+}

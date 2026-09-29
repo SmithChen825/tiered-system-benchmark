@@ -1,0 +1,1135 @@
+{
+  "scoring_version": "public-contract-audit/2026-09-26",
+  "coding_date": "2026-09-29",
+  "interpretation": "Post-collection evidence coding; compact extracts are derived from retained original logs, not independent new executions. Public sources contain selected checks and diffs. Full archived interactions are not included.",
+  "runs": [
+    {
+      "run_id": "main-L1-01-qwen2-5-coder-7b-instruct-r01-a01",
+      "published_sources": [
+        "data/L1/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L1-01-qwen2-5-coder-7b-instruct-r01-a01/metadata.json",
+        "runs/main-L1-01-qwen2-5-coder-7b-instruct-r01-a01/final.diff",
+        "runs/main-L1-01-qwen2-5-coder-7b-instruct-r01-a01/hidden_test_results.json",
+        "runs/main-L1-01-qwen2-5-coder-7b-instruct-r01-a01/transcript.txt",
+        "runs/main-L1-01-qwen2-5-coder-7b-instruct-r01-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 1; accepted tool actions: 1.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 1,
+        "missing_path_error_count": 1,
+        "missing_path_messages": [
+          "Path does not exist: index.html"
+        ],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L1-01-qwen2-5-coder-7b-instruct-r02-a01",
+      "published_sources": [
+        "data/L1/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L1-01-qwen2-5-coder-7b-instruct-r02-a01/metadata.json",
+        "runs/main-L1-01-qwen2-5-coder-7b-instruct-r02-a01/final.diff",
+        "runs/main-L1-01-qwen2-5-coder-7b-instruct-r02-a01/hidden_test_results.json",
+        "runs/main-L1-01-qwen2-5-coder-7b-instruct-r02-a01/transcript.txt",
+        "runs/main-L1-01-qwen2-5-coder-7b-instruct-r02-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 1; accepted tool actions: 1.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 1,
+        "missing_path_error_count": 1,
+        "missing_path_messages": [
+          "Path does not exist: index.html"
+        ],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L1-01-qwen2-5-coder-7b-instruct-r03-a01",
+      "published_sources": [
+        "data/L1/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L1-01-qwen2-5-coder-7b-instruct-r03-a01/metadata.json",
+        "runs/main-L1-01-qwen2-5-coder-7b-instruct-r03-a01/final.diff",
+        "runs/main-L1-01-qwen2-5-coder-7b-instruct-r03-a01/hidden_test_results.json",
+        "runs/main-L1-01-qwen2-5-coder-7b-instruct-r03-a01/transcript.txt",
+        "runs/main-L1-01-qwen2-5-coder-7b-instruct-r03-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 1; accepted tool actions: 1.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 1,
+        "missing_path_error_count": 1,
+        "missing_path_messages": [
+          "Path does not exist: index.html"
+        ],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L1-02-qwen2-5-coder-7b-instruct-r01-a01",
+      "published_sources": [
+        "data/L1/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L1-02-qwen2-5-coder-7b-instruct-r01-a01/metadata.json",
+        "runs/main-L1-02-qwen2-5-coder-7b-instruct-r01-a01/final.diff",
+        "runs/main-L1-02-qwen2-5-coder-7b-instruct-r01-a01/hidden_test_results.json",
+        "runs/main-L1-02-qwen2-5-coder-7b-instruct-r01-a01/transcript.txt",
+        "runs/main-L1-02-qwen2-5-coder-7b-instruct-r01-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 0; accepted tool actions: 0.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 0,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L1-02-qwen2-5-coder-7b-instruct-r02-a01",
+      "published_sources": [
+        "data/L1/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L1-02-qwen2-5-coder-7b-instruct-r02-a01/metadata.json",
+        "runs/main-L1-02-qwen2-5-coder-7b-instruct-r02-a01/final.diff",
+        "runs/main-L1-02-qwen2-5-coder-7b-instruct-r02-a01/hidden_test_results.json",
+        "runs/main-L1-02-qwen2-5-coder-7b-instruct-r02-a01/transcript.txt",
+        "runs/main-L1-02-qwen2-5-coder-7b-instruct-r02-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 0; accepted tool actions: 0.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 0,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L1-02-qwen2-5-coder-7b-instruct-r03-a01",
+      "published_sources": [
+        "data/L1/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L1-02-qwen2-5-coder-7b-instruct-r03-a01/metadata.json",
+        "runs/main-L1-02-qwen2-5-coder-7b-instruct-r03-a01/final.diff",
+        "runs/main-L1-02-qwen2-5-coder-7b-instruct-r03-a01/hidden_test_results.json",
+        "runs/main-L1-02-qwen2-5-coder-7b-instruct-r03-a01/transcript.txt",
+        "runs/main-L1-02-qwen2-5-coder-7b-instruct-r03-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 0; accepted tool actions: 0.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 0,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L1-03-qwen2-5-coder-7b-instruct-r01-a01",
+      "published_sources": [
+        "data/L1/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L1-03-qwen2-5-coder-7b-instruct-r01-a01/metadata.json",
+        "runs/main-L1-03-qwen2-5-coder-7b-instruct-r01-a01/final.diff",
+        "runs/main-L1-03-qwen2-5-coder-7b-instruct-r01-a01/hidden_test_results.json",
+        "runs/main-L1-03-qwen2-5-coder-7b-instruct-r01-a01/transcript.txt",
+        "runs/main-L1-03-qwen2-5-coder-7b-instruct-r01-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 1; accepted tool actions: 1.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 1,
+        "missing_path_error_count": 1,
+        "missing_path_messages": [
+          "Path does not exist: index.html"
+        ],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L1-03-qwen2-5-coder-7b-instruct-r02-a01",
+      "published_sources": [
+        "data/L1/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L1-03-qwen2-5-coder-7b-instruct-r02-a01/metadata.json",
+        "runs/main-L1-03-qwen2-5-coder-7b-instruct-r02-a01/final.diff",
+        "runs/main-L1-03-qwen2-5-coder-7b-instruct-r02-a01/hidden_test_results.json",
+        "runs/main-L1-03-qwen2-5-coder-7b-instruct-r02-a01/transcript.txt",
+        "runs/main-L1-03-qwen2-5-coder-7b-instruct-r02-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 1; accepted tool actions: 1.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 1,
+        "missing_path_error_count": 1,
+        "missing_path_messages": [
+          "Path does not exist: index.html"
+        ],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L1-03-qwen2-5-coder-7b-instruct-r03-a01",
+      "published_sources": [
+        "data/L1/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L1-03-qwen2-5-coder-7b-instruct-r03-a01/metadata.json",
+        "runs/main-L1-03-qwen2-5-coder-7b-instruct-r03-a01/final.diff",
+        "runs/main-L1-03-qwen2-5-coder-7b-instruct-r03-a01/hidden_test_results.json",
+        "runs/main-L1-03-qwen2-5-coder-7b-instruct-r03-a01/transcript.txt",
+        "runs/main-L1-03-qwen2-5-coder-7b-instruct-r03-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 1; accepted tool actions: 1.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 1,
+        "missing_path_error_count": 1,
+        "missing_path_messages": [
+          "Path does not exist: index.html"
+        ],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L2-01-qwen2-5-coder-7b-instruct-r01-a01",
+      "published_sources": [
+        "data/L2/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L2-01-qwen2-5-coder-7b-instruct-r01-a01/metadata.json",
+        "runs/main-L2-01-qwen2-5-coder-7b-instruct-r01-a01/final.diff",
+        "runs/main-L2-01-qwen2-5-coder-7b-instruct-r01-a01/hidden_test_results.json",
+        "runs/main-L2-01-qwen2-5-coder-7b-instruct-r01-a01/transcript.txt",
+        "runs/main-L2-01-qwen2-5-coder-7b-instruct-r01-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 0; accepted tool actions: 0.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 0,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L2-01-qwen2-5-coder-7b-instruct-r02-a01",
+      "published_sources": [
+        "data/L2/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L2-01-qwen2-5-coder-7b-instruct-r02-a01/metadata.json",
+        "runs/main-L2-01-qwen2-5-coder-7b-instruct-r02-a01/final.diff",
+        "runs/main-L2-01-qwen2-5-coder-7b-instruct-r02-a01/hidden_test_results.json",
+        "runs/main-L2-01-qwen2-5-coder-7b-instruct-r02-a01/transcript.txt",
+        "runs/main-L2-01-qwen2-5-coder-7b-instruct-r02-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 0; accepted tool actions: 0.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 0,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L2-01-qwen2-5-coder-7b-instruct-r03-a01",
+      "published_sources": [
+        "data/L2/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L2-01-qwen2-5-coder-7b-instruct-r03-a01/metadata.json",
+        "runs/main-L2-01-qwen2-5-coder-7b-instruct-r03-a01/final.diff",
+        "runs/main-L2-01-qwen2-5-coder-7b-instruct-r03-a01/hidden_test_results.json",
+        "runs/main-L2-01-qwen2-5-coder-7b-instruct-r03-a01/transcript.txt",
+        "runs/main-L2-01-qwen2-5-coder-7b-instruct-r03-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 0; accepted tool actions: 0.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 0,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L2-02-qwen2-5-coder-7b-instruct-r01-a01",
+      "published_sources": [
+        "data/L2/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L2-02-qwen2-5-coder-7b-instruct-r01-a01/metadata.json",
+        "runs/main-L2-02-qwen2-5-coder-7b-instruct-r01-a01/final.diff",
+        "runs/main-L2-02-qwen2-5-coder-7b-instruct-r01-a01/hidden_test_results.json",
+        "runs/main-L2-02-qwen2-5-coder-7b-instruct-r01-a01/transcript.txt",
+        "runs/main-L2-02-qwen2-5-coder-7b-instruct-r01-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 2; accepted tool actions: 2.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 2,
+        "missing_path_error_count": 2,
+        "missing_path_messages": [
+          "Path does not exist: forms.py",
+          "Path does not exist: task_creation_form.py"
+        ],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L2-02-qwen2-5-coder-7b-instruct-r02-a01",
+      "published_sources": [
+        "data/L2/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L2-02-qwen2-5-coder-7b-instruct-r02-a01/metadata.json",
+        "runs/main-L2-02-qwen2-5-coder-7b-instruct-r02-a01/final.diff",
+        "runs/main-L2-02-qwen2-5-coder-7b-instruct-r02-a01/hidden_test_results.json",
+        "runs/main-L2-02-qwen2-5-coder-7b-instruct-r02-a01/transcript.txt",
+        "runs/main-L2-02-qwen2-5-coder-7b-instruct-r02-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 2; accepted tool actions: 2.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 2,
+        "missing_path_error_count": 2,
+        "missing_path_messages": [
+          "Path does not exist: forms.py",
+          "Path does not exist: task_creation_form.py"
+        ],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L2-02-qwen2-5-coder-7b-instruct-r03-a01",
+      "published_sources": [
+        "data/L2/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L2-02-qwen2-5-coder-7b-instruct-r03-a01/metadata.json",
+        "runs/main-L2-02-qwen2-5-coder-7b-instruct-r03-a01/final.diff",
+        "runs/main-L2-02-qwen2-5-coder-7b-instruct-r03-a01/hidden_test_results.json",
+        "runs/main-L2-02-qwen2-5-coder-7b-instruct-r03-a01/transcript.txt",
+        "runs/main-L2-02-qwen2-5-coder-7b-instruct-r03-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 1; accepted tool actions: 1.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 1,
+        "missing_path_error_count": 1,
+        "missing_path_messages": [
+          "Path does not exist: logs.txt"
+        ],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L2-03-gpt-5-4-r01-a01",
+      "published_sources": [
+        "data/L2/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L2-03-gpt-5-4-r01-a01/metadata.json",
+        "runs/main-L2-03-gpt-5-4-r01-a01/final.diff",
+        "runs/main-L2-03-gpt-5-4-r01-a01/hidden_test_results.json",
+        "artifacts/evaluation-audit-20260926/l203_cwd_diagnostic.json"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "Storage path remained relative to the request working directory; reviewed persistence probe fails.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 19,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": true,
+        "no_action_limit_recorded": false,
+        "final_diff_empty": false,
+        "failed_validation_messages": [
+          "bash: line 1: pytest: command not found"
+        ]
+      }
+    },
+    {
+      "run_id": "main-L2-03-qwen2-5-coder-7b-instruct-r01-a01",
+      "published_sources": [
+        "data/L2/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L2-03-qwen2-5-coder-7b-instruct-r01-a01/metadata.json",
+        "runs/main-L2-03-qwen2-5-coder-7b-instruct-r01-a01/final.diff",
+        "runs/main-L2-03-qwen2-5-coder-7b-instruct-r01-a01/hidden_test_results.json",
+        "runs/main-L2-03-qwen2-5-coder-7b-instruct-r01-a01/transcript.txt",
+        "runs/main-L2-03-qwen2-5-coder-7b-instruct-r01-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 0; accepted tool actions: 0.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 0,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L2-03-devin-r02-a01",
+      "published_sources": [
+        "data/L2/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "Native final-state evidence; trajectory unavailable",
+      "retained_archive_references": [
+        "runs/main-L2-03-devin-r02-a01/metadata.json",
+        "runs/main-L2-03-devin-r02-a01/final.diff",
+        "runs/main-L2-03-devin-r02-a01/hidden_test_results.json",
+        "artifacts/evaluation-audit-20260926/l203_cwd_diagnostic.json"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "Only Dockerfile environment changed; application-level authoritative-storage and restart checks fail. Native interaction sequence unavailable."
+    },
+    {
+      "run_id": "main-L2-03-qwen2-5-coder-7b-instruct-r02-a01",
+      "published_sources": [
+        "data/L2/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L2-03-qwen2-5-coder-7b-instruct-r02-a01/metadata.json",
+        "runs/main-L2-03-qwen2-5-coder-7b-instruct-r02-a01/final.diff",
+        "runs/main-L2-03-qwen2-5-coder-7b-instruct-r02-a01/hidden_test_results.json",
+        "runs/main-L2-03-qwen2-5-coder-7b-instruct-r02-a01/transcript.txt",
+        "runs/main-L2-03-qwen2-5-coder-7b-instruct-r02-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 0; accepted tool actions: 0.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 0,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L2-03-qwen2-5-coder-7b-instruct-r03-a01",
+      "published_sources": [
+        "data/L2/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L2-03-qwen2-5-coder-7b-instruct-r03-a01/metadata.json",
+        "runs/main-L2-03-qwen2-5-coder-7b-instruct-r03-a01/final.diff",
+        "runs/main-L2-03-qwen2-5-coder-7b-instruct-r03-a01/hidden_test_results.json",
+        "runs/main-L2-03-qwen2-5-coder-7b-instruct-r03-a01/transcript.txt",
+        "runs/main-L2-03-qwen2-5-coder-7b-instruct-r03-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 0; accepted tool actions: 0.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 0,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L2-03-devin-r03-a01",
+      "published_sources": [
+        "data/L2/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "Native final-state evidence; trajectory unavailable",
+      "retained_archive_references": [
+        "runs/main-L2-03-devin-r03-a01/metadata.json",
+        "runs/main-L2-03-devin-r03-a01/final.diff",
+        "runs/main-L2-03-devin-r03-a01/hidden_test_results.json"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "Import changed from replacement to merging; returned note_count=4 instead of 2 and old records remain. Native interaction sequence unavailable."
+    },
+    {
+      "run_id": "main-L3-01-qwen2-5-coder-7b-instruct-r01-a01",
+      "published_sources": [
+        "data/L3/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L3-01-qwen2-5-coder-7b-instruct-r01-a01/metadata.json",
+        "runs/main-L3-01-qwen2-5-coder-7b-instruct-r01-a01/final.diff",
+        "runs/main-L3-01-qwen2-5-coder-7b-instruct-r01-a01/hidden_test_results.json",
+        "runs/main-L3-01-qwen2-5-coder-7b-instruct-r01-a01/transcript.txt",
+        "runs/main-L3-01-qwen2-5-coder-7b-instruct-r01-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 0; accepted tool actions: 0.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 0,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L3-01-qwen2-5-coder-7b-instruct-r02-a01",
+      "published_sources": [
+        "data/L3/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L3-01-qwen2-5-coder-7b-instruct-r02-a01/metadata.json",
+        "runs/main-L3-01-qwen2-5-coder-7b-instruct-r02-a01/final.diff",
+        "runs/main-L3-01-qwen2-5-coder-7b-instruct-r02-a01/hidden_test_results.json",
+        "runs/main-L3-01-qwen2-5-coder-7b-instruct-r02-a01/transcript.txt",
+        "runs/main-L3-01-qwen2-5-coder-7b-instruct-r02-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 0; accepted tool actions: 0.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 0,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L3-01-qwen2-5-coder-7b-instruct-r03-a01",
+      "published_sources": [
+        "data/L3/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L3-01-qwen2-5-coder-7b-instruct-r03-a01/metadata.json",
+        "runs/main-L3-01-qwen2-5-coder-7b-instruct-r03-a01/final.diff",
+        "runs/main-L3-01-qwen2-5-coder-7b-instruct-r03-a01/hidden_test_results.json",
+        "runs/main-L3-01-qwen2-5-coder-7b-instruct-r03-a01/transcript.txt",
+        "runs/main-L3-01-qwen2-5-coder-7b-instruct-r03-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 0; accepted tool actions: 0.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 0,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L3-02-qwen2-5-coder-7b-instruct-r01-a01",
+      "published_sources": [
+        "data/L3/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L3-02-qwen2-5-coder-7b-instruct-r01-a01/metadata.json",
+        "runs/main-L3-02-qwen2-5-coder-7b-instruct-r01-a01/final.diff",
+        "runs/main-L3-02-qwen2-5-coder-7b-instruct-r01-a01/hidden_test_results.json",
+        "runs/main-L3-02-qwen2-5-coder-7b-instruct-r01-a01/transcript.txt",
+        "runs/main-L3-02-qwen2-5-coder-7b-instruct-r01-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 0; accepted tool actions: 0.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 0,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L3-02-qwen2-5-coder-7b-instruct-r02-a01",
+      "published_sources": [
+        "data/L3/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L3-02-qwen2-5-coder-7b-instruct-r02-a01/metadata.json",
+        "runs/main-L3-02-qwen2-5-coder-7b-instruct-r02-a01/final.diff",
+        "runs/main-L3-02-qwen2-5-coder-7b-instruct-r02-a01/hidden_test_results.json",
+        "runs/main-L3-02-qwen2-5-coder-7b-instruct-r02-a01/transcript.txt",
+        "runs/main-L3-02-qwen2-5-coder-7b-instruct-r02-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 0; accepted tool actions: 0.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 0,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L3-02-qwen2-5-coder-7b-instruct-r03-a01",
+      "published_sources": [
+        "data/L3/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L3-02-qwen2-5-coder-7b-instruct-r03-a01/metadata.json",
+        "runs/main-L3-02-qwen2-5-coder-7b-instruct-r03-a01/final.diff",
+        "runs/main-L3-02-qwen2-5-coder-7b-instruct-r03-a01/hidden_test_results.json",
+        "runs/main-L3-02-qwen2-5-coder-7b-instruct-r03-a01/transcript.txt",
+        "runs/main-L3-02-qwen2-5-coder-7b-instruct-r03-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "Submission marker in prose containing unexecuted proposed tool calls; zero accepted actions and unchanged task code. Recorded missing-path errors: 0; accepted tool actions: 0.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 0,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": true,
+        "no_action_limit_recorded": false,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L3-03-qwen2-5-coder-7b-instruct-r01-a01",
+      "published_sources": [
+        "data/L3/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L3-03-qwen2-5-coder-7b-instruct-r01-a01/metadata.json",
+        "runs/main-L3-03-qwen2-5-coder-7b-instruct-r01-a01/final.diff",
+        "runs/main-L3-03-qwen2-5-coder-7b-instruct-r01-a01/hidden_test_results.json",
+        "runs/main-L3-03-qwen2-5-coder-7b-instruct-r01-a01/transcript.txt",
+        "runs/main-L3-03-qwen2-5-coder-7b-instruct-r01-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 0; accepted tool actions: 0.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 0,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L3-03-qwen2-5-coder-7b-instruct-r02-a01",
+      "published_sources": [
+        "data/L3/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L3-03-qwen2-5-coder-7b-instruct-r02-a01/metadata.json",
+        "runs/main-L3-03-qwen2-5-coder-7b-instruct-r02-a01/final.diff",
+        "runs/main-L3-03-qwen2-5-coder-7b-instruct-r02-a01/hidden_test_results.json",
+        "runs/main-L3-03-qwen2-5-coder-7b-instruct-r02-a01/transcript.txt",
+        "runs/main-L3-03-qwen2-5-coder-7b-instruct-r02-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 0; accepted tool actions: 0.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 0,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L3-03-qwen2-5-coder-7b-instruct-r03-a01",
+      "published_sources": [
+        "data/L3/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L3-03-qwen2-5-coder-7b-instruct-r03-a01/metadata.json",
+        "runs/main-L3-03-qwen2-5-coder-7b-instruct-r03-a01/final.diff",
+        "runs/main-L3-03-qwen2-5-coder-7b-instruct-r03-a01/hidden_test_results.json",
+        "runs/main-L3-03-qwen2-5-coder-7b-instruct-r03-a01/transcript.txt",
+        "runs/main-L3-03-qwen2-5-coder-7b-instruct-r03-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 0; accepted tool actions: 0.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 0,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L4-01-qwen2-5-coder-7b-instruct-r01-a01",
+      "published_sources": [
+        "data/L4/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L4-01-qwen2-5-coder-7b-instruct-r01-a01/metadata.json",
+        "runs/main-L4-01-qwen2-5-coder-7b-instruct-r01-a01/final.diff",
+        "runs/main-L4-01-qwen2-5-coder-7b-instruct-r01-a01/hidden_test_results.json",
+        "runs/main-L4-01-qwen2-5-coder-7b-instruct-r01-a01/transcript.txt",
+        "runs/main-L4-01-qwen2-5-coder-7b-instruct-r01-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 0; accepted tool actions: 1.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 1,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L4-01-qwen2-5-coder-7b-instruct-r02-a01",
+      "published_sources": [
+        "data/L4/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L4-01-qwen2-5-coder-7b-instruct-r02-a01/metadata.json",
+        "runs/main-L4-01-qwen2-5-coder-7b-instruct-r02-a01/final.diff",
+        "runs/main-L4-01-qwen2-5-coder-7b-instruct-r02-a01/hidden_test_results.json",
+        "runs/main-L4-01-qwen2-5-coder-7b-instruct-r02-a01/transcript.txt",
+        "runs/main-L4-01-qwen2-5-coder-7b-instruct-r02-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 0; accepted tool actions: 1.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 1,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L4-01-qwen2-5-coder-7b-instruct-r03-a01",
+      "published_sources": [
+        "data/L4/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L4-01-qwen2-5-coder-7b-instruct-r03-a01/metadata.json",
+        "runs/main-L4-01-qwen2-5-coder-7b-instruct-r03-a01/final.diff",
+        "runs/main-L4-01-qwen2-5-coder-7b-instruct-r03-a01/hidden_test_results.json",
+        "runs/main-L4-01-qwen2-5-coder-7b-instruct-r03-a01/transcript.txt",
+        "runs/main-L4-01-qwen2-5-coder-7b-instruct-r03-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 0; accepted tool actions: 1.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 1,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L4-02-qwen2-5-coder-7b-instruct-r01-a01",
+      "published_sources": [
+        "data/L4/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L4-02-qwen2-5-coder-7b-instruct-r01-a01/metadata.json",
+        "runs/main-L4-02-qwen2-5-coder-7b-instruct-r01-a01/final.diff",
+        "runs/main-L4-02-qwen2-5-coder-7b-instruct-r01-a01/hidden_test_results.json",
+        "runs/main-L4-02-qwen2-5-coder-7b-instruct-r01-a01/transcript.txt",
+        "runs/main-L4-02-qwen2-5-coder-7b-instruct-r01-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 1; accepted tool actions: 1.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 1,
+        "missing_path_error_count": 1,
+        "missing_path_messages": [
+          "Path does not exist: customer_service.py"
+        ],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L4-02-devin-r01-a01",
+      "published_sources": [
+        "data/L4/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "Native final-state evidence; trajectory unavailable",
+      "retained_archive_references": [
+        "runs/main-L4-02-devin-r01-a01/metadata.json",
+        "runs/main-L4-02-devin-r01-a01/final.diff",
+        "runs/main-L4-02-devin-r01-a01/hidden_test_results.json",
+        "artifacts/evaluation-audit-20260926/reviewed_analysis_overlay.json"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "Creation forces active and ignores explicit inactive/invalid status; default location is not the rejection reason. Native interaction sequence unavailable."
+    },
+    {
+      "run_id": "main-L4-02-qwen2-5-coder-7b-instruct-r02-a01",
+      "published_sources": [
+        "data/L4/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L4-02-qwen2-5-coder-7b-instruct-r02-a01/metadata.json",
+        "runs/main-L4-02-qwen2-5-coder-7b-instruct-r02-a01/final.diff",
+        "runs/main-L4-02-qwen2-5-coder-7b-instruct-r02-a01/hidden_test_results.json",
+        "runs/main-L4-02-qwen2-5-coder-7b-instruct-r02-a01/transcript.txt",
+        "runs/main-L4-02-qwen2-5-coder-7b-instruct-r02-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 1; accepted tool actions: 5.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 5,
+        "missing_path_error_count": 1,
+        "missing_path_messages": [
+          "Path does not exist: customer_service.py"
+        ],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L4-02-cursor-r02-a01",
+      "published_sources": [
+        "data/L4/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "Native final-state evidence; trajectory unavailable",
+      "retained_archive_references": [
+        "runs/main-L4-02-cursor-r02-a01/metadata.json",
+        "runs/main-L4-02-cursor-r02-a01/final.diff",
+        "runs/main-L4-02-cursor-r02-a01/hidden_test_results.json",
+        "artifacts/evaluation-audit-20260926/reviewed_analysis_overlay.json"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "Explicit null is accepted and converted to active; omitted-status default passes the layer-independent review. Native interaction sequence unavailable."
+    },
+    {
+      "run_id": "main-L4-02-qwen2-5-coder-7b-instruct-r03-a01",
+      "published_sources": [
+        "data/L4/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L4-02-qwen2-5-coder-7b-instruct-r03-a01/metadata.json",
+        "runs/main-L4-02-qwen2-5-coder-7b-instruct-r03-a01/final.diff",
+        "runs/main-L4-02-qwen2-5-coder-7b-instruct-r03-a01/hidden_test_results.json",
+        "runs/main-L4-02-qwen2-5-coder-7b-instruct-r03-a01/transcript.txt",
+        "runs/main-L4-02-qwen2-5-coder-7b-instruct-r03-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 1; accepted tool actions: 5.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 5,
+        "missing_path_error_count": 1,
+        "missing_path_messages": [
+          "Path does not exist: customer_service.py"
+        ],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L4-03-qwen2-5-coder-7b-instruct-r01-a01",
+      "published_sources": [
+        "data/L4/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L4-03-qwen2-5-coder-7b-instruct-r01-a01/metadata.json",
+        "runs/main-L4-03-qwen2-5-coder-7b-instruct-r01-a01/final.diff",
+        "runs/main-L4-03-qwen2-5-coder-7b-instruct-r01-a01/hidden_test_results.json",
+        "runs/main-L4-03-qwen2-5-coder-7b-instruct-r01-a01/transcript.txt",
+        "runs/main-L4-03-qwen2-5-coder-7b-instruct-r01-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 1; accepted tool actions: 1.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 1,
+        "missing_path_error_count": 1,
+        "missing_path_messages": [
+          "Path does not exist: docker-compose.yml"
+        ],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L4-03-gpt-5-4-r01-a02",
+      "published_sources": [
+        "data/L4/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L4-03-gpt-5-4-r01-a02/metadata.json",
+        "runs/main-L4-03-gpt-5-4-r01-a02/final.diff",
+        "runs/main-L4-03-gpt-5-4-r01-a02/hidden_test_results.json",
+        "runs/main-L4-03-gpt-5-4-r01-a02/transcript.txt"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "Database hostname repaired, but new frontend proxy path yields browser HTTP 404. Recorded pytest/npm validation commands fail before submission.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 12,
+        "missing_path_error_count": 0,
+        "missing_path_messages": [],
+        "submission_marker_present": true,
+        "no_action_limit_recorded": false,
+        "final_diff_empty": false,
+        "failed_validation_messages": [
+          "bash: line 1: npm: command not found",
+          "bash: line 1: pytest: command not found"
+        ]
+      }
+    },
+    {
+      "run_id": "main-L4-03-qwen2-5-coder-7b-instruct-r02-a01",
+      "published_sources": [
+        "data/L4/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L4-03-qwen2-5-coder-7b-instruct-r02-a01/metadata.json",
+        "runs/main-L4-03-qwen2-5-coder-7b-instruct-r02-a01/final.diff",
+        "runs/main-L4-03-qwen2-5-coder-7b-instruct-r02-a01/hidden_test_results.json",
+        "runs/main-L4-03-qwen2-5-coder-7b-instruct-r02-a01/transcript.txt",
+        "runs/main-L4-03-qwen2-5-coder-7b-instruct-r02-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 1; accepted tool actions: 1.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 1,
+        "missing_path_error_count": 1,
+        "missing_path_messages": [
+          "Path does not exist: docker-compose.yml"
+        ],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    },
+    {
+      "run_id": "main-L4-03-qwen2-5-coder-7b-instruct-r03-a01",
+      "published_sources": [
+        "data/L4/selected_runs.json",
+        "data/main/analysis_dataset.csv"
+      ],
+      "join_key": "run_id",
+      "coverage": "API observable transcript and adapter decisions",
+      "retained_archive_references": [
+        "runs/main-L4-03-qwen2-5-coder-7b-instruct-r03-a01/metadata.json",
+        "runs/main-L4-03-qwen2-5-coder-7b-instruct-r03-a01/final.diff",
+        "runs/main-L4-03-qwen2-5-coder-7b-instruct-r03-a01/hidden_test_results.json",
+        "runs/main-L4-03-qwen2-5-coder-7b-instruct-r03-a01/transcript.txt",
+        "runs/main-L4-03-qwen2-5-coder-7b-instruct-r03-a01/adapter_decisions.jsonl"
+      ],
+      "archive_availability": "Retained by researcher; raw transcripts and adapter journals not published in full",
+      "observation": "No-progress termination after non-acting responses; no recorded task-code diff. Recorded missing-path errors: 1; accepted tool actions: 1.",
+      "observable_event_extract": {
+        "accepted_tool_actions": 1,
+        "missing_path_error_count": 1,
+        "missing_path_messages": [
+          "Path does not exist: docker-compose.yml"
+        ],
+        "submission_marker_present": false,
+        "no_action_limit_recorded": true,
+        "final_diff_empty": true,
+        "failed_validation_messages": []
+      }
+    }
+  ]
+}

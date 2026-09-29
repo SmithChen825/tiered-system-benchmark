@@ -1,0 +1,17 @@
+scoring,system,measure,n,median,q1,q3
+original,cursor,functional,36,1.0,1.0,1.0
+original,cursor,architecture,36,1.0,1.0,1.0
+original,devin,functional,36,1.0,1.0,1.0
+original,devin,architecture,36,1.0,1.0,1.0
+original,gpt-5.4,functional,36,1.0,1.0,1.0
+original,gpt-5.4,architecture,36,1.0,1.0,1.0
+original,qwen2.5-coder-7b-instruct,functional,36,0.125,0.0,0.375
+original,qwen2.5-coder-7b-instruct,architecture,36,0.6190476190476191,0.4583333333333333,0.7
+reviewed,cursor,functional,36,1.0,1.0,1.0
+reviewed,cursor,architecture,36,1.0,1.0,1.0
+reviewed,devin,functional,36,1.0,1.0,1.0
+reviewed,devin,architecture,36,1.0,1.0,1.0
+reviewed,gpt-5.4,functional,36,1.0,1.0,1.0
+reviewed,gpt-5.4,architecture,36,1.0,1.0,1.0
+reviewed,qwen2.5-coder-7b-instruct,functional,36,0.125,0.0,0.375
+reviewed,qwen2.5-coder-7b-instruct,architecture,36,0.6666666666666666,0.4583333333333333,0.8

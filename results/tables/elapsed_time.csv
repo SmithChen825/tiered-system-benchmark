@@ -1,0 +1,17 @@
+scoring,system,population,n,median,q1,q3
+original,cursor,all_valid,36,96.69550000000001,65.46125,190.9535
+original,cursor,successful_valid,30,96.69550000000001,69.83250000000001,186.77274999999997
+original,devin,all_valid,36,218.703,108.9575,260.543
+original,devin,successful_valid,31,187.375,104.6325,238.5625
+original,gpt-5.4,all_valid,36,27.718499999988126,21.03338249998114,34.978401249994874
+original,gpt-5.4,successful_valid,31,26.21799999999348,20.27487749996228,32.687000000041735
+original,qwen2.5-coder-7b-instruct,all_valid,36,19.820499999994354,15.191750000027241,36.95675000002666
+original,qwen2.5-coder-7b-instruct,successful_valid,0,,,
+reviewed,cursor,all_valid,36,96.69550000000001,65.46125,190.9535
+reviewed,cursor,successful_valid,35,102.266,61.6095,191.344
+reviewed,devin,all_valid,36,218.703,108.9575,260.543
+reviewed,devin,successful_valid,33,209.0,108.359,251.375
+reviewed,gpt-5.4,all_valid,36,27.718499999988126,21.03338249998114,34.978401249994874
+reviewed,gpt-5.4,successful_valid,34,27.00749999997788,20.65712749994342,34.75165125002235
+reviewed,qwen2.5-coder-7b-instruct,all_valid,36,19.820499999994354,15.191750000027241,36.95675000002666
+reviewed,qwen2.5-coder-7b-instruct,successful_valid,0,,,

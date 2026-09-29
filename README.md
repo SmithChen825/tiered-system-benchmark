@@ -4,7 +4,7 @@
 
 TSB is the research software for *Benchmarking Agentic Code Generation Tools*, a University of Melbourne thesis by Wenrui Chen, supervised by Prof. Richard Sinnott.
 
-Main collection is complete: **144 selected valid observations**, including valid unsuccessful outcomes. This branch retains the detailed [L1 results](data/L1/README.md), [L2 results](data/L2/README.md), [L3 results](data/L3/README.md), and [L4 results](data/L4/README.md), and adds a [uniform evaluator review](docs/evaluation-review.md) with original/reviewed scores for all 144 slots and an offline reproduction script. The L3 addition includes 36 selected records and all 38 attempts with timing, checks and curated code diffs. The L4 addition likewise includes 36 selected records and 38 attempts. Full runtime archives and final comparative analysis remain outside this release.
+Main collection is complete: **144 selected valid observations**, including valid unsuccessful outcomes. This branch retains the detailed [L1 results](data/L1/README.md), [L2 results](data/L2/README.md), [L3 results](data/L3/README.md), and [L4 results](data/L4/README.md), and adds a [uniform evaluator review](docs/evaluation-review.md) with original/reviewed scores for all 144 slots and an offline reproduction script. The L3 addition includes 36 selected records and all 38 attempts with timing, checks and curated code diffs. The L4 addition likewise includes 36 selected records and 38 attempts. Core success analysis and main-text figures are now available in [results](results/README.md); secondary outcomes and scoring sensitivity are also available; failure coding and full runtime archives remain outside this release.
 
 ## At a glance
 
@@ -48,7 +48,11 @@ L4 includes 36 selected observations and 38 retained attempts. Original and revi
 
 ## Analysis-ready data
 
-The [unified 144-row dataset](data/main/README.md) combines all four tiers with separate original/reviewed scores, timing and recorded behavior fields. Run `python analysis/build_dataset.py --check` to verify the published outputs. This is data preparation only; no comparative statistical analysis or thesis figures are included.
+The [unified 144-row dataset](data/main/README.md) combines all four tiers with separate original/reviewed scores, timing and recorded behavior fields. Run `python analysis/build_dataset.py --check` to verify the published outputs. The dataset preparation remains separate from the [core success analysis](results/README.md), which now supplies overall/tier/task results and task-paired comparisons.
+
+## Core success analysis
+
+See the [results, figures, captions and interpretation](results/README.md), [reproducible notebook](analysis/core_success.ipynb) and [analysis manifest](results/core_success_manifest.json). Results figures are intended for the thesis main text. Core and secondary quantitative analysis and descriptive failure coding are complete.
 
 ## Start here
 
@@ -93,6 +97,15 @@ The first command checks all 12 deterministic starting commits. The second exerc
 
 The pilot validated execution, resets, evidence capture, and operational limits. All 16 selected records passed the common evidence validator; the eight selected native-IDE records also passed native validation. The pilot led to increasing the common API action limit from 15 to 30 before the main experiment.
 
-Pilot outcomes are **descriptive process evidence**, excluded from the main dataset and unsuitable for system rankings. The score-level review is now available for all 144 selected slots. Detailed selected-run records are now available for all four tiers. Comparative analysis outputs and final figures remain pending.
+Pilot outcomes are **descriptive process evidence**, excluded from the main dataset and unsuitable for system rankings. The score-level review is now available for all 144 selected slots. Detailed selected-run records are now available for all four tiers. Core and secondary quantitative outputs, scoring sensitivity and eight main-text figures are available. Evidence-based failure coding and thesis results integration are complete; final manuscript review remains.
 
 Keep evaluated agents inside their assigned `workspaces/<run_id>/repo` directory. The full repository contains evaluator-only tests and oracle repairs that must remain outside the evaluated agent's information boundary.
+
+
+## Secondary outcomes and sensitivity
+
+See [secondary results and captions](results/secondary_results.md) and the [reproducible notebook](analysis/secondary_outcomes.ipynb) for elapsed time, check diagnostics, clarification, L3/L4 success without evaluator responses and original/reviewed sensitivity.
+
+## Failure analysis
+
+See [coding rules, evidence and findings](results/failure_analysis.md) for all 42 reviewed unsuccessful runs. Regenerate or verify summaries with `python analysis/failure_summary.py --check`.
