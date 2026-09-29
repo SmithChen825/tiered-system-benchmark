@@ -1,0 +1,36 @@
+{
+  "source_commit": "0bf95f7630e8c87e6ccb95292ed34de02296b4e1",
+  "review_version": "public-contract-audit/2026-09-26",
+  "dataset_sha256": "b24c3c126dcbe707307ea9bfe1e9e937b754e75ec2955cbfc9d0030e9016dfaa",
+  "analysis_script_sha256": "2d95095e6140cbb4356e6288b74aa297a8c0fd78e21674c68eb5834bd9748c71",
+  "analysis_plan_sha256": "106469fbdc2e56bf237781ebed2920360a5f040d3f6e0c9e7aba12e79859853b",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "seed_text": "tsb-main-bootstrap-2026-v1",
+  "seed_integer": 11383949017189440719,
+  "seed_conversion": "SHA256 UTF-8 string; first 8 digest bytes, unsigned big-endian",
+  "generator": "NumPy PCG64",
+  "task_order": [
+    "L1-01",
+    "L1-02",
+    "L1-03",
+    "L2-01",
+    "L2-02",
+    "L2-03",
+    "L3-01",
+    "L3-02",
+    "L3-03",
+    "L4-01",
+    "L4-02",
+    "L4-03"
+  ],
+  "bootstrap_draws_shared_across_contrasts_and_scoring_versions": true,
+  "inference": "Exploratory task-paired comparisons over the 12 benchmark tasks; not a model-only or general task-population claim.",
+  "implementation_notes": [
+    "Python runtime is 3.12.14 versus planned 3.12.13; patch-version difference disclosed, frozen plan not rewritten.",
+    "NumPy 2.3.5 matches frozen plan. Matplotlib is an added rendering dependency.",
+    "Wilson intervals are descriptive run-level intervals; they do not adjust for within-task dependence.",
+    "Pairwise percentile intervals are unadjusted 95% task-bootstrap intervals; p values use Holm across six comparisons separately per scoring version.",
+    "Original-score tables are a baseline for later full sensitivity reporting; this stage covers success outcomes only."
+  ]
+}

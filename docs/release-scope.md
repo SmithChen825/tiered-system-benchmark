@@ -1,6 +1,6 @@
 # Release scope
 
-This repository publishes curated research materials and detailed selected-run exports for all four tiers: 144 valid main observations. It includes the pilot's descriptive tables, original/reviewed score pairs, and a unified analysis dataset with reproducible generation and validation. Formal comparative statistics and final thesis figures remain pending.
+This repository publishes curated research materials and detailed selected-run exports for all four tiers: 144 valid main observations. It includes the pilot's descriptive tables, original/reviewed score pairs, and a unified analysis dataset with reproducible generation and validation. Core success comparisons and four main-text figures are now included; the remaining statistical outcomes and final thesis integration are pending.
 
 ## Included
 
@@ -47,3 +47,8 @@ The `L4-experiment` addition publishes 36 selected observations and all 38 attem
 ## Unified dataset addition
 
 The `analysisData` addition joins the four tier exports to the versioned original/reviewed scores, validates schedule and replacement selection, and preserves unavailable usage/cost as missing. It adds a standard-library generator, check mode and focused regression tests. See the [dataset guide](../data/main/README.md). Existing experimental source files and scoring decisions are unchanged.
+
+
+## Core success analysis addition (29 September 2026)
+
+The `statisticalAnalysis` branch adds reviewed overall/tier/task success figures, six task-paired comparisons, original-score baseline tables, reproducible scripts/notebook and input/version provenance. Results graphs belong in the thesis main text; task text, prompts and interaction examples belong in the appendix. See [results](../results/README.md) for captions, actual environment differences and inference limits. Timing, diagnostic/behavior analysis, complete sensitivity reporting and failure coding are still pending. The Overleaf source is unchanged by this addition.
