@@ -1,0 +1,13 @@
+stage,system,count
+No accepted action,cursor,0
+No accepted action,devin,0
+No accepted action,gpt-5.4,0
+No accepted action,qwen2.5-coder-7b-instruct,18
+Inspection attempts; no edit,cursor,0
+Inspection attempts; no edit,devin,0
+Inspection attempts; no edit,gpt-5.4,0
+Inspection attempts; no edit,qwen2.5-coder-7b-instruct,18
+Edited and submitted; checks fail,cursor,1
+Edited and submitted; checks fail,devin,3
+Edited and submitted; checks fail,gpt-5.4,2
+Edited and submitted; checks fail,qwen2.5-coder-7b-instruct,0

@@ -52,7 +52,7 @@ The [unified 144-row dataset](data/main/README.md) combines all four tiers with 
 
 ## Core success analysis
 
-See the [results, figures, captions and interpretation](results/README.md), [reproducible notebook](analysis/core_success.ipynb) and [analysis manifest](results/core_success_manifest.json). Results figures are intended for the thesis main text. The full planned analysis is not yet complete.
+See the [results, figures, captions and interpretation](results/README.md), [reproducible notebook](analysis/core_success.ipynb) and [analysis manifest](results/core_success_manifest.json). Results figures are intended for the thesis main text. Core and secondary quantitative analysis and descriptive failure coding are complete.
 
 ## Start here
 
@@ -97,7 +97,7 @@ The first command checks all 12 deterministic starting commits. The second exerc
 
 The pilot validated execution, resets, evidence capture, and operational limits. All 16 selected records passed the common evidence validator; the eight selected native-IDE records also passed native validation. The pilot led to increasing the common API action limit from 15 to 30 before the main experiment.
 
-Pilot outcomes are **descriptive process evidence**, excluded from the main dataset and unsuitable for system rankings. The score-level review is now available for all 144 selected slots. Detailed selected-run records are now available for all four tiers. Core and secondary quantitative outputs, scoring sensitivity and eight main-text figures are available. Evidence-based failure coding and thesis integration remain pending.
+Pilot outcomes are **descriptive process evidence**, excluded from the main dataset and unsuitable for system rankings. The score-level review is now available for all 144 selected slots. Detailed selected-run records are now available for all four tiers. Core and secondary quantitative outputs, scoring sensitivity and eight main-text figures are available. Evidence-based failure coding and thesis results integration are complete; final manuscript review remains.
 
 Keep evaluated agents inside their assigned `workspaces/<run_id>/repo` directory. The full repository contains evaluator-only tests and oracle repairs that must remain outside the evaluated agent's information boundary.
 
@@ -105,3 +105,7 @@ Keep evaluated agents inside their assigned `workspaces/<run_id>/repo` directory
 ## Secondary outcomes and sensitivity
 
 See [secondary results and captions](results/secondary_results.md) and the [reproducible notebook](analysis/secondary_outcomes.ipynb) for elapsed time, check diagnostics, clarification, L3/L4 success without evaluator responses and original/reviewed sensitivity.
+
+## Failure analysis
+
+See [coding rules, evidence and findings](results/failure_analysis.md) for all 42 reviewed unsuccessful runs. Regenerate or verify summaries with `python analysis/failure_summary.py --check`.

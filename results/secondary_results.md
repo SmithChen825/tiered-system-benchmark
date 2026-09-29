@@ -77,3 +77,7 @@ All-valid duration and recorded clarification behavior are unchanged. Successful
 ## Remaining work
 
 Evidence-based failure-cause coding, selection of accurately labelled interaction examples and thesis integration remain pending. These results do not assert that every Qwen failure is a navigation failure, and do not rank incomparable or missing monetary-cost measurements. Results charts belong in the main text; detailed correction records and interactions belong in the appendix. The conclusion should discuss the study-wide findings and limitations rather than single out one corrected task.
+
+## Subsequent completion
+
+[Evidence-based failure coding](failure_analysis.md) and thesis Results integration are now complete. Full native interaction traces remain unavailable for the four native unsuccessful observations; final-state evidence supports their coding.

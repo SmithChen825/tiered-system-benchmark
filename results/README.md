@@ -1,6 +1,6 @@
 # Core success results — stage 1
 
-This stage covers overall, tier and task success plus the six planned pairwise comparisons. All figures below are intended for the **main text**, following supervisor feedback reported by the researcher on 29 September 2026. Task text, prompts and illustrative LLM interactions belong in the appendix; incomplete native records must remain labelled partial. Figure numbers are provisional until integration into the thesis. The Overleaf manuscript has not been edited in this stage.
+This stage covers overall, tier and task success plus the six planned pairwise comparisons. All figures below are intended for the **main text**, following supervisor feedback reported by the researcher on 29 September 2026. Task text, prompts and illustrative LLM interactions belong in the appendix; incomplete native records must remain labelled partial. Figure numbers are provisional until integration into the thesis. The quantitative results were subsequently integrated into the thesis main text on 29 September 2026.
 
 ## Reproduce
 
@@ -26,7 +26,7 @@ Success summaries use descriptive 95% Wilson intervals: n=36 runs per system ove
 
 Pairwise effects are system A minus system B success rates. Ten thousand bootstrap resamples draw 12 tasks with replacement; all systems and three repetitions travel together within each sampled task. Percentile intervals use the 2.5th and 97.5th percentiles (NumPy linear quantiles). All 4,096 task-level A/B label swaps are enumerated for a two-sided exact test, counting ties using integer success-count differences. Holm adjustment covers six contrasts separately within each scoring version. Bootstrap intervals are unadjusted 95% intervals, not simultaneous intervals or inversions of the exact tests; their endpoints and Holm p values need not give identical threshold decisions.
 
-Inference is exploratory and bounded to this benchmark and the configured systems. Non-significance is not equivalence. Qwen's 0/36 is a valid end-to-end outcome and does not isolate model reasoning from interface/tool use. No claim that all Qwen failures occurred during file navigation is made; failure coding remains pending.
+Inference is exploratory and bounded to this benchmark and the configured systems. Non-significance is not equivalence. Qwen's 0/36 is a valid end-to-end outcome and does not isolate model reasoning from interface/tool use. No claim that all Qwen failures occurred during file navigation is made; the completed [failure analysis](failure_analysis.md) distinguishes observable stages and evidence coverage.
 
 ## Main-text figures and captions
 
@@ -63,3 +63,7 @@ The observed differences among Cursor, Devin Desktop and GPT-5.4 ranged from −
 ## Remaining work
 
 Timing, functional/architecture diagnostics, clarification, L3/L4 success without evaluator responses and scoring sensitivity are now available in [secondary results](secondary_results.md), with four additional main-text figures. Evidence-based failure classification and thesis integration remain pending. Prompts and interaction examples have not yet been selected or inserted into the appendix. No new agent runs occurred.
+
+## Completed failure coding and thesis integration
+
+The [failure analysis](failure_analysis.md) covers all 42 reviewed unsuccessful runs and includes a public evidence index, run-level codes and reproducible category/stage counts. Eight quantitative figures and aggregate tables are in the thesis main body; interaction examples and evaluator amendments remain in its appendix.

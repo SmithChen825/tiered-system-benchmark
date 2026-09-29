@@ -1,6 +1,6 @@
 # Release scope
 
-This repository publishes curated research materials and detailed selected-run exports for all four tiers: 144 valid main observations. It includes the pilot's descriptive tables, original/reviewed score pairs, and a unified analysis dataset with reproducible generation and validation. Core and secondary quantitative outcomes, scoring sensitivity and eight main-text figures are included; failure coding and final thesis integration are pending.
+This repository publishes curated research materials and detailed selected-run exports for all four tiers: 144 valid main observations. It includes the pilot's descriptive tables, original/reviewed score pairs, and a unified analysis dataset with reproducible generation and validation. Core and secondary quantitative outcomes, scoring sensitivity and eight main-text figures are included; evidence-based failure coding is included, and results have been integrated into the thesis draft.
 
 ## Included
 
@@ -27,7 +27,7 @@ The `.gitattributes` file disables automatic line-ending conversion so that copi
 
 ## Next data release
 
-Remaining work is evidence-based failure coding and thesis integration. The included offline script reproduces score mapping from exported evidence; it does not reproduce agent executions or replace the planned statistical analysis. Keep pilot and main records separate.
+Failure coding and thesis results integration are complete. Remaining work concerns manuscript review and submission preparation. The included offline script reproduces score mapping from exported evidence; it does not reproduce agent executions or replace the planned statistical analysis. Keep pilot and main records separate.
 
 ## L2 experiment addition
 
@@ -51,9 +51,13 @@ The `analysisData` addition joins the four tier exports to the versioned origina
 
 ## Core success analysis addition (29 September 2026)
 
-The `statisticalAnalysis` branch adds reviewed overall/tier/task success figures, six task-paired comparisons, original-score baseline tables, reproducible scripts/notebook and input/version provenance. Results graphs belong in the thesis main text; task text, prompts and interaction examples belong in the appendix. See [results](../results/README.md) for captions, actual environment differences and inference limits. The subsequent secondary-outcome addition completes timing, diagnostic/behavior summaries and scoring sensitivity; failure coding remains pending. The Overleaf source is unchanged by this addition.
+The `statisticalAnalysis` branch adds reviewed overall/tier/task success figures, six task-paired comparisons, original-score baseline tables, reproducible scripts/notebook and input/version provenance. Results graphs belong in the thesis main text; task text, prompts and interaction examples belong in the appendix. See [results](../results/README.md) for captions, actual environment differences and inference limits. The subsequent secondary-outcome addition completes timing, diagnostic/behavior summaries and scoring sensitivity; failure coding was completed in the subsequent addition below. The Overleaf source is unchanged by this addition.
 
 
 ## Secondary outcomes and sensitivity addition (29 September 2026)
 
 Seven CSV tables, four further figures (PDF/SVG/600 dpi PNG), reproducible scripts/notebook and captions are included. The original dataset and evaluator records are unchanged. See [secondary results](../results/secondary_results.md). No new runs or Overleaf edits were made.
+
+## Failure coding addition (29 September 2026)
+
+Includes codes for all 42 reviewed unsuccessful runs, compact event extracts and source pointers, category/stage summaries, a codebook and an offline aggregation/validation script. Full transcripts remain in the retained archive; public and retained-only evidence are labelled separately. The codebook records post-collection operational definitions and missing native trajectories. See [failure analysis](../results/failure_analysis.md). The thesis draft now includes Results and eight figures in the main body, with corrections/interactions in the appendix.
