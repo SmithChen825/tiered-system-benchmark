@@ -1,6 +1,6 @@
 # Release scope
 
-This repository publishes curated research materials and detailed selected-run exports for all four tiers: 144 valid main observations. It includes the pilot's descriptive tables, original/reviewed score pairs, and a unified analysis dataset with reproducible generation and validation. Core success comparisons and four main-text figures are now included; the remaining statistical outcomes and final thesis integration are pending.
+This repository publishes curated research materials and detailed selected-run exports for all four tiers: 144 valid main observations. It includes the pilot's descriptive tables, original/reviewed score pairs, and a unified analysis dataset with reproducible generation and validation. Core and secondary quantitative outcomes, scoring sensitivity and eight main-text figures are included; failure coding and final thesis integration are pending.
 
 ## Included
 
@@ -27,7 +27,7 @@ The `.gitattributes` file disables automatic line-ending conversion so that copi
 
 ## Next data release
 
-Remaining work is final comparative analysis, original-versus-reviewed sensitivity, tables and figures. The included offline script reproduces score mapping from exported evidence; it does not reproduce agent executions or replace the planned statistical analysis. Keep pilot and main records separate.
+Remaining work is evidence-based failure coding and thesis integration. The included offline script reproduces score mapping from exported evidence; it does not reproduce agent executions or replace the planned statistical analysis. Keep pilot and main records separate.
 
 ## L2 experiment addition
 
@@ -51,4 +51,9 @@ The `analysisData` addition joins the four tier exports to the versioned origina
 
 ## Core success analysis addition (29 September 2026)
 
-The `statisticalAnalysis` branch adds reviewed overall/tier/task success figures, six task-paired comparisons, original-score baseline tables, reproducible scripts/notebook and input/version provenance. Results graphs belong in the thesis main text; task text, prompts and interaction examples belong in the appendix. See [results](../results/README.md) for captions, actual environment differences and inference limits. Timing, diagnostic/behavior analysis, complete sensitivity reporting and failure coding are still pending. The Overleaf source is unchanged by this addition.
+The `statisticalAnalysis` branch adds reviewed overall/tier/task success figures, six task-paired comparisons, original-score baseline tables, reproducible scripts/notebook and input/version provenance. Results graphs belong in the thesis main text; task text, prompts and interaction examples belong in the appendix. See [results](../results/README.md) for captions, actual environment differences and inference limits. The subsequent secondary-outcome addition completes timing, diagnostic/behavior summaries and scoring sensitivity; failure coding remains pending. The Overleaf source is unchanged by this addition.
+
+
+## Secondary outcomes and sensitivity addition (29 September 2026)
+
+Seven CSV tables, four further figures (PDF/SVG/600 dpi PNG), reproducible scripts/notebook and captions are included. The original dataset and evaluator records are unchanged. See [secondary results](../results/secondary_results.md). No new runs or Overleaf edits were made.

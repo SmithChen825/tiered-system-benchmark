@@ -62,4 +62,4 @@ The observed differences among Cursor, Devin Desktop and GPT-5.4 ranged from −
 
 ## Remaining work
 
-Timing, functional/architecture diagnostics, clarification and robustness measures, complete sensitivity interpretation and evidence-based failure classification are not completed here. The original-score tables are retained, but the full planned analysis is not claimed complete. Prompts and interaction examples have not yet been selected or inserted into the appendix. No new agent runs occurred.
+Timing, functional/architecture diagnostics, clarification, L3/L4 success without evaluator responses and scoring sensitivity are now available in [secondary results](secondary_results.md), with four additional main-text figures. Evidence-based failure classification and thesis integration remain pending. Prompts and interaction examples have not yet been selected or inserted into the appendix. No new agent runs occurred.
