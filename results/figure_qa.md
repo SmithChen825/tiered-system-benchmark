@@ -1,26 +1,31 @@
-# Figure design and QA
+# Current figure design and reproduction
 
-The four single-plot figures answer complementary questions: overall completion level; variation across tiers; task-level concentration of failures; paired differences accounting for task grouping. They use all 144 selected observations, with reviewed scoring. The source tables also retain original scores. No observations are sampled or removed for plotting.
+The nine quantitative figures match Figures 8–16 installed in the thesis draft on 7 October 2026. The repository update of 9 October publishes those exact PDF/SVG/PNG assets and portable plotting scripts. The [figure map](README.md#thesis-figure-map) identifies data sources and captions.
 
-The Python/matplotlib workflow follows the existing Python analysis pipeline. Figures are about 180 mm wide; editable SVG and TrueType PDF are primary exports, with 600 dpi PNG previews. No raster TIFF is needed for this thesis's vector plots; the source validator's PNG-without-TIFF advisory was reviewed and accepted. No journal-specific submission compliance is claimed.
+## Design and evidence
 
-| Figure | Center / interval | Unit / coverage | QA |
-|---|---|---|---|
-| Overall | Proportion and descriptive 95% Wilson interval | 36 runs per system | Direct counts and names; full 0–100% axis; visual inspection passed |
-| Tier | Proportion and descriptive 95% Wilson interval | 9 runs per system/tier, three tasks | Consistent colors and intervals; offsets distinguish systems; visual inspection passed |
-| Task | Count k/3, fixed 0–3 scale | All 12 tasks × four systems | No clustering; all cells annotated; interval values retained in table; visual inspection passed |
-| Pairwise | Rate difference and task-bootstrap percentile 95% interval | 12 paired tasks, all repetitions retained | Zero reference; effect direction explicit; exact/adjusted p values in table and caption; visual inspection passed |
+| Figure | Form and quantity | Coverage and uncertainty |
+|---|---|---|
+| 8 | Overall point intervals plus task count matrix | 36 runs/system; all 48 task/system cells; descriptive Wilson 95% intervals in panel a |
+| 9 | Four tier panels with system rows | 9 runs/system/tier; descriptive Wilson 95% intervals |
+| 10 | Paired point intervals and direct effect/p-value columns | 12 tasks; unadjusted percentile 95% task-bootstrap intervals; Holm-adjusted tests |
+| 11 | Horizontal boxes and all observations on a log-seconds axis | All 144 runs and successful subsets separated; Qwen's empty successful subset explicit |
+| 12 | Functional and architectural median matrices | Three repetitions/cell; colour uses unrounded medians; labels are whole percentages |
+| 13 | Direct rates and counts | 18 eligible L3/L4 runs/system; no inferential intervals |
+| 14 | Within-system failure-stage composition | Failure denominators 1/3/2/36; mutually exclusive observed stages |
+| 15 | Overlapping evidence-supported category counts | Same 42 failures; shared 0–36 scale; missing native trajectories marked |
+| 16 | Original-to-reviewed paired points | Same 36 observations/system; counts and percentage-point changes |
 
-Rendered PDF text checks found a minimum of 8 pt in every figure (5 pt floor). Collision audits found zero failures and zero warnings in all four PDFs. Geometry audits record single-panel status as not applicable; the task heatmap's colorbar is excluded from panel comparison. Local detailed QA diagnostics are retained separately from the curated public outputs. The source audit passed with only the reviewed TIFF advisory.
+The established thesis layout, palette, typography, model order and dimensions are retained. Figures are 7.1–7.2 inches wide, with PDF/SVG exports and 300 dpi PNG previews. Text remains editable in SVG; PDF fonts are embedded. The elapsed-time notes use 7.2 pt and diagnostic cell labels use 7 pt, as in the installed thesis assets; other figures have minimum text sizes of 7.5–8 pt. This synchronisation does not redesign those assets.
 
-The notebook reuses the same scripts. Re-running it reproduces numerical tables; exact byte equality was checked for the tables and analysis manifest. PDF/SVG metadata may include generation times, so binary figure identity is not the numerical reproducibility criterion. Four regression tests cover Wilson boundary intervals, exact permutation extremes/ties and Holm ordering.
+Wilson intervals are descriptive and do not adjust for repeated attempts within tasks. Bootstrap intervals are not simultaneous intervals corresponding to the Holm tests. Failure categories can overlap; their totals must not be interpreted as distinct failures. The L3/L4 no-response measure equals success on those tasks here and is not independent evidence of recovery. Non-significance does not establish equivalence.
 
-Reporting limits: Wilson intervals are descriptive, not clustered; pairwise bootstrap intervals are not multiplicity-adjusted; adjusted tests use six contrasts per scoring version. Small task count, three tasks per tier, post-outcome scoring review and interface differences constrain interpretation. Non-significance is not equivalence. Failure mechanisms are not inferred from success rates.
+## Verification of this update
 
-## Secondary outcomes and sensitivity
+Both repository plotting commands executed using Python 3.12.14, NumPy 2.3.5 and Matplotlib 3.10.8. All nine regenerated PDFs matched the installed assets' text and page dimensions. Font rasterisation differed slightly in PNG output, so the committed graphics retain the exact installed assets. Rendering metadata and font versions can affect byte or pixel identity; numerical values, labels, layout and source data are the reproduction target.
 
-Four further figures follow the same Python/vector workflow. Elapsed time retains all individual observations and separates all-valid from successful populations. Diagnostics use task-level medians of run proportions, separately by check type. The no-response figure reports L3/L4 counts without claiming independent recovery evidence. The sensitivity figure connects original/reviewed values for the same observations.
+The dataset check reconciled 144 selected slots, 155 attempts and 11 exclusions. The failure-summary check reproduced aggregates for all 42 coded failures. All 11 existing analysis tests passed. Published numerical tables and experimental records remain unchanged. The plotting scripts additionally check overall/task success consistency and failure stage/category counts against their published tables.
 
-All four figures passed visual inspection and rendered collision checks (zero failures/warnings). Minimum PDF text sizes are 6.3 pt (elapsed time), 7 pt (diagnostics), and 8 pt (no-response success and sensitivity), above the 5 pt floor. Both two-panel figures passed strict geometry alignment checks; the diagnostic colorbar is excluded from panel comparison. Source preflight has zero failures. The PNG-without-TIFF advisory is accepted for vector thesis figures; the logarithm advisory is a static-detection limitation, with every plotted duration explicitly asserted positive before plotting.
+The nine committed PDFs were rendered and visually inspected in colour and grayscale. No clipping or label overlap was observed. Direct labels and matrix values retain numerical interpretation without colour. Local review sheets are excluded from the release.
 
-Three secondary regression tests cover empty successful populations, zero-request precision and linear quartiles. The companion notebook executed successfully and reproduced every numerical CSV byte-for-byte. The underlying 144-row dataset and earlier analysis tables were not modified. Detailed local audit files are not part of the curated publication.
+Run the two plotting commands in the [reproduction guide](README.md#reproduce) to regenerate the current set. The old standalone overall/task success figures are superseded by Figure 8; Git history retains them. Numerical-analysis manifests remain the provenance records for their original analysis runs, rather than records of this graphical refresh.
