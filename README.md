@@ -4,7 +4,7 @@
 
 TSB is the research software for *Benchmarking Agentic Code Generation Tools*, a University of Melbourne thesis by Wenrui Chen, supervised by Prof. Richard Sinnott.
 
-Main collection is complete: **144 selected valid observations**, including valid unsuccessful outcomes. This branch retains the detailed [L1 results](data/L1/README.md), [L2 results](data/L2/README.md), [L3 results](data/L3/README.md), and [L4 results](data/L4/README.md), and adds a [uniform evaluator review](docs/evaluation-review.md) with original/reviewed scores for all 144 slots and an offline reproduction script. The L3 addition includes 36 selected records and all 38 attempts with timing, checks and curated code diffs. The L4 addition likewise includes 36 selected records and 38 attempts. Core success analysis and main-text figures are now available in [results](results/README.md); secondary outcomes and scoring sensitivity are also available; failure coding and full runtime archives remain outside this release.
+Main collection is complete: **144 selected valid observations**, including valid unsuccessful outcomes. This branch retains the detailed [L1 results](data/L1/README.md), [L2 results](data/L2/README.md), [L3 results](data/L3/README.md), and [L4 results](data/L4/README.md), and adds a [uniform evaluator review](docs/evaluation-review.md) with original/reviewed scores for all 144 slots and an offline reproduction script. The L3 addition includes 36 selected records and all 38 attempts with timing, checks and curated code diffs. The L4 addition likewise includes 36 selected records and 38 attempts. Core success analysis, secondary outcomes, scoring sensitivity and failure coding are available in [results](results/README.md). The [nine current quantitative figures](results/README.md#thesis-figure-map) match thesis Figures 8–16 in the 7 October 2026 draft. Full runtime archives remain outside this release.
 
 ## At a glance
 
@@ -15,7 +15,7 @@ Main collection is complete: **144 selected valid observations**, including vali
 | Main experiment | 12 tasks × 4 systems × 3 fresh repetitions = **144 runs** |
 | Pilot | 16 selected runs; 27 retained attempts in the audit index |
 | Primary outcome | Normal submission and all required hidden tests and architectural invariants passing |
-| Other outcomes | Elapsed time, clarification behaviour, autonomous recovery, and diagnostic test results |
+| Other outcomes | Elapsed time, clarification behaviour, L3/L4 success without evaluator responses, and diagnostic test results |
 
 The comparison concerns **complete configured systems**, including their interfaces and execution controls. It is not an isolated ranking of underlying language models.
 
@@ -76,7 +76,8 @@ data/L2/       L2 original results, check-level evidence, code diffs, attempt in
 data/L3/       L3 original/reviewed results, timing, curated diffs, attempt index
 data/L4/       L4 original/reviewed results, timing, final diffs, attempt index
 data/main/     Unified 144-row analysis dataset, field guide, validation summary
-analysis/      Standard-library dataset builder and validation tests
+analysis/      Dataset builder, statistical analysis, plotting scripts and tests
+results/       Nine quantitative figures, captions, tables and failure evidence
 data/evaluation-review/  144 paired scores, diagnostic evidence, review reproduction
 data/pilot/    Selected pilot observations, attempt index, descriptive summary
 docs/          Short guides to the study, tasks, pilot, and reproduction
@@ -93,11 +94,11 @@ python -m unittest benchmark.runner.tests.test_api_wrapper benchmark.runner.test
 
 The first command checks all 12 deterministic starting commits. The second exercises the API wrapper and logical tools with local test doubles; neither command calls a model provider. Docker and browser checks are documented separately in the [reproduction guide](docs/reproduction.md).
 
-## Pilot and remaining analysis
+## Pilot and analysis status
 
 The pilot validated execution, resets, evidence capture, and operational limits. All 16 selected records passed the common evidence validator; the eight selected native-IDE records also passed native validation. The pilot led to increasing the common API action limit from 15 to 30 before the main experiment.
 
-Pilot outcomes are **descriptive process evidence**, excluded from the main dataset and unsuitable for system rankings. The score-level review is now available for all 144 selected slots. Detailed selected-run records are now available for all four tiers. Core and secondary quantitative outputs, scoring sensitivity and eight main-text figures are available. Evidence-based failure coding and thesis results integration are complete; final manuscript review remains.
+Pilot outcomes are **descriptive process evidence**, excluded from the main dataset and unsuitable for system rankings. The score-level review is now available for all 144 selected slots. Detailed selected-run records are now available for all four tiers. Core and secondary quantitative outputs, scoring sensitivity and nine main-text quantitative figures are available. Evidence-based failure coding and thesis results integration are complete; final manuscript review remains.
 
 Keep evaluated agents inside their assigned `workspaces/<run_id>/repo` directory. The full repository contains evaluator-only tests and oracle repairs that must remain outside the evaluated agent's information boundary.
 
@@ -109,3 +110,17 @@ See [secondary results and captions](results/secondary_results.md) and the [repr
 ## Failure analysis
 
 See [coding rules, evidence and findings](results/failure_analysis.md) for all 42 reviewed unsuccessful runs. Regenerate or verify summaries with `python analysis/failure_summary.py --check`.
+
+## Current thesis figures
+
+The 9 October 2026 update synchronises the nine quantitative figures installed in the 7 October thesis draft. Overall and task-level success are combined in Figure 8a/b; Figures 14–15 add the failure-stage and failure-category displays. Each figure has PDF, SVG and 300 dpi PNG exports.
+
+From the repository root, regenerate all nine from the published data:
+
+```sh
+python -m pip install -r analysis/requirements-statistics.txt
+python analysis/plot_core_success.py
+python analysis/plot_secondary_outcomes.py
+```
+
+See the [figure map and reproduction guide](results/README.md#thesis-figure-map). This update changes presentation and documentation; the 144 observations, numerical tables and scoring decisions are unchanged. The full thesis PDF and internal handoff are not included.
