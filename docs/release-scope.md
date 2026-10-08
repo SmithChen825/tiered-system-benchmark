@@ -1,6 +1,6 @@
 # Release scope
 
-This repository publishes curated research materials and detailed selected-run exports for all four tiers: 144 valid main observations. It includes the pilot's descriptive tables, original/reviewed score pairs, and a unified analysis dataset with reproducible generation and validation. Core and secondary quantitative outcomes, scoring sensitivity and eight main-text figures are included; evidence-based failure coding is included, and results have been integrated into the thesis draft.
+This repository publishes curated research materials and detailed selected-run exports for all four tiers: 144 valid main observations. It includes the pilot's descriptive tables, original/reviewed score pairs, and a unified analysis dataset with reproducible generation and validation. Core and secondary quantitative outcomes, scoring sensitivity and nine current main-text quantitative figures are included; evidence-based failure coding is included, and results have been integrated into the thesis draft.
 
 ## Included
 
@@ -27,7 +27,7 @@ The `.gitattributes` file disables automatic line-ending conversion so that copi
 
 ## Next data release
 
-Failure coding and thesis results integration are complete. Remaining work concerns manuscript review and submission preparation. The included offline script reproduces score mapping from exported evidence; it does not reproduce agent executions or replace the planned statistical analysis. Keep pilot and main records separate.
+Failure coding and thesis results integration are complete. Remaining work concerns manuscript review and submission preparation. The included offline script reproduces score mapping from exported evidence; it does not reproduce agent executions; the completed statistical analysis is provided separately in `analysis/` and `results/`. Keep pilot and main records separate.
 
 ## L2 experiment addition
 
@@ -41,7 +41,7 @@ The `L3-experiment` addition publishes 36 selected observations and all 38 attem
 
 ## L4 experiment addition
 
-The `L4-experiment` addition publishes 36 selected observations and all 38 attempts, selecting L4-01 Devin Rep 1 a02 and L4-03 GPT-5.4 Rep 1 a02. The latter remains valid unsuccessful. Original scores and reviewed summaries are separate; the existing L4-02 semantic review is included once. All selected records passed the common evidence validator and match the existing 144-run score review. See the [L4 data guide](../data/L4/README.md). This release completes the curated selected-run exports for all four tiers; it does not publish the complete sealed runtime archive or final statistical analysis.
+The `L4-experiment` addition publishes 36 selected observations and all 38 attempts, selecting L4-01 Devin Rep 1 a02 and L4-03 GPT-5.4 Rep 1 a02. The latter remains valid unsuccessful. Original scores and reviewed summaries are separate; the existing L4-02 semantic review is included once. All selected records passed the common evidence validator and match the existing 144-run score review. See the [L4 data guide](../data/L4/README.md). This release completes the curated selected-run exports for all four tiers; it does not publish the complete sealed runtime archive; statistical analysis was added subsequently.
 
 
 ## Unified dataset addition
@@ -56,8 +56,14 @@ The `statisticalAnalysis` branch adds reviewed overall/tier/task success figures
 
 ## Secondary outcomes and sensitivity addition (29 September 2026)
 
-Seven CSV tables, four further figures (PDF/SVG/600 dpi PNG), reproducible scripts/notebook and captions are included. The original dataset and evaluator records are unchanged. See [secondary results](../results/secondary_results.md). No new runs or Overleaf edits were made.
+That addition supplied seven CSV tables, four further figures (PDF/SVG/600 dpi PNG), reproducible scripts/notebook and captions. The current 300 dpi figure exports supersede those earlier renders; see the October update below. The original dataset and evaluator records are unchanged. See [secondary results](../results/secondary_results.md). No new runs or Overleaf edits were made.
 
 ## Failure coding addition (29 September 2026)
 
-Includes codes for all 42 reviewed unsuccessful runs, compact event extracts and source pointers, category/stage summaries, a codebook and an offline aggregation/validation script. Full transcripts remain in the retained archive; public and retained-only evidence are labelled separately. The codebook records post-collection operational definitions and missing native trajectories. See [failure analysis](../results/failure_analysis.md). The thesis draft now includes Results and eight figures in the main body, with corrections/interactions in the appendix.
+Includes codes for all 42 reviewed unsuccessful runs, compact event extracts and source pointers, category/stage summaries, a codebook and an offline aggregation/validation script. Full transcripts remain in the retained archive; public and retained-only evidence are labelled separately. The codebook records post-collection operational definitions and missing native trajectories. See [failure analysis](../results/failure_analysis.md). At that stage the thesis draft included Results and eight figures in the main body, with corrections/interactions in the appendix.
+
+## Thesis figure synchronisation (9 October 2026)
+
+The current release includes the nine quantitative figures installed in the 7 October thesis draft: the combined success Figure 8a/b, six revised comparison/secondary figures and two failure figures. See the [Figure 8–16 map](../results/README.md#thesis-figure-map) for filenames, data sources and captions.
+
+The two repository plotting entry points now generate the current set directly from published data, in PDF, SVG and 300 dpi PNG formats. The old standalone overall/task success files are superseded by `success_summary`; Git history retains the earlier assets. Existing observations, CSV tables, scoring decisions, inferential procedures and numerical-analysis manifests are unchanged. The full thesis PDF, thesis source, internal handoff, preview comparison sheets and private operational archives are outside this update.

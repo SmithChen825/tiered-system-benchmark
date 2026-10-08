@@ -32,6 +32,20 @@ Eighteen Qwen runs had no accepted action; 18 had inspection or clarification ac
 
 The six edited unsuccessful submissions concern working-directory-dependent persistence, a Dockerfile-only configuration change, replacement-import semantics changed to merging, invalid status accepted, supplied status ignored, and a remaining frontend/proxy HTTP 404 after repairing a database hostname. The last run also records failed pytest/npm validation commands before submission. Detailed observable examples are in thesis Appendix D.9; aggregate categories and stage interpretation are in the main Results.
 
+## Figure 14 — Observed stages of unsuccessful runs
+
+![Observed failure stages](figures/failure_stages.svg)
+
+**Caption.** Observable stages for all 42 reviewed unsuccessful runs. Each bar sums to 100% of that system's failures: Cursor n=1, Devin Desktop n=3, GPT-5.4 n=2 and Qwen n=36. Segments are mutually exclusive: no accepted action; inspection or clarification without a final task-code edit; edited submission failing checks. Labels give counts and within-system percentages. The unequal denominators mean equal-length bars do not represent equal failure rates. Stages describe recorded progress, not causes or an ordinal capability score. Sources: [failure_coding.csv](tables/failure_coding.csv) and [failure_stage_counts.csv](tables/failure_stage_counts.csv).
+
+## Figure 15 — Evidence-supported failure categories
+
+![Failure categories](figures/failure_categories.svg)
+
+**Caption.** Documented category counts for the same 42 unsuccessful runs, with per-system failure denominators beneath the columns. Colour uses a shared linear 0–36 count scale; categories may overlap, and no clustering or rate normalisation is applied. Zero means no assigned evidence-supported code, not demonstrated absence of behaviour. Asterisks mark the four native-IDE failures without usable interaction trajectories. Other supported behaviour comprises 35 Qwen no-progress/protocol terminations and two storage/configuration failures. Counts are descriptive; no inferential comparisons are made. Sources: [failure_coding.csv](tables/failure_coding.csv) and [failure_category_counts.csv](tables/failure_category_counts.csv).
+
+Run `python analysis/plot_secondary_outcomes.py` from the repository root to produce these two figures together with Figures 11–13 and 16. It checks the stage and category aggregations against the published count tables before drawing them. Each figure has PDF, SVG and 300 dpi PNG exports.
+
 ## Manuscript alignment
 
-The thesis Results contains eight statistical figures in its main body, along with clarification and failure-category tables. Methods state the uniform scoring-review policy. Appendix D.8 retains task-specific score corrections and original comparisons; D.9 contains failure coding and illustrative interactions. The Conclusion does not single out an individual evaluator correction. This repository addition publishes the failure evidence package, not the thesis source or a new experiment.
+The current thesis Results contains nine quantitative figures (8–16), including these two failure displays and the combined success figure, alongside the clarification table. Methods state the uniform scoring-review policy. Appendix D.8 retains task-specific corrections and original comparisons; D.9 contains failure coding and illustrative interactions. The [figure map](README.md#thesis-figure-map) gives all filenames. This repository publishes the research data, figures and reproducible scripts; the full thesis PDF and internal handoff are not included in this update.
