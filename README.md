@@ -1,68 +1,100 @@
 # Tiered System Benchmark (TSB)
 
-**A controlled benchmark for testing how agentic coding systems diagnose and repair faults across frontend, backend, and database layers.**
+TSB tests how AI coding systems find and repair faults in web applications, from static websites to applications with a frontend, backend and database. The study compares four systems on 12 debugging tasks, with three fresh runs per system and task: 144 valid runs, including unsuccessful outcomes.
 
-TSB is the research software for *Benchmarking Agentic Code Generation Tools*, a University of Melbourne thesis by Wenrui Chen, supervised by Prof. Richard Sinnott.
+This repository contains the task suite, evaluation framework, experimental data and analysis for *Benchmarking Agentic Code Generation Tools*, a University of Melbourne thesis by Wenrui Chen, supervised by Prof. Richard Sinnott.
 
-**Read the thesis:** [Benchmarking Agentic Code Generation Tools (PDF)](docs/thesis/benchmarking-agentic-code-generation-tools.pdf) — manuscript version saved 24 October 2026.
+## Start here
 
-Main collection is complete: **144 selected valid observations**, including valid unsuccessful outcomes. This branch retains the detailed [L1 results](data/L1/README.md), [L2 results](data/L2/README.md), [L3 results](data/L3/README.md), and [L4 results](data/L4/README.md), and adds a [uniform evaluator review](docs/evaluation-review.md) with original/reviewed scores for all 144 slots and an offline reproduction script. The L3 addition includes 36 selected records and all 38 attempts with timing, checks and curated code diffs. The L4 addition likewise includes 36 selected records and 38 attempts. Core success analysis, secondary outcomes, scoring sensitivity and failure coding are available in [results](results/README.md). The [nine current quantitative figures](results/README.md#thesis-figure-map) match thesis Figures 8–16 in the 7 October 2026 draft. Full runtime archives remain outside this release.
+- Read the [thesis PDF](docs/thesis/benchmarking-agentic-code-generation-tools.pdf), saved 24 October 2026. [Version details](docs/thesis/README.md) accompany the file.
+- View the [results and figures](results/README.md).
+- Download the [144-run dataset and field guide](data/main/README.md).
+- Follow the [setup and reproduction guide](docs/reproduction.md).
 
-## At a glance
+## Main findings
+
+Success requires a normal submission that passes every applicable functional and architectural check. The primary analysis uses reviewed scores; the original scores remain available for comparison.
+
+| System | Successful runs | Success rate |
+|---|---:|---:|
+| Cursor | 35/36 | 97.2% |
+| Devin Desktop | 33/36 | 91.7% |
+| GPT-5.4 | 34/36 | 94.4% |
+| Qwen2.5-Coder-7B-Instruct | 0/36 | 0% |
+
+The task-paired tests found no statistically significant differences among Cursor, Devin Desktop and GPT-5.4 after correction for multiple comparisons. All three had higher success than the configured Qwen system. These findings concern the complete systems, including their interfaces, tools and execution controls, on these 12 tasks. They do not establish equivalence among the three higher-success systems or isolate the effect of the underlying models.
+
+On the static-website tier (L1), Cursor, Devin Desktop and GPT-5.4 each succeeded in all nine runs. All nine Qwen runs stopped at the no-action response limit.
+
+The [full analysis](results/README.md) reports results by task and tier, uncertainty intervals and paired comparisons. [Secondary results](results/secondary_results.md) cover elapsed time, diagnostic checks, clarification requests, L3/L4 success without evaluator responses, and the effect of score corrections. The [failure analysis](results/failure_analysis.md) examines all 42 reviewed unsuccessful runs.
+
+## Study design
 
 | Design | Scope |
 |---|---|
 | Systems | Cursor, Devin Desktop, GPT-5.4, Qwen2.5-Coder-7B-Instruct |
-| Tasks | 12 deterministic debugging tasks across four architectural tiers |
-| Main experiment | 12 tasks × 4 systems × 3 fresh repetitions = **144 runs** |
+| Tasks | 12 debugging tasks across four architectural tiers |
+| Main experiment | 12 tasks × 4 systems × 3 fresh repetitions = 144 runs |
 | Pilot | 16 selected runs; 27 retained attempts in the audit index |
-| Primary outcome | Normal submission and all required hidden tests and architectural invariants passing |
+| Primary outcome | Normal submission with all required hidden tests and architectural checks passing |
 | Other outcomes | Elapsed time, clarification behaviour, L3/L4 success without evaluator responses, and diagnostic test results |
 
-The comparison concerns **complete configured systems**, including their interfaces and execution controls. It is not an isolated ranking of underlying language models.
-
-## Four tiers of debugging
+### Four tiers of debugging
 
 | Tier | Application | What the tasks exercise |
 |---|---|---|
 | L1 | Static website | Asset paths, responsive navigation, client-side validation |
 | L2 | FastAPI application | Routing, requirement clarification, persistent storage |
-| L3 | Vue + FastAPI | CORS, response contracts, API endpoint versions |
+| L3 | Vue + FastAPI | Cross-origin requests (CORS), response formats, API endpoint versions |
 | L4 | Vue + FastAPI + PostgreSQL | Schema consistency, record creation, database connectivity |
 
-Each task provides a public brief, a faulty starting repository, a deterministic reset, evaluator-only tests, architectural invariants, and a known-good repair. See the [task catalogue](docs/tasks.md).
+Each task includes a public brief, a faulty starting repository, a reset to the same starting state, hidden evaluator tests and a known-good repair. Architectural checks verify that a repair preserves required properties of the application.
 
-## L1 results
+See the [task catalogue](docs/tasks.md), [experimental protocol](docs/protocol.md) and [analysis plan](benchmark/config/analysis_plan.main.json). For a concrete example, browse the [L3-03 brief](benchmark/tasks/L3-03/public_task_brief.md), [starting application](benchmark/tasks/L3-03/fixture_repo) and [task package](benchmark/tasks/L3-03).
 
-Cursor, Devin Desktop, and GPT-5.4 each succeeded in 9/9 L1 runs. Qwen succeeded in 0/9, with all nine runs stopping at the no-action response limit. See the [L1 summary, per-run results, and attempt index](data/L1/README.md). These results cover the static-website tier only.
+## Data and scoring
 
-## L2 results
+The unified dataset contains success outcomes, timing and recorded behaviour for all 144 selected runs. Original and reviewed scores are stored separately. The [evaluation-review guide](docs/evaluation-review.md) explains the corrections and provides an offline script for reproducing the reviewed scores.
 
-L2 includes 36 selected observations and 38 retained attempts. See the [L2 summary, check results, code diffs, and exclusions](data/L2/README.md).
+| Tier records | Included material |
+|---|---|
+| [L1](data/L1/README.md) | Results, individual checks, code diffs and attempt index |
+| [L2](data/L2/README.md) | 36 selected runs, 38 retained attempts, checks, code diffs and exclusions |
+| [L3](data/L3/README.md) | 36 selected runs, 38 retained attempts, original/reviewed scores, timing, checks and curated code diffs |
+| [L4](data/L4/README.md) | 36 selected runs, 38 retained attempts, original/reviewed scores, timing, checks, final diffs and replacement records |
 
-## L3 results
+The pilot checked execution, resets, evidence capture and operational limits. All 16 selected records passed the common evidence validator; the eight selected native-IDE records also passed native validation. It led to increasing the common API action limit from 15 to 30 before the main experiment. Pilot outcomes describe the testing process and are excluded from the main analysis and system rankings. See the [pilot summary](docs/pilot.md), [selected observations](data/pilot/selected_runs.csv) and [attempt index](data/pilot/all_attempts.csv).
 
-L3 includes 36 selected observations and 38 retained attempts. Original and reviewed scoring are explicitly separated. See the [L3 summary, check results, code diffs, and exclusions](data/L3/README.md).
+Full runtime archives and internal handoff notes remain outside the release. The [release scope](docs/release-scope.md) describes the published materials and their history.
 
-## L4 results
+## Reproduce the analysis and figures
 
-L4 includes 36 selected observations and 38 retained attempts. Original and reviewed scoring are explicitly separated. See the [L4 summary, checks, final code diffs, and replacement provenance](data/L4/README.md).
+Run `python analysis/build_dataset.py --check` to validate the unified dataset and `python analysis/failure_summary.py --check` to verify the failure summaries. These commands check the published outputs without rerunning the agents.
 
-## Analysis-ready data
+From the repository root, regenerate the nine quantitative figures:
 
-The [unified 144-row dataset](data/main/README.md) combines all four tiers with separate original/reviewed scores, timing and recorded behavior fields. Run `python analysis/build_dataset.py --check` to verify the published outputs. The dataset preparation remains separate from the [core success analysis](results/README.md), which now supplies overall/tier/task results and task-paired comparisons.
+```sh
+python -m pip install -r analysis/requirements-statistics.txt
+python analysis/plot_core_success.py
+python analysis/plot_secondary_outcomes.py
+```
 
-## Core success analysis
+Each figure has PDF, SVG and 300 dpi PNG exports. The [figure map and reproduction commands](results/README.md#thesis-figure-map) connect the files to thesis Figures 8 to 16. Figure 8a/b combines overall and task-level success; Figures 14 and 15 show failure stages and categories.
 
-See the [results, figures, captions and interpretation](results/README.md), [reproducible notebook](analysis/core_success.ipynb) and [analysis manifest](results/core_success_manifest.json). Results figures are intended for the thesis main text. Core and secondary quantitative analysis and descriptive failure coding are complete.
+The [core notebook](analysis/core_success.ipynb) and [secondary notebook](analysis/secondary_outcomes.ipynb) reproduce the analyses. The [analysis manifest](results/core_success_manifest.json) records the numerical-analysis inputs and environment.
 
-## Start here
+### Check the framework locally
 
-- **Understand the study:** [experimental protocol](docs/protocol.md) and [analysis plan](benchmark/config/analysis_plan.main.json).
-- **Inspect a task:** [L3-03 public brief](benchmark/tasks/L3-03/public_task_brief.md), [starting application](benchmark/tasks/L3-03/fixture_repo), and [task package](benchmark/tasks/L3-03).
-- **Try the framework:** follow the [local setup and validation guide](docs/reproduction.md).
-- **Review the pilot:** read the [pilot summary](docs/pilot.md), [16 selected observations](data/pilot/selected_runs.csv), and [27-attempt index](data/pilot/all_attempts.csv).
-- **Understand this release:** read the [release scope](docs/release-scope.md).
+With Python 3.12 and Git installed, run these commands from the repository root:
+
+```sh
+python -m benchmark.runner.verify_start_commits --verify
+python -m unittest benchmark.runner.tests.test_api_wrapper benchmark.runner.tests.test_api_tools benchmark.runner.tests.test_openai_responses_transport benchmark.runner.tests.test_qwen_vllm_transport
+```
+
+The first command checks the starting commits for all 12 tasks. The second checks the API wrapper and logical tools with local test doubles. Neither requires a model account or calls a model provider. The [reproduction guide](docs/reproduction.md) also covers Docker and browser checks.
+
+When running an evaluated agent, keep it inside its assigned `workspaces/<run_id>/repo` directory. Hidden evaluator tests and known-good repairs in the full repository must remain outside the agent's information boundary.
 
 ## Repository layout
 
@@ -85,45 +117,3 @@ data/pilot/    Selected pilot observations, attempt index, descriptive summary
 docs/          Short guides to the study, tasks, pilot, and reproduction
 docs/thesis/   Thesis PDF and version information
 ```
-
-## Quick check — no model account required
-
-With **Python 3.12** and **Git** installed, run these commands from the repository root:
-
-```sh
-python -m benchmark.runner.verify_start_commits --verify
-python -m unittest benchmark.runner.tests.test_api_wrapper benchmark.runner.tests.test_api_tools benchmark.runner.tests.test_openai_responses_transport benchmark.runner.tests.test_qwen_vllm_transport
-```
-
-The first command checks all 12 deterministic starting commits. The second exercises the API wrapper and logical tools with local test doubles; neither command calls a model provider. Docker and browser checks are documented separately in the [reproduction guide](docs/reproduction.md).
-
-## Pilot and analysis status
-
-The pilot validated execution, resets, evidence capture, and operational limits. All 16 selected records passed the common evidence validator; the eight selected native-IDE records also passed native validation. The pilot led to increasing the common API action limit from 15 to 30 before the main experiment.
-
-Pilot outcomes are **descriptive process evidence**, excluded from the main dataset and unsuitable for system rankings. The score-level review is now available for all 144 selected slots. Detailed selected-run records are now available for all four tiers. Core and secondary quantitative outputs, scoring sensitivity and nine main-text quantitative figures are available. Evidence-based failure coding and thesis results integration are complete. The manuscript version saved 24 October 2026 is available in [docs/thesis](docs/thesis/README.md).
-
-Keep evaluated agents inside their assigned `workspaces/<run_id>/repo` directory. The full repository contains evaluator-only tests and oracle repairs that must remain outside the evaluated agent's information boundary.
-
-
-## Secondary outcomes and sensitivity
-
-See [secondary results and captions](results/secondary_results.md) and the [reproducible notebook](analysis/secondary_outcomes.ipynb) for elapsed time, check diagnostics, clarification, L3/L4 success without evaluator responses and original/reviewed sensitivity.
-
-## Failure analysis
-
-See [coding rules, evidence and findings](results/failure_analysis.md) for all 42 reviewed unsuccessful runs. Regenerate or verify summaries with `python analysis/failure_summary.py --check`.
-
-## Current thesis figures
-
-The 9 October 2026 update synchronises the nine quantitative figures installed in the 7 October thesis draft. Overall and task-level success are combined in Figure 8a/b; Figures 14–15 add the failure-stage and failure-category displays. Each figure has PDF, SVG and 300 dpi PNG exports.
-
-From the repository root, regenerate all nine from the published data:
-
-```sh
-python -m pip install -r analysis/requirements-statistics.txt
-python analysis/plot_core_success.py
-python analysis/plot_secondary_outcomes.py
-```
-
-See the [figure map and reproduction guide](results/README.md#thesis-figure-map). This update changes presentation and documentation; the 144 observations, numerical tables and scoring decisions are unchanged. The thesis PDF is available in [docs/thesis](docs/thesis/README.md); internal handoff notes remain outside the release.
