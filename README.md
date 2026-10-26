@@ -4,6 +4,8 @@
 
 TSB is the research software for *Benchmarking Agentic Code Generation Tools*, a University of Melbourne thesis by Wenrui Chen, supervised by Prof. Richard Sinnott.
 
+**Read the thesis:** [Benchmarking Agentic Code Generation Tools (PDF)](docs/thesis/benchmarking-agentic-code-generation-tools.pdf) — manuscript version saved 24 October 2026.
+
 Main collection is complete: **144 selected valid observations**, including valid unsuccessful outcomes. This branch retains the detailed [L1 results](data/L1/README.md), [L2 results](data/L2/README.md), [L3 results](data/L3/README.md), and [L4 results](data/L4/README.md), and adds a [uniform evaluator review](docs/evaluation-review.md) with original/reviewed scores for all 144 slots and an offline reproduction script. The L3 addition includes 36 selected records and all 38 attempts with timing, checks and curated code diffs. The L4 addition likewise includes 36 selected records and 38 attempts. Core success analysis, secondary outcomes, scoring sensitivity and failure coding are available in [results](results/README.md). The [nine current quantitative figures](results/README.md#thesis-figure-map) match thesis Figures 8–16 in the 7 October 2026 draft. Full runtime archives remain outside this release.
 
 ## At a glance
@@ -81,6 +83,7 @@ results/       Nine quantitative figures, captions, tables and failure evidence
 data/evaluation-review/  144 paired scores, diagnostic evidence, review reproduction
 data/pilot/    Selected pilot observations, attempt index, descriptive summary
 docs/          Short guides to the study, tasks, pilot, and reproduction
+docs/thesis/   Thesis PDF and version information
 ```
 
 ## Quick check — no model account required
@@ -98,7 +101,7 @@ The first command checks all 12 deterministic starting commits. The second exerc
 
 The pilot validated execution, resets, evidence capture, and operational limits. All 16 selected records passed the common evidence validator; the eight selected native-IDE records also passed native validation. The pilot led to increasing the common API action limit from 15 to 30 before the main experiment.
 
-Pilot outcomes are **descriptive process evidence**, excluded from the main dataset and unsuitable for system rankings. The score-level review is now available for all 144 selected slots. Detailed selected-run records are now available for all four tiers. Core and secondary quantitative outputs, scoring sensitivity and nine main-text quantitative figures are available. Evidence-based failure coding and thesis results integration are complete; final manuscript review remains.
+Pilot outcomes are **descriptive process evidence**, excluded from the main dataset and unsuitable for system rankings. The score-level review is now available for all 144 selected slots. Detailed selected-run records are now available for all four tiers. Core and secondary quantitative outputs, scoring sensitivity and nine main-text quantitative figures are available. Evidence-based failure coding and thesis results integration are complete. The manuscript version saved 24 October 2026 is available in [docs/thesis](docs/thesis/README.md).
 
 Keep evaluated agents inside their assigned `workspaces/<run_id>/repo` directory. The full repository contains evaluator-only tests and oracle repairs that must remain outside the evaluated agent's information boundary.
 
@@ -123,4 +126,4 @@ python analysis/plot_core_success.py
 python analysis/plot_secondary_outcomes.py
 ```
 
-See the [figure map and reproduction guide](results/README.md#thesis-figure-map). This update changes presentation and documentation; the 144 observations, numerical tables and scoring decisions are unchanged. The full thesis PDF and internal handoff are not included.
+See the [figure map and reproduction guide](results/README.md#thesis-figure-map). This update changes presentation and documentation; the 144 observations, numerical tables and scoring decisions are unchanged. The thesis PDF is available in [docs/thesis](docs/thesis/README.md); internal handoff notes remain outside the release.
