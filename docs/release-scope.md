@@ -4,6 +4,8 @@ This repository publishes curated research materials and detailed selected-run e
 
 ## Included
 
+- The [thesis PDF](thesis/README.md), manuscript version saved 24 October 2026 (104 pages; 25,096 body words).
+
 - Unified 144-row CSV, field dictionary and validation summary in `data/main/`, generated and verified by `analysis/build_dataset.py`; no statistical comparisons or figures are produced by this step.
 
 - L1 main results, timing, individual check outcomes, final diffs, and attempt/exclusion provenance in `data/L1/`.
@@ -27,7 +29,7 @@ The `.gitattributes` file disables automatic line-ending conversion so that copi
 
 ## Next data release
 
-Failure coding and thesis results integration are complete. Remaining work concerns manuscript review and submission preparation. The included offline script reproduces score mapping from exported evidence; it does not reproduce agent executions; the completed statistical analysis is provided separately in `analysis/` and `results/`. Keep pilot and main records separate.
+Failure coding and thesis results integration are complete. The manuscript version saved 24 October 2026 is now published in [docs/thesis](thesis/README.md). The included offline script reproduces score mapping from exported evidence; it does not reproduce agent executions; the completed statistical analysis is provided separately in `analysis/` and `results/`. Keep pilot and main records separate.
 
 ## L2 experiment addition
 
@@ -66,4 +68,9 @@ Includes codes for all 42 reviewed unsuccessful runs, compact event extracts and
 
 The current release includes the nine quantitative figures installed in the 7 October thesis draft: the combined success Figure 8a/b, six revised comparison/secondary figures and two failure figures. See the [Figure 8–16 map](../results/README.md#thesis-figure-map) for filenames, data sources and captions.
 
-The two repository plotting entry points now generate the current set directly from published data, in PDF, SVG and 300 dpi PNG formats. The old standalone overall/task success files are superseded by `success_summary`; Git history retains the earlier assets. Existing observations, CSV tables, scoring decisions, inferential procedures and numerical-analysis manifests are unchanged. The full thesis PDF, thesis source, internal handoff, preview comparison sheets and private operational archives are outside this update.
+The two repository plotting entry points now generate the current set directly from published data, in PDF, SVG and 300 dpi PNG formats. The old standalone overall/task success files are superseded by `success_summary`; Git history retains the earlier assets. Existing observations, CSV tables, scoring decisions, inferential procedures and numerical-analysis manifests are unchanged. The full thesis PDF was outside that figure update and is now published as described below. Thesis source, internal handoff, preview comparison sheets and private operational archives remain outside this release.
+
+
+## Thesis PDF addition (26 October 2026)
+
+The [thesis PDF](thesis/benchmarking-agentic-code-generation-tools.pdf) is published on `main` in `docs/thesis/`, with version details in the accompanying [README](thesis/README.md). This is the manuscript version saved 24 October 2026: 104 pages and 25,096 body words, excluding front matter, references and appendices. This addition publishes the manuscript and updates its navigation links; experimental data, analysis scripts and figure files are unchanged.
