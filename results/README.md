@@ -1,6 +1,6 @@
 # Quantitative results and thesis figures
 
-The current nine quantitative figures correspond to Figures 8–16 in the thesis draft of 7 October 2026. They use the same 144 selected valid observations and reviewed scoring as the published analysis. Task briefs, prompts and illustrative interactions remain in the thesis appendix. The figure update published on 9 October changes presentation, not experimental records or statistical conclusions.
+The current nine quantitative figures correspond to Figures 8–16 in the [26 October 2026 thesis](../docs/thesis/README.md). The figure assets were last revised for the 7 October draft and are unchanged in this manuscript version. They use the same 144 selected valid observations and reviewed scoring as the published analysis. Task briefs, prompts and illustrative interactions remain in the thesis appendix. The figure update published on 9 October changes presentation, not experimental records or statistical conclusions.
 
 ## Reproduce
 
@@ -31,7 +31,7 @@ Input: `data/main/analysis_dataset.csv` from commit `0bf95f7630e8c87e6ccb95292ed
 
 ## Thesis figure map
 
-Every filename below has `.pdf`, `.svg` and `.png` versions in [figures](figures/). Figure numbers refer to the 7 October draft.
+Every filename below has `.pdf`, `.svg` and `.png` versions in [figures](figures/). Figure numbers also match the 26 October manuscript.
 
 | Figure | Content | Filename stem | Published data source |
 |---|---|---|---|
@@ -85,4 +85,4 @@ The observed differences among Cursor, Devin Desktop and GPT-5.4 ranged from −
 
 ## Related results
 
-[Secondary results](secondary_results.md) report timing, diagnostic correctness, clarification, L3/L4 success without evaluator responses and scoring sensitivity. [Failure analysis](failure_analysis.md) covers all 42 reviewed unsuccessful runs with a public evidence index, run-level codes, two figures and reproducible category/stage counts. Quantitative analysis, failure coding and thesis Results integration are complete. The full thesis PDF and internal handoff are outside this repository update.
+[Secondary results](secondary_results.md) report timing, diagnostic correctness, clarification, L3/L4 success without evaluator responses and scoring sensitivity. [Failure analysis](failure_analysis.md) covers all 42 reviewed unsuccessful runs with a public evidence index, run-level codes, two figures and reproducible category/stage counts. Quantitative analysis, failure coding and thesis Results integration are complete. The [full thesis PDF](../docs/thesis/README.md) is included. A separate [72-run Qwen interface control](qwen_interface_control.md) reports both parser conditions and tool-execution outcomes; these runs are excluded from the main figures. Internal handoff notes remain private.

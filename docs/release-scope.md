@@ -4,7 +4,7 @@ This repository publishes curated research materials and detailed selected-run e
 
 ## Included
 
-- The [thesis PDF](thesis/README.md), manuscript version saved 24 October 2026 (104 pages; 25,096 body words).
+- The [thesis PDF](thesis/README.md), manuscript version saved 26 October 2026 (107 pages; 26,110 body words).
 
 - Unified 144-row CSV, field dictionary and validation summary in `data/main/`, generated and verified by `analysis/build_dataset.py`; no statistical comparisons or figures are produced by this step.
 
@@ -27,9 +27,9 @@ Operational freeze manifests, amendment archives, account-specific authorization
 
 The `.gitattributes` file disables automatic line-ending conversion so that copied fixture bytes retain their deterministic starting commits. Do not normalize fixture line endings when editing or distributing the suite.
 
-## Next data release
+## Current analysis status
 
-Failure coding and thesis results integration are complete. The manuscript version saved 24 October 2026 is now published in [docs/thesis](thesis/README.md). The included offline script reproduces score mapping from exported evidence; it does not reproduce agent executions; the completed statistical analysis is provided separately in `analysis/` and `results/`. Keep pilot and main records separate.
+Failure coding and thesis results integration are complete. The manuscript version saved 26 October 2026 is now published in [docs/thesis](thesis/README.md). The included offline script reproduces score mapping from exported evidence; it does not reproduce agent executions; the completed statistical analysis is provided separately in `analysis/` and `results/`. Pilot, main and supplementary interface-control records are kept separate.
 
 ## L2 experiment addition
 
@@ -74,3 +74,9 @@ The two repository plotting entry points now generate the current set directly f
 ## Thesis PDF addition (26 October 2026)
 
 The [thesis PDF](thesis/benchmarking-agentic-code-generation-tools.pdf) is published on `main` in `docs/thesis/`, with version details in the accompanying [README](thesis/README.md). This is the manuscript version saved 24 October 2026: 104 pages and 25,096 body words, excluding front matter, references and appendices. This addition publishes the manuscript and updates its navigation links; experimental data, analysis scripts and figure files are unchanged.
+
+## Thesis and Qwen interface-control update (26 October 2026)
+
+The PDF now contains the completed supplementary interface experiment: 72 valid selected runs across 12 tasks, three repetitions and two parser conditions. This replaces the earlier 24 October manuscript with the 26 October version (107 pages; 26,110 body words). The [results guide](../results/qwen_interface_control.md), [72-row export and field guide](../data/qwen-interface-control/README.md) and `analysis/qwen_interface_summary.py` publish the outcomes and reproduce their aggregate counts offline. The guide also reports the retained response-replay audit; the response archive itself remains private.
+
+The 144 main observations, scoring decisions, statistical comparisons and Figure 8–16 assets are unchanged. Thesis source, internal handoff notes, credentials, billing and raw runtime archives remain outside this release.

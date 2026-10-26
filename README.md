@@ -6,7 +6,7 @@ This repository contains the task suite, evaluation framework, experimental data
 
 ## Start here
 
-- Read the [thesis PDF](docs/thesis/benchmarking-agentic-code-generation-tools.pdf), saved 24 October 2026. [Version details](docs/thesis/README.md) accompany the file.
+- Read the [thesis PDF](docs/thesis/benchmarking-agentic-code-generation-tools.pdf), saved 26 October 2026. [Version details](docs/thesis/README.md) accompany the file.
 - View the [results and figures](results/README.md).
 - Download the [144-run dataset and field guide](data/main/README.md).
 - Follow the [setup and reproduction guide](docs/reproduction.md).
@@ -27,6 +27,10 @@ The task-paired tests found no statistically significant differences among Curso
 On the static-website tier (L1), Cursor, Devin Desktop and GPT-5.4 each succeeded in all nine runs. All nine Qwen runs stopped at the no-action response limit.
 
 The [full analysis](results/README.md) reports results by task and tier, uncertainty intervals and paired comparisons. [Secondary results](results/secondary_results.md) cover elapsed time, diagnostic checks, clarification requests, L3/L4 success without evaluator responses, and the effect of score corrections. The [failure analysis](results/failure_analysis.md) examines all 42 reviewed unsuccessful runs.
+
+## Supplementary Qwen interface control
+
+A separate 72-run experiment tested whether allowing physical newlines inside JSON tool requests improved Qwen's outcomes. Both interfaces achieved 0/36 task successes. The relaxed parser accepted some requests that the frozen parser rejected, but those additional reads targeted missing paths. The [control results](results/qwen_interface_control.md) distinguish parsing, tool execution and task completion, with [selected-run data](data/qwen-interface-control/README.md) and an offline summary command. These runs are separate from the 144-run main comparison.
 
 ## Study design
 
