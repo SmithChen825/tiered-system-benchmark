@@ -147,10 +147,6 @@ To run new agent experiments, supply provider access, record native application 
 
 The [release scope](docs/release-scope.md) describes the published evidence and archival boundaries. Full runtime archives and internal handoff notes remain outside the release.
 
-## 📚 Reference and questions
-
-When referring to this work, identify the thesis and the repository commit used:
-
-> Chen, Wenrui. (2026). *Benchmarking Agentic Code Generation Tools*. University of Melbourne. Supervisor: Prof. Richard Sinnott.
+## 💬 Questions
 
 Use [GitHub Issues](https://github.com/SmithChen825/tiered-system-benchmark/issues) for questions about tasks, data or reproduction, including the task/run identifier and relevant command output where applicable.
