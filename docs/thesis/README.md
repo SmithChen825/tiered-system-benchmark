@@ -5,11 +5,11 @@
 - **Author:** Wenrui Chen
 - **Institution:** University of Melbourne
 - **Supervisor:** Prof. Richard Sinnott
-- **Manuscript version:** saved 26 October 2026
-- **Length:** 107 pages; 26,110 body words (excluding front matter, references and appendices)
+- **Published file:** Author-supplied `thesisRevised36.pdf`, synchronised on 1 November 2026
+- **Length:** 105 pages
 
-The PDF accompanies the benchmark materials in this repository. See the [Figure 8–16 map](../../results/README.md#thesis-figure-map) for the quantitative figures and the [reproduction guide](../reproduction.md) for the published data and analysis commands.
+The repository PDF is an unchanged copy of the supplied final manuscript. It includes the main 144-run comparison, the 72-run supplementary Qwen interface control, original-versus-reviewed scoring, discussion and supporting appendices.
 
-This version incorporates the completed 72-run supplementary Qwen interface control in Methods §4.5, Results §5.6 (Table 6), Discussion §6.2 and the conclusion. Appendix E records the configuration, task-level results (Table 8) and interrupted-attempt replacement. The original 144 main observations and Figure 8–16 assets are unchanged.
+See the [Figure 8–16 map](../../results/README.md#thesis-figure-map) for the quantitative figures and the [reproduction guide](../reproduction.md) for local setup. The [main dataset](../../data/main/README.md) and [supplementary dataset](../../data/qwen-interface-control/README.md) are analysed separately.
 
-See the [supplementary results](../../results/qwen_interface_control.md) and [selected-run data](../../data/qwen-interface-control/README.md). The published PDF compiled without errors or warnings; body words were counted in Overleaf with front matter, references and appendices excluded.
+This manuscript replacement does not change experimental records, scoring versions or statistical results.

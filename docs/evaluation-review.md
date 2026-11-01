@@ -53,4 +53,4 @@ The review is not exhaustive fresh deployment testing of every final system. The
 
 ## Reporting
 
-The manuscript's method states this common rule. Appendix D.8 records the concrete decisions and score transitions; the conclusion does not single out a task. Planned Results reporting will compare original and reviewed system rates, diagnostic proportions and pairwise effects on the same selected slots, and state whether conclusions depend on the review. Final comparative analysis is not claimed by this supplement.
+The manuscript's method states this common rule. Appendix D.8 records the concrete decisions and score transitions; the conclusion does not single out a task. The completed [scoring-sensitivity analysis](../results/secondary_results.md) compares original and reviewed system rates, diagnostic proportions and pairwise effects on the same selected slots. It reports which conclusions persist under both scoring versions.

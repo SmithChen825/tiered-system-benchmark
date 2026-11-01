@@ -1,6 +1,6 @@
 # Quantitative results and thesis figures
 
-The current nine quantitative figures correspond to Figures 8–16 in the [26 October 2026 thesis](../docs/thesis/README.md). The figure assets were last revised for the 7 October draft and are unchanged in this manuscript version. They use the same 144 selected valid observations and reviewed scoring as the published analysis. Task briefs, prompts and illustrative interactions remain in the thesis appendix. The figure update published on 9 October changes presentation, not experimental records or statistical conclusions.
+The current nine quantitative figures correspond to Figures 8–16 in the [current thesis](../docs/thesis/README.md). The figure assets were last revised for the 7 October draft and are unchanged in this manuscript version. They use the same 144 selected valid observations and reviewed scoring as the published analysis. Task briefs, prompts and illustrative interactions remain in the thesis appendix. The figure update published on 9 October changes presentation, not experimental records or statistical conclusions.
 
 ## Reproduce
 
